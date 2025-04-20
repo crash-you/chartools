@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>文字处理工具网站</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
+    <meta name="description" content="多功能文本处理工具网站，提供字符计数、文本转换、格式化等功能，满足各种文字处理需求">
+    <meta name="keywords" content="文字工具,字符计数,文本处理,在线工具">
+    <link rel="alternate" hreflang="zh-CN" href="index.html">
+    <link rel="alternate" hreflang="en" href="en/index.html">
+    <link rel="alternate" hreflang="x-default" href="index.html">
+</head>
+<body class="bg-white text-gray-800 min-h-screen flex flex-col">
+    <!-- 导航栏 -->
+    <nav id="navigation" class="fixed top-0 w-full bg-white bg-opacity-80 backdrop-blur-md shadow-sm z-50">
+        <div class="container mx-auto max-w-7xl px-4">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="index.html" class="text-2xl font-semibold text-gray-900">文字工具</a>
+                </div>
+                
+                <!-- 主导航 (桌面版) -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#" class="text-gray-700 hover:text-blue-600">功能</a>
+                    <a href="#tools" class="text-gray-700 hover:text-blue-600">工具</a>
+                    <a href="#" class="text-gray-700 hover:text-blue-600">帮助</a>
+                </div>
+                
+                <!-- 右侧选项 -->
+                <div class="flex items-center space-x-4">
+                    <!-- 语言切换按钮 -->
+                    <div class="relative language-selector">
+                        <button id="language-button" class="flex items-center space-x-1 p-2 rounded-md hover:bg-gray-100 transition">
+                            <span id="current-language">中文</span>
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div id="language-dropdown" class="absolute right-0 mt-2 w-32 bg-white rounded-md shadow-lg hidden z-10">
+                            <a href="index.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-100" data-lang="zh-CN">中文</a>
+                            <a href="en/index.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-100" data-lang="en">English</a>
+                        </div>
+                    </div>
+                    
+                    <!-- 移动端菜单按钮 -->
+                    <button id="mobile-menu-button" class="md:hidden p-2 rounded-md hover:bg-gray-100">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- 移动端菜单 -->
+            <div id="mobile-menu" class="md:hidden hidden pb-4">
+                <div class="flex flex-col space-y-4">
+                    <a href="#" class="text-gray-700 hover:text-blue-600">功能</a>
+                    <a href="#tools" class="text-gray-700 hover:text-blue-600">工具</a>
+                    <a href="#" class="text-gray-700 hover:text-blue-600">帮助</a>
+                    <div class="pt-2 border-t border-gray-200">
+                        <p class="text-sm text-gray-600 mb-1">选择语言</p>
+                        <a href="index.html" class="block py-1 text-gray-700 hover:text-blue-600" data-lang="zh-CN">中文</a>
+                        <a href="en/index.html" class="block py-1 text-gray-700 hover:text-blue-600" data-lang="en">English</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- 主内容区 -->
+    <main class="flex-grow pt-16">
+        <!-- 英雄区域 -->
+        <section class="py-12 md:py-20 px-4 bg-gradient-to-br from-blue-50 to-indigo-50">
+            <div class="container mx-auto max-w-7xl">
+                <div class="flex flex-col items-center text-center">
+                    <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">专业文字处理工具</h1>
+                    <p class="text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl">多功能文本处理工具，满足您的各种文字需求，简单易用且安全可靠。</p>
+                    <a href="tools/text-counter.html" class="bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-lg transition-colors duration-300">开始使用</a>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 功能类别网格 -->
+        <section id="tools" class="py-16 px-4 bg-white">
+            <div class="container mx-auto max-w-7xl">
+                <h2 class="text-3xl font-bold text-gray-900 mb-12 text-center">实用工具</h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- 字符计数工具 -->
+                    <a href="tools/text-counter.html" class="group">
+                        <div class="bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden h-full">
+                            <div class="p-6">
+                                <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+                                    <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"></path>
+                                    </svg>
+                                </div>
+                                <h3 class="text-xl font-semibold text-gray-900 mb-2">字符计数</h3>
+                                <p class="text-gray-600">实时统计字符、单词数量，分类计数与阅读时间估算。</p>
+                            </div>
+                            <div class="px-6 pb-4">
+                                <span class="inline-block text-blue-600 group-hover:translate-x-1 transition-transform duration-200">立即使用 →</span>
+                            </div>
+                        </div>
+                    </a>
+                    
+                    <!-- 其他工具 (暂不启用) -->
+                    <div class="bg-white rounded-xl shadow-md overflow-hidden h-full opacity-60">
+                        <div class="p-6">
+                            <div class="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center mb-4">
+                                <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-semibold text-gray-700 mb-2">文本转换</h3>
+                            <p class="text-gray-500">大小写转换、简繁体转换、行排序等功能 (即将推出)</p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white rounded-xl shadow-md overflow-hidden h-full opacity-60">
+                        <div class="p-6">
+                            <div class="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center mb-4">
+                                <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-semibold text-gray-700 mb-2">格式化工具</h3>
+                            <p class="text-gray-500">JSON、XML、HTML、CSS 格式化 (即将推出)</p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white rounded-xl shadow-md overflow-hidden h-full opacity-60">
+                        <div class="p-6">
+                            <div class="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center mb-4">
+                                <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-semibold text-gray-700 mb-2">文本比较</h3>
+                            <p class="text-gray-500">对比两段文本，高亮显示差异 (即将推出)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- 页脚 -->
+    <footer class="bg-gray-100 py-8 px-4">
+        <div class="container mx-auto max-w-7xl">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <p class="text-gray-600">© 2023 文字处理工具网站</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-600 hover:text-blue-600">关于我们</a>
+                    <a href="#" class="text-gray-600 hover:text-blue-600">使用条款</a>
+                    <a href="#" class="text-gray-600 hover:text-blue-600">隐私政策</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/language.js"></script>
+</body>
+</html> 
