@@ -70,12 +70,10 @@
    ```
 
 3. 访问网站
-   - 如使用Python: http://localhost:8000
-   - 如使用http-server: http://localhost:8080
 
 ### 在线使用
 
-访问网站: [文字处理工具网站](https://tools-words.netlify.app)
+访问网站: [文字处理工具网站](https://chartools.art)
 
 ## 贡献指南
 
@@ -93,12 +91,12 @@
 
 ## 联系方式
 
-- 项目维护者: [您的名字](mailto:your.email@example.com)
-- 项目网站: [https://tools-words.netlify.app](https://tools-words.netlify.app)
+- 项目维护者: [crash-liu](1161230385abc@example.com)
+- 项目网站: [https://chartools.art](https://chartools.art)
 
 ---
 
-© 2023 文字处理工具网站
+© 2025 文字处理工具网站
 
 文字处理工具网站已创建成功
 README.md文件已创建完成，包含了项目简介、功能特性、技术栈、目录结构、使用说明和贡献指南等内容。您可以根据实际情况修改以下内容：
