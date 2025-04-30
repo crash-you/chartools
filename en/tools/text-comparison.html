@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Comparison - Text Processing Tools</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="../../css/custom.css" rel="stylesheet">
+    <meta name="description" content="Compare two texts online, highlight differences, merge texts, and support cross-language text comparison">
+    <meta name="keywords" content="text comparison,diff checker,text diff,merge texts,text tools">
+    <link rel="alternate" hreflang="zh-CN" href="../../tools/text-comparison.html">
+    <link rel="alternate" hreflang="en" href="text-comparison.html">
+    <link rel="alternate" hreflang="x-default" href="../../tools/text-comparison.html">
+</head>
+<body class="bg-white text-gray-800 min-h-screen flex flex-col">
+    <!-- Navigation Bar -->
+    <nav id="navigation" class="fixed top-0 w-full bg-white bg-opacity-80 backdrop-blur-md shadow-sm z-50">
+        <div class="container mx-auto max-w-7xl px-4">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="../index.html" class="text-2xl font-semibold text-gray-900">Text Tools</a>
+                </div>
+                
+                <!-- Main Navigation (Desktop) -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="../index.html#" class="text-gray-700 hover:text-blue-600">Features</a>
+                    <a href="../index.html#tools" class="text-gray-700 hover:text-blue-600">Tools</a>
+                    <a href="../help.html" class="text-gray-700 hover:text-blue-600">Help</a>
+                </div>
+                
+                <!-- Right Options -->
+                <div class="flex items-center space-x-4">
+                    <!-- Language Selector -->
+                    <div class="relative language-selector">
+                        <button id="language-button" class="flex items-center space-x-1 p-2 rounded-md hover:bg-gray-100 transition">
+                            <span id="current-language">English</span>
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div id="language-dropdown" class="absolute right-0 mt-2 w-32 bg-white rounded-md shadow-lg hidden z-10">
+                            <a href="../../tools/text-comparison.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-100" data-lang="zh-CN">中文</a>
+                            <a href="text-comparison.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-100" data-lang="en">English</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Mobile Menu Button -->
+                    <button id="mobile-menu-button" class="md:hidden p-2 rounded-md hover:bg-gray-100">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="md:hidden hidden pb-4">
+                <div class="flex flex-col space-y-4">
+                    <a href="../index.html#" class="text-gray-700 hover:text-blue-600">Features</a>
+                    <a href="../index.html#tools" class="text-gray-700 hover:text-blue-600">Tools</a>
+                    <a href="../help.html" class="text-gray-700 hover:text-blue-600">Help</a>
+                    <div class="pt-2 border-t border-gray-200">
+                        <p class="text-sm text-gray-600 mb-1">Select Language</p>
+                        <a href="../../tools/text-comparison.html" class="block py-1 text-gray-700 hover:text-blue-600" data-lang="zh-CN">中文</a>
+                        <a href="text-comparison.html" class="block py-1 text-gray-700 hover:text-blue-600" data-lang="en">English</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Main Content -->
+    <main class="flex-grow pt-16">
+        <div class="container mx-auto max-w-7xl px-4 py-8">
+            <!-- Page Title -->
+            <div class="mb-8">
+                <h1 class="text-3xl font-bold text-gray-900">Text Comparison Tool</h1>
+                <p class="mt-2 text-gray-600">Compare two texts, highlight differences, and merge text with powerful comparison features.</p>
+            </div>
+            
+            <!-- Options Area -->
+            <div class="mb-6 bg-white rounded-xl shadow-md p-6">
+                <h2 class="text-xl font-semibold text-gray-900 mb-4">Comparison Options</h2>
+                <div class="flex flex-wrap gap-4">
+                    <div class="flex items-center">
+                        <input type="checkbox" id="ignore-case" class="w-4 h-4 text-blue-600 rounded">
+                        <label for="ignore-case" class="ml-2 text-gray-700">Ignore Case</label>
+                    </div>
+                    <div class="flex items-center">
+                        <input type="checkbox" id="ignore-whitespace" class="w-4 h-4 text-blue-600 rounded">
+                        <label for="ignore-whitespace" class="ml-2 text-gray-700">Ignore Whitespace</label>
+                    </div>
+                    <div class="flex items-center">
+                        <input type="checkbox" id="word-level" class="w-4 h-4 text-blue-600 rounded">
+                        <label for="word-level" class="ml-2 text-gray-700">Word-level Comparison</label>
+                    </div>
+                    <div class="flex items-center">
+                        <input type="checkbox" id="line-level" class="w-4 h-4 text-blue-600 rounded" checked>
+                        <label for="line-level" class="ml-2 text-gray-700">Line-level Comparison</label>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Input and Results Area -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                <!-- Left Text -->
+                <div class="bg-white rounded-xl shadow-md p-6">
+                    <h2 class="text-xl font-semibold text-gray-900 mb-4">Original Text</h2>
+                    <div class="mb-4">
+                        <textarea 
+                            id="text-original" 
+                            class="w-full h-64 p-4 bg-gray-50 text-gray-900 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-y"
+                            placeholder="Enter or paste the first text here..."
+                        ></textarea>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <button id="clear-original" class="px-3 py-1 bg-gray-200 text-gray-800 rounded-lg hover:bg-gray-300 transition-colors text-sm">
+                            Clear
+                        </button>
+                        <button id="sample-original" class="px-3 py-1 bg-blue-100 text-blue-700 rounded-lg hover:bg-blue-200 transition-colors text-sm">
+                            Insert Sample
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Right Text -->
+                <div class="bg-white rounded-xl shadow-md p-6">
+                    <h2 class="text-xl font-semibold text-gray-900 mb-4">Modified Text</h2>
+                    <div class="mb-4">
+                        <textarea 
+                            id="text-modified" 
+                            class="w-full h-64 p-4 bg-gray-50 text-gray-900 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-y"
+                            placeholder="Enter or paste the second text here..."
+                        ></textarea>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <button id="clear-modified" class="px-3 py-1 bg-gray-200 text-gray-800 rounded-lg hover:bg-gray-300 transition-colors text-sm">
+                            Clear
+                        </button>
+                        <button id="sample-modified" class="px-3 py-1 bg-blue-100 text-blue-700 rounded-lg hover:bg-blue-200 transition-colors text-sm">
+                            Insert Sample
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Action Button -->
+            <div class="flex justify-center my-8">
+                <button id="compare-button" class="px-6 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors">
+                    Compare Texts
+                </button>
+            </div>
+            
+            <!-- Comparison Results -->
+            <div id="result-container" class="bg-white rounded-xl shadow-md p-6 mb-8 hidden">
+                <h2 class="text-xl font-semibold text-gray-900 mb-4">Comparison Results</h2>
+                
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                    <!-- Difference Summary -->
+                    <div class="lg:col-span-2">
+                        <div class="p-4 bg-gray-50 rounded-lg">
+                            <h3 class="text-lg font-medium text-gray-800 mb-2">Difference Summary</h3>
+                            <div id="diff-summary" class="text-gray-700">
+                                <!-- Difference summary will be displayed here -->
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Left Text Diff -->
+                    <div>
+                        <h3 class="text-lg font-medium text-gray-800 mb-2">Original Text Differences</h3>
+                        <div id="diff-original" class="p-4 bg-gray-50 rounded-lg overflow-x-auto max-h-80">
+                            <!-- Original text differences will be displayed here -->
+                        </div>
+                    </div>
+                    
+                    <!-- Right Text Diff -->
+                    <div>
+                        <h3 class="text-lg font-medium text-gray-800 mb-2">Modified Text Differences</h3>
+                        <div id="diff-modified" class="p-4 bg-gray-50 rounded-lg overflow-x-auto max-h-80">
+                            <!-- Modified text differences will be displayed here -->
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Merge Options -->
+                <div class="mt-8">
+                    <h3 class="text-lg font-medium text-gray-800 mb-4">Merge Texts</h3>
+                    <div class="flex flex-wrap gap-4 mb-4">
+                        <button id="merge-left" class="px-4 py-2 bg-blue-100 text-blue-700 rounded-lg hover:bg-blue-200 transition-colors">
+                            Merge into Original
+                        </button>
+                        <button id="merge-right" class="px-4 py-2 bg-blue-100 text-blue-700 rounded-lg hover:bg-blue-200 transition-colors">
+                            Merge into Modified
+                        </button>
+                        <button id="merge-both" class="px-4 py-2 bg-green-100 text-green-700 rounded-lg hover:bg-green-200 transition-colors">
+                            Create Merged Text
+                        </button>
+                    </div>
+                    
+                    <div id="merged-text-container" class="mt-4 hidden">
+                        <textarea 
+                            id="merged-text" 
+                            class="w-full h-40 p-4 bg-gray-50 text-gray-900 rounded-lg border border-gray-300 resize-y"
+                            readonly
+                        ></textarea>
+                        <div class="mt-2">
+                            <button id="copy-merged" class="px-3 py-1 bg-gray-200 text-gray-800 rounded-lg hover:bg-gray-300 transition-colors text-sm">
+                                Copy Merged Text
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="bg-gray-100 py-8 px-4 mt-8">
+        <div class="container mx-auto max-w-7xl">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <p class="text-gray-600">© 2023 Text Processing Tools</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-600 hover:text-blue-600">About Us</a>
+                    <a href="#" class="text-gray-600 hover:text-blue-600">Terms of Use</a>
+                    <a href="#" class="text-gray-600 hover:text-blue-600">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- JavaScript -->
+    <script src="../../js/main.js"></script>
+    <script src="../../js/navigation.js"></script>
+    <script src="../../js/language.js"></script>
+    <script src="../../js/tools/text-comparison.js"></script>
+</body>
+</html> 

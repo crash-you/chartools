@@ -35,7 +35,7 @@
                 <div class="hidden md:flex items-center space-x-8">
                     <a href="#" class="text-gray-700 hover:text-blue-600">功能</a>
                     <a href="#tools" class="text-gray-700 hover:text-blue-600">工具</a>
-                    <a href="#" class="text-gray-700 hover:text-blue-600">帮助</a>
+                    <a href="help.html" class="text-gray-700 hover:text-blue-600">帮助</a>
                 </div>
                 
                 <!-- 右侧选项 -->
@@ -68,7 +68,7 @@
                 <div class="flex flex-col space-y-4">
                     <a href="#" class="text-gray-700 hover:text-blue-600">功能</a>
                     <a href="#tools" class="text-gray-700 hover:text-blue-600">工具</a>
-                    <a href="#" class="text-gray-700 hover:text-blue-600">帮助</a>
+                    <a href="help.html" class="text-gray-700 hover:text-blue-600">帮助</a>
                     <div class="pt-2 border-t border-gray-200">
                         <p class="text-sm text-gray-600 mb-1">选择语言</p>
                         <a href="index.html" class="block py-1 text-gray-700 hover:text-blue-600" data-lang="zh-CN">中文</a>
@@ -95,7 +95,7 @@
         <!-- 功能类别网格 -->
         <section id="tools" class="py-16 px-4 bg-white">
             <div class="container mx-auto max-w-7xl">
-                <h2 class="text-3xl font-bold text-gray-900 mb-12 text-center">实用工具</h2>
+                <h2 class="text-3xl font-bold text-gray-900 mb-12 text-center">更多工具</h2>
                 
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                     <!-- 字符计数工具 -->
@@ -141,17 +141,22 @@
                         </div>
                     </div>
                     
-                    <div class="bg-white rounded-xl shadow-md overflow-hidden h-full opacity-60">
-                        <div class="p-6">
-                            <div class="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center mb-4">
-                                <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
-                                </svg>
+                    <a href="tools/text-comparison.html" class="group">
+                        <div class="bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden h-full">
+                            <div class="p-6">
+                                <div class="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center mb-4">
+                                    <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
+                                    </svg>
+                                </div>
+                                <h3 class="text-xl font-semibold text-gray-900 mb-2">文本比较</h3>
+                                <p class="text-gray-600">对比两段文本，高亮显示差异</p>
                             </div>
-                            <h3 class="text-xl font-semibold text-gray-700 mb-2">文本比较</h3>
-                            <p class="text-gray-500">对比两段文本，高亮显示差异 (即将推出)</p>
+                            <div class="px-6 pb-4">
+                                <span class="inline-block text-blue-600 group-hover:translate-x-1 transition-transform duration-200">立即使用 →</span>
+                            </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
             </div>
         </section>

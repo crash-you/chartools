@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help Center - Text Processing Tools</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="../css/custom.css" rel="stylesheet">
+    <meta name="description" content="Text Processing Tools Help Center, providing tool guides, FAQs and usage tips">
+    <meta name="keywords" content="text tools,help docs,faq,tutorials,text processing">
+    <link rel="alternate" hreflang="zh-CN" href="../help.html">
+    <link rel="alternate" hreflang="en" href="help.html">
+    <link rel="alternate" hreflang="x-default" href="../help.html">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-32ZXK1J41J"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-32ZXK1J41J');
+    </script>
+</head>
+<body class="bg-white text-gray-800 min-h-screen flex flex-col">
+    <!-- Navigation -->
+    <nav id="navigation" class="fixed top-0 w-full bg-white bg-opacity-80 backdrop-blur-md shadow-sm z-50">
+        <div class="container mx-auto max-w-7xl px-4">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="index.html" class="text-2xl font-semibold text-gray-900">Text Tools</a>
+                </div>
+                
+                <!-- Main navigation (desktop) -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html#" class="text-gray-700 hover:text-blue-600">Features</a>
+                    <a href="index.html#tools" class="text-gray-700 hover:text-blue-600">Tools</a>
+                    <a href="help.html" class="text-blue-600">Help</a>
+                </div>
+                
+                <!-- Right options -->
+                <div class="flex items-center space-x-4">
+                    <!-- Language selector -->
+                    <div class="relative language-selector">
+                        <button id="language-button" class="flex items-center space-x-1 p-2 rounded-md hover:bg-gray-100 transition">
+                            <span id="current-language">English</span>
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div id="language-dropdown" class="absolute right-0 mt-2 w-32 bg-white rounded-md shadow-lg hidden z-10">
+                            <a href="../help.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-100" data-lang="zh-CN">中文</a>
+                            <a href="help.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-100" data-lang="en">English</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Mobile menu button -->
+                    <button id="mobile-menu-button" class="md:hidden p-2 rounded-md hover:bg-gray-100">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Mobile menu -->
+            <div id="mobile-menu" class="md:hidden hidden pb-4">
+                <div class="flex flex-col space-y-4">
+                    <a href="index.html#" class="text-gray-700 hover:text-blue-600">Features</a>
+                    <a href="index.html#tools" class="text-gray-700 hover:text-blue-600">Tools</a>
+                    <a href="help.html" class="text-blue-600">Help</a>
+                    <div class="pt-2 border-t border-gray-200">
+                        <p class="text-sm text-gray-600 mb-1">Select Language</p>
+                        <a href="../help.html" class="block py-1 text-gray-700 hover:text-blue-600" data-lang="zh-CN">中文</a>
+                        <a href="help.html" class="block py-1 text-gray-700 hover:text-blue-600" data-lang="en">English</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Main content -->
+    <main class="flex-grow pt-16">
+        <!-- Help center title -->
+        <section class="py-12 md:py-16 px-4 bg-gradient-to-br from-blue-50 to-indigo-50">
+            <div class="container mx-auto max-w-7xl">
+                <div class="flex flex-col items-center text-center">
+                    <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Help Center</h1>
+                    <p class="text-xl text-gray-600 mb-8 max-w-3xl">Welcome to our Text Processing Tools website. Here you can find user guides and FAQs for all our tools.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Help content -->
+        <section class="py-16 px-4 bg-white">
+            <div class="container mx-auto max-w-4xl">
+                <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                    <!-- Table of contents -->
+                    <div class="p-6 bg-gray-50 border-b border-gray-200">
+                        <h2 class="text-2xl font-bold text-gray-900 mb-4">Contents</h2>
+                        <ul class="space-y-2">
+                            <li>
+                                <a href="#getting-started" class="text-blue-600 hover:underline">Getting Started</a>
+                            </li>
+                            <li>
+                                <a href="#tools-guide" class="text-blue-600 hover:underline">Tool Guides</a>
+                            </li>
+                            <li>
+                                <a href="#faq" class="text-blue-600 hover:underline">Frequently Asked Questions</a>
+                            </li>
+                            <li>
+                                <a href="#tips" class="text-blue-600 hover:underline">Tips and Tricks</a>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Getting started -->
+                    <div id="getting-started" class="p-6 border-b border-gray-200">
+                        <h2 class="text-2xl font-bold text-gray-900 mb-4">Getting Started</h2>
+                        <p class="text-gray-700 mb-4">Text Processing Tools offers a variety of text handling functions to help you process text-related tasks easily. All tools run in your browser with no software installation required.</p>
+                        <div class="bg-blue-50 rounded-lg p-4 mb-4">
+                            <h3 class="text-lg font-semibold text-blue-800 mb-2">How to Start?</h3>
+                            <ol class="list-decimal list-inside text-gray-700 space-y-2">
+                                <li>Open the homepage and select the tool you need</li>
+                                <li>Enter text according to the tool interface prompts</li>
+                                <li>View the results after performing the appropriate operations</li>
+                                <li>Copy or download the processed text as needed</li>
+                            </ol>
+                        </div>
+                        <p class="text-gray-700">All our tools are designed to be simple and user-friendly with clear interfaces that are easy to use even for first-time users.</p>
+                    </div>
+                    
+                    <!-- Tool guides -->
+                    <div id="tools-guide" class="p-6 border-b border-gray-200">
+                        <h2 class="text-2xl font-bold text-gray-900 mb-4">Tool Guides</h2>
+                        
+                        <!-- Character counter tool -->
+                        <div class="mb-8">
+                            <h3 class="text-xl font-semibold text-gray-900 mb-3">Character Counter Tool</h3>
+                            <p class="text-gray-700 mb-4">The character counter tool helps you count characters, words, paragraphs and other information in your text, and provides estimated reading time.</p>
+                            <h4 class="text-lg font-medium text-gray-800 mb-2">Usage Steps:</h4>
+                            <ol class="list-decimal list-inside text-gray-700 mb-4 pl-4 space-y-1">
+                                <li>Visit the character counter tool page</li>
+                                <li>Enter or paste your text in the text box</li>
+                                <li>View real-time statistics including total character count, character count without spaces, word count, paragraph count, etc.</li>
+                                <li>Check the estimated reading time</li>
+                            </ol>
+                            <div class="bg-yellow-50 rounded-lg p-4">
+                                <h4 class="text-lg font-medium text-yellow-800 mb-2">Tip:</h4>
+                                <p class="text-gray-700">Character counting happens in real-time, so you don't need to click any buttons to see the results. If you need to count a large amount of text, you can paste it in and then view the statistics.</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Text comparison tool -->
+                        <div class="mb-8">
+                            <h3 class="text-xl font-semibold text-gray-900 mb-3">Text Comparison Tool</h3>
+                            <p class="text-gray-700 mb-4">The text comparison tool helps you compare two pieces of text, highlighting differences with support for various comparison options and text merging features.</p>
+                            <h4 class="text-lg font-medium text-gray-800 mb-2">Usage Steps:</h4>
+                            <ol class="list-decimal list-inside text-gray-700 mb-4 pl-4 space-y-1">
+                                <li>Visit the text comparison tool page</li>
+                                <li>Enter or paste your original text in the left text box</li>
+                                <li>Enter or paste the text you want to compare in the right text box</li>
+                                <li>Click the "Compare Text" button to start the comparison</li>
+                                <li>View the highlighted differences</li>
+                                <li>Adjust comparison options as needed, such as ignoring case, ignoring whitespace, etc.</li>
+                                <li>If needed, use the merge functionality to integrate both texts</li>
+                            </ol>
+                            <div class="bg-yellow-50 rounded-lg p-4">
+                                <h4 class="text-lg font-medium text-yellow-800 mb-2">Tip:</h4>
+                                <p class="text-gray-700">When comparing longer texts, the system will automatically scroll to the first difference. You can use the "Next Difference" and "Previous Difference" buttons to navigate between different changes.</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Text conversion tool (coming soon) -->
+                        <div class="mb-8">
+                            <h3 class="text-xl font-semibold text-gray-900 mb-3">Text Conversion Tool (Coming Soon)</h3>
+                            <p class="text-gray-700 mb-4">The text conversion tool will provide various functions such as case conversion, simplified/traditional Chinese conversion, line sorting, etc., to help you process text formats quickly.</p>
+                            <div class="bg-gray-100 rounded-lg p-4">
+                                <p class="text-gray-600 italic">This tool is coming soon. Stay tuned!</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Formatting tools (coming soon) -->
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-900 mb-3">Formatting Tools (Coming Soon)</h3>
+                            <p class="text-gray-700 mb-4">We are developing formatting tools that will support JSON, XML, HTML, CSS formatting features, which will be launched soon.</p>
+                            <div class="bg-gray-100 rounded-lg p-4">
+                                <p class="text-gray-600 italic">Follow our updates for the latest tool information!</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Frequently asked questions -->
+                    <div id="faq" class="p-6 border-b border-gray-200">
+                        <h2 class="text-2xl font-bold text-gray-900 mb-4">Frequently Asked Questions (FAQ)</h2>
+                        
+                        <div class="space-y-6">
+                            <!-- Question 1 -->
+                            <div>
+                                <h3 class="text-lg font-semibold text-gray-900 mb-2">Are these tools free to use?</h3>
+                                <p class="text-gray-700">Yes, all tools we provide are free to use with no registration or login required.</p>
+                            </div>
+                            
+                            <!-- Question 2 -->
+                            <div>
+                                <h3 class="text-lg font-semibold text-gray-900 mb-2">Is my text data secure?</h3>
+                                <p class="text-gray-700">All text processing is done in your browser, and data is not transmitted to our servers. You can use our tools with confidence, without worrying about data leakage.</p>
+                            </div>
+                            
+                            <!-- Question 3 -->
+                            <div>
+                                <h3 class="text-lg font-semibold text-gray-900 mb-2">Which languages do the tools support?</h3>
+                                <p class="text-gray-700">Our tools support multiple languages, including Chinese, English, and more. For the character counting tool, it can handle almost all Unicode characters.</p>
+                            </div>
+                            
+                            <!-- Question 4 -->
+                            <div>
+                                <h3 class="text-lg font-semibold text-gray-900 mb-2">Is there a size limit for text?</h3>
+                                <p class="text-gray-700">Since all processing is done in the browser, very large texts may affect performance. We recommend processing text not exceeding 1 million characters at a time. For especially large files, you can process them in batches.</p>
+                            </div>
+                            
+                            <!-- Question 5 -->
+                            <div>
+                                <h3 class="text-lg font-semibold text-gray-900 mb-2">Can I use these tools offline?</h3>
+                                <p class="text-gray-700">Currently, our tools need to be used online. However, we are considering developing application versions that support offline use in the future.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Tips and tricks -->
+                    <div id="tips" class="p-6">
+                        <h2 class="text-2xl font-bold text-gray-900 mb-4">Tips and Tricks</h2>
+                        
+                        <div class="space-y-6">
+                            <!-- Tip 1 -->
+                            <div>
+                                <h3 class="text-lg font-semibold text-gray-900 mb-2">Keyboard Shortcuts</h3>
+                                <p class="text-gray-700 mb-2">Most tools support common keyboard shortcuts, such as:</p>
+                                <ul class="list-disc list-inside text-gray-700 pl-4 space-y-1">
+                                    <li>Ctrl+A: Select all text</li>
+                                    <li>Ctrl+C: Copy selected text</li>
+                                    <li>Ctrl+V: Paste text</li>
+                                    <li>Ctrl+Z: Undo operation</li>
+                                </ul>
+                            </div>
+                            
+                            <!-- Tip 2 -->
+                            <div>
+                                <h3 class="text-lg font-semibold text-gray-900 mb-2">Efficient Use of Character Counter</h3>
+                                <p class="text-gray-700 mb-2">If you need to count multiple segments of text, you can:</p>
+                                <ul class="list-disc list-inside text-gray-700 pl-4 space-y-1">
+                                    <li>Use separators (such as blank lines) to separate different paragraphs for more accurate paragraph counting</li>
+                                    <li>Utilize the real-time statistics feature to see character count changes while editing</li>
+                                    <li>For writing that requires word count control (such as essays, resumes, etc.), count as you write to ensure you don't exceed word limits</li>
+                                </ul>
+                            </div>
+                            
+                            <!-- Tip 3 -->
+                            <div>
+                                <h3 class="text-lg font-semibold text-gray-900 mb-2">Browser Compatibility</h3>
+                                <p class="text-gray-700">For the best experience, we recommend using the latest versions of Chrome, Firefox, Edge, or Safari browsers. Some older browsers may not display or use certain features correctly.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="bg-gray-100 py-8 px-4">
+        <div class="container mx-auto max-w-7xl">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <p class="text-gray-600">© 2023 Text Processing Tools Website</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-600 hover:text-blue-600">About Us</a>
+                    <a href="#" class="text-gray-600 hover:text-blue-600">Terms of Use</a>
+                    <a href="#" class="text-gray-600 hover:text-blue-600">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- JavaScript -->
+    <script src="../js/main.js"></script>
+    <script src="../js/navigation.js"></script>
+    <script src="../js/language.js"></script>
+</body>
+</html> 

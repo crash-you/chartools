@@ -10,11 +10,11 @@
 
 ### 已实现功能
 - **字符计数**：实时统计字符、单词、句子数量，分类计数与阅读时间估算
+- **文本比较**：对比两段文本，高亮显示差异，支持多种对比选项和文本合并功能
 
 ### 计划实现功能
 - **文本转换**：大小写转换、简繁体转换、行排序等功能
 - **格式化工具**：JSON、XML、HTML、CSS格式化
-- **文本比较**：对比两段文本，高亮显示差异
 - **更多工具**将陆续开发中...
 
 ## 技术栈
@@ -24,17 +24,21 @@
 - **响应式设计**：适配各种设备屏幕
 - **多语言支持**：中英文界面切换
 - **无后端依赖**：纯前端实现，所有处理在浏览器端完成
+- **Google Analytics**：访问数据统计
 
 ## 项目结构
 
 ```
 /
 ├── index.html                 # 首页
+├── help.html                  # 帮助中心页面
 ├── en/                        # 英文版网站
 │   ├── index.html             # 英文首页
+│   ├── help.html              # 英文帮助中心
 │   └── tools/                 # 英文工具页面
 ├── tools/                     # 工具页面
-│   └── text-counter.html      # 字符计数工具
+│   ├── text-counter.html      # 字符计数工具
+│   └── text-comparison.html   # 文本比较工具
 ├── css/
 │   └── custom.css             # 自定义样式
 ├── js/
@@ -42,6 +46,8 @@
 │   ├── navigation.js          # 导航组件功能
 │   ├── language.js            # 语言切换功能
 │   └── tools/                 # 工具相关功能
+├── design.md                  # 设计文档
+├── idea.md                    # 功能构想文档
 └── README.md                  # 项目说明文档
 ```
 
@@ -69,7 +75,7 @@
 
 ### 在线使用
 
-访问网站: [文字处理工具网站](https://yourdomain.com)
+访问网站: [文字处理工具网站](https://tools-words.netlify.app)
 
 ## 贡献指南
 
@@ -88,11 +94,11 @@
 ## 联系方式
 
 - 项目维护者: [您的名字](mailto:your.email@example.com)
-- 项目网站: [https://yourdomain.com](https://yourdomain.com)
+- 项目网站: [https://tools-words.netlify.app](https://tools-words.netlify.app)
 
 ---
 
-© 2023 文字处理工具网站 
+© 2023 文字处理工具网站
 
 文字处理工具网站已创建成功
 README.md文件已创建完成，包含了项目简介、功能特性、技术栈、目录结构、使用说明和贡献指南等内容。您可以根据实际情况修改以下内容：

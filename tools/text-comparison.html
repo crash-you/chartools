@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>文本比较 - 文字处理工具网站</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="../css/custom.css" rel="stylesheet">
+    <meta name="description" content="在线对比两段文本的差异，高亮显示不同部分，支持合并文本，跨语言文本比较">
+    <meta name="keywords" content="文本比较,文本对比,差异对比,文本合并,文字工具">
+    <link rel="alternate" hreflang="zh-CN" href="text-comparison.html">
+    <link rel="alternate" hreflang="en" href="../en/tools/text-comparison.html">
+    <link rel="alternate" hreflang="x-default" href="text-comparison.html">
+</head>
+<body class="bg-white text-gray-800 min-h-screen flex flex-col">
+    <!-- 导航栏 -->
+    <nav id="navigation" class="fixed top-0 w-full bg-white bg-opacity-80 backdrop-blur-md shadow-sm z-50">
+        <div class="container mx-auto max-w-7xl px-4">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="../index.html" class="text-2xl font-semibold text-gray-900">文字工具</a>
+                </div>
+                
+                <!-- 主导航 (桌面版) -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="../index.html#" class="text-gray-700 hover:text-blue-600">功能</a>
+                    <a href="../index.html#tools" class="text-gray-700 hover:text-blue-600">工具</a>
+                    <a href="../help.html" class="text-gray-700 hover:text-blue-600">帮助</a>
+                </div>
+                
+                <!-- 右侧选项 -->
+                <div class="flex items-center space-x-4">
+                    <!-- 语言切换按钮 -->
+                    <div class="relative language-selector">
+                        <button id="language-button" class="flex items-center space-x-1 p-2 rounded-md hover:bg-gray-100 transition">
+                            <span id="current-language">中文</span>
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div id="language-dropdown" class="absolute right-0 mt-2 w-32 bg-white rounded-md shadow-lg hidden z-10">
+                            <a href="text-comparison.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-100" data-lang="zh-CN">中文</a>
+                            <a href="../en/tools/text-comparison.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-100" data-lang="en">English</a>
+                        </div>
+                    </div>
+                    
+                    <!-- 移动端菜单按钮 -->
+                    <button id="mobile-menu-button" class="md:hidden p-2 rounded-md hover:bg-gray-100">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- 移动端菜单 -->
+            <div id="mobile-menu" class="md:hidden hidden pb-4">
+                <div class="flex flex-col space-y-4">
+                    <a href="../index.html#" class="text-gray-700 hover:text-blue-600">功能</a>
+                    <a href="../index.html#tools" class="text-gray-700 hover:text-blue-600">工具</a>
+                    <a href="../help.html" class="text-gray-700 hover:text-blue-600">帮助</a>
+                    <div class="pt-2 border-t border-gray-200">
+                        <p class="text-sm text-gray-600 mb-1">选择语言</p>
+                        <a href="text-comparison.html" class="block py-1 text-gray-700 hover:text-blue-600" data-lang="zh-CN">中文</a>
+                        <a href="../en/tools/text-comparison.html" class="block py-1 text-gray-700 hover:text-blue-600" data-lang="en">English</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- 主内容区 -->
+    <main class="flex-grow pt-16">
+        <div class="container mx-auto max-w-7xl px-4 py-8">
+            <!-- 页面标题 -->
+            <div class="mb-8">
+                <h1 class="text-3xl font-bold text-gray-900">文本比较工具</h1>
+                <p class="mt-2 text-gray-600">对比两段文本的差异，高亮显示不同部分，支持合并文本功能。</p>
+            </div>
+            
+            <!-- 选项区域 -->
+            <div class="mb-6 bg-white rounded-xl shadow-md p-6">
+                <h2 class="text-xl font-semibold text-gray-900 mb-4">比较选项</h2>
+                <div class="flex flex-wrap gap-4">
+                    <div class="flex items-center">
+                        <input type="checkbox" id="ignore-case" class="w-4 h-4 text-blue-600 rounded">
+                        <label for="ignore-case" class="ml-2 text-gray-700">忽略大小写</label>
+                    </div>
+                    <div class="flex items-center">
+                        <input type="checkbox" id="ignore-whitespace" class="w-4 h-4 text-blue-600 rounded">
+                        <label for="ignore-whitespace" class="ml-2 text-gray-700">忽略空白字符</label>
+                    </div>
+                    <div class="flex items-center">
+                        <input type="checkbox" id="word-level" class="w-4 h-4 text-blue-600 rounded">
+                        <label for="word-level" class="ml-2 text-gray-700">单词级别比较</label>
+                    </div>
+                    <div class="flex items-center">
+                        <input type="checkbox" id="line-level" class="w-4 h-4 text-blue-600 rounded" checked>
+                        <label for="line-level" class="ml-2 text-gray-700">行级别比较</label>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 输入和结果区域 -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                <!-- 左侧文本 -->
+                <div class="bg-white rounded-xl shadow-md p-6">
+                    <h2 class="text-xl font-semibold text-gray-900 mb-4">原始文本</h2>
+                    <div class="mb-4">
+                        <textarea 
+                            id="text-original" 
+                            class="w-full h-64 p-4 bg-gray-50 text-gray-900 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-y"
+                            placeholder="在此输入或粘贴第一段文本..."
+                        ></textarea>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <button id="clear-original" class="px-3 py-1 bg-gray-200 text-gray-800 rounded-lg hover:bg-gray-300 transition-colors text-sm">
+                            清空
+                        </button>
+                        <button id="sample-original" class="px-3 py-1 bg-blue-100 text-blue-700 rounded-lg hover:bg-blue-200 transition-colors text-sm">
+                            插入示例
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- 右侧文本 -->
+                <div class="bg-white rounded-xl shadow-md p-6">
+                    <h2 class="text-xl font-semibold text-gray-900 mb-4">修改后文本</h2>
+                    <div class="mb-4">
+                        <textarea 
+                            id="text-modified" 
+                            class="w-full h-64 p-4 bg-gray-50 text-gray-900 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-y"
+                            placeholder="在此输入或粘贴第二段文本..."
+                        ></textarea>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <button id="clear-modified" class="px-3 py-1 bg-gray-200 text-gray-800 rounded-lg hover:bg-gray-300 transition-colors text-sm">
+                            清空
+                        </button>
+                        <button id="sample-modified" class="px-3 py-1 bg-blue-100 text-blue-700 rounded-lg hover:bg-blue-200 transition-colors text-sm">
+                            插入示例
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 操作按钮 -->
+            <div class="flex justify-center my-8">
+                <button id="compare-button" class="px-6 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors">
+                    比较文本
+                </button>
+            </div>
+            
+            <!-- 比较结果 -->
+            <div id="result-container" class="bg-white rounded-xl shadow-md p-6 mb-8 hidden">
+                <h2 class="text-xl font-semibold text-gray-900 mb-4">比较结果</h2>
+                
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                    <!-- 差异摘要 -->
+                    <div class="lg:col-span-2">
+                        <div class="p-4 bg-gray-50 rounded-lg">
+                            <h3 class="text-lg font-medium text-gray-800 mb-2">差异摘要</h3>
+                            <div id="diff-summary" class="text-gray-700">
+                                <!-- 这里将显示差异摘要 -->
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 左侧文本差异 -->
+                    <div>
+                        <h3 class="text-lg font-medium text-gray-800 mb-2">原始文本差异</h3>
+                        <div id="diff-original" class="p-4 bg-gray-50 rounded-lg overflow-x-auto max-h-80">
+                            <!-- 这里将显示原始文本差异 -->
+                        </div>
+                    </div>
+                    
+                    <!-- 右侧文本差异 -->
+                    <div>
+                        <h3 class="text-lg font-medium text-gray-800 mb-2">修改后文本差异</h3>
+                        <div id="diff-modified" class="p-4 bg-gray-50 rounded-lg overflow-x-auto max-h-80">
+                            <!-- 这里将显示修改后文本差异 -->
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 合并选项 -->
+                <div class="mt-8">
+                    <h3 class="text-lg font-medium text-gray-800 mb-4">合并文本</h3>
+                    <div class="flex flex-wrap gap-4 mb-4">
+                        <button id="merge-left" class="px-4 py-2 bg-blue-100 text-blue-700 rounded-lg hover:bg-blue-200 transition-colors">
+                            合并到原始文本
+                        </button>
+                        <button id="merge-right" class="px-4 py-2 bg-blue-100 text-blue-700 rounded-lg hover:bg-blue-200 transition-colors">
+                            合并到修改后文本
+                        </button>
+                        <button id="merge-both" class="px-4 py-2 bg-green-100 text-green-700 rounded-lg hover:bg-green-200 transition-colors">
+                            创建合并文本
+                        </button>
+                    </div>
+                    
+                    <div id="merged-text-container" class="mt-4 hidden">
+                        <textarea 
+                            id="merged-text" 
+                            class="w-full h-40 p-4 bg-gray-50 text-gray-900 rounded-lg border border-gray-300 resize-y"
+                            readonly
+                        ></textarea>
+                        <div class="mt-2">
+                            <button id="copy-merged" class="px-3 py-1 bg-gray-200 text-gray-800 rounded-lg hover:bg-gray-300 transition-colors text-sm">
+                                复制合并文本
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <!-- 页脚 -->
+    <footer class="bg-gray-100 py-8 px-4 mt-8">
+        <div class="container mx-auto max-w-7xl">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <p class="text-gray-600">© 2023 文字处理工具网站</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-600 hover:text-blue-600">关于我们</a>
+                    <a href="#" class="text-gray-600 hover:text-blue-600">使用条款</a>
+                    <a href="#" class="text-gray-600 hover:text-blue-600">隐私政策</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- JavaScript -->
+    <script src="../js/main.js"></script>
+    <script src="../js/navigation.js"></script>
+    <script src="../js/language.js"></script>
+    <script src="../js/tools/text-comparison.js"></script>
+</body>
+</html> 

@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>帮助中心 - 文字处理工具网站</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
+    <meta name="description" content="文字处理工具网站帮助中心，提供各种工具使用指南、常见问题解答和使用技巧">
+    <meta name="keywords" content="文字工具,帮助文档,常见问题,使用教程,文本处理">
+    <link rel="alternate" hreflang="zh-CN" href="help.html">
+    <link rel="alternate" hreflang="en" href="en/help.html">
+    <link rel="alternate" hreflang="x-default" href="help.html">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-32ZXK1J41J"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-32ZXK1J41J');
+    </script>
+</head>
+<body class="bg-white text-gray-800 min-h-screen flex flex-col">
+    <!-- 导航栏 -->
+    <nav id="navigation" class="fixed top-0 w-full bg-white bg-opacity-80 backdrop-blur-md shadow-sm z-50">
+        <div class="container mx-auto max-w-7xl px-4">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="index.html" class="text-2xl font-semibold text-gray-900">文字工具</a>
+                </div>
+                
+                <!-- 主导航 (桌面版) -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html#" class="text-gray-700 hover:text-blue-600">功能</a>
+                    <a href="index.html#tools" class="text-gray-700 hover:text-blue-600">工具</a>
+                    <a href="help.html" class="text-blue-600">帮助</a>
+                </div>
+                
+                <!-- 右侧选项 -->
+                <div class="flex items-center space-x-4">
+                    <!-- 语言切换按钮 -->
+                    <div class="relative language-selector">
+                        <button id="language-button" class="flex items-center space-x-1 p-2 rounded-md hover:bg-gray-100 transition">
+                            <span id="current-language">中文</span>
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div id="language-dropdown" class="absolute right-0 mt-2 w-32 bg-white rounded-md shadow-lg hidden z-10">
+                            <a href="help.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-100" data-lang="zh-CN">中文</a>
+                            <a href="en/help.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-100" data-lang="en">English</a>
+                        </div>
+                    </div>
+                    
+                    <!-- 移动端菜单按钮 -->
+                    <button id="mobile-menu-button" class="md:hidden p-2 rounded-md hover:bg-gray-100">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- 移动端菜单 -->
+            <div id="mobile-menu" class="md:hidden hidden pb-4">
+                <div class="flex flex-col space-y-4">
+                    <a href="index.html#" class="text-gray-700 hover:text-blue-600">功能</a>
+                    <a href="index.html#tools" class="text-gray-700 hover:text-blue-600">工具</a>
+                    <a href="help.html" class="text-blue-600">帮助</a>
+                    <div class="pt-2 border-t border-gray-200">
+                        <p class="text-sm text-gray-600 mb-1">选择语言</p>
+                        <a href="help.html" class="block py-1 text-gray-700 hover:text-blue-600" data-lang="zh-CN">中文</a>
+                        <a href="en/help.html" class="block py-1 text-gray-700 hover:text-blue-600" data-lang="en">English</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- 主内容区 -->
+    <main class="flex-grow pt-16">
+        <!-- 帮助中心标题 -->
+        <section class="py-12 md:py-16 px-4 bg-gradient-to-br from-blue-50 to-indigo-50">
+            <div class="container mx-auto max-w-7xl">
+                <div class="flex flex-col items-center text-center">
+                    <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">帮助中心</h1>
+                    <p class="text-xl text-gray-600 mb-8 max-w-3xl">欢迎使用我们的文字处理工具网站，在这里您可以找到所有工具的使用指南和常见问题解答。</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 帮助内容 -->
+        <section class="py-16 px-4 bg-white">
+            <div class="container mx-auto max-w-4xl">
+                <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                    <!-- 目录导航 -->
+                    <div class="p-6 bg-gray-50 border-b border-gray-200">
+                        <h2 class="text-2xl font-bold text-gray-900 mb-4">目录</h2>
+                        <ul class="space-y-2">
+                            <li>
+                                <a href="#getting-started" class="text-blue-600 hover:underline">开始使用</a>
+                            </li>
+                            <li>
+                                <a href="#tools-guide" class="text-blue-600 hover:underline">工具使用指南</a>
+                            </li>
+                            <li>
+                                <a href="#faq" class="text-blue-600 hover:underline">常见问题解答</a>
+                            </li>
+                            <li>
+                                <a href="#tips" class="text-blue-600 hover:underline">使用技巧</a>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <!-- 开始使用 -->
+                    <div id="getting-started" class="p-6 border-b border-gray-200">
+                        <h2 class="text-2xl font-bold text-gray-900 mb-4">开始使用</h2>
+                        <p class="text-gray-700 mb-4">文字处理工具网站提供多种文本处理功能，让您轻松处理各种文字相关任务。所有工具都在浏览器中运行，无需安装任何软件。</p>
+                        <div class="bg-blue-50 rounded-lg p-4 mb-4">
+                            <h3 class="text-lg font-semibold text-blue-800 mb-2">如何开始？</h3>
+                            <ol class="list-decimal list-inside text-gray-700 space-y-2">
+                                <li>打开首页，选择您需要的工具</li>
+                                <li>根据工具界面提示输入文本</li>
+                                <li>进行相应操作后查看结果</li>
+                                <li>根据需要复制或下载处理后的文本</li>
+                            </ol>
+                        </div>
+                        <p class="text-gray-700">我们的所有工具都设计得简单易用，界面清晰直观，即使是第一次使用也能快速上手。</p>
+                    </div>
+                    
+                    <!-- 工具使用指南 -->
+                    <div id="tools-guide" class="p-6 border-b border-gray-200">
+                        <h2 class="text-2xl font-bold text-gray-900 mb-4">工具使用指南</h2>
+                        
+                        <!-- 字符计数工具 -->
+                        <div class="mb-8">
+                            <h3 class="text-xl font-semibold text-gray-900 mb-3">字符计数工具</h3>
+                            <p class="text-gray-700 mb-4">字符计数工具可以帮助您统计文本中的字符数、单词数、段落数等信息，并提供阅读时间估算。</p>
+                            <h4 class="text-lg font-medium text-gray-800 mb-2">使用步骤：</h4>
+                            <ol class="list-decimal list-inside text-gray-700 mb-4 pl-4 space-y-1">
+                                <li>访问字符计数工具页面</li>
+                                <li>在文本框中输入或粘贴您需要统计的文本</li>
+                                <li>实时查看统计结果，包括总字符数、不计空格的字符数、单词数、段落数等</li>
+                                <li>查看估算的阅读时间</li>
+                            </ol>
+                            <div class="bg-yellow-50 rounded-lg p-4">
+                                <h4 class="text-lg font-medium text-yellow-800 mb-2">提示：</h4>
+                                <p class="text-gray-700">字符计数是实时进行的，您无需点击任何按钮即可看到结果。如果您需要统计大量文本，可以先将文本粘贴进来，然后进行查看。</p>
+                            </div>
+                        </div>
+                        
+                        <!-- 文本比较工具 -->
+                        <div class="mb-8">
+                            <h3 class="text-xl font-semibold text-gray-900 mb-3">文本比较工具</h3>
+                            <p class="text-gray-700 mb-4">文本比较工具可以帮助您对比两段文本，高亮显示差异，支持多种对比选项和文本合并功能。</p>
+                            <h4 class="text-lg font-medium text-gray-800 mb-2">使用步骤：</h4>
+                            <ol class="list-decimal list-inside text-gray-700 mb-4 pl-4 space-y-1">
+                                <li>访问文本比较工具页面</li>
+                                <li>在左侧文本框中输入或粘贴原始文本</li>
+                                <li>在右侧文本框中输入或粘贴需要比较的文本</li>
+                                <li>点击"比较文本"按钮开始对比</li>
+                                <li>查看高亮显示的差异部分</li>
+                                <li>可以根据需要调整比较选项，如忽略大小写、忽略空白字符等</li>
+                                <li>如果需要，可以使用合并功能将两段文本整合</li>
+                            </ol>
+                            <div class="bg-yellow-50 rounded-lg p-4">
+                                <h4 class="text-lg font-medium text-yellow-800 mb-2">提示：</h4>
+                                <p class="text-gray-700">当比较较长文本时，系统会自动滚动到第一处差异位置。您可以使用"下一处差异"和"上一处差异"按钮在不同差异之间导航。</p>
+                            </div>
+                        </div>
+                        
+                        <!-- 文本转换工具 (即将推出) -->
+                        <div class="mb-8">
+                            <h3 class="text-xl font-semibold text-gray-900 mb-3">文本转换工具 (即将推出)</h3>
+                            <p class="text-gray-700 mb-4">文本转换工具将提供大小写转换、简繁体转换、行排序等多种功能，帮助您快速处理文本格式。</p>
+                            <div class="bg-gray-100 rounded-lg p-4">
+                                <p class="text-gray-600 italic">该工具即将推出，敬请期待！</p>
+                            </div>
+                        </div>
+                        
+                        <!-- 格式化工具 (即将推出) -->
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-900 mb-3">格式化工具 (即将推出)</h3>
+                            <p class="text-gray-700 mb-4">我们正在开发格式化工具，将支持JSON、XML、HTML、CSS等格式化功能，将在近期推出。</p>
+                            <div class="bg-gray-100 rounded-lg p-4">
+                                <p class="text-gray-600 italic">关注我们的更新，获取最新工具信息！</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 常见问题解答 -->
+                    <div id="faq" class="p-6 border-b border-gray-200">
+                        <h2 class="text-2xl font-bold text-gray-900 mb-4">常见问题解答 (FAQ)</h2>
+                        
+                        <div class="space-y-6">
+                            <!-- 问题1 -->
+                            <div>
+                                <h3 class="text-lg font-semibold text-gray-900 mb-2">这些工具是免费使用的吗？</h3>
+                                <p class="text-gray-700">是的，我们提供的所有工具均可免费使用，无需注册或登录。</p>
+                            </div>
+                            
+                            <!-- 问题2 -->
+                            <div>
+                                <h3 class="text-lg font-semibold text-gray-900 mb-2">我的文本数据安全吗？</h3>
+                                <p class="text-gray-700">所有文本处理都在您的浏览器中完成，数据不会传输到我们的服务器。您可以放心使用，不用担心数据泄露。</p>
+                            </div>
+                            
+                            <!-- 问题3 -->
+                            <div>
+                                <h3 class="text-lg font-semibold text-gray-900 mb-2">工具支持哪些语言的文字？</h3>
+                                <p class="text-gray-700">我们的工具支持多种语言，包括中文、英文等。对于字符计数工具，它可以处理几乎所有Unicode字符。</p>
+                            </div>
+                            
+                            <!-- 问题4 -->
+                            <div>
+                                <h3 class="text-lg font-semibold text-gray-900 mb-2">文本有大小限制吗？</h3>
+                                <p class="text-gray-700">由于所有处理都在浏览器中进行，过大的文本可能会影响性能。我们建议一次处理的文本不超过100万字符。对于特别大的文件，您可以分批处理。</p>
+                            </div>
+                            
+                            <!-- 问题5 -->
+                            <div>
+                                <h3 class="text-lg font-semibold text-gray-900 mb-2">我可以离线使用这些工具吗？</h3>
+                                <p class="text-gray-700">目前我们的工具需要在线使用。不过，我们正在考虑开发支持离线使用的应用版本，敬请期待。</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 使用技巧 -->
+                    <div id="tips" class="p-6">
+                        <h2 class="text-2xl font-bold text-gray-900 mb-4">使用技巧</h2>
+                        
+                        <div class="space-y-6">
+                            <!-- 技巧1 -->
+                            <div>
+                                <h3 class="text-lg font-semibold text-gray-900 mb-2">快捷键使用</h3>
+                                <p class="text-gray-700 mb-2">大多数工具支持常见的键盘快捷键，例如：</p>
+                                <ul class="list-disc list-inside text-gray-700 pl-4 space-y-1">
+                                    <li>Ctrl+A：全选文本</li>
+                                    <li>Ctrl+C：复制选中文本</li>
+                                    <li>Ctrl+V：粘贴文本</li>
+                                    <li>Ctrl+Z：撤销操作</li>
+                                </ul>
+                            </div>
+                            
+                            <!-- 技巧2 -->
+                            <div>
+                                <h3 class="text-lg font-semibold text-gray-900 mb-2">高效使用字符计数工具</h3>
+                                <p class="text-gray-700 mb-2">如果您需要统计多段文字，可以：</p>
+                                <ul class="list-disc list-inside text-gray-700 pl-4 space-y-1">
+                                    <li>使用分隔符（如空行）分隔不同段落，以获得更准确的段落计数</li>
+                                    <li>利用实时统计功能，可以边编辑边查看字数变化</li>
+                                    <li>对于需要控制字数的写作（如论文、简历等），可以边写边统计，确保不超过字数限制</li>
+                                </ul>
+                            </div>
+                            
+                            <!-- 技巧3 -->
+                            <div>
+                                <h3 class="text-lg font-semibold text-gray-900 mb-2">浏览器兼容性</h3>
+                                <p class="text-gray-700">为获得最佳体验，我们建议使用最新版本的Chrome、Firefox、Edge或Safari浏览器。某些旧版浏览器可能无法正常显示或使用某些功能。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- 页脚 -->
+    <footer class="bg-gray-100 py-8 px-4">
+        <div class="container mx-auto max-w-7xl">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <p class="text-gray-600">© 2023 文字处理工具网站</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-600 hover:text-blue-600">关于我们</a>
+                    <a href="#" class="text-gray-600 hover:text-blue-600">使用条款</a>
+                    <a href="#" class="text-gray-600 hover:text-blue-600">隐私政策</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/language.js"></script>
+</body>
+</html> 
