@@ -1,0 +1,56 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+# 开发指南
+
+本文档提供项目开发和贡献指南，帮助开发者理解项目架构和参与开发。
+
+## 项目架构
+
+项目采用纯前端架构，所有处理均在浏览器端完成：
+
+- HTML 页面：提供用户界面和基本结构
+- CSS 样式：基于 TailwindCSS 进行样式设计
+- JavaScript 脚本：实现各种文本处理功能
+
+主要设计思想记录在 [design.md](mdc:design.md) 文件中，功能规划记录在 [idea.md](mdc:idea.md) 文件中。
+
+## 添加新工具
+
+如需添加新工具，请按照以下步骤操作：
+
+1. 在 `tools/` 目录创建工具页面 HTML 文件
+2. 在 `en/tools/` 目录创建对应的英文版页面
+3. 在 `js/tools/` 目录下创建相应的 JavaScript 功能实现
+4. 在首页 [index.html](mdc:index.html) 和英文版首页 [en/index.html](mdc:en/index.html) 添加工具链接
+5. 如需要，在 `css/custom.css` 中添加特定样式
+
+## 多语言支持
+
+添加或修改功能时，请确保同时更新中英文版本：
+
+- 中文版主页：[index.html](mdc:index.html)
+- 英文版主页：[en/index.html](mdc:en/index.html)
+- 语言切换功能：[js/language.js](mdc:js/language.js)
+
+## 测试指南
+
+在提交代码前，请确保：
+
+1. 在不同浏览器中测试功能（至少包括 Chrome、Firefox、Safari）
+2. 在不同设备上测试响应式布局（桌面端、平板、手机）
+3. 功能保持一致性，避免不同语言版本间的差异
+4. 遵循无障碍设计原则
+
+## 代码提交
+
+提交代码时，请遵循以下规范：
+
+1. 确保代码风格符合项目规范
+2. 提供清晰的提交信息，说明修改内容
+3. 如果解决了特定问题，请在提交信息中注明
+4. 较大的功能更新请先创建分支，完成后通过 Pull Request 合并
+
+

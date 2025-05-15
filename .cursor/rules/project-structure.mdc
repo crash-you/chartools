@@ -1,0 +1,32 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+# 项目结构
+
+本项目是一个文字处理工具网站，提供多种文本处理功能。网站支持中英文双语界面，采用纯前端实现。
+
+## 主要文件结构
+
+- [index.html](mdc:index.html)：中文版首页
+- [help.html](mdc:help.html)：中文版帮助页面
+- [en/index.html](mdc:en/index.html)：英文版首页
+- [en/help.html](mdc:en/help.html)：英文版帮助页面
+- [tools/](mdc:tools)：中文版工具页面目录
+  - [tools/text-counter.html](mdc:tools/text-counter.html)：字符计数工具
+  - [tools/text-comparison.html](mdc:tools/text-comparison.html)：文本比较工具
+- [en/tools/](mdc:en/tools)：英文版工具页面目录
+- [js/](mdc:js)：JavaScript文件目录
+  - [js/main.js](mdc:js/main.js)：主要JavaScript功能
+  - [js/navigation.js](mdc:js/navigation.js)：导航功能
+  - [js/language.js](mdc:js/language.js)：语言切换功能
+  - [js/tools/](mdc:js/tools)：工具相关JavaScript
+    - [js/tools/text-counter.js](mdc:js/tools/text-counter.js)：字符计数工具功能
+    - [js/tools/text-comparison.js](mdc:js/tools/text-comparison.js)：文本比较工具功能
+- [css/](mdc:css)：样式文件目录
+
+项目采用TailwindCSS进行样式设计，所有处理均在浏览器端完成，无后端依赖。
+
+
+

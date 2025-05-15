@@ -1,0 +1,50 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+# 代码规范
+
+本项目采用以下代码规范和风格指南：
+
+## HTML 规范
+
+- 使用 HTML5 标准
+- 文档类型声明使用 `<!DOCTYPE html>`
+- 使用语义化标签（header, nav, main, section, footer等）
+- 遵循无障碍设计原则
+- 多语言支持使用 `lang` 属性和 `hreflang` 标记
+
+## CSS 规范
+
+- 主要使用 TailwindCSS 进行样式设计
+- 自定义样式存放在 [css/custom.css](mdc:css/custom.css)
+- 采用响应式设计，适配不同设备屏幕
+- 使用渐进增强策略，确保基本功能在不支持新特性的浏览器中仍能使用
+
+## JavaScript 规范
+
+- 使用 ES6+ 语法
+- 避免全局变量污染，使用模块化组织代码
+- 功能按文件拆分，保持单一职责原则
+- 主要功能：
+  - [js/main.js](mdc:js/main.js)：通用功能
+  - [js/navigation.js](mdc:js/navigation.js)：导航相关功能
+  - [js/language.js](mdc:js/language.js)：语言切换功能
+  - 工具特定功能位于 [js/tools/](mdc:js/tools) 目录下
+
+## 多语言支持
+
+- 中文版作为默认版本
+- 英文版放置在 [en/](mdc:en) 目录下
+- 所有用户界面文本需要支持中英文双语
+- 语言切换通过 [js/language.js](mdc:js/language.js) 实现
+
+## 命名规范
+
+- 文件名使用小写字母，多个单词用连字符 `-` 连接
+- HTML 元素 id 和 class 名称使用有意义的英文命名
+- JavaScript 变量和函数使用驼峰命名法
+- 常量使用全大写字母，单词间用下划线 `_` 连接
+
+

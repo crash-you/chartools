@@ -1,0 +1,35 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+# 工具功能说明
+
+本网站提供多种文字处理工具，目前已实现以下功能：
+
+## 字符计数工具
+
+字符计数工具提供文本统计分析功能，位于 [tools/text-counter.html](mdc:tools/text-counter.html)，其核心功能由 [js/tools/text-counter.js](mdc:js/tools/text-counter.js) 实现。
+
+主要功能：
+- 实时统计字符、单词、句子数量
+- 提供中英文字符分类计数
+- 估算文本阅读时间
+- 支持剔除空格、换行符等特殊字符的统计
+
+## 文本比较工具
+
+文本比较工具用于对比两段文本的差异，位于 [tools/text-comparison.html](mdc:tools/text-comparison.html)，其核心功能由 [js/tools/text-comparison.js](mdc:js/tools/text-comparison.js) 实现。
+
+主要功能：
+- 对比两段文本并高亮显示差异
+- 支持多种对比选项（忽略大小写、忽略空格等）
+- 提供文本合并功能
+- 可视化展示差异结果
+
+## 计划实现功能
+
+以下功能计划在后续版本中实现：
+- 文本转换（大小写转换、简繁体转换、行排序等）
+
+- 格式化工具（JSON、XML、HTML、CSS格式化）
