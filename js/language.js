@@ -56,6 +56,15 @@ function detectBrowserLanguage() {
         return;
     }
     
+    // 爬虫与一次性重定向保护
+    const userAgent = navigator.userAgent || '';
+    const isBot = /Googlebot|Bingbot|DuckDuckBot|Yandex|Baiduspider|Sogou|Slurp|SemrushBot|AhrefsBot|MJ12bot|DotBot|PetalBot/i.test(userAgent);
+    if (isBot) {
+        return;
+    }
+    if (sessionStorage.getItem('autoLangRedirectDone') === '1') {
+        return;
+    }
     // 检测浏览器语言
     const browserLang = navigator.language || navigator.userLanguage;
     
@@ -65,13 +74,15 @@ function detectBrowserLanguage() {
         if (!window.location.pathname.includes('/en/')) {
             return;
         }
+        sessionStorage.setItem('autoLangRedirectDone', '1');
         window.location.href = window.location.href.replace('/en/', '/');
     } else {
         // 如果浏览器语言不是中文，且用户不在英文页面，则重定向到英文版
-        if (!window.location.pathname.includes('/en/') && !window.location.pathname.endsWith('/')) {
+        if (!window.location.pathname.includes('/en/')) {
             const path = window.location.pathname;
             const baseUrl = window.location.origin;
             const newPath = path.replace(/^\//, '/en/');
+            sessionStorage.setItem('autoLangRedirectDone', '1');
             window.location.href = baseUrl + newPath;
         }
     }

@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>帮助中心 - 文字处理工具网站</title>
+    <meta name="robots" content="index,follow,max-image-preview:large">
+    <meta property="og:image" content="https://chartools.art/img/og/og-zh.svg">
+    <meta property="og:image:alt" content="文字处理工具网站 OG 图">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link href="css/custom.css" rel="stylesheet">
     <meta name="description" content="文字处理工具网站帮助中心，提供各种工具使用指南、常见问题解答和使用技巧">
@@ -11,6 +14,7 @@
     <link rel="alternate" hreflang="zh-CN" href="help.html">
     <link rel="alternate" hreflang="en" href="en/help.html">
     <link rel="alternate" hreflang="x-default" href="help.html">
+    <link rel="canonical" href="https://chartools.art/help.html">
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-32ZXK1J41J"></script>
     <script>
@@ -20,8 +24,7 @@
 
       gtag('config', 'G-32ZXK1J41J');
     </script>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4770465793767896"
-     crossorigin="anonymous"></script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4770465793767896" crossorigin="anonymous"></script>
 </head>
 <body class="bg-white text-gray-800 min-h-screen flex flex-col">
     <!-- 导航栏 -->
@@ -38,6 +41,7 @@
                     <a href="index.html#" class="text-gray-700 hover:text-blue-600">功能</a>
                     <a href="index.html#tools" class="text-gray-700 hover:text-blue-600">工具</a>
                     <a href="help.html" class="text-blue-600">帮助</a>
+                    <a href="articles/index.html" class="text-gray-700 hover:text-blue-600">指南</a>
                 </div>
                 
                 <!-- 右侧选项 -->
@@ -71,6 +75,7 @@
                     <a href="index.html#" class="text-gray-700 hover:text-blue-600">功能</a>
                     <a href="index.html#tools" class="text-gray-700 hover:text-blue-600">工具</a>
                     <a href="help.html" class="text-blue-600">帮助</a>
+                    <a href="articles/index.html" class="text-gray-700 hover:text-blue-600">指南</a>
                     <div class="pt-2 border-t border-gray-200">
                         <p class="text-sm text-gray-600 mb-1">选择语言</p>
                         <a href="help.html" class="block py-1 text-gray-700 hover:text-blue-600" data-lang="zh-CN">中文</a>
@@ -173,21 +178,43 @@
                             </div>
                         </div>
                         
-                        <!-- 文本转换工具 (即将推出) -->
+                        <!-- 文本转换工具 -->
                         <div class="mb-8">
-                            <h3 class="text-xl font-semibold text-gray-900 mb-3">文本转换工具 (即将推出)</h3>
-                            <p class="text-gray-700 mb-4">文本转换工具将提供大小写转换、简繁体转换、行排序等多种功能，帮助您快速处理文本格式。</p>
-                            <div class="bg-gray-100 rounded-lg p-4">
-                                <p class="text-gray-600 italic">该工具即将推出，敬请期待！</p>
+                            <h3 class="text-xl font-semibold text-gray-900 mb-3">文本转换工具</h3>
+                            <p class="text-gray-700 mb-4">支持大小写转换、简繁体转换、行处理、空白处理、全角/半角等常用文本转换操作，帮助您快速规范文本格式。</p>
+                            <h4 class="text-lg font-medium text-gray-800 mb-2">使用步骤：</h4>
+                            <ol class="list-decimal list-inside text-gray-700 mb-4 pl-4 space-y-1">
+                                <li>打开 <a href="tools/text-conversion.html" class="text-blue-600 hover:underline">文本转换工具页面</a></li>
+                                <li>在左侧输入框输入或粘贴文本</li>
+                                <li>在右侧选择需要的转换操作（如转大写、转简体、升序排序等）</li>
+                                <li>如需保存结果，点击“复制文本”复制处理后的内容</li>
+                            </ol>
+                            <h4 class="text-lg font-medium text-gray-800 mb-2">功能说明：</h4>
+                            <ul class="list-disc list-inside text-gray-700 mb-4 pl-4 space-y-1">
+                                <li><strong>大小写</strong>：转大写、转小写、标题化、大小写互换</li>
+                                <li><strong>简繁体</strong>：转简体、转繁体（首次使用会自动加载转换库）</li>
+                                <li><strong>行处理</strong>：升序/降序排序、去重、反转行、裁剪每行、移除空行</li>
+                                <li><strong>空白处理</strong>：裁剪首尾、合并多空格、Tab→空格、移除多余空白行</li>
+                                <li><strong>全角/半角</strong>：ASCII 字符全角与半角互转</li>
+                            </ul>
+                            <div class="bg-yellow-50 rounded-lg p-4">
+                                <h4 class="text-lg font-medium text-yellow-800 mb-2">提示：</h4>
+                                <p class="text-gray-700">简繁体转换依赖 <span class="font-mono">opencc-js</span> 库，首次点击相关按钮会从 CDN 自动加载。若网络不可达，仅简繁体转换受影响，其他转换功能不受影响。</p>
                             </div>
                         </div>
                         
-                        <!-- 格式化工具 (即将推出) -->
+                        <!-- 格式化工具 -->
                         <div>
-                            <h3 class="text-xl font-semibold text-gray-900 mb-3">格式化工具 (即将推出)</h3>
-                            <p class="text-gray-700 mb-4">我们正在开发格式化工具，将支持JSON、XML、HTML、CSS等格式化功能，将在近期推出。</p>
-                            <div class="bg-gray-100 rounded-lg p-4">
-                                <p class="text-gray-600 italic">关注我们的更新，获取最新工具信息！</p>
+                            <h3 class="text-xl font-semibold text-gray-900 mb-3">格式化工具</h3>
+                            <p class="text-gray-700 mb-4">支持 JSON、XML、HTML、CSS 的格式化与最小化，帮助你快速美化或压缩文本/代码。</p>
+                            <ol class="list-decimal list-inside text-gray-700 mb-4 pl-4 space-y-1">
+                                <li>打开 <a href="tools/formatting.html" class="text-blue-600 hover:underline">格式化工具页面</a></li>
+                                <li>在左侧输入框粘贴文本，右侧选择类型与缩进</li>
+                                <li>点击“格式化”或“最小化”查看结果，并可复制</li>
+                            </ol>
+                            <div class="bg-yellow-50 rounded-lg p-4">
+                                <h4 class="text-lg font-medium text-yellow-800 mb-2">提示：</h4>
+                                <p class="text-gray-700">JSON 将进行语法校验；XML/HTML/CSS 为轻量格式化器，适合通用场景。如需专业语法级格式化，可考虑在本地使用 IDE 插件。</p>
                             </div>
                         </div>
                     </div>
@@ -225,6 +252,12 @@
                             <div>
                                 <h3 class="text-lg font-semibold text-gray-900 mb-2">我可以离线使用这些工具吗？</h3>
                                 <p class="text-gray-700">目前我们的工具需要在线使用。不过，我们正在考虑开发支持离线使用的应用版本，敬请期待。</p>
+                            </div>
+                            
+                            <!-- 问题6 -->
+                            <div>
+                                <h3 class="text-lg font-semibold text-gray-900 mb-2">简繁体转换是否需要联网？</h3>
+                                <p class="text-gray-700">是的，简繁体转换首次需要从 CDN 加载 <span class="font-mono">opencc-js</span> 库。加载完成后即可正常使用。若加载失败，您仍可使用大小写、行处理、全角半角等其他功能；也可联系管理员配置内网可访问的 CDN。</p>
                             </div>
                         </div>
                     </div>
@@ -277,9 +310,10 @@
                     <p class="text-gray-600">© 2025 文字处理工具网站</p>
                 </div>
                 <div class="flex space-x-6">
-                    <a href="#" class="text-gray-600 hover:text-blue-600">关于我们</a>
-                    <a href="#" class="text-gray-600 hover:text-blue-600">使用条款</a>
-                    <a href="#" class="text-gray-600 hover:text-blue-600">隐私政策</a>
+                    <a href="about.html" class="text-gray-600 hover:text-blue-600">关于我们</a>
+                    <a href="terms.html" class="text-gray-600 hover:text-blue-600">使用条款</a>
+                    <a href="privacy.html" class="text-gray-600 hover:text-blue-600">隐私政策</a>
+                    <a href="contact.html" class="text-gray-600 hover:text-blue-600">联系我们</a>
                 </div>
             </div>
         </div>
@@ -289,5 +323,6 @@
     <script src="js/main.js"></script>
     <script src="js/navigation.js"></script>
     <script src="js/language.js"></script>
+    <script src="js/cookie-consent.js"></script>
 </body>
 </html> 

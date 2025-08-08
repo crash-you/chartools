@@ -3,9 +3,18 @@
  * 包含网站通用功能
  */
 
-// 页面加载完成后执行
-document.addEventListener('DOMContentLoaded', function() {
-    // 不需要初始化任何主题相关功能
+// 当文档加载完成时运行初始化函数
+document.addEventListener('DOMContentLoaded', async function() {
+    // 仅在本地开发环境尝试加载 Stagewise 工具栏，线上环境不加载任何开发依赖
+    try {
+        const isLocal = ['localhost', '127.0.0.1'].includes(window.location.hostname);
+        if (isLocal) {
+            const mod = await import('./stagewise-setup.js');
+            mod.setupStagewise?.();
+        }
+    } catch (_) {
+        // 忽略开发工具加载失败
+    }
 });
 
 /**
@@ -76,4 +85,34 @@ async function copyToClipboard(text) {
         console.error('复制失败:', err);
         return false;
     }
-} 
+}
+
+// 移动端菜单开关
+document.getElementById('mobile-menu-button')?.addEventListener('click', function() {
+    const mobileMenu = document.getElementById('mobile-menu');
+    if (mobileMenu.classList.contains('hidden')) {
+        mobileMenu.classList.remove('hidden');
+    } else {
+        mobileMenu.classList.add('hidden');
+    }
+});
+
+// 语言切换下拉菜单
+document.getElementById('language-button')?.addEventListener('click', function() {
+    const dropdown = document.getElementById('language-dropdown');
+    if (dropdown.classList.contains('hidden')) {
+        dropdown.classList.remove('hidden');
+    } else {
+        dropdown.classList.add('hidden');
+    }
+});
+
+// 点击外部区域时关闭下拉菜单
+document.addEventListener('click', function(event) {
+    const languageButton = document.getElementById('language-button');
+    const languageDropdown = document.getElementById('language-dropdown');
+    
+    if (languageButton && languageDropdown && !languageButton.contains(event.target) && !languageDropdown.contains(event.target)) {
+        languageDropdown.classList.add('hidden');
+    }
+}); 

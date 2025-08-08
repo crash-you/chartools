@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Conversion - Text Processing Tools</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="../../css/custom.css" rel="stylesheet">
+    <meta name="description" content="Online text conversion tool: case conversion, Simplified/Traditional Chinese, line sorting/dedup, whitespace handling, full/half width, etc.">
+    <meta name="keywords" content="text conversion,case,opencc,fullwidth,halfwidth,deduplicate,sort,whitespace,text tools">
+    <meta property="og:image" content="https://chartools.art/img/og/og-en.svg">
+    <meta property="og:image:alt" content="Text Conversion Tool">
+    <meta property="og:locale:alternate" content="zh_CN">
+    <link rel="alternate" hreflang="zh-CN" href="../../tools/text-conversion.html">
+    <link rel="alternate" hreflang="en" href="text-conversion.html">
+    <link rel="alternate" hreflang="x-default" href="../../tools/text-conversion.html">
+    <link rel="canonical" href="https://chartools.art/en/tools/text-conversion.html">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-32ZXK1J41J"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-32ZXK1J41J');
+    </script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4770465793767896" crossorigin="anonymous"></script>
+</head>
+<body class="bg-white text-gray-800 min-h-screen flex flex-col">
+    <!-- Navigation Bar -->
+    <nav id="navigation" class="fixed top-0 w-full bg-white bg-opacity-80 backdrop-blur-md shadow-sm z-50">
+        <div class="container mx-auto max-w-7xl px-4">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="../index.html" class="text-2xl font-semibold text-gray-900">Text Tools</a>
+                </div>
+                
+                <!-- Main Navigation (Desktop) -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="../index.html#" class="text-gray-700 hover:text-blue-600">Features</a>
+                    <a href="../index.html#tools" class="text-gray-700 hover:text-blue-600">Tools</a>
+                    <a href="../help.html" class="text-gray-700 hover:text-blue-600">Help</a>
+                </div>
+                
+                <!-- Right Options -->
+                <div class="flex items-center space-x-4">
+                    <!-- Language Selector -->
+                    <div class="relative language-selector">
+                        <button id="language-button" class="flex items-center space-x-1 p-2 rounded-md hover:bg-gray-100 transition">
+                            <span id="current-language">English</span>
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div id="language-dropdown" class="absolute right-0 mt-2 w-32 bg-white rounded-md shadow-lg hidden z-10">
+                            <a href="../../tools/text-conversion.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-100" data-lang="zh-CN">中文</a>
+                            <a href="text-conversion.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-100" data-lang="en">English</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Mobile Menu Button -->
+                    <button id="mobile-menu-button" class="md:hidden p-2 rounded-md hover:bg-gray-100">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="md:hidden hidden pb-4">
+                <div class="flex flex-col space-y-4">
+                    <a href="../index.html#" class="text-gray-700 hover:text-blue-600">Features</a>
+                    <a href="../index.html#tools" class="text-gray-700 hover:text-blue-600">Tools</a>
+                    <a href="../help.html" class="text-gray-700 hover:text-blue-600">Help</a>
+                    <div class="pt-2 border-t border-gray-200">
+                        <p class="text-sm text-gray-600 mb-1">Select Language</p>
+                        <a href="../../tools/text-conversion.html" class="block py-1 text-gray-700 hover:text-blue-600" data-lang="zh-CN">中文</a>
+                        <a href="text-conversion.html" class="block py-1 text-gray-700 hover:text-blue-600" data-lang="en">English</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="flex-grow pt-16">
+        <script type="application/ld+json">{
+          "@context":"https://schema.org",
+          "@type":"FAQPage",
+          "mainEntity":[
+            {"@type":"Question","name":"Does S/T conversion require internet?","acceptedAnswer":{"@type":"Answer","text":"The opencc-js library is loaded from CDN on first use; other features remain available if loading fails."}},
+            {"@type":"Question","name":"Can I deduplicate and sort lines?","acceptedAnswer":{"@type":"Answer","text":"Yes. The Line Ops section provides Unique, Sort Asc/Desc and Trim Lines."}}
+          ]
+        }</script>
+        <div class="container mx-auto max-w-7xl px-4 py-8">
+            <!-- Page Title -->
+            <div class="mb-8">
+                <h1 class="text-3xl font-bold text-gray-900">Text Conversion Tool</h1>
+                <p class="mt-2 text-gray-600">Case conversion, CN Simplified/Traditional conversion, line processing, whitespace handling, full/half width, and more.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <!-- Left: Input Area -->
+                <div class="lg:col-span-2">
+                    <div class="bg-white rounded-xl shadow-md p-6">
+                        <h2 class="text-xl font-semibold text-gray-900 mb-4">Input Text</h2>
+                        <div class="mb-4">
+                            <textarea 
+                                id="text-input" 
+                                class="w-full h-72 p-4 bg-gray-50 text-gray-900 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-y"
+                                placeholder="Enter or paste text here..."
+                            ></textarea>
+                        </div>
+                        <div class="flex flex-wrap gap-3">
+                            <button id="clear-button" class="px-3 py-2 bg-gray-200 text-gray-800 rounded-lg hover:bg-gray-300 transition-colors">Clear</button>
+                            <button id="sample-button" class="px-3 py-2 bg-blue-100 text-blue-700 rounded-lg hover:bg-blue-200 transition-colors">Insert Sample</button>
+                            <button id="copy-button" class="px-3 py-2 bg-green-100 text-green-700 rounded-lg hover:bg-green-200 transition-colors">Copy</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Operations -->
+                <div class="lg:col-span-1">
+                    <div class="bg-white rounded-xl shadow-md p-6 space-y-6">
+                        <div>
+                            <h3 class="text-lg font-medium text-gray-800 mb-3">Case</h3>
+                            <div class="flex flex-wrap gap-2">
+                                <button id="to-upper" class="px-3 py-1.5 bg-blue-600 text-white rounded-md hover:bg-blue-700 text-sm">Uppercase</button>
+                                <button id="to-lower" class="px-3 py-1.5 bg-blue-600 text-white rounded-md hover:bg-blue-700 text-sm">Lowercase</button>
+                                <button id="to-title" class="px-3 py-1.5 bg-blue-600 text-white rounded-md hover:bg-blue-700 text-sm">Title Case</button>
+                                <button id="toggle-case" class="px-3 py-1.5 bg-blue-600 text-white rounded-md hover:bg-blue-700 text-sm">Toggle Case</button>
+                            </div>
+                        </div>
+
+                        <div>
+                            <h3 class="text-lg font-medium text-gray-800 mb-3">Simplified/Traditional</h3>
+                            <div class="flex flex-wrap gap-2">
+                                <button id="to-simplified" class="px-3 py-1.5 bg-indigo-600 text-white rounded-md hover:bg-indigo-700 text-sm">To Simplified</button>
+                                <button id="to-traditional" class="px-3 py-1.5 bg-indigo-600 text-white rounded-md hover:bg-indigo-700 text-sm">To Traditional</button>
+                            </div>
+                        </div>
+
+                        <div>
+                            <h3 class="text-lg font-medium text-gray-800 mb-3">Line Operations</h3>
+                            <div class="flex flex-wrap gap-2">
+                                <button id="sort-asc" class="px-3 py-1.5 bg-gray-100 text-gray-800 rounded-md hover:bg-gray-200 text-sm">Sort Asc</button>
+                                <button id="sort-desc" class="px-3 py-1.5 bg-gray-100 text-gray-800 rounded-md hover:bg-gray-200 text-sm">Sort Desc</button>
+                                <button id="unique-lines" class="px-3 py-1.5 bg-gray-100 text-gray-800 rounded-md hover:bg-gray-200 text-sm">Unique</button>
+                                <button id="reverse-lines" class="px-3 py-1.5 bg-gray-100 text-gray-800 rounded-md hover:bg-gray-200 text-sm">Reverse</button>
+                                <button id="trim-lines" class="px-3 py-1.5 bg-gray-100 text-gray-800 rounded-md hover:bg-gray-200 text-sm">Trim Lines</button>
+                                <button id="remove-empty-lines" class="px-3 py-1.5 bg-gray-100 text-gray-800 rounded-md hover:bg-gray-200 text-sm">Remove Empty</button>
+                            </div>
+                        </div>
+
+                        <div>
+                            <h3 class="text-lg font-medium text-gray-800 mb-3">Whitespace</h3>
+                            <div class="flex flex-wrap gap-2">
+                                <button id="trim-all" class="px-3 py-1.5 bg-gray-100 text-gray-800 rounded-md hover:bg-gray-200 text-sm">Trim All</button>
+                                <button id="collapse-spaces" class="px-3 py-1.5 bg-gray-100 text-gray-800 rounded-md hover:bg-gray-200 text-sm">Collapse Spaces</button>
+                                <button id="tabs-to-spaces" class="px-3 py-1.5 bg-gray-100 text-gray-800 rounded-md hover:bg-gray-200 text-sm">Tabs → Spaces</button>
+                                <button id="remove-extra-blank-lines" class="px-3 py-1.5 bg-gray-100 text-gray-800 rounded-md hover:bg-gray-200 text-sm">Remove Extra Blank</button>
+                            </div>
+                        </div>
+
+                        <div>
+                            <h3 class="text-lg font-medium text-gray-800 mb-3">Full/Half Width</h3>
+                            <div class="flex flex-wrap gap-2">
+                                <button id="to-halfwidth" class="px-3 py-1.5 bg-purple-600 text-white rounded-md hover:bg-purple-700 text-sm">To Half-width</button>
+                                <button id="to-fullwidth" class="px-3 py-1.5 bg-purple-600 text-white rounded-md hover:bg-purple-700 text-sm">To Full-width</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-100 py-8 px-4 mt-8">
+        <div class="container mx-auto max-w-7xl">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <p class="text-gray-600">© 2025 Text Processing Tools</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="../../about.html" class="text-gray-600 hover:text-blue-600">About Us</a>
+                    <a href="../../terms.html" class="text-gray-600 hover:text-blue-600">Terms of Use</a>
+                    <a href="../../privacy.html" class="text-gray-600 hover:text-blue-600">Privacy Policy</a>
+                    <a href="../../contact.html" class="text-gray-600 hover:text-blue-600">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="../../js/main.js"></script>
+    <script src="../../js/navigation.js"></script>
+    <script src="../../js/language.js"></script>
+    <script src="../../js/cookie-consent.js"></script>
+    <script src="../../js/tools/text-conversion.js"></script>
+</body>
+</html>
+
+

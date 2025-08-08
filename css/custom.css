@@ -1,4 +1,9 @@
 /* 自定义CSS样式 */
+/* 视觉微优化：改进可读性与可访问性 */
+:root { color-scheme: light dark; }
+img { max-width: 100%; height: auto; }
+a { text-underline-offset: 2px; }
+.prose a { color: #2563eb; }
 
 /* 自定义滚动条样式 */
 ::-webkit-scrollbar {

@@ -75,6 +75,20 @@
 
 访问网站: [文字处理工具网站](https://chartools.art)
 
+## 合规说明
+
+- 已配置 `ads.txt`：`google.com, pub-4770465793767896, DIRECT, f08c47fec0942fa0`
+- 新增页面：`about.html`、`privacy.html`、`terms.html`、`contact.html`，并在所有页面页脚提供可访问链接
+- 新增 `robots.txt` 与 `sitemap.xml`
+- 站点仅使用必要 Cookie，提供简易 Cookie 同意条（`js/cookie-consent.js`）
+
+## SEO 说明（关键点）
+
+- 全站 canonical、hreflang（中/英）
+- OG/Twitter 元信息与结构化数据（首页 Website、文章 Article）
+- `robots.txt` 与 `sitemap.xml` 已覆盖文章与工具页
+- 新增“指南/Guides”原创内容板块以提升内容价值
+
 ## 贡献指南
 
 欢迎贡献代码、提出问题或建议。请通过以下方式参与项目：
@@ -105,3 +119,83 @@ GitHub仓库地址
 项目维护者信息
 开源协议详情
 文件结构清晰，为项目提供了完整的文档支持，有助于其他开发者理解和使用您的文字处理工具网站
+
+## 开发环境设置
+
+### 安装依赖
+
+```bash
+npm install
+```
+
+### 运行开发服务器
+
+```bash
+npm run dev
+```
+
+### 构建生产版本
+
+```bash
+npm run build
+```
+
+## Stagewise 工具栏集成
+
+本项目已集成 Stagewise 工具栏，可以帮助开发人员更高效地编辑前端代码。
+
+### 安装和使用
+
+1. 首先确保你已安装 Stagewise VSCode 扩展：
+   - 通过 [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=stagewise.stagewise-vscode-extension) 安装
+
+2. 在 Cursor 编辑器中启用 MCP 支持：
+   - Cursor 会提示你启用 Stagewise MCP 服务器
+   - 点击"启用"以允许你的 AI 代理调用 Stagewise 提供的 MCP 工具
+
+3. 运行开发服务器：
+   ```bash
+   npm run dev
+   ```
+
+4. 自动设置工具栏（使用 AI 指导）：
+   - 在 Cursor 中，按下 CMD + Shift + P
+   - 输入 `setupToolbar`
+   - 执行命令，工具栏将自动初始化
+
+### 工具栏特点
+
+- 选择任何网页元素并添加注释
+- 使用 AI 代理智能编辑前端代码
+- 自动将浏览器上下文发送到你的 AI 代理
+- 在浏览器中直接对实时元素进行评论
+
+### 自定义配置
+
+Stagewise 工具栏配置位于 `js/stagewise-setup.js` 文件中。你可以根据需要修改以下内容：
+
+- 插件名称和描述
+- 为 AI 提示提供的上下文信息
+- 自定义工具栏操作
+
+## 技术栈
+
+- HTML5 + CSS3
+- JavaScript (ES6+)
+- TailwindCSS
+- Webpack
+- Stagewise 工具栏
+
+## 贡献指南
+
+欢迎贡献代码和功能建议！请遵循以下步骤：
+
+1. Fork 本仓库
+2. 创建您的特性分支 (`git checkout -b feature/amazing-feature`)
+3. 提交您的更改 (`git commit -m 'Add some amazing feature'`)
+4. 推送到分支 (`git push origin feature/amazing-feature`)
+5. 打开一个 Pull Request
+
+## 许可证
+
+本项目采用 ISC 许可证。

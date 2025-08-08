@@ -56,6 +56,15 @@ function detectBrowserLanguage() {
         return;
     }
     
+    // Bot and one-time redirect protection
+    const userAgent = navigator.userAgent || '';
+    const isBot = /Googlebot|Bingbot|DuckDuckBot|Yandex|Baiduspider|Sogou|Slurp|SemrushBot|AhrefsBot|MJ12bot|DotBot|PetalBot/i.test(userAgent);
+    if (isBot) {
+        return;
+    }
+    if (sessionStorage.getItem('autoLangRedirectDone') === '1') {
+        return;
+    }
     // Detect browser language
     const browserLang = navigator.language || navigator.userLanguage;
     
@@ -65,14 +74,16 @@ function detectBrowserLanguage() {
         if (window.location.pathname.includes('/en/')) {
             const path = window.location.pathname;
             const redirectPath = path.replace('/en/', '/');
+            sessionStorage.setItem('autoLangRedirectDone', '1');
             window.location.href = redirectPath;
         }
     } else {
         // If browser language is not Chinese and not on English page, redirect to English version
-        if (!window.location.pathname.includes('/en/') && !window.location.pathname.endsWith('/')) {
+        if (!window.location.pathname.includes('/en/')) {
             const currentPath = window.location.pathname;
             // Add '/en' to the beginning of the path, but after the domain
             const enPath = currentPath.replace(/^\//, '/en/');
+            sessionStorage.setItem('autoLangRedirectDone', '1');
             window.location.href = window.location.origin + enPath;
         }
     }

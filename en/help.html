@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Help Center - Text Processing Tools</title>
+    <meta name="robots" content="index,follow,max-image-preview:large">
+    <meta property="og:image" content="https://chartools.art/img/og/og-en.svg">
+    <meta property="og:image:alt" content="Text Processing Tools OG Image">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link href="../css/custom.css" rel="stylesheet">
     <meta name="description" content="Text Processing Tools Help Center, providing tool guides, FAQs and usage tips">
@@ -11,6 +14,7 @@
     <link rel="alternate" hreflang="zh-CN" href="../help.html">
     <link rel="alternate" hreflang="en" href="help.html">
     <link rel="alternate" hreflang="x-default" href="../help.html">
+    <link rel="canonical" href="https://chartools.art/en/help.html">
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-32ZXK1J41J"></script>
     <script>
@@ -38,6 +42,7 @@
                     <a href="index.html#" class="text-gray-700 hover:text-blue-600">Features</a>
                     <a href="index.html#tools" class="text-gray-700 hover:text-blue-600">Tools</a>
                     <a href="help.html" class="text-blue-600">Help</a>
+                    <a href="articles/index.html" class="text-gray-700 hover:text-blue-600">Guides</a>
                 </div>
                 
                 <!-- Right options -->
@@ -71,6 +76,7 @@
                     <a href="index.html#" class="text-gray-700 hover:text-blue-600">Features</a>
                     <a href="index.html#tools" class="text-gray-700 hover:text-blue-600">Tools</a>
                     <a href="help.html" class="text-blue-600">Help</a>
+                    <a href="articles/index.html" class="text-gray-700 hover:text-blue-600">Guides</a>
                     <div class="pt-2 border-t border-gray-200">
                         <p class="text-sm text-gray-600 mb-1">Select Language</p>
                         <a href="../help.html" class="block py-1 text-gray-700 hover:text-blue-600" data-lang="zh-CN">中文</a>
@@ -173,21 +179,43 @@
                             </div>
                         </div>
                         
-                        <!-- Text conversion tool (coming soon) -->
+                        <!-- Text conversion tool -->
                         <div class="mb-8">
-                            <h3 class="text-xl font-semibold text-gray-900 mb-3">Text Conversion Tool (Coming Soon)</h3>
-                            <p class="text-gray-700 mb-4">The text conversion tool will provide various functions such as case conversion, simplified/traditional Chinese conversion, line sorting, etc., to help you process text formats quickly.</p>
-                            <div class="bg-gray-100 rounded-lg p-4">
-                                <p class="text-gray-600 italic">This tool is coming soon. Stay tuned!</p>
+                            <h3 class="text-xl font-semibold text-gray-900 mb-3">Text Conversion Tool</h3>
+                            <p class="text-gray-700 mb-4">Supports case conversion, Simplified/Traditional Chinese conversion, line operations, whitespace handling, and full/half width conversion, helping you normalize text quickly.</p>
+                            <h4 class="text-lg font-medium text-gray-800 mb-2">Usage Steps:</h4>
+                            <ol class="list-decimal list-inside text-gray-700 mb-4 pl-4 space-y-1">
+                                <li>Open the <a href="tools/text-conversion.html" class="text-blue-600 hover:underline">Text Conversion Tool page</a></li>
+                                <li>Enter or paste text into the left input box</li>
+                                <li>Select the operations on the right (e.g., Uppercase, To Simplified, Sort Asc, etc.)</li>
+                                <li>Click "Copy" to save the processed result if needed</li>
+                            </ol>
+                            <h4 class="text-lg font-medium text-gray-800 mb-2">Features:</h4>
+                            <ul class="list-disc list-inside text-gray-700 mb-4 pl-4 space-y-1">
+                                <li><strong>Case</strong>: Uppercase, Lowercase, Title Case, Toggle Case</li>
+                                <li><strong>Simplified/Traditional</strong>: To Simplified, To Traditional (loads the conversion library on first use)</li>
+                                <li><strong>Line Ops</strong>: Sort Asc/Desc, Unique, Reverse, Trim Lines, Remove Empty</li>
+                                <li><strong>Whitespace</strong>: Trim All, Collapse Spaces, Tabs → Spaces, Remove Extra Blank Lines</li>
+                                <li><strong>Full/Half Width</strong>: ASCII full/half width conversion</li>
+                            </ul>
+                            <div class="bg-yellow-50 rounded-lg p-4">
+                                <h4 class="text-lg font-medium text-yellow-800 mb-2">Tip:</h4>
+                                <p class="text-gray-700">Simplified/Traditional conversion relies on the <span class="font-mono">opencc-js</span> library. On first use, it is automatically loaded from a CDN. If the network is unavailable, only S/T conversion is affected; other features remain usable.</p>
                             </div>
                         </div>
                         
-                        <!-- Formatting tools (coming soon) -->
+                        <!-- Formatting tools -->
                         <div>
-                            <h3 class="text-xl font-semibold text-gray-900 mb-3">Formatting Tools (Coming Soon)</h3>
-                            <p class="text-gray-700 mb-4">We are developing formatting tools that will support JSON, XML, HTML, CSS formatting features, which will be launched soon.</p>
-                            <div class="bg-gray-100 rounded-lg p-4">
-                                <p class="text-gray-600 italic">Follow our updates for the latest tool information!</p>
+                            <h3 class="text-xl font-semibold text-gray-900 mb-3">Formatting Tools</h3>
+                            <p class="text-gray-700 mb-4">Support formatting and minifying JSON, XML, HTML, and CSS to quickly beautify or compress your text/code.</p>
+                            <ol class="list-decimal list-inside text-gray-700 mb-4 pl-4 space-y-1">
+                                <li>Open the <a href="tools/formatting.html" class="text-blue-600 hover:underline">Formatting Tools page</a></li>
+                                <li>Paste text in the left input, select type and indent on the right</li>
+                                <li>Click "Format" or "Minify" to get the result, then copy as needed</li>
+                            </ol>
+                            <div class="bg-yellow-50 rounded-lg p-4">
+                                <h4 class="text-lg font-medium text-yellow-800 mb-2">Tip:</h4>
+                                <p class="text-gray-700">JSON is strictly validated; XML/HTML/CSS use a lightweight formatter for general scenarios. For language-aware formatting, consider IDE plugins locally.</p>
                             </div>
                         </div>
                     </div>
@@ -225,6 +253,12 @@
                             <div>
                                 <h3 class="text-lg font-semibold text-gray-900 mb-2">Can I use these tools offline?</h3>
                                 <p class="text-gray-700">Currently, our tools need to be used online. However, we are considering developing application versions that support offline use in the future.</p>
+                            </div>
+                            
+                            <!-- Question 6 -->
+                            <div>
+                                <h3 class="text-lg font-semibold text-gray-900 mb-2">Does Simplified/Traditional conversion require internet access?</h3>
+                                <p class="text-gray-700">Yes. On first use, the <span class="font-mono">opencc-js</span> library is loaded from a CDN. After loading, you can use it normally. If loading fails, other features (case, line ops, full/half width) remain available. An internal CDN can be configured if needed.</p>
                             </div>
                         </div>
                     </div>
@@ -277,9 +311,10 @@
                     <p class="text-gray-600">© 2025 Text Processing Tools Website</p>
                 </div>
                 <div class="flex space-x-6">
-                    <a href="#" class="text-gray-600 hover:text-blue-600">About Us</a>
-                    <a href="#" class="text-gray-600 hover:text-blue-600">Terms of Use</a>
-                    <a href="#" class="text-gray-600 hover:text-blue-600">Privacy Policy</a>
+                    <a href="../about.html" class="text-gray-600 hover:text-blue-600">About Us</a>
+                    <a href="../terms.html" class="text-gray-600 hover:text-blue-600">Terms of Use</a>
+                    <a href="../privacy.html" class="text-gray-600 hover:text-blue-600">Privacy Policy</a>
+                    <a href="../contact.html" class="text-gray-600 hover:text-blue-600">Contact</a>
                 </div>
             </div>
         </div>
@@ -289,5 +324,6 @@
     <script src="../js/main.js"></script>
     <script src="../js/navigation.js"></script>
     <script src="../js/language.js"></script>
+    <script src="../js/cookie-consent.js"></script>
 </body>
 </html> 

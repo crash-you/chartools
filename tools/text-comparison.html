@@ -7,10 +7,14 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link href="../css/custom.css" rel="stylesheet">
     <meta name="description" content="在线对比两段文本的差异，高亮显示不同部分，支持合并文本，跨语言文本比较">
-    <meta name="keywords" content="文本比较,文本对比,差异对比,文本合并,文字工具">
+    <meta name="keywords" content="文本比较,文本对比,差异对比,文本合并,文字工具,文本diff,差异合并">
+    <meta property="og:image" content="https://chartools.art/img/og/og-zh.svg">
+    <meta property="og:image:alt" content="文本比较工具">
+    <meta property="og:locale:alternate" content="en_US">
     <link rel="alternate" hreflang="zh-CN" href="text-comparison.html">
     <link rel="alternate" hreflang="en" href="../en/tools/text-comparison.html">
     <link rel="alternate" hreflang="x-default" href="text-comparison.html">
+    <link rel="canonical" href="https://chartools.art/tools/text-comparison.html">
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-32ZXK1J41J"></script>
     <script>
@@ -20,8 +24,7 @@
 
       gtag('config', 'G-32ZXK1J41J');
     </script>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4770465793767896"
-     crossorigin="anonymous"></script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4770465793767896" crossorigin="anonymous"></script>
 </head>
 <body class="bg-white text-gray-800 min-h-screen flex flex-col">
     <!-- 导航栏 -->
@@ -83,6 +86,14 @@
     
     <!-- 主内容区 -->
     <main class="flex-grow pt-16">
+        <script type="application/ld+json">{
+          "@context":"https://schema.org",
+          "@type":"FAQPage",
+          "mainEntity":[
+            {"@type":"Question","name":"可以按行或按词比较吗？","acceptedAnswer":{"@type":"Answer","text":"支持行级与单词级比较，可按需切换并忽略大小写或空白。"}},
+            {"@type":"Question","name":"能把两段文本合并吗？","acceptedAnswer":{"@type":"Answer","text":"提供三种合并方式：合并到原始、合并到修改后、创建合并文本。"}}
+          ]
+        }</script>
         <div class="container mx-auto max-w-7xl px-4 py-8">
             <!-- 页面标题 -->
             <div class="mb-8">
@@ -235,9 +246,10 @@
                     <p class="text-gray-600">© 2025 文字处理工具网站</p>
                 </div>
                 <div class="flex space-x-6">
-                    <a href="#" class="text-gray-600 hover:text-blue-600">关于我们</a>
-                    <a href="#" class="text-gray-600 hover:text-blue-600">使用条款</a>
-                    <a href="#" class="text-gray-600 hover:text-blue-600">隐私政策</a>
+                    <a href="../about.html" class="text-gray-600 hover:text-blue-600">关于我们</a>
+                    <a href="../terms.html" class="text-gray-600 hover:text-blue-600">使用条款</a>
+                    <a href="../privacy.html" class="text-gray-600 hover:text-blue-600">隐私政策</a>
+                    <a href="../contact.html" class="text-gray-600 hover:text-blue-600">联系我们</a>
                 </div>
             </div>
         </div>
@@ -247,6 +259,7 @@
     <script src="../js/main.js"></script>
     <script src="../js/navigation.js"></script>
     <script src="../js/language.js"></script>
+    <script src="../js/cookie-consent.js"></script>
     <script src="../js/tools/text-comparison.js"></script>
 </body>
 </html> 

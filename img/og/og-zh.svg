@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#3b82f6"/>
+      <stop offset="100%" stop-color="#6366f1"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#g)"/>
+  <g fill="#fff" font-family="Segoe UI, Arial, Helvetica, sans-serif">
+    <text x="80" y="220" font-size="84" font-weight="700">文字处理工具网站</text>
+    <text x="80" y="320" font-size="40" opacity="0.95">字符计数 · 文本转换 · 格式化 · 文本比较</text>
+    <text x="80" y="430" font-size="28" opacity="0.85">chartools.art</text>
+  </g>
+</svg>
+
