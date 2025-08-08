@@ -9,11 +9,14 @@
     <meta property="og:image:alt" content="Text Processing Tools OG Image">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link href="../css/custom.css" rel="stylesheet">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
+  <link rel="preconnect" href="https://pagead2.googlesyndication.com" crossorigin>
     <meta name="description" content="Text Processing Tools Help Center, providing tool guides, FAQs and usage tips">
     <meta name="keywords" content="text tools,help docs,faq,tutorials,text processing">
-    <link rel="alternate" hreflang="zh-CN" href="../help.html">
-    <link rel="alternate" hreflang="en" href="help.html">
-    <link rel="alternate" hreflang="x-default" href="../help.html">
+    <link rel="alternate" hreflang="zh-CN" href="https://chartools.art/help.html">
+    <link rel="alternate" hreflang="en" href="https://chartools.art/en/help.html">
+    <link rel="alternate" hreflang="x-default" href="https://chartools.art/help.html">
     <link rel="canonical" href="https://chartools.art/en/help.html">
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-32ZXK1J41J"></script>
@@ -89,6 +92,23 @@
     
     <!-- Main content -->
     <main class="flex-grow pt-16">
+        <script type="application/ld+json">{
+          "@context":"https://schema.org",
+          "@type":"BreadcrumbList",
+          "itemListElement":[
+            {"@type":"ListItem","position":1,"name":"Home","item":"https://chartools.art/en/index.html"},
+            {"@type":"ListItem","position":2,"name":"Help","item":"https://chartools.art/en/help.html"}
+          ]
+        }</script>
+        <script type="application/ld+json">{
+          "@context":"https://schema.org",
+          "@type":"FAQPage",
+          "mainEntity":[
+            {"@type":"Question","name":"Are the tools free?","acceptedAnswer":{"@type":"Answer","text":"Yes, all tools are free to use without registration or login."}},
+            {"@type":"Question","name":"Is my text uploaded to servers?","acceptedAnswer":{"@type":"Answer","text":"No. All processing happens locally in your browser and data does not leave your device."}},
+            {"@type":"Question","name":"What text operations are supported?","acceptedAnswer":{"@type":"Answer","text":"Character counting, text conversion (case, S/T Chinese, line ops, whitespace, full/half width), text comparison, and JSON/XML/HTML/CSS formatting & minifying."}}
+          ]
+        }</script>
         <!-- Help center title -->
         <section class="py-12 md:py-16 px-4 bg-gradient-to-br from-blue-50 to-indigo-50">
             <div class="container mx-auto max-w-7xl">
@@ -311,10 +331,10 @@
                     <p class="text-gray-600">© 2025 Text Processing Tools Website</p>
                 </div>
                 <div class="flex space-x-6">
-                    <a href="../about.html" class="text-gray-600 hover:text-blue-600">About Us</a>
-                    <a href="../terms.html" class="text-gray-600 hover:text-blue-600">Terms of Use</a>
-                    <a href="../privacy.html" class="text-gray-600 hover:text-blue-600">Privacy Policy</a>
-                    <a href="../contact.html" class="text-gray-600 hover:text-blue-600">Contact</a>
+                    <a href="about.html" class="text-gray-600 hover:text-blue-600">About Us</a>
+                    <a href="terms.html" class="text-gray-600 hover:text-blue-600">Terms of Use</a>
+                    <a href="privacy.html" class="text-gray-600 hover:text-blue-600">Privacy Policy</a>
+                    <a href="contact.html" class="text-gray-600 hover:text-blue-600">Contact</a>
                 </div>
             </div>
         </div>

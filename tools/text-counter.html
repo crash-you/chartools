@@ -3,17 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>字符计数 - 文字处理工具网站</title>
+    <title>字符计数工具 - 在线字数统计/字频/阅读时间 | 文字处理工具网站</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="preload" href="../css/custom.css" as="style">
     <link href="../css/custom.css" rel="stylesheet">
-    <meta name="description" content="实时统计文本的字符数、单词数、句子数等信息，提供详细的分类统计和阅读时间估算">
+    <meta name="description" content="在线字符计数工具：实时统计字符、字数、句子、段落与行数，支持字符分类计数与阅读时间估算，纯前端本地处理，安全可靠。">
     <meta name="keywords" content="字符计数,单词统计,文本分析,阅读时间,中文字数统计,英文单词统计">
     <meta property="og:image" content="https://chartools.art/img/og/og-zh.svg">
     <meta property="og:image:alt" content="字符计数工具">
     <meta property="og:locale:alternate" content="en_US">
-    <link rel="alternate" hreflang="zh-CN" href="text-counter.html">
-    <link rel="alternate" hreflang="en" href="../en/tools/text-counter.html">
-    <link rel="alternate" hreflang="x-default" href="text-counter.html">
+    <meta property="og:title" content="字符计数工具 - 在线字数统计/字频/阅读时间 | 文字处理工具网站">
+    <meta property="og:description" content="实时统计字符/字数/句子/段落，提供分类计数与阅读时间估算；纯前端本地处理，保护隐私。">
+    <meta property="og:url" content="https://chartools.art/tools/text-counter.html">
+    <meta property="og:site_name" content="文字处理工具网站">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="字符计数工具 - 在线字数统计/字频/阅读时间">
+    <meta name="twitter:description" content="实时统计字符/字数/句子/段落与行数，分类统计与阅读时间估算，纯前端本地处理。">
+    <link rel="alternate" hreflang="zh-CN" href="https://chartools.art/tools/text-counter.html">
+    <link rel="alternate" hreflang="en" href="https://chartools.art/en/tools/text-counter.html">
+    <link rel="alternate" hreflang="x-default" href="https://chartools.art/tools/text-counter.html">
     <link rel="canonical" href="https://chartools.art/tools/text-counter.html">
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-32ZXK1J41J"></script>
@@ -88,10 +96,29 @@
     <main class="flex-grow pt-16">
         <script type="application/ld+json">{
           "@context":"https://schema.org",
-          "@type":"FAQPage",
-          "mainEntity":[
-            {"@type":"Question","name":"字符计数是否实时？","acceptedAnswer":{"@type":"Answer","text":"是的，输入或粘贴文本后，字符、单词、句子和段落统计会实时更新。"}},
-            {"@type":"Question","name":"我的文本会上传吗？","acceptedAnswer":{"@type":"Answer","text":"不会，所有处理在浏览器本地完成，文本不会上传到服务器。"}}
+          "@graph":[
+            {
+              "@type":"BreadcrumbList",
+              "itemListElement":[
+                {"@type":"ListItem","position":1,"name":"首页","item":"https://chartools.art/"},
+                {"@type":"ListItem","position":2,"name":"字符计数","item":"https://chartools.art/tools/text-counter.html"}
+              ]
+            },
+            {
+              "@type":"SoftwareApplication",
+              "name":"字符计数工具",
+              "applicationCategory":"UtilityApplication",
+              "operatingSystem":"Web",
+              "url":"https://chartools.art/tools/text-counter.html",
+              "offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}
+            },
+            {
+              "@type":"FAQPage",
+              "mainEntity":[
+                {"@type":"Question","name":"字符计数是否实时？","acceptedAnswer":{"@type":"Answer","text":"是的，输入或粘贴文本后，字符、单词、句子和段落统计会实时更新。"}},
+                {"@type":"Question","name":"我的文本会上传吗？","acceptedAnswer":{"@type":"Answer","text":"不会，所有处理在浏览器本地完成，文本不会上传到服务器。"}}
+              ]
+            }
           ]
         }</script>
         <div class="container mx-auto max-w-7xl px-4 py-8">

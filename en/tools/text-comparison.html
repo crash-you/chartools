@@ -3,17 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Text Comparison - Text Processing Tools</title>
+    <title>Text Comparison Tool - Online Diff Checker & Merge | Text Processing Tools</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="preload" href="../../css/custom.css" as="style">
     <link href="../../css/custom.css" rel="stylesheet">
-    <meta name="description" content="Compare two texts online, highlight differences, merge texts, and support cross-language text comparison">
+    <meta name="description" content="Online text comparison: highlight differences, word/line-level diff, ignore case/whitespace, and merge texts. Client-side processing.">
     <meta name="keywords" content="text comparison,diff checker,text diff,merge texts,text tools">
     <meta property="og:image" content="https://chartools.art/img/og/og-en.svg">
     <meta property="og:image:alt" content="Text Comparison Tool">
     <meta property="og:locale:alternate" content="zh_CN">
-    <link rel="alternate" hreflang="zh-CN" href="../../tools/text-comparison.html">
-    <link rel="alternate" hreflang="en" href="text-comparison.html">
-    <link rel="alternate" hreflang="x-default" href="../../tools/text-comparison.html">
+    <meta property="og:title" content="Text Comparison Tool - Online Diff Checker & Merge | Text Processing Tools">
+    <meta property="og:description" content="Compare two texts with word/line-level diff, ignore case/whitespace, and merge. Client-side only.">
+    <meta property="og:url" content="https://chartools.art/en/tools/text-comparison.html">
+    <meta property="og:site_name" content="Text Processing Tools">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Text Comparison Tool - Diff & Merge">
+    <meta name="twitter:description" content="Diff at word/line level, ignore case/whitespace, merge results.">
+    <link rel="alternate" hreflang="zh-CN" href="https://chartools.art/tools/text-comparison.html">
+    <link rel="alternate" hreflang="en" href="https://chartools.art/en/tools/text-comparison.html">
+    <link rel="alternate" hreflang="x-default" href="https://chartools.art/tools/text-comparison.html">
     <link rel="canonical" href="https://chartools.art/en/tools/text-comparison.html">
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-32ZXK1J41J"></script>
@@ -88,10 +96,29 @@
     <main class="flex-grow pt-16">
         <script type="application/ld+json">{
           "@context":"https://schema.org",
-          "@type":"FAQPage",
-          "mainEntity":[
-            {"@type":"Question","name":"Line-level or word-level diff?","acceptedAnswer":{"@type":"Answer","text":"Both are supported. You can also ignore case or whitespace."}},
-            {"@type":"Question","name":"Can I merge texts?","acceptedAnswer":{"@type":"Answer","text":"Yes, you can merge into original, merge into modified, or create a merged text."}}
+          "@graph":[
+            {
+              "@type":"BreadcrumbList",
+              "itemListElement":[
+                {"@type":"ListItem","position":1,"name":"Home","item":"https://chartools.art/en/index.html"},
+                {"@type":"ListItem","position":2,"name":"Text Comparison","item":"https://chartools.art/en/tools/text-comparison.html"}
+              ]
+            },
+            {
+              "@type":"SoftwareApplication",
+              "name":"Text Comparison Tool",
+              "applicationCategory":"UtilityApplication",
+              "operatingSystem":"Web",
+              "url":"https://chartools.art/en/tools/text-comparison.html",
+              "offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}
+            },
+            {
+              "@type":"FAQPage",
+              "mainEntity":[
+                {"@type":"Question","name":"Line-level or word-level diff?","acceptedAnswer":{"@type":"Answer","text":"Both are supported. You can also ignore case or whitespace."}},
+                {"@type":"Question","name":"Can I merge texts?","acceptedAnswer":{"@type":"Answer","text":"Yes, you can merge into original, merge into modified, or create a merged text."}}
+              ]
+            }
           ]
         }</script>
         <div class="container mx-auto max-w-7xl px-4 py-8">
@@ -246,10 +273,10 @@
                     <p class="text-gray-600">© 2025 Text Processing Tools</p>
                 </div>
                 <div class="flex space-x-6">
-                    <a href="../../about.html" class="text-gray-600 hover:text-blue-600">About Us</a>
-                    <a href="../../terms.html" class="text-gray-600 hover:text-blue-600">Terms of Use</a>
-                    <a href="../../privacy.html" class="text-gray-600 hover:text-blue-600">Privacy Policy</a>
-                    <a href="../../contact.html" class="text-gray-600 hover:text-blue-600">Contact</a>
+                    <a href="../about.html" class="text-gray-600 hover:text-blue-600">About Us</a>
+                    <a href="../terms.html" class="text-gray-600 hover:text-blue-600">Terms of Use</a>
+                    <a href="../privacy.html" class="text-gray-600 hover:text-blue-600">Privacy Policy</a>
+                    <a href="../contact.html" class="text-gray-600 hover:text-blue-600">Contact</a>
                 </div>
             </div>
         </div>

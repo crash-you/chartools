@@ -9,11 +9,14 @@
     <meta property="og:image:alt" content="文字处理工具网站 OG 图">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link href="css/custom.css" rel="stylesheet">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
+  <link rel="preconnect" href="https://pagead2.googlesyndication.com" crossorigin>
     <meta name="description" content="文字处理工具网站帮助中心，提供各种工具使用指南、常见问题解答和使用技巧">
     <meta name="keywords" content="文字工具,帮助文档,常见问题,使用教程,文本处理">
-    <link rel="alternate" hreflang="zh-CN" href="help.html">
-    <link rel="alternate" hreflang="en" href="en/help.html">
-    <link rel="alternate" hreflang="x-default" href="help.html">
+    <link rel="alternate" hreflang="zh-CN" href="https://chartools.art/help.html">
+    <link rel="alternate" hreflang="en" href="https://chartools.art/en/help.html">
+    <link rel="alternate" hreflang="x-default" href="https://chartools.art/help.html">
     <link rel="canonical" href="https://chartools.art/help.html">
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-32ZXK1J41J"></script>
@@ -88,6 +91,23 @@
     
     <!-- 主内容区 -->
     <main class="flex-grow pt-16">
+        <script type="application/ld+json">{
+          "@context":"https://schema.org",
+          "@type":"BreadcrumbList",
+          "itemListElement":[
+            {"@type":"ListItem","position":1,"name":"首页","item":"https://chartools.art/"},
+            {"@type":"ListItem","position":2,"name":"帮助","item":"https://chartools.art/help.html"}
+          ]
+        }</script>
+        <script type="application/ld+json">{
+          "@context":"https://schema.org",
+          "@type":"FAQPage",
+          "mainEntity":[
+            {"@type":"Question","name":"这些工具是否免费？","acceptedAnswer":{"@type":"Answer","text":"是的，本站所有工具免费使用，无需注册登录。"}},
+            {"@type":"Question","name":"文本会被上传到服务器吗？","acceptedAnswer":{"@type":"Answer","text":"不会，所有处理在您的浏览器本地完成，数据不离开本地环境。"}},
+            {"@type":"Question","name":"支持哪些文本处理？","acceptedAnswer":{"@type":"Answer","text":"字符计数、文本转换（大小写、简繁体、行处理、空白、全/半角）、文本比较、JSON/XML/HTML/CSS 格式化与最小化等。"}}
+          ]
+        }</script>
         <!-- 帮助中心标题 -->
         <section class="py-12 md:py-16 px-4 bg-gradient-to-br from-blue-50 to-indigo-50">
             <div class="container mx-auto max-w-7xl">

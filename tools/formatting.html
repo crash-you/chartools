@@ -3,14 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>格式化工具 - 文字处理工具网站</title>
+    <title>格式化工具 - 在线格式化/最小化 JSON/XML/HTML/CSS | 文字处理工具网站</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="preload" href="../css/custom.css" as="style">
     <link href="../css/custom.css" rel="stylesheet">
-    <meta name="description" content="在线格式化与压缩 JSON、XML、HTML、CSS。">
+    <meta name="description" content="在线格式化与最小化 JSON、XML、HTML、CSS，轻量快速，适合通用场景；纯前端本地处理，保护隐私。">
     <meta name="keywords" content="JSON格式化,XML格式化,HTML格式化,CSS格式化,代码美化,最小化,压缩,格式化工具,代码格式化">
     <meta property="og:image" content="https://chartools.art/img/og/og-zh.svg">
     <meta property="og:image:alt" content="格式化工具">
     <meta property="og:locale:alternate" content="en_US">
+    <meta property="og:title" content="格式化工具 - 在线格式化/最小化 JSON/XML/HTML/CSS | 文字处理工具网站">
+    <meta property="og:description" content="在线格式化与最小化 JSON/XML/HTML/CSS；纯前端本地处理，隐私安全。">
+    <meta property="og:url" content="https://chartools.art/tools/formatting.html">
+    <meta property="og:site_name" content="文字处理工具网站">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="格式化工具 - 在线格式化/最小化 JSON/XML/HTML/CSS">
+    <meta name="twitter:description" content="轻量格式化与最小化，纯前端本地处理。">
     <link rel="alternate" hreflang="zh-CN" href="formatting.html">
     <link rel="alternate" hreflang="en" href="../en/tools/formatting.html">
     <link rel="alternate" hreflang="x-default" href="formatting.html">
@@ -86,10 +94,16 @@
     <main class="flex-grow pt-16">
         <script type="application/ld+json">{
           "@context":"https://schema.org",
-          "@type":"FAQPage",
-          "mainEntity":[
-            {"@type":"Question","name":"支持哪些类型？","acceptedAnswer":{"@type":"Answer","text":"支持 JSON、XML、HTML、CSS 的格式化与最小化。"}},
-            {"@type":"Question","name":"JSON 会做语法校验吗？","acceptedAnswer":{"@type":"Answer","text":"会进行基本语法校验并在异常时提示。"}}
+          "@graph":[
+            {"@type":"BreadcrumbList","itemListElement":[
+              {"@type":"ListItem","position":1,"name":"首页","item":"https://chartools.art/"},
+              {"@type":"ListItem","position":2,"name":"格式化工具","item":"https://chartools.art/tools/formatting.html"}
+            ]},
+            {"@type":"SoftwareApplication","name":"格式化工具","applicationCategory":"DeveloperApplication","operatingSystem":"Web","url":"https://chartools.art/tools/formatting.html","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}},
+            {"@type":"FAQPage","mainEntity":[
+              {"@type":"Question","name":"支持哪些类型？","acceptedAnswer":{"@type":"Answer","text":"支持 JSON、XML、HTML、CSS 的格式化与最小化。"}},
+              {"@type":"Question","name":"JSON 会做语法校验吗？","acceptedAnswer":{"@type":"Answer","text":"会进行基本语法校验并在异常时提示。"}}
+            ]}
           ]
         }</script>
         <div class="container mx-auto max-w-7xl px-4 py-8">
