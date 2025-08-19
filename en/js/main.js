@@ -4,8 +4,17 @@
  */
 
 // Execute when page is loaded
-document.addEventListener('DOMContentLoaded', function() {
-    // No theme-related functionality needs to be initialized
+document.addEventListener('DOMContentLoaded', async function() {
+    // Only try to load Stagewise toolbar in local dev environment, no dev dependencies in production
+    try {
+        const isLocal = ['localhost', '127.0.0.1'].includes(window.location.hostname);
+        if (isLocal) {
+            const mod = await import('../js/stagewise-setup.js');
+            mod.setupStagewise?.();
+        }
+    } catch (_) {
+        // Ignore dev tool loading failures
+    }
 });
 
 /**
@@ -76,4 +85,34 @@ async function copyToClipboard(text) {
         console.error('Copy failed:', err);
         return false;
     }
-} 
+}
+
+// Mobile menu toggle
+document.getElementById('mobile-menu-button')?.addEventListener('click', function() {
+    const mobileMenu = document.getElementById('mobile-menu');
+    if (mobileMenu.classList.contains('hidden')) {
+        mobileMenu.classList.remove('hidden');
+    } else {
+        mobileMenu.classList.add('hidden');
+    }
+});
+
+// Language switch dropdown menu
+document.getElementById('language-button')?.addEventListener('click', function() {
+    const dropdown = document.getElementById('language-dropdown');
+    if (dropdown.classList.contains('hidden')) {
+        dropdown.classList.remove('hidden');
+    } else {
+        dropdown.classList.add('hidden');
+    }
+});
+
+// Close dropdown when clicking outside
+document.addEventListener('click', function(event) {
+    const languageButton = document.getElementById('language-button');
+    const languageDropdown = document.getElementById('language-dropdown');
+    
+    if (languageButton && languageDropdown && !languageButton.contains(event.target) && !languageDropdown.contains(event.target)) {
+        languageDropdown.classList.add('hidden');
+    }
+}); 
