@@ -49,22 +49,343 @@
   <main class="flex-grow pt-16">
     <article class="py-12 px-4">
       <div class="container mx-auto max-w-3xl prose">
+        <!-- 面包屑导航 -->
+        <nav class="mb-6 text-sm text-gray-600">
+          <a href="../index.html" class="hover:text-blue-600">首页</a> 
+          <span class="mx-2">›</span>
+          <a href="index.html" class="hover:text-blue-600">指南</a>
+          <span class="mx-2">›</span>
+          <span class="text-gray-800">数据清洗</span>
+        </nav>
+
         <h1>数据清洗与批量处理：文本去重、排序、空白优化</h1>
-        <p>当你从问卷、导出报表、用户反馈或爬虫中拿到一批文本时，第一步通常是清洗。下面的工作流可以做到“一键处理”。</p>
+        
+        <div class="bg-blue-50 border-l-4 border-blue-400 p-4 mb-6">
+          <p class="text-blue-800"><strong>阅读时长：</strong>约10分钟 &nbsp;|&nbsp; <strong>适用场景：</strong>数据分析、内容运营、产品管理</p>
+        </div>
 
-        <h2>标准流程</h2>
-        <ol>
-          <li>将原始文本粘贴到 <a href="../tools/text-conversion.html">文本转换工具</a> 左侧输入。</li>
-          <li>按需执行：<em>裁剪首尾</em> → <em>合并多空格</em> → <em>移除多余空白行</em>。</li>
-          <li>行级处理：<em>去重</em>、<em>升序/降序排序</em>、<em>裁剪每行</em>。</li>
-          <li>若需要去掉制表符，使用 <em>Tab 转空格</em> 并统一缩进。</li>
-        </ol>
+        <p>在数据驱动的时代，文本数据清洗已成为数据分析师、产品经理、运营人员的必备技能。无论是处理用户反馈、问卷调查结果，还是爬虫获取的数据，高效的清洗流程都能显著提升工作效率和数据质量。本指南将为您详细介绍专业的文本数据清洗方法。</p>
 
-        <h2>案例：标签库去噪</h2>
-        <p>把用户自填标签导出后，使用“去重+排序”立刻得到规范集合，再配合“大小写规则”和“全角/半角转换”统一风格。</p>
+        <h2>为什么需要专业的数据清洗？</h2>
+        
+        <div class="bg-red-50 border border-red-200 rounded-lg p-4 my-4">
+          <h3 class="text-red-800 font-semibold mb-2">🚨 常见的脏数据问题</h3>
+          <ul class="text-red-700 space-y-1">
+            <li>• <strong>重复数据</strong>：同一内容的多种表达方式</li>
+            <li>• <strong>格式不统一</strong>：大小写混乱、标点不规范</li>
+            <li>• <strong>空白字符</strong>：多余的空格、制表符、换行符</li>
+            <li>• <strong>编码问题</strong>：全角半角混用、特殊字符</li>
+            <li>• <strong>数据缺失</strong>：空行、无效条目</li>
+          </ul>
+        </div>
 
-        <h2>导出与复用</h2>
-         <p>清洗后内容可直接复制或下载；若要与旧版本对比变化，可用 <a href="../tools/text-comparison.html">文本比较工具</a> 高亮差异。</p>
+        <h3>清洗不当的后果</h3>
+        <ul>
+          <li><strong>分析偏差</strong>：重复数据导致统计结果失真</li>
+          <li><strong>效率低下</strong>：人工处理耗时且容易出错</li>
+          <li><strong>决策错误</strong>：基于脏数据的决策可能南辕北辙</li>
+          <li><strong>系统故障</strong>：格式不规范可能导致程序异常</li>
+        </ul>
+
+        <h2>专业数据清洗工作流</h2>
+
+        <h3>第一步：数据评估与预处理</h3>
+        
+        <div class="bg-gray-50 border border-gray-200 rounded-lg p-4 my-4">
+          <h4 class="font-semibold mb-2">数据质量评估清单</h4>
+          <ul class="space-y-1">
+            <li>☐ 数据总量和有效条目数量</li>
+            <li>☐ 重复率和空值比例</li>
+            <li>☐ 字符编码和格式一致性</li>
+            <li>☐ 特殊字符和异常值分布</li>
+          </ul>
+        </div>
+
+        <p>将原始数据导入我们的<a href="../tools/text-counter.html">字符计数工具</a>进行初步评估：</p>
+        <ul>
+          <li>统计总行数、字符数、段落数</li>
+          <li>识别异常长度的条目</li>
+          <li>评估数据的整体质量</li>
+        </ul>
+
+        <h3>第二步：基础清洗操作</h3>
+
+        <p>使用<a href="../tools/text-conversion.html">文本转换工具</a>进行标准化处理：</p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-6">
+          <div class="border border-blue-200 rounded-lg p-4">
+            <h4 class="font-semibold text-blue-800 mb-2">空白字符处理</h4>
+            <ol class="text-sm space-y-1">
+              <li>1. 裁剪首尾空格</li>
+              <li>2. 合并多个空格</li>
+              <li>3. 移除多余空白行</li>
+              <li>4. Tab转空格统一</li>
+            </ol>
+          </div>
+          <div class="border border-green-200 rounded-lg p-4">
+            <h4 class="font-semibold text-green-800 mb-2">格式标准化</h4>
+            <ol class="text-sm space-y-1">
+              <li>1. 统一大小写规则</li>
+              <li>2. 全角半角转换</li>
+              <li>3. 标点符号规范</li>
+              <li>4. 特殊字符处理</li>
+            </ol>
+          </div>
+        </div>
+
+        <h3>第三步：高级数据处理</h3>
+
+        <h4>1. 去重与排序</h4>
+        <ul>
+          <li><strong>智能去重</strong>：自动识别完全相同的条目</li>
+          <li><strong>排序优化</strong>：支持升序、降序、自定义排序规则</li>
+          <li><strong>条目修剪</strong>：批量处理每行的首尾空格</li>
+        </ul>
+
+        <h4>2. 数据验证与质检</h4>
+        <ul>
+          <li>使用<a href="../tools/text-counter.html">字符计数工具</a>验证清洗效果</li>
+          <li>对比清洗前后的数据量变化</li>
+          <li>抽样检查数据质量</li>
+        </ul>
+
+        <h2>实战案例详解</h2>
+
+        <h3>案例一：用户标签库清洗</h3>
+        
+        <div class="bg-yellow-50 border border-yellow-200 rounded-lg p-4 my-4">
+          <h4 class="font-semibold text-yellow-800 mb-2">📊 场景描述</h4>
+          <p class="text-yellow-700">某电商平台收集了10万个用户自定义标签，需要清洗后用于推荐算法训练。原始数据存在大量重复、格式不统一的问题。</p>
+        </div>
+
+        <div class="space-y-4">
+          <div class="border-l-4 border-blue-400 pl-4">
+            <h5 class="font-semibold">原始数据示例：</h5>
+            <pre class="bg-gray-100 p-2 text-sm rounded">
+数码产品
+  数码产品  
+DIGITAL PRODUCTS
+digital products
+数码產品
+数码产品
+电子产品
+            </pre>
+          </div>
+          
+          <div class="border-l-4 border-green-400 pl-4">
+            <h5 class="font-semibold">清洗步骤：</h5>
+            <ol class="space-y-2">
+              <li><strong>Step 1</strong>：裁剪首尾空格，移除空行</li>
+              <li><strong>Step 2</strong>：统一转换为小写</li>
+              <li><strong>Step 3</strong>：繁体转简体</li>
+              <li><strong>Step 4</strong>：去重排序</li>
+              <li><strong>Step 5</strong>：人工审核合并相似标签</li>
+            </ol>
+          </div>
+          
+          <div class="border-l-4 border-purple-400 pl-4">
+            <h5 class="font-semibold">清洗结果：</h5>
+            <pre class="bg-gray-100 p-2 text-sm rounded">
+digital products
+数码产品
+电子产品
+            </pre>
+            <p class="text-sm text-gray-600 mt-2">从7个条目清洗为3个有效标签，去重率达57%</p>
+          </div>
+        </div>
+
+        <h3>案例二：问卷开放题回答整理</h3>
+
+        <div class="bg-green-50 border border-green-200 rounded-lg p-4 my-4">
+          <h4 class="font-semibold text-green-800 mb-2">📝 场景描述</h4>
+          <p class="text-green-700">市场调研收集了5000份问卷的开放题回答，需要分类统计用户意见分布，原始数据格式混乱且包含大量无效回答。</p>
+        </div>
+
+        <div class="overflow-x-auto">
+          <table class="w-full border-collapse border border-gray-300 my-4">
+            <thead>
+              <tr class="bg-gray-50">
+                <th class="border border-gray-300 px-4 py-2 text-left">处理阶段</th>
+                <th class="border border-gray-300 px-4 py-2 text-left">操作内容</th>
+                <th class="border border-gray-300 px-4 py-2 text-left">效果</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="border border-gray-300 px-4 py-2">预处理</td>
+                <td class="border border-gray-300 px-4 py-2">移除空行、裁剪空格</td>
+                <td class="border border-gray-300 px-4 py-2">数据量从5000减少到4650</td>
+              </tr>
+              <tr>
+                <td class="border border-gray-300 px-4 py-2">格式统一</td>
+                <td class="border border-gray-300 px-4 py-2">标点规范、大小写统一</td>
+                <td class="border border-gray-300 px-4 py-2">提升可读性和一致性</td>
+              </tr>
+              <tr>
+                <td class="border border-gray-300 px-4 py-2">去重处理</td>
+                <td class="border border-gray-300 px-4 py-2">完全相同回答去重</td>
+                <td class="border border-gray-300 px-4 py-2">最终得到3890个独特回答</td>
+              </tr>
+              <tr>
+                <td class="border border-gray-300 px-4 py-2">分类排序</td>
+                <td class="border border-gray-300 px-4 py-2">按字符长度排序分组</td>
+                <td class="border border-gray-300 px-4 py-2">便于后续人工分类</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>案例三：爬虫数据清洗</h3>
+
+        <div class="bg-purple-50 border border-purple-200 rounded-lg p-4 my-4">
+          <h4 class="font-semibold text-purple-800 mb-2">🕷️ 场景描述</h4>
+          <p class="text-purple-700">从多个新闻网站爬取文章标题，需要清洗后用于内容分析，原始数据包含HTML标签、编码问题等。</p>
+        </div>
+
+        <div class="bg-gray-50 border border-gray-200 rounded-lg p-4 my-4">
+          <h4 class="font-semibold mb-2">清洗策略：</h4>
+          <ol class="space-y-2">
+            <li><strong>HTML清理</strong>：使用<a href="../tools/formatting.html">格式化工具</a>预处理HTML内容</li>
+            <li><strong>编码修复</strong>：统一字符编码，处理乱码问题</li>
+            <li><strong>内容提取</strong>：提取纯文本标题内容</li>
+            <li><strong>质量过滤</strong>：移除过短或过长的异常标题</li>
+            <li><strong>去重排序</strong>：最终整理为可分析的数据集</li>
+          </ol>
+        </div>
+
+        <h2>高级技巧与最佳实践</h2>
+
+        <h3>1. 批量处理优化</h3>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-6">
+          <div class="bg-blue-50 border border-blue-200 rounded-lg p-4">
+            <h4 class="font-semibold text-blue-800 mb-2">⚡ 效率提升</h4>
+            <ul class="text-blue-700 text-sm space-y-1">
+              <li>• 建立标准清洗模板</li>
+              <li>• 使用快捷操作组合</li>
+              <li>• 分批处理大数据集</li>
+              <li>• 自动化重复操作</li>
+            </ul>
+          </div>
+          <div class="bg-green-50 border border-green-200 rounded-lg p-4">
+            <h4 class="font-semibold text-green-800 mb-2">🎯 质量保证</h4>
+            <ul class="text-green-700 text-sm space-y-1">
+              <li>• 设置数据验证规则</li>
+              <li>• 建立质检流程</li>
+              <li>• 记录清洗日志</li>
+              <li>• 定期抽样检查</li>
+            </ul>
+          </div>
+        </div>
+
+        <h3>2. 数据清洗检查清单</h3>
+
+        <div class="bg-yellow-50 border border-yellow-200 rounded-lg p-4 my-4">
+          <h4 class="font-semibold text-yellow-800 mb-2">✅ 清洗完成检查项</h4>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm">
+            <div>
+              <p class="font-semibold mb-1">基础检查：</p>
+              <ul class="text-yellow-700 space-y-1">
+                <li>☐ 空行和空值已清理</li>
+                <li>☐ 首尾空格已裁剪</li>
+                <li>☐ 重复条目已去除</li>
+                <li>☐ 格式已统一</li>
+              </ul>
+            </div>
+            <div>
+              <p class="font-semibold mb-1">高级检查：</p>
+              <ul class="text-yellow-700 space-y-1">
+                <li>☐ 字符编码正确</li>
+                <li>☐ 数据量符合预期</li>
+                <li>☐ 抽样质量合格</li>
+                <li>☐ 清洗日志完整</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <h3>3. 常见问题与解决方案</h3>
+
+        <div class="space-y-4">
+          <div class="border border-gray-200 rounded-lg p-4">
+            <h4 class="font-semibold text-gray-800 mb-2">Q: 如何处理半角全角混用的数据？</h4>
+            <p class="text-gray-700">A: 使用文本转换工具的"全角转半角"功能统一处理。建议优先转为半角，因为半角字符在大多数系统中兼容性更好。</p>
+          </div>
+          
+          <div class="border border-gray-200 rounded-lg p-4">
+            <h4 class="font-semibold text-gray-800 mb-2">Q: 大数据量清洗时如何避免浏览器卡顿？</h4>
+            <p class="text-gray-700">A: 建议将大数据集分批处理，每批不超过1万行。可以先用字符计数工具评估数据量，然后分批清洗后再合并。</p>
+          </div>
+          
+          <div class="border border-gray-200 rounded-lg p-4">
+            <h4 class="font-semibold text-gray-800 mb-2">Q: 如何判断清洗效果是否达标？</h4>
+            <p class="text-gray-700">A: 建议设定量化指标：去重率>90%、空值率<1%、格式一致性>95%。使用文本比较工具对比清洗前后的样本数据。</p>
+          </div>
+        </div>
+
+        <h2>工具组合使用建议</h2>
+
+        <div class="overflow-x-auto my-6">
+          <table class="w-full border-collapse border border-gray-300">
+            <thead>
+              <tr class="bg-gray-50">
+                <th class="border border-gray-300 px-4 py-2 text-left">数据类型</th>
+                <th class="border border-gray-300 px-4 py-2 text-left">推荐工具组合</th>
+                <th class="border border-gray-300 px-4 py-2 text-left">关键步骤</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="border border-gray-300 px-4 py-2">用户标签</td>
+                <td class="border border-gray-300 px-4 py-2">文本转换 + 字符计数</td>
+                <td class="border border-gray-300 px-4 py-2">去重→排序→统计</td>
+              </tr>
+              <tr>
+                <td class="border border-gray-300 px-4 py-2">问卷回答</td>
+                <td class="border border-gray-300 px-4 py-2">文本转换 + 文本比较</td>
+                <td class="border border-gray-300 px-4 py-2">清洗→分类→验证</td>
+              </tr>
+              <tr>
+                <td class="border border-gray-300 px-4 py-2">爬虫数据</td>
+                <td class="border border-gray-300 px-4 py-2">格式化 + 文本转换</td>
+                <td class="border border-gray-300 px-4 py-2">解析→清洗→标准化</td>
+              </tr>
+              <tr>
+                <td class="border border-gray-300 px-4 py-2">日志文件</td>
+                <td class="border border-gray-300 px-4 py-2">文本转换 + 字符计数</td>
+                <td class="border border-gray-300 px-4 py-2">过滤→去重→分析</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2>导出与后续处理</h2>
+
+        <h3>1. 清洗结果导出</h3>
+        <ul>
+          <li><strong>直接复制</strong>：适用于小批量数据的快速使用</li>
+          <li><strong>文件下载</strong>：支持多种格式，便于后续分析</li>
+          <li><strong>分批导出</strong>：大数据集建议分批处理和导出</li>
+        </ul>
+
+        <h3>2. 版本对比与质检</h3>
+        <p>使用<a href="../tools/text-comparison.html">文本比较工具</a>进行质量检查：</p>
+        <ul>
+          <li>对比清洗前后的数据变化</li>
+          <li>验证关键数据是否保留</li>
+          <li>检查清洗操作的准确性</li>
+          <li>生成清洗报告和日志</li>
+        </ul>
+
+        <div class="bg-blue-50 border border-blue-200 rounded-lg p-4 my-6">
+          <h4 class="font-semibold text-blue-800 mb-2">🚀 进阶学习建议</h4>
+          <ul class="text-blue-700 space-y-1">
+            <li>• 学习正则表达式进行复杂模式匹配</li>
+            <li>• 掌握数据分析工具（如Excel、Python）的高级功能</li>
+            <li>• 建立数据质量管理体系</li>
+            <li>• 关注数据清洗的最新技术和工具</li>
+          </ul>
+        </div>
       </div>
     </article>
   </main>
