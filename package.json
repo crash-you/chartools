@@ -4,7 +4,7 @@
   "description": "一个多功能的在线文字处理工具集合，提供字符计数、文本转换、格式化等功能，帮助用户高效处理各种文本需求。",
   "main": "sw.js",
   "scripts": {
-    "test": "echo \"No tests specified\"",
+    "test": "echo \"No tests specified\" && exit 0",
     "start": "webpack serve --open",
     "build": "webpack",
     "dev": "webpack serve --open",
