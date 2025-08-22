@@ -5,38 +5,25 @@
 
 // 页面加载完成后执行
 document.addEventListener('DOMContentLoaded', function() {
-    console.log('语言切换JS开始加载...');
-    
     // 初始化语言切换功能
     initLanguageSelector();
     
     // 自动检测浏览器语言并切换
     detectBrowserLanguage();
-    
-    console.log('语言切换JS加载完成');
 });
 
 /**
  * 初始化语言选择器功能
  */
 function initLanguageSelector() {
-    console.log('初始化语言选择器...');
-    
     const languageButton = document.getElementById('language-button');
     const languageDropdown = document.getElementById('language-dropdown');
     
-    console.log('语言按钮元素:', languageButton);
-    console.log('语言下拉菜单元素:', languageDropdown);
-    
     if (languageButton && languageDropdown) {
-        console.log('开始绑定语言切换事件...');
-        
         // 点击语言按钮切换下拉菜单显示状态
         languageButton.addEventListener('click', function(e) {
-            console.log('语言按钮被点击！');
             e.stopPropagation();
             languageDropdown.classList.toggle('hidden');
-            console.log('下拉菜单状态切换完成');
         });
         
         // 点击页面其他区域关闭下拉菜单

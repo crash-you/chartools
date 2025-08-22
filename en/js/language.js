@@ -5,38 +5,25 @@
 
 // Execute when page is loaded
 document.addEventListener('DOMContentLoaded', function() {
-    console.log('Language switching JS loading...');
-    
     // Initialize language selector
     initLanguageSelector();
     
     // Auto-detect browser language and switch
     detectBrowserLanguage();
-    
-    console.log('Language switching JS loaded');
 });
 
 /**
  * Initialize language selector functionality
  */
 function initLanguageSelector() {
-    console.log('Initializing language selector...');
-    
     const languageButton = document.getElementById('language-button');
     const languageDropdown = document.getElementById('language-dropdown');
     
-    console.log('Language button element:', languageButton);
-    console.log('Language dropdown element:', languageDropdown);
-    
     if (languageButton && languageDropdown) {
-        console.log('Starting to bind language switch event...');
-        
         // Toggle dropdown when language button is clicked
         languageButton.addEventListener('click', function(e) {
-            console.log('Language button clicked!');
             e.stopPropagation();
             languageDropdown.classList.toggle('hidden');
-            console.log('Dropdown state toggle completed');
         });
         
         // Close dropdown when clicking elsewhere
