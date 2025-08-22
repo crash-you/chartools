@@ -22,7 +22,7 @@
   <meta property="og:image" content="https://chartools.art/img/og/og-en.svg">
   <meta property="og:image:alt" content="Data Cleaning Guide">
   <meta property="article:published_time" content="2025-01-01T00:00:00+00:00">
-  <meta property="article:modified_time" content="2025-01-01T00:00:00+00:00">
+  <meta property="article:modified_time" content="2025-08-22T08:00:00+00:00">
   <meta name="twitter:card" content="summary">
   <script type="application/ld+json">{"@context":"https://schema.org","@graph":[
     {"@type":"BreadcrumbList","itemListElement":[
@@ -49,19 +49,315 @@
   <main class="flex-grow pt-16">
     <article class="py-12 px-4">
       <div class="container mx-auto max-w-3xl prose">
-        <h1>Data Cleaning: Deduplicate, Sort and Whitespace</h1>
-        <p>When you get raw text from surveys, exports or crawlers, start with cleaning.</p>
-        <h2>Standard Flow</h2>
-        <ol>
-          <li>Paste the text into the <a href="../../tools/text-conversion.html">Text Conversion Tool</a>.</li>
-          <li>Run <em>Trim All</em> → <em>Collapse Spaces</em> → <em>Remove Extra Blank Lines</em>.</li>
-          <li>Line ops: <em>Unique</em>, <em>Sort Asc/Desc</em>, <em>Trim Lines</em>.</li>
-          <li>Use <em>Tabs → Spaces</em> for unified indentation if needed.</li>
+        <nav class="text-sm breadcrumbs mb-6">
+          <a href="../index.html" class="text-blue-600 hover:underline">Home</a>
+          <span class="mx-2">›</span>
+          <a href="index.html" class="text-blue-600 hover:underline">Guides</a>
+          <span class="mx-2">›</span>
+          <span class="text-gray-500">Data Cleaning</span>
+        </nav>
+
+        <h1>Data Cleaning & Batch Processing: Text Deduplication, Sorting & Whitespace Optimization</h1>
+        <p><strong>Reading Time:</strong> ~10 minutes | <strong>Use Cases:</strong> Data Analysis, Content Operations, Product Management</p>
+        
+        <p>In the data-driven era, text data cleaning has become an essential skill for data analysts, product managers, and operations professionals. Whether processing user feedback, survey results, or web-scraped data, efficient cleaning workflows can significantly improve work efficiency and data quality. This guide will detail professional text data cleaning methods.</p>
+
+        <h2>Why Professional Data Cleaning is Essential</h2>
+        
+        <div>
+          <h3>🚨 Common Dirty Data Problems</h3>
+          <ul>
+            <li>• <strong>Duplicate Data</strong>: Multiple expressions of the same content</li>
+            <li>• <strong>Inconsistent Formatting</strong>: Mixed case, irregular punctuation</li>
+            <li>• <strong>Whitespace Characters</strong>: Excess spaces, tabs, line breaks</li>
+            <li>• <strong>Encoding Issues</strong>: Mixed full-width/half-width, special characters</li>
+            <li>• <strong>Missing Data</strong>: Empty lines, invalid entries</li>
+          </ul>
+        </div>
+
+        <h3>Consequences of Poor Cleaning</h3>
+        <ul>
+          <li><strong>Analysis Bias</strong>: Duplicate data leads to distorted statistical results</li>
+          <li><strong>Reduced Efficiency</strong>: Manual processing is time-consuming and error-prone</li>
+          <li><strong>Poor Decisions</strong>: Decisions based on dirty data can be counterproductive</li>
+          <li><strong>System Failures</strong>: Non-standard formatting may cause program exceptions</li>
+        </ul>
+
+        <h2>Professional Data Cleaning Workflow</h2>
+
+        <h3>Step 1: Data Assessment & Preprocessing</h3>
+        <div>
+          <h4>Data Quality Assessment Checklist</h4>
+          <ul>
+            <li>☐ Total data volume and valid entry count</li>
+            <li>☐ Duplication rate and null value percentage</li>
+            <li>☐ Character encoding and format consistency</li>
+            <li>☐ Special characters and anomaly distribution</li>
+          </ul>
+        </div>
+
+        <p>Import raw data into our <a href="../../tools/text-counter.html">Character Counter Tool</a> for initial assessment:</p>
+        <ul>
+          <li>Count total lines, character count, paragraph count</li>
+          <li>Identify abnormally long/short entries</li>
+          <li>Assess overall data quality</li>
+        </ul>
+
+        <h3>Step 2: Basic Cleaning Operations</h3>
+        <p>Use the <a href="../../tools/text-conversion.html">Text Conversion Tool</a> for standardization:</p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div>
+            <h4>Whitespace Character Processing</h4>
+            <ol>
+              <li>1. Trim leading/trailing spaces</li>
+              <li>2. Collapse multiple spaces</li>
+              <li>3. Remove extra blank lines</li>
+              <li>4. Convert tabs to spaces uniformly</li>
+            </ol>
+          </div>
+          <div>
+            <h4>Format Standardization</h4>
+            <ol>
+              <li>1. Unify case rules</li>
+              <li>2. Full-width/half-width conversion</li>
+              <li>3. Punctuation standardization</li>
+              <li>4. Special character processing</li>
+            </ol>
+          </div>
+        </div>
+
+        <h3>Step 3: Advanced Data Processing</h3>
+
+        <h4>1. Deduplication & Sorting</h4>
+        <ul>
+          <li><strong>Smart Deduplication</strong>: Automatically identify completely identical entries</li>
+          <li><strong>Sorting Optimization</strong>: Support ascending, descending, custom sorting rules</li>
+          <li><strong>Entry Trimming</strong>: Batch process leading/trailing spaces on each line</li>
+        </ul>
+
+        <h4>2. Data Validation & Quality Control</h4>
+        <ul>
+          <li>Use <a href="../../tools/text-counter.html">Character Counter Tool</a> to validate cleaning effects</li>
+          <li>Compare data volume changes before and after cleaning</li>
+          <li>Sample check data quality</li>
+        </ul>
+
+        <h2>Real-World Case Studies</h2>
+
+        <h3>Case 1: User Tag Library Cleaning</h3>
+        <div>
+          <h4>📊 Scenario Description</h4>
+          <p>An e-commerce platform collected 100,000 user-defined tags that needed cleaning for recommendation algorithm training. The raw data had significant duplication and formatting inconsistencies.</p>
+        </div>
+
+        <div class="grid grid-cols-1 gap-4">
+          <div>
+            <h5>Original Data Example:</h5>
+            <div class="bg-gray-100 p-3 rounded">digital products digital products DIGITAL PRODUCTS digital products 數碼產品 digital products electronics</div>
+          </div>
+          <div>
+            <h5>Cleaning Steps:</h5>
+            <ol>
+              <li><strong>Step 1</strong>: Trim leading/trailing spaces, remove empty lines</li>
+              <li><strong>Step 2</strong>: Convert to lowercase uniformly</li>
+              <li><strong>Step 3</strong>: Convert traditional to simplified Chinese</li>
+              <li><strong>Step 4</strong>: Deduplicate and sort</li>
+              <li><strong>Step 5</strong>: Manual review and merge similar tags</li>
         </ol>
-        <h2>Use Case: Tag Library</h2>
-        <p>“Unique + Sort” creates a clean tag list; unify case and full/half width for consistent style.</p>
-        <h2>Export & Reuse</h2>
-         <p>Copy results directly; compare with previous versions in the <a href="../../tools/text-comparison.html">Text Comparison Tool</a>.</p>
+          </div>
+          <div>
+            <h5>Cleaning Results:</h5>
+            <div class="bg-green-100 p-3 rounded">digital products 數碼產品 electronics</div>
+            <p>Reduced from 7 entries to 3 valid tags, achieving 57% deduplication rate</p>
+          </div>
+        </div>
+
+        <h3>Case 2: Survey Open-Ended Response Organization</h3>
+        <div>
+          <h4>📝 Scenario Description</h4>
+          <p>Market research collected 5,000 survey open-ended responses that needed categorization for user opinion distribution analysis. Raw data was messy and contained many invalid responses.</p>
+        </div>
+
+        <table class="min-w-full border-collapse border border-gray-300">
+          <thead>
+            <tr class="bg-gray-100">
+              <th class="border border-gray-300 px-4 py-2">Processing Stage</th>
+              <th class="border border-gray-300 px-4 py-2">Operations</th>
+              <th class="border border-gray-300 px-4 py-2">Results</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="border border-gray-300 px-4 py-2">Preprocessing</td>
+              <td class="border border-gray-300 px-4 py-2">Remove empty lines, trim spaces</td>
+              <td class="border border-gray-300 px-4 py-2">Data reduced from 5,000 to 4,650</td>
+            </tr>
+            <tr>
+              <td class="border border-gray-300 px-4 py-2">Format Unification</td>
+              <td class="border border-gray-300 px-4 py-2">Punctuation standardization, case unification</td>
+              <td class="border border-gray-300 px-4 py-2">Improved readability and consistency</td>
+            </tr>
+            <tr>
+              <td class="border border-gray-300 px-4 py-2">Deduplication</td>
+              <td class="border border-gray-300 px-4 py-2">Remove completely identical responses</td>
+              <td class="border border-gray-300 px-4 py-2">Final result: 3,890 unique responses</td>
+            </tr>
+            <tr>
+              <td class="border border-gray-300 px-4 py-2">Classification & Sorting</td>
+              <td class="border border-gray-300 px-4 py-2">Sort by character length for grouping</td>
+              <td class="border border-gray-300 px-4 py-2">Facilitate subsequent manual classification</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h3>Case 3: Web Crawler Data Cleaning</h3>
+        <div>
+          <h4>🕷️ Scenario Description</h4>
+          <p>Article titles were scraped from multiple news websites and needed cleaning for content analysis. Raw data contained HTML tags and encoding issues.</p>
+        </div>
+
+        <div>
+          <h4>Cleaning Strategy:</h4>
+          <ul>
+            <li><strong>HTML Cleanup</strong>: Use <a href="../../tools/formatting.html">Formatting Tools</a> to preprocess HTML content</li>
+            <li><strong>Encoding Fixes</strong>: Unify character encoding, handle garbled text</li>
+            <li><strong>Content Extraction</strong>: Extract clean title text</li>
+            <li><strong>Quality Filtering</strong>: Remove abnormally short or long titles</li>
+            <li><strong>Deduplication & Sorting</strong>: Final organization into analyzable dataset</li>
+          </ul>
+        </div>
+
+        <h2>Advanced Techniques & Best Practices</h2>
+
+        <h3>1. Batch Processing Optimization</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div>
+            <h4>⚡ Efficiency Improvement</h4>
+            <ul>
+              <li>• Establish standard cleaning templates</li>
+              <li>• Use shortcut operation combinations</li>
+              <li>• Process large datasets in batches</li>
+              <li>• Automate repetitive operations</li>
+            </ul>
+          </div>
+          <div>
+            <h4>🎯 Quality Assurance</h4>
+            <ul>
+              <li>• Set data validation rules</li>
+              <li>• Establish quality control processes</li>
+              <li>• Record cleaning logs</li>
+              <li>• Regular sampling inspections</li>
+            </ul>
+          </div>
+        </div>
+
+        <h3>2. Data Cleaning Checklist</h3>
+        <div>
+          <h4>✅ Cleaning Completion Checklist</h4>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <p>Basic Checks:</p>
+              <ul>
+                <li>☐ Empty lines and null values cleaned</li>
+                <li>☐ Leading/trailing spaces trimmed</li>
+                <li>☐ Duplicate entries removed</li>
+                <li>☐ Format unified</li>
+              </ul>
+            </div>
+            <div>
+              <p>Advanced Checks:</p>
+              <ul>
+                <li>☐ Character encoding correct</li>
+                <li>☐ Data volume meets expectations</li>
+                <li>☐ Sample quality passes inspection</li>
+                <li>☐ Cleaning logs complete</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <h3>3. Common Issues & Solutions</h3>
+        <div>
+          <div class="space-y-4">
+            <div class="border-l-4 border-blue-500 pl-4">
+              <h4 class="font-semibold">Q: How to handle mixed full-width/half-width data?</h4>
+              <p>A: Use the text conversion tool's "Full-width to Half-width" function for uniform processing. Recommend prioritizing half-width as it has better system compatibility.</p>
+            </div>
+            
+            <div class="border-l-4 border-green-500 pl-4">
+              <h4 class="font-semibold">Q: How to avoid browser lag when cleaning large datasets?</h4>
+              <p>A: Recommend processing large datasets in batches of no more than 10,000 lines each. Use the character counter tool to assess data volume first, then clean in batches before merging.</p>
+            </div>
+            
+            <div class="border-l-4 border-purple-500 pl-4">
+              <h4 class="font-semibold">Q: How to determine if cleaning results meet standards?</h4>
+              <p>A: Recommend setting quantified metrics: deduplication rate >90%, null value rate <1%, format consistency >95%. Use text comparison tool to compare before/after sample data.</p>
+            </div>
+          </div>
+        </div>
+
+        <h2>Tool Combination Usage Recommendations</h2>
+
+        <table class="min-w-full border-collapse border border-gray-300">
+          <thead>
+            <tr class="bg-gray-100">
+              <th class="border border-gray-300 px-4 py-2">Data Type</th>
+              <th class="border border-gray-300 px-4 py-2">Recommended Tool Combination</th>
+              <th class="border border-gray-300 px-4 py-2">Key Steps</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="border border-gray-300 px-4 py-2">User Tags</td>
+              <td class="border border-gray-300 px-4 py-2">Text Conversion + Character Counter</td>
+              <td class="border border-gray-300 px-4 py-2">Deduplicate→Sort→Statistics</td>
+            </tr>
+            <tr>
+              <td class="border border-gray-300 px-4 py-2">Survey Responses</td>
+              <td class="border border-gray-300 px-4 py-2">Text Conversion + Text Comparison</td>
+              <td class="border border-gray-300 px-4 py-2">Clean→Categorize→Validate</td>
+            </tr>
+            <tr>
+              <td class="border border-gray-300 px-4 py-2">Crawler Data</td>
+              <td class="border border-gray-300 px-4 py-2">Formatting + Text Conversion</td>
+              <td class="border border-gray-300 px-4 py-2">Parse→Clean→Standardize</td>
+            </tr>
+            <tr>
+              <td class="border border-gray-300 px-4 py-2">Log Files</td>
+              <td class="border border-gray-300 px-4 py-2">Text Conversion + Character Counter</td>
+              <td class="border border-gray-300 px-4 py-2">Filter→Deduplicate→Analyze</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2>Export & Subsequent Processing</h2>
+
+        <h3>1. Cleaning Results Export</h3>
+        <ul>
+          <li><strong>Direct Copy</strong>: Suitable for small batch data for quick use</li>
+          <li><strong>File Download</strong>: Support multiple formats for subsequent analysis</li>
+          <li><strong>Batch Export</strong>: Large datasets recommend batch processing and export</li>
+        </ul>
+
+        <h3>2. Version Comparison & Quality Control</h3>
+        <p>Use the <a href="../../tools/text-comparison.html">Text Comparison Tool</a> for quality checks:</p>
+        <ul>
+          <li>Compare data changes before and after cleaning</li>
+          <li>Verify key data retention</li>
+          <li>Check accuracy of cleaning operations</li>
+          <li>Generate cleaning reports and logs</li>
+        </ul>
+
+        <div class="bg-blue-50 p-6 rounded-lg">
+          <h4>🚀 Advanced Learning Recommendations</h4>
+          <ul>
+            <li>• Learn regular expressions for complex pattern matching</li>
+            <li>• Master advanced features of data analysis tools (Excel, Python)</li>
+            <li>• Establish data quality management systems</li>
+            <li>• Stay updated on latest data cleaning technologies and tools</li>
+          </ul>
+        </div>
       </div>
     </article>
   </main>

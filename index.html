@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>文字处理工具网站 | 在线字符计数/文本转换/文本比较/格式化</title>
+    <title>免费在线文字处理工具 - 字符计数器、文本转换与格式化 | CharTools</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="preload" href="css/custom.css" as="style">
     <link href="css/custom.css" rel="stylesheet">
@@ -19,7 +19,7 @@
     <meta property="og:site_name" content="文字处理工具网站">
     <meta name="twitter:card" content="summary">
     <meta name="description" content="多功能文本处理工具：字符计数、文本转换、文本比较、格式化等，一站式满足文字处理需求，纯前端本地处理更安全。">
-    <meta name="keywords" content="文字工具,字符计数,文本处理,在线工具">
+    <meta name="keywords" content="文字工具,字符计数,文本处理,在线工具,免费字数统计,文本转换器,文档格式化,批量文字处理,中文字符计数,英文单词统计,文本比较工具,JSON格式化,XML美化,HTML压缩,CSS最小化,数据清洗工具,文本去重排序,写作辅助工具,内容编辑器,SEO文案工具">
     <link rel="alternate" hreflang="zh-CN" href="https://chartools.art/index.html">
     <link rel="alternate" hreflang="en" href="https://chartools.art/en/index.html">
     <link rel="alternate" hreflang="x-default" href="https://chartools.art/index.html">
@@ -27,6 +27,8 @@
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
     <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
     <link rel="preconnect" href="https://pagead2.googlesyndication.com" crossorigin>
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-32ZXK1J41J"></script>
     <script>
@@ -50,7 +52,7 @@
                 
                 <!-- 主导航 (桌面版) -->
                 <div class="hidden md:flex items-center space-x-8">
-                    <a href="#" class="text-gray-700 hover:text-blue-600">功能</a>
+                    <a href="about.html" class="text-gray-700 hover:text-blue-600">关于</a>
                     <a href="#tools" class="text-gray-700 hover:text-blue-600">工具</a>
                     <a href="help.html" class="text-gray-700 hover:text-blue-600">帮助</a>
                     <a href="articles/index.html" class="text-gray-700 hover:text-blue-600">指南</a>
@@ -84,7 +86,7 @@
             <!-- 移动端菜单 -->
             <div id="mobile-menu" class="md:hidden hidden pb-4">
                 <div class="flex flex-col space-y-4">
-                    <a href="#" class="text-gray-700 hover:text-blue-600">功能</a>
+                    <a href="about.html" class="text-gray-700 hover:text-blue-600">关于</a>
                     <a href="#tools" class="text-gray-700 hover:text-blue-600">工具</a>
                     <a href="help.html" class="text-gray-700 hover:text-blue-600">帮助</a>
                     <a href="articles/index.html" class="text-gray-700 hover:text-blue-600">指南</a>
@@ -239,7 +241,7 @@
                                     </svg>
                                 </div>
                                 <h3 class="text-xl font-semibold text-gray-900 mb-2">字符计数</h3>
-                                <p class="text-gray-600">实时统计字符、单词数量，分类计数与阅读时间估算。</p>
+                                <p class="text-gray-600">实时统计字符、单词数量，分类计数与阅读时间估算。配合<a href="articles/writing-guides.html" class="text-blue-600 hover:underline">写作指南</a>使用更高效。</p>
                             </div>
                             <div class="px-6 pb-4">
                                 <span class="inline-block text-blue-600 group-hover:translate-x-1 transition-transform duration-200">立即使用 →</span>
@@ -257,7 +259,7 @@
                                     </svg>
                                 </div>
                                 <h3 class="text-xl font-semibold text-gray-900 mb-2">文本转换</h3>
-                                <p class="text-gray-600">大小写、简繁体、行处理、空白处理、全角半角</p>
+                                <p class="text-gray-600">大小写、简繁体、行处理、空白处理、全角半角。了解<a href="articles/data-cleaning.html" class="text-blue-600 hover:underline">数据清洗技巧</a>提升处理效果。</p>
                             </div>
                             <div class="px-6 pb-4">
                                 <span class="inline-block text-blue-600 group-hover:translate-x-1 transition-transform duration-200">立即使用 →</span>
@@ -274,7 +276,7 @@
                                     </svg>
                                 </div>
                                 <h3 class="text-xl font-semibold text-gray-900 mb-2">格式化工具</h3>
-                                <p class="text-gray-600">JSON、XML、HTML、CSS 格式化与最小化</p>
+                                <p class="text-gray-600">JSON、XML、HTML、CSS 格式化与最小化。参考<a href="articles/dev-workflows.html" class="text-blue-600 hover:underline">开发者工作流</a>优化使用技巧。</p>
                             </div>
                             <div class="px-6 pb-4">
                                 <span class="inline-block text-blue-600 group-hover:translate-x-1 transition-transform duration-200">立即使用 →</span>
@@ -305,7 +307,7 @@
         <!-- 核心优势展示 -->
         <section class="py-16 px-4 bg-gray-50">
             <div class="container mx-auto max-w-7xl">
-                <h2 class="text-3xl font-bold text-gray-900 mb-12 text-center">为什么选择我们的工具</h2>
+                <h2 class="text-3xl font-bold text-gray-900 mb-12 text-center">核心优势</h2>
                 <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
                     <div>
                         <div class="text-4xl font-bold text-blue-600 mb-2">4+</div>
