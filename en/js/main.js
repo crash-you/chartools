@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', async function() {
     try {
         const isLocal = ['localhost', '127.0.0.1'].includes(window.location.hostname);
         if (isLocal) {
-            const mod = await import('../js/stagewise-setup.js');
+            const mod = await import('../../js/stagewise-setup.js');
             mod.setupStagewise?.();
         }
     } catch (_) {
