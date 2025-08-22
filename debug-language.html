@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>语言切换调试测试</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 p-8">
+    <h1 class="text-2xl font-bold mb-4">语言切换功能调试</h1>
+    
+    <!-- 语言选择器 -->
+    <div class="relative language-selector mb-4">
+        <button id="language-button" class="flex items-center space-x-1 p-2 bg-white rounded-md hover:bg-gray-100 transition border">
+            <span id="current-language">中文</span>
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+        </button>
+        <div id="language-dropdown" class="absolute right-0 mt-2 w-32 bg-white rounded-md shadow-lg hidden z-10 border">
+            <a href="debug-language.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-100" data-lang="zh-CN">中文</a>
+            <a href="en/debug-language.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-100" data-lang="en">English</a>
+        </div>
+    </div>
+    
+    <!-- 调试信息 -->
+    <div class="bg-white p-4 rounded-lg shadow mb-4">
+        <h2 class="text-lg font-semibold mb-2">调试信息：</h2>
+        <div id="debug-info" class="text-sm text-gray-600">
+            <p>等待JavaScript加载...</p>
+        </div>
+    </div>
+    
+    <!-- 测试按钮 -->
+    <button id="test-button" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
+        测试按钮点击
+    </button>
+
+    <script>
+        // 调试用的JavaScript代码
+        document.addEventListener('DOMContentLoaded', function() {
+            const debugInfo = document.getElementById('debug-info');
+            
+            function log(message) {
+                console.log(message);
+                debugInfo.innerHTML += '<p>' + message + '</p>';
+            }
+            
+            log('DOM加载完成');
+            
+            // 检查元素是否存在
+            const languageButton = document.getElementById('language-button');
+            const languageDropdown = document.getElementById('language-dropdown');
+            
+            log('language-button元素: ' + (languageButton ? '存在' : '不存在'));
+            log('language-dropdown元素: ' + (languageDropdown ? '存在' : '不存在'));
+            
+            if (languageButton && languageDropdown) {
+                log('准备绑定点击事件...');
+                
+                languageButton.addEventListener('click', function(e) {
+                    log('语言按钮被点击！');
+                    e.stopPropagation();
+                    
+                    const isHidden = languageDropdown.classList.contains('hidden');
+                    log('下拉菜单当前状态: ' + (isHidden ? '隐藏' : '显示'));
+                    
+                    languageDropdown.classList.toggle('hidden');
+                    
+                    const newState = languageDropdown.classList.contains('hidden');
+                    log('下拉菜单新状态: ' + (newState ? '隐藏' : '显示'));
+                });
+                
+                log('事件绑定完成');
+                
+                // 点击页面其他区域关闭下拉菜单
+                document.addEventListener('click', function(event) {
+                    if (!languageButton.contains(event.target) && !languageDropdown.contains(event.target)) {
+                        languageDropdown.classList.add('hidden');
+                        log('点击外部，关闭下拉菜单');
+                    }
+                });
+            } else {
+                log('错误：找不到必需的DOM元素');
+            }
+            
+            // 测试按钮
+            const testButton = document.getElementById('test-button');
+            if (testButton) {
+                testButton.addEventListener('click', function() {
+                    log('测试按钮被点击！事件系统正常工作');
+                });
+            }
+        });
+    </script>
+</body>
+</html>

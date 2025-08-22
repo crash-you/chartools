@@ -97,22 +97,4 @@ document.getElementById('mobile-menu-button')?.addEventListener('click', functio
     }
 });
 
-// 语言切换下拉菜单
-document.getElementById('language-button')?.addEventListener('click', function() {
-    const dropdown = document.getElementById('language-dropdown');
-    if (dropdown.classList.contains('hidden')) {
-        dropdown.classList.remove('hidden');
-    } else {
-        dropdown.classList.add('hidden');
-    }
-});
-
-// 点击外部区域时关闭下拉菜单
-document.addEventListener('click', function(event) {
-    const languageButton = document.getElementById('language-button');
-    const languageDropdown = document.getElementById('language-dropdown');
-    
-    if (languageButton && languageDropdown && !languageButton.contains(event.target) && !languageDropdown.contains(event.target)) {
-        languageDropdown.classList.add('hidden');
-    }
-}); 
+// 语言切换功能由 language.js 文件处理 

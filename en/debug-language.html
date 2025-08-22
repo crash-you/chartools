@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Language Switch Debug Test</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 p-8">
+    <h1 class="text-2xl font-bold mb-4">Language Switch Function Debug</h1>
+    
+    <!-- Language Selector -->
+    <div class="relative language-selector mb-4">
+        <button id="language-button" class="flex items-center space-x-1 p-2 bg-white rounded-md hover:bg-gray-100 transition border">
+            <span id="current-language">English</span>
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+        </button>
+        <div id="language-dropdown" class="absolute right-0 mt-2 w-32 bg-white rounded-md shadow-lg hidden z-10 border">
+            <a href="../debug-language.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-100" data-lang="zh-CN">中文</a>
+            <a href="debug-language.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-100" data-lang="en">English</a>
+        </div>
+    </div>
+    
+    <!-- Debug Info -->
+    <div class="bg-white p-4 rounded-lg shadow mb-4">
+        <h2 class="text-lg font-semibold mb-2">Debug Info:</h2>
+        <div id="debug-info" class="text-sm text-gray-600">
+            <p>Waiting for JavaScript to load...</p>
+        </div>
+    </div>
+    
+    <!-- Test Button -->
+    <button id="test-button" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
+        Test Button Click
+    </button>
+
+    <script>
+        // Debug JavaScript code
+        document.addEventListener('DOMContentLoaded', function() {
+            const debugInfo = document.getElementById('debug-info');
+            
+            function log(message) {
+                console.log(message);
+                debugInfo.innerHTML += '<p>' + message + '</p>';
+            }
+            
+            log('DOM loaded');
+            
+            // Check if elements exist
+            const languageButton = document.getElementById('language-button');
+            const languageDropdown = document.getElementById('language-dropdown');
+            
+            log('language-button element: ' + (languageButton ? 'exists' : 'not found'));
+            log('language-dropdown element: ' + (languageDropdown ? 'exists' : 'not found'));
+            
+            if (languageButton && languageDropdown) {
+                log('Preparing to bind click event...');
+                
+                languageButton.addEventListener('click', function(e) {
+                    log('Language button clicked!');
+                    e.stopPropagation();
+                    
+                    const isHidden = languageDropdown.classList.contains('hidden');
+                    log('Dropdown current state: ' + (isHidden ? 'hidden' : 'visible'));
+                    
+                    languageDropdown.classList.toggle('hidden');
+                    
+                    const newState = languageDropdown.classList.contains('hidden');
+                    log('Dropdown new state: ' + (newState ? 'hidden' : 'visible'));
+                });
+                
+                log('Event binding complete');
+                
+                // Close dropdown when clicking elsewhere
+                document.addEventListener('click', function(event) {
+                    if (!languageButton.contains(event.target) && !languageDropdown.contains(event.target)) {
+                        languageDropdown.classList.add('hidden');
+                        log('Clicked outside, closing dropdown');
+                    }
+                });
+            } else {
+                log('Error: Required DOM elements not found');
+            }
+            
+            // Test button
+            const testButton = document.getElementById('test-button');
+            if (testButton) {
+                testButton.addEventListener('click', function() {
+                    log('Test button clicked! Event system works correctly');
+                });
+            }
+        });
+    </script>
+</body>
+</html>
