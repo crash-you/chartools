@@ -33,16 +33,208 @@
 
   <main class="flex-grow pt-16">
     <section class="py-12 px-4">
-      <div class="container mx-auto max-w-3xl bg-white rounded-xl shadow-md p-6 space-y-6">
-        <h1 class="text-3xl font-bold">关于我们</h1>
-        <p>我们致力于提供便捷、可靠的在线文字处理工具，包括字符计数、文本转换、格式化、文本对比等，帮助用户在浏览器中快速完成常见文本任务。</p>
-        <h2 class="text-xl font-semibold">特点</h2>
-        <ul class="list-disc pl-6 space-y-1 text-gray-700">
-          <li>纯前端运行，本地处理文本</li>
-          <li>中英文双语、响应式设计</li>
-          <li>免费使用</li>
-        </ul>
-        <p>如需合作或反馈，请前往 <a class="text-blue-700 underline" href="contact.html">联系我们</a>。</p>
+      <div class="container mx-auto max-w-4xl">
+        <!-- 主要介绍 -->
+        <div class="bg-white rounded-xl shadow-md p-8 mb-8">
+          <h1 class="text-4xl font-bold text-gray-900 mb-6">关于文字处理工具网站</h1>
+          <p class="text-lg text-gray-700 mb-6">我们致力于为用户提供专业、便捷、安全的在线文字处理解决方案。通过纯前端技术，我们确保您的数据始终在本地处理，无需担心隐私泄露问题。</p>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+            <div>
+              <h3 class="text-xl font-semibold text-gray-900 mb-3">🎯 我们的使命</h3>
+              <p class="text-gray-700">简化文字处理流程，提升工作效率，让每个人都能轻松完成复杂的文本任务。</p>
+            </div>
+            <div>
+              <h3 class="text-xl font-semibold text-gray-900 mb-3">🔒 隐私承诺</h3>
+              <p class="text-gray-700">所有处理都在您的浏览器中完成，数据不会上传到服务器，确保绝对的数据安全。</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 功能特色 -->
+        <div class="bg-white rounded-xl shadow-md p-8 mb-8">
+          <h2 class="text-2xl font-bold text-gray-900 mb-6">🛠️ 核心功能</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="flex items-start space-x-4">
+              <div class="flex-shrink-0 w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center">
+                <span class="text-blue-600 font-semibold">1</span>
+              </div>
+              <div>
+                <h3 class="font-semibold text-gray-900">字符计数工具</h3>
+                <p class="text-gray-600 text-sm">实时统计字符、单词、句子数量，支持中英文分类计数和阅读时间预估</p>
+              </div>
+            </div>
+            <div class="flex items-start space-x-4">
+              <div class="flex-shrink-0 w-8 h-8 bg-green-100 rounded-full flex items-center justify-center">
+                <span class="text-green-600 font-semibold">2</span>
+              </div>
+              <div>
+                <h3 class="font-semibold text-gray-900">文本转换工具</h3>
+                <p class="text-gray-600 text-sm">大小写转换、简繁体转换、全角半角转换、行处理和空白优化</p>
+              </div>
+            </div>
+            <div class="flex items-start space-x-4">
+              <div class="flex-shrink-0 w-8 h-8 bg-purple-100 rounded-full flex items-center justify-center">
+                <span class="text-purple-600 font-semibold">3</span>
+              </div>
+              <div>
+                <h3 class="font-semibold text-gray-900">格式化工具</h3>
+                <p class="text-gray-600 text-sm">JSON、XML、HTML、CSS 格式化与最小化，提升代码可读性</p>
+              </div>
+            </div>
+            <div class="flex items-start space-x-4">
+              <div class="flex-shrink-0 w-8 h-8 bg-yellow-100 rounded-full flex items-center justify-center">
+                <span class="text-yellow-600 font-semibold">4</span>
+              </div>
+              <div>
+                <h3 class="font-semibold text-gray-900">文本比较工具</h3>
+                <p class="text-gray-600 text-sm">精确对比两段文本，高亮显示差异，支持行级和词级比较</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 技术特色 -->
+        <div class="bg-white rounded-xl shadow-md p-8 mb-8">
+          <h2 class="text-2xl font-bold text-gray-900 mb-6">⚡ 技术优势</h2>
+          <div class="space-y-4">
+            <div class="flex items-center space-x-4">
+              <div class="flex-shrink-0 w-6 h-6 bg-blue-500 rounded-full flex items-center justify-center">
+                <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                </svg>
+              </div>
+              <div>
+                <h3 class="font-semibold text-gray-900">纯前端技术架构</h3>
+                <p class="text-gray-600">基于现代JavaScript和Web API，无需服务器端处理，保证数据隐私安全</p>
+              </div>
+            </div>
+            <div class="flex items-center space-x-4">
+              <div class="flex-shrink-0 w-6 h-6 bg-green-500 rounded-full flex items-center justify-center">
+                <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                </svg>
+              </div>
+              <div>
+                <h3 class="font-semibold text-gray-900">响应式设计</h3>
+                <p class="text-gray-600">完美适配桌面、平板和手机设备，随时随地使用我们的工具</p>
+              </div>
+            </div>
+            <div class="flex items-center space-x-4">
+              <div class="flex-shrink-0 w-6 h-6 bg-purple-500 rounded-full flex items-center justify-center">
+                <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                </svg>
+              </div>
+              <div>
+                <h3 class="font-semibold text-gray-900">多语言支持</h3>
+                <p class="text-gray-600">支持中英文双语界面，满足不同用户的语言需求</p>
+              </div>
+            </div>
+            <div class="flex items-center space-x-4">
+              <div class="flex-shrink-0 w-6 h-6 bg-yellow-500 rounded-full flex items-center justify-center">
+                <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                </svg>
+              </div>
+              <div>
+                <h3 class="font-semibold text-gray-900">即时处理</h3>
+                <p class="text-gray-600">实时反馈处理结果，无需等待，大幅提升工作效率</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 适用人群 -->
+        <div class="bg-white rounded-xl shadow-md p-8 mb-8">
+          <h2 class="text-2xl font-bold text-gray-900 mb-6">👥 适用人群</h2>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="text-center p-6 bg-blue-50 rounded-lg">
+              <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path>
+                </svg>
+              </div>
+              <h3 class="text-lg font-semibold text-gray-900 mb-2">内容创作者</h3>
+              <p class="text-gray-600 text-sm">作家、编辑、文案策划等需要处理大量文字的专业人员</p>
+            </div>
+            <div class="text-center p-6 bg-green-50 rounded-lg">
+              <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+                </svg>
+              </div>
+              <h3 class="text-lg font-semibold text-gray-900 mb-2">程序开发者</h3>
+              <p class="text-gray-600 text-sm">前端、后端开发工程师，需要格式化和比较代码文件</p>
+            </div>
+            <div class="text-center p-6 bg-purple-50 rounded-lg">
+              <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg class="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+                </svg>
+              </div>
+              <h3 class="text-lg font-semibold text-gray-900 mb-2">数据分析师</h3>
+              <p class="text-gray-600 text-sm">需要清洗和处理文本数据，进行数据分析工作</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 发展历程 -->
+        <div class="bg-white rounded-xl shadow-md p-8 mb-8">
+          <h2 class="text-2xl font-bold text-gray-900 mb-6">📈 项目发展</h2>
+          <div class="space-y-6">
+            <div class="flex items-start space-x-4">
+              <div class="flex-shrink-0 w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center">
+                <span class="text-blue-600 font-bold text-sm">2024</span>
+              </div>
+              <div>
+                <h3 class="font-semibold text-gray-900">项目立项</h3>
+                <p class="text-gray-600">基于用户需求，开始设计和开发在线文字处理工具</p>
+              </div>
+            </div>
+            <div class="flex items-start space-x-4">
+              <div class="flex-shrink-0 w-10 h-10 bg-green-100 rounded-full flex items-center justify-center">
+                <span class="text-green-600 font-bold text-sm">核心</span>
+              </div>
+              <div>
+                <h3 class="font-semibold text-gray-900">核心功能上线</h3>
+                <p class="text-gray-600">完成字符计数、文本转换、文本比较等核心功能开发</p>
+              </div>
+            </div>
+            <div class="flex items-start space-x-4">
+              <div class="flex-shrink-0 w-10 h-10 bg-purple-100 rounded-full flex items-center justify-center">
+                <span class="text-purple-600 font-bold text-sm">优化</span>
+              </div>
+              <div>
+                <h3 class="font-semibold text-gray-900">用户体验优化</h3>
+                <p class="text-gray-600">基于用户反馈，持续优化界面设计和功能体验</p>
+              </div>
+            </div>
+            <div class="flex items-start space-x-4">
+              <div class="flex-shrink-0 w-10 h-10 bg-yellow-100 rounded-full flex items-center justify-center">
+                <span class="text-yellow-600 font-bold text-sm">2025</span>
+              </div>
+              <div>
+                <h3 class="font-semibold text-gray-900">功能扩展</h3>
+                <p class="text-gray-600">增加格式化工具、专业指南内容，构建完整的工具生态</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 联系信息 -->
+        <div class="bg-gradient-to-r from-blue-500 to-purple-600 rounded-xl shadow-md p-8 text-white text-center">
+          <h2 class="text-2xl font-bold mb-4">💬 联系我们</h2>
+          <p class="text-blue-100 mb-6">如果您有任何问题、建议或合作意向，欢迎随时联系我们</p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="contact.html" class="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors">
+              联系我们
+            </a>
+            <a href="help.html" class="bg-blue-400 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-300 transition-colors">
+              使用帮助
+            </a>
+          </div>
+        </div>
       </div>
     </section>
   </main>
