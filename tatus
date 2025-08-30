@@ -1,0 +1,10 @@
+warning: in the working copy of 'en/privacy.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'privacy.html', LF will be replaced by CRLF the next time Git touches it
+ en/help.html         |   4 [32m+[m[31m-[m
+ en/privacy.html      | 101 [32m++++++++++++++++++++++++++++++++++++++++++++[m[31m-------[m
+ en/terms.html        |  92 [32m+++++++++++++++++++++++++++++++++++++++++++[m[31m---[m
+ help.html            |   4 [32m+[m[31m-[m
+ js/cookie-consent.js |  12 [32m++++[m[31m--[m
+ privacy.html         |   2 [32m+[m[31m-[m
+ sitemap.xml          |  58 [32m+++++++++++++++[m[31m--------------[m
+ 7 files changed, 217 insertions(+), 56 deletions(-)

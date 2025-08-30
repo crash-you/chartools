@@ -17,19 +17,23 @@
   bar.style.alignItems = 'center';
   bar.style.justifyContent = 'center';
 
+  const isEnglish = document.documentElement.lang === 'en' || window.location.pathname.includes('/en/');
+  
   const text = document.createElement('span');
-  text.textContent = '本网站使用必要的 Cookie 以确保基本功能运行。详见 隐私政策。';
+  text.textContent = isEnglish 
+    ? 'This website uses necessary cookies to ensure basic functionality. See Privacy Policy for details.' 
+    : '本网站使用必要的 Cookie 以确保基本功能运行。详见 隐私政策。';
   text.style.marginRight = '8px';
 
   const link = document.createElement('a');
-  link.href = '/privacy.html';
-  link.textContent = '查看';
+  link.href = isEnglish ? '/en/privacy.html' : '/privacy.html';
+  link.textContent = isEnglish ? 'View' : '查看';
   link.style.textDecoration = 'underline';
   link.style.color = '#93c5fd';
   link.target = '_self';
 
   const btn = document.createElement('button');
-  btn.textContent = '我知道了';
+  btn.textContent = isEnglish ? 'Got it' : '我知道了';
   btn.style.background = '#2563eb';
   btn.style.color = 'white';
   btn.style.borderRadius = '6px';
