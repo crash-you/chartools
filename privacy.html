@@ -37,21 +37,100 @@
       <div class="container mx-auto max-w-3xl bg-white rounded-xl shadow-md p-6 space-y-6">
         <h1 class="text-3xl font-bold">隐私政策</h1>
         <p>更新日期：2025-08-30</p>
-        <p>我们重视您的隐私。本网站为纯前端站点，所有文本处理均在您的浏览器本地完成，我们<strong>不收集、不存储</strong>您输入的任何文本内容。</p>
+        <div class="bg-blue-50 border-l-4 border-blue-400 p-6 mb-6">
+            <p class="text-lg text-blue-800 mb-4">我们重视您的隐私，承诺以最高标准保护您的个人信息。本网站为纯前端站点，所有文本处理均在您的浏览器本地完成，我们<strong>不收集、不存储</strong>您输入的任何文本内容。</p>
+            <p class="text-blue-700 mb-3">这份隐私政策详细说明了我们的数据处理实践、您的权利以及我们如何保护您的隐私。我们严格遵守GDPR、CCPA等国际隐私法规，确保透明度和用户控制权。</p>
+        </div>
+        
+        <div class="bg-green-50 rounded-lg p-6 mb-8">
+            <h3 class="text-green-800 font-semibold text-lg mb-3">🔒 我们的隐私承诺</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-green-700">
+                <div>
+                    <h4 class="font-semibold mb-2">技术隐私保障</h4>
+                    <ul class="list-disc list-inside text-sm space-y-1">
+                        <li>所有文本处理100%本地化</li>
+                        <li>零服务器数据传输</li>
+                        <li>即时数据清理</li>
+                        <li>安全连接保护</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-2">法律合规保障</h4>
+                    <ul class="list-disc list-inside text-sm space-y-1">
+                        <li>GDPR完全合规</li>
+                        <li>CCPA权利保护</li>
+                        <li>透明度报告</li>
+                        <li>用户权利尊重</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
 
-        <h2 class="text-xl font-semibold">我们收集的信息</h2>
-        <h3 class="text-lg font-semibold mt-4 mb-2">文本处理数据</h3>
-        <ul class="list-disc pl-6 space-y-1 text-gray-700">
-          <li><strong>本地处理</strong>：您在我们工具中输入的所有文本内容均在您的浏览器本地处理，不会上传到我们的服务器。</li>
-          <li><strong>数据安全</strong>：我们无法访问、存储或查看您输入的任何文本内容。</li>
-        </ul>
+        <h2 class="text-xl font-semibold mb-4">信息收集详细说明</h2>
+        <p class="text-gray-700 mb-6">基于"隐私优先"设计理念，我们收集的信息极其有限。以下详细说明每类信息的收集目的、法律依据和保护措施：</p>
+        
+        <div class="border-l-4 border-green-500 pl-6 mb-8">
+            <h3 class="text-lg font-semibold text-green-800 mb-3">1. 文本处理数据（完全本地化）</h3>
+            <div class="bg-green-50 rounded-lg p-4 mb-4">
+                <h4 class="font-semibold text-green-800 mb-2">🔐 零数据收集承诺</h4>
+                <ul class="list-disc pl-6 space-y-2 text-green-700">
+                    <li><strong>输入内容保护</strong>：您在工具中输入的所有文本内容均在浏览器本地处理，从不上传服务器</li>
+                    <li><strong>处理结果安全</strong>：格式化、转换、比较等所有操作结果仅存在于您的设备内存中</li>
+                    <li><strong>文件处理隐私</strong>：上传的文件内容不离开您的浏览器，处理完成后立即清理</li>
+                    <li><strong>会话隔离</strong>：不同标签页和会话间数据完全隔离，无交叉访问</li>
+                    <li><strong>技术验证</strong>：您可以断网使用工具验证我们的本地处理承诺</li>
+                </ul>
+            </div>
+            <div class="bg-gray-100 rounded p-3">
+                <p class="text-sm text-gray-800"><strong>技术实现：</strong>采用纯JavaScript客户端架构，所有算法在浏览器沙盒环境中运行</p>
+                <p class="text-sm text-gray-800"><strong>法律依据：</strong>技术措施，无需法律依据（因为不涉及数据收集）</p>
+            </div>
+        </div>
 
-        <h3 class="text-lg font-semibold mt-4 mb-2">分析数据</h3>
-        <ul class="list-disc pl-6 space-y-1 text-gray-700">
-          <li>我们使用 Google Analytics 收集匿名的网站使用统计信息，包括页面访问量、用户地理位置（国家/地区级别）、设备类型等。</li>
-          <li>这些数据用于改善网站性能和用户体验，不包含任何个人身份信息。</li>
-          <li>我们启用了 Google Analytics 的 IP 匿名化功能，确保您的 IP 地址被匿名处理。</li>
-        </ul>
+        <div class="border-l-4 border-blue-500 pl-6 mb-8">
+            <h3 class="text-lg font-semibold text-blue-800 mb-3">2. 网站分析数据（匿名化处理）</h3>
+            <div class="space-y-4">
+                <div class="bg-blue-50 rounded-lg p-4">
+                    <h4 class="font-semibold text-blue-800 mb-2">📊 Google Analytics 数据收集</h4>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-blue-700 text-sm">
+                        <div>
+                            <p class="font-medium mb-2">收集的信息：</p>
+                            <ul class="list-disc pl-4 space-y-1">
+                                <li>页面访问量和浏览时长</li>
+                                <li>地理位置（国家/省份级别）</li>
+                                <li>设备类型、屏幕分辨率</li>
+                                <li>浏览器和操作系统版本</li>
+                                <li>流量来源和搜索关键词</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <p class="font-medium mb-2">使用目的：</p>
+                            <ul class="list-disc pl-4 space-y-1">
+                                <li>优化网站性能和加载速度</li>
+                                <li>改善用户体验和界面设计</li>
+                                <li>了解用户需求和使用习惯</li>
+                                <li>评估功能效果和满意度</li>
+                                <li>制定产品改进计划</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-gray-100 rounded p-4">
+                    <h4 class="font-semibold mb-2">🔒 隐私保护措施</h4>
+                    <ul class="list-disc pl-6 space-y-2 text-gray-700 text-sm">
+                        <li><strong>IP地址匿名化</strong>：启用Google Analytics的IP匿名化功能，最后8位被屏蔽</li>
+                        <li><strong>数据聚合处理</strong>：所有数据以聚合形式呈现，无法识别个人用户</li>
+                        <li><strong>敏感信息过滤</strong>：自动过滤可能包含个人信息的URL参数</li>
+                        <li><strong>数据保留控制</strong>：设置26个月的数据自动删除期限</li>
+                        <li><strong>共享限制</strong>：禁用Google信号和广告功能</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="bg-blue-100 rounded p-3 mt-4">
+                <p class="text-sm text-blue-800"><strong>法律依据：</strong>正当利益（网站优化） | <strong>退出方式：</strong>浏览器DNT设置或安装Google Analytics退出插件</p>
+            </div>
+        </div>
 
         <h3 class="text-lg font-semibold mt-4 mb-2">广告相关数据</h3>
         <ul class="list-disc pl-6 space-y-1 text-gray-700">

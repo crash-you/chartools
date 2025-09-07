@@ -26,7 +26,58 @@
   <nav id="navigation" class="fixed top-0 w-full bg-white bg-opacity-80 backdrop-blur-md shadow-sm z-50">
     <div class="container mx-auto max-w-7xl px-4">
       <div class="flex justify-between items-center h-16">
-        <a href="index.html" class="text-2xl font-semibold text-gray-900">Text Tools</a>
+        <div class="flex-shrink-0 flex items-center">
+          <a href="index.html" class="text-2xl font-semibold text-gray-900">Text Tools</a>
+        </div>
+        
+        <!-- Main Navigation (Desktop) -->
+        <div class="hidden md:flex items-center space-x-8">
+          <a href="about.html" class="text-gray-700 hover:text-blue-600">About</a>
+          <a href="index.html#tools" class="text-gray-700 hover:text-blue-600">Tools</a>
+          <a href="help.html" class="text-gray-700 hover:text-blue-600">Help</a>
+          <a href="articles/index.html" class="text-gray-700 hover:text-blue-600">Guides</a>
+          <a href="blog/index.html" class="text-gray-700 hover:text-blue-600">Blog</a>
+        </div>
+        
+        <!-- Right Options -->
+        <div class="flex items-center space-x-4">
+          <!-- Language Selector -->
+          <div class="relative language-selector">
+            <button id="language-button" class="flex items-center space-x-1 p-2 rounded-md hover:bg-gray-100 transition">
+              <span id="current-language">English</span>
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </button>
+            <div id="language-dropdown" class="absolute right-0 mt-2 w-32 bg-white rounded-md shadow-lg hidden z-10">
+              <a href="../contact.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">中文</a>
+              <a href="contact.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">English</a>
+            </div>
+          </div>
+          
+          <!-- Mobile Menu Button -->
+          <button id="mobile-menu-button" class="md:hidden p-2 rounded-md hover:bg-gray-100">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+      
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" class="md:hidden hidden pb-4">
+        <div class="flex flex-col space-y-4">
+          <a href="about.html" class="text-gray-700 hover:text-blue-600">About</a>
+          <a href="index.html#tools" class="text-gray-700 hover:text-blue-600">Tools</a>
+          <a href="help.html" class="text-gray-700 hover:text-blue-600">Help</a>
+          <a href="articles/index.html" class="text-gray-700 hover:text-blue-600">Guides</a>
+          <a href="blog/index.html" class="text-gray-700 hover:text-blue-600">Blog</a>
+          <div class="pt-2 border-t border-gray-200">
+            <p class="text-sm text-gray-600 mb-1">Select Language</p>
+            <a href="../contact.html" class="block py-1 text-gray-700 hover:text-blue-600">中文</a>
+            <a href="contact.html" class="block py-1 text-gray-700 hover:text-blue-600">English</a>
+          </div>
+        </div>
       </div>
     </div>
   </nav>

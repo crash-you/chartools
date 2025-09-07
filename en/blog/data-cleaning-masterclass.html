@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Cleaning Masterclass: Professional Strategies for Handling Messy Data</title>
+    <meta name="description" content="Master advanced data cleaning techniques: identify quality issues, implement automated workflows, and handle messy data professionally.">
+    <meta name="keywords" content="data cleaning,data preprocessing,messy data processing,data quality,data analysis,text data cleaning,data standardization,data deduplication">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="../../css/custom.css" rel="stylesheet">
+    <meta property="og:title" content="Data Cleaning Masterclass: Professional Strategies for Handling Messy Data">
+    <meta property="og:description" content="Master advanced data cleaning techniques and learn professional methods for handling messy data with automated workflows.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://chartools.art/en/blog/data-cleaning-masterclass.html">
+    <meta property="og:site_name" content="Text Processing Tools">
+    <meta property="og:image" content="https://chartools.art/img/og/og-en.svg">
+    <meta property="article:published_time" content="2025-09-01T14:00:00+08:00">
+    <meta property="article:author" content="Data Analysis Expert Team">
+    <meta property="article:section" content="Data Processing">
+    <link rel="canonical" href="https://chartools.art/en/blog/data-cleaning-masterclass.html">
+    <link rel="alternate" hreflang="zh-CN" href="https://chartools.art/blog/data-cleaning-masterclass.html">
+    <link rel="alternate" hreflang="en" href="https://chartools.art/en/blog/data-cleaning-masterclass.html">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Data Cleaning Masterclass: Professional Strategies for Handling Messy Data",
+      "description": "Master advanced data cleaning techniques and automated workflows for professional data processing.",
+      "author": {
+        "@type": "Organization",
+        "name": "Data Analysis Expert Team"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Text Processing Tools"
+      },
+      "datePublished": "2025-09-01T14:00:00+08:00",
+      "wordCount": 3200,
+      "inLanguage": "en"
+    }
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-32ZXK1J41J"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-32ZXK1J41J');
+    </script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4770465793767896" crossorigin="anonymous"></script>
+</head>
+<body class="bg-white text-gray-800 min-h-screen flex flex-col">
+    <nav id="navigation" class="fixed top-0 w-full bg-white bg-opacity-80 backdrop-blur-md shadow-sm z-50">
+        <div class="container mx-auto max-w-7xl px-4">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="../../en/index.html" class="text-2xl font-semibold text-gray-900">TextTools</a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="../about.html" class="text-gray-700 hover:text-blue-600">About</a>
+                    <a href="../index.html#tools" class="text-gray-700 hover:text-blue-600">Tools</a>
+                    <a href="../help.html" class="text-gray-700 hover:text-blue-600">Help</a>
+                    <a href="../articles/index.html" class="text-gray-700 hover:text-blue-600">Guides</a>
+                    <a href="index.html" class="text-blue-600">Blog</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="flex-grow pt-16">
+        <article class="py-12 px-4">
+            <div class="container mx-auto max-w-4xl">
+                <header class="mb-12 text-center">
+                    <div class="mb-4">
+                        <span class="bg-green-100 text-green-800 text-sm font-medium px-3 py-1 rounded">Data Processing</span>
+                        <time datetime="2025-09-01" class="text-gray-500 text-sm ml-4">Published Sep 1, 2025</time>
+                    </div>
+                    <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+                        Data Cleaning Masterclass: Professional Strategies for Handling Messy Data
+                    </h1>
+                    <p class="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+                        In the world of data analysis, cleaning data accounts for 80% of the work. This comprehensive guide explores professional data cleaning strategies, from identifying common data quality issues to building automated cleaning workflows, helping you become a data cleaning expert.
+                    </p>
+                    <div class="flex items-center justify-center text-sm text-gray-500">
+                        <span>Reading time: ~15 minutes</span>
+                        <span class="mx-3">•</span>
+                        <span>3,200 words</span>
+                    </div>
+                </header>
+
+                <div class="prose prose-lg max-w-none">
+                    <section class="mb-12">
+                        <p class="text-lg leading-relaxed mb-6">
+                            Data quality is the key factor determining the reliability of analysis results. However, real-world data often contains various quality issues: missing values, duplicate records, inconsistent formats, outliers, and more. Mastering professional data cleaning skills not only improves work efficiency but also ensures the accuracy and credibility of analysis results.
+                        </p>
+                        <p class="text-lg leading-relaxed mb-6">
+                            This article systematically introduces the complete data cleaning workflow, from problem identification to solution implementation, including numerous practical techniques and tool recommendations. Whether you're a data analysis beginner or an experienced professional, you'll gain valuable insights.
+                        </p>
+                    </section>
+
+                    <section class="mb-12">
+                        <h2 class="text-3xl font-bold text-gray-900 mb-6">Part 1: Identifying and Categorizing Data Quality Issues</h2>
+                        <p class="text-lg leading-relaxed mb-6">
+                            Effective data cleaning starts with accurate problem identification. Different types of data quality issues require different solution strategies, so it's essential to establish a comprehensive data quality assessment framework.
+                        </p>
+                        
+                        <h3 class="text-2xl font-semibold text-gray-900 mb-4">1.1 Data Completeness Issues</h3>
+                        <p class="text-lg leading-relaxed mb-4">
+                            Data completeness refers to the level of data integrity, mainly including:
+                        </p>
+                        <ul class="list-disc pl-6 mb-6 space-y-2">
+                            <li><strong>Missing Values</strong>: Completely missing data items, usually displayed as blank cells in Excel</li>
+                            <li><strong>NULL Values</strong>: Empty value markers in databases</li>
+                            <li><strong>Placeholders</strong>: Temporary fill values like "N/A," "TBD," "Pending"</li>
+                            <li><strong>Implicit Missing</strong>: Records that should exist but have been omitted</li>
+                        </ul>
+                        
+                        <div class="bg-blue-50 border-l-4 border-blue-400 p-6 mb-6">
+                            <h4 class="text-lg font-semibold text-blue-800 mb-2">Real Case Study:</h4>
+                            <p class="text-blue-700">
+                                An e-commerce platform's user data showed 30% of age fields were null. Investigation revealed these users registered through an earlier version where age wasn't mandatory. This type of historical data completeness issue needs to be addressed with business context.
+                            </p>
+                        </div>
+
+                        <h3 class="text-2xl font-semibold text-gray-900 mb-4">1.2 Data Consistency Issues</h3>
+                        <p class="text-lg leading-relaxed mb-4">
+                            Consistency issues mainly manifest in non-uniform data formats and standards:
+                        </p>
+                        <ul class="list-disc pl-6 mb-6 space-y-2">
+                            <li><strong>Format Inconsistency</strong>: Mixed date formats (2025-09-01 vs 09/01/2025 vs September 1, 2025)</li>
+                            <li><strong>Case Inconsistency</strong>: Mixed case usage in company names</li>
+                            <li><strong>Encoding Standard Differences</strong>: Using different coding methods for the same concept</li>
+                            <li><strong>Unit Inconsistency</strong>: Weight data mixing kilograms and pounds</li>
+                        </ul>
+
+                        <h3 class="text-2xl font-semibold text-gray-900 mb-4">1.3 Data Accuracy Issues</h3>
+                        <p class="text-lg leading-relaxed mb-4">
+                            Accuracy issues involve the correctness of data content:
+                        </p>
+                        <ul class="list-disc pl-6 mb-6 space-y-2">
+                            <li><strong>Input Errors</strong>: Spelling or numerical errors from manual entry</li>
+                            <li><strong>System Errors</strong>: Errors during data transmission or processing</li>
+                            <li><strong>Outdated Data</strong>: Historical data that no longer accurately reflects current conditions</li>
+                            <li><strong>Outliers</strong>: Statistically significant outlying points</li>
+                        </ul>
+                    </section>
+
+                    <section class="mb-12">
+                        <h2 class="text-3xl font-bold text-gray-900 mb-6">Part 2: Systematic Data Cleaning Methodology</h2>
+                        
+                        <h3 class="text-2xl font-semibold text-gray-900 mb-4">2.1 Establishing Data Cleaning Workflow</h3>
+                        <p class="text-lg leading-relaxed mb-6">
+                            Professional data cleaning should follow a systematic workflow to ensure the repeatability and auditability of the cleaning process.
+                        </p>
+                        
+                        <div class="space-y-6 mb-8">
+                            <div class="bg-white border-l-4 border-green-500 p-6 shadow-sm">
+                                <h4 class="text-xl font-semibold text-gray-900 mb-3">Step 1: Data Exploration and Quality Assessment</h4>
+                                <ul class="list-disc pl-6 space-y-1">
+                                    <li>Calculate missing rates and unique value counts for each field</li>
+                                    <li>Identify data type and format inconsistencies</li>
+                                    <li>Detect outliers and anomalous values</li>
+                                    <li>Analyze data distribution and correlations</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="bg-white border-l-4 border-blue-500 p-6 shadow-sm">
+                                <h4 class="text-xl font-semibold text-gray-900 mb-3">Step 2: Develop Cleaning Strategy</h4>
+                                <ul class="list-disc pl-6 space-y-1">
+                                    <li>Determine cleaning priorities based on business needs</li>
+                                    <li>Establish missing value handling rules</li>
+                                    <li>Design data standardization schemes</li>
+                                    <li>Build data validation rules</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="bg-white border-l-4 border-purple-500 p-6 shadow-sm">
+                                <h4 class="text-xl font-semibold text-gray-900 mb-3">Step 3: Execute Cleaning Operations</h4>
+                                <ul class="list-disc pl-6 space-y-1">
+                                    <li>Batch process format standardization</li>
+                                    <li>Implement deduplication algorithms</li>
+                                    <li>Fill or delete missing values</li>
+                                    <li>Correct identified errors</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="bg-white border-l-4 border-yellow-500 p-6 shadow-sm">
+                                <h4 class="text-xl font-semibold text-gray-900 mb-3">Step 4: Quality Validation and Documentation</h4>
+                                <ul class="list-disc pl-6 space-y-1">
+                                    <li>Validate cleaning results for correctness</li>
+                                    <li>Document cleaning process and decision rationale</li>
+                                    <li>Create before-and-after comparison reports</li>
+                                    <li>Update data dictionaries and metadata</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <h3 class="text-2xl font-semibold text-gray-900 mb-4">2.2 Advanced Missing Value Handling Strategies</h3>
+                        <p class="text-lg leading-relaxed mb-6">
+                            Missing value handling methods should be chosen based on data characteristics and business requirements:
+                        </p>
+                        
+                        <div class="overflow-x-auto mb-6">
+                            <table class="min-w-full bg-white border border-gray-200">
+                                <thead class="bg-gray-50">
+                                    <tr>
+                                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Method</th>
+                                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Suitable Scenarios</th>
+                                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Pros & Cons</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="divide-y divide-gray-200">
+                                    <tr>
+                                        <td class="px-6 py-4 whitespace-nowrap font-medium">Delete Records</td>
+                                        <td class="px-6 py-4">Missing rate <5% and randomly missing</td>
+                                        <td class="px-6 py-4">Simple and fast, but may lose important information</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-6 py-4 whitespace-nowrap font-medium">Mean Imputation</td>
+                                        <td class="px-6 py-4">Numerical data, normal distribution</td>
+                                        <td class="px-6 py-4">Maintains overall statistics, but reduces variance</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-6 py-4 whitespace-nowrap font-medium">Mode Imputation</td>
+                                        <td class="px-6 py-4">Categorical variables</td>
+                                        <td class="px-6 py-4">Suitable for discrete values, but may strengthen dominant categories</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-6 py-4 whitespace-nowrap font-medium">Regression Prediction</td>
+                                        <td class="px-6 py-4">Correlated variables exist</td>
+                                        <td class="px-6 py-4">High accuracy, but computationally complex</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <h3 class="text-2xl font-semibold text-gray-900 mb-4">2.3 Text Data Standardization Techniques</h3>
+                        <p class="text-lg leading-relaxed mb-6">
+                            Text data cleaning requires special techniques and tools. Our <a href="../tools/text-conversion.html" class="text-blue-600 hover:underline">text conversion tool</a> can help you complete many standardization tasks:
+                        </p>
+                        
+                        <ul class="list-disc pl-6 mb-6 space-y-3">
+                            <li><strong>Case Standardization</strong>: Uniformly convert to lowercase or title case, eliminating duplicates caused by case differences</li>
+                            <li><strong>Whitespace Handling</strong>: Remove excess spaces, tabs, and line breaks</li>
+                            <li><strong>Special Character Cleaning</strong>: Remove or replace non-standard characters</li>
+                            <li><strong>Encoding Conversion</strong>: Standardize character encoding formats</li>
+                            <li><strong>Format Unification</strong>: Standardize formats for phone numbers, email addresses, etc.</li>
+                        </ul>
+
+                        <div class="bg-green-50 border-l-4 border-green-400 p-6 mb-6">
+                            <h4 class="text-lg font-semibold text-green-800 mb-2">Pro Tip:</h4>
+                            <p class="text-green-700">
+                                Use our <a href="../tools/text-conversion.html" class="text-green-800 hover:underline">text conversion tool</a> to quickly handle bulk text standardization tasks, supporting case conversion, whitespace processing, line sorting and deduplication, and more.
+                            </p>
+                        </div>
+                    </section>
+
+                    <section class="mb-12">
+                        <h2 class="text-3xl font-bold text-gray-900 mb-6">Part 3: Professional Tools and Technology Selection</h2>
+                        
+                        <h3 class="text-2xl font-semibold text-gray-900 mb-4">3.1 Advantages of Online Tools</h3>
+                        <p class="text-lg leading-relaxed mb-6">
+                            For small to medium-scale data cleaning tasks, online tools provide convenient and efficient solutions:
+                        </p>
+                        
+                        <ul class="list-disc pl-6 mb-6 space-y-2">
+                            <li><strong>Instant Availability</strong>: No installation required, just open your browser</li>
+                            <li><strong>Cross-platform Compatibility</strong>: Supports Windows, Mac, Linux, and other operating systems</li>
+                            <li><strong>Real-time Preview</strong>: See results while operating, making strategy adjustments easier</li>
+                            <li><strong>Privacy Protection</strong>: Local processing, data not uploaded to servers</li>
+                        </ul>
+
+                        <h3 class="text-2xl font-semibold text-gray-900 mb-4">3.2 Recommended Data Cleaning Tool Stack</h3>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                            <div class="bg-blue-50 rounded-lg p-6">
+                                <h4 class="text-lg font-semibold text-blue-800 mb-3">Text Processing Tools</h4>
+                                <ul class="space-y-2 text-blue-700">
+                                    <li>• <a href="../tools/text-conversion.html" class="hover:underline">Text Conversion Tool</a> - Format standardization</li>
+                                    <li>• <a href="../tools/text-counter.html" class="hover:underline">Character Counting Tool</a> - Data statistics</li>
+                                    <li>• <a href="../tools/text-comparison.html" class="hover:underline">Text Comparison Tool</a> - Difference identification</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="bg-green-50 rounded-lg p-6">
+                                <h4 class="text-lg font-semibold text-green-800 mb-3">Programming Languages</h4>
+                                <ul class="space-y-2 text-green-700">
+                                    <li>• Python (Pandas, NumPy)</li>
+                                    <li>• R (dplyr, tidyr)</li>
+                                    <li>• SQL (complex query processing)</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="bg-purple-50 rounded-lg p-6">
+                                <h4 class="text-lg font-semibold text-purple-800 mb-3">Professional Software</h4>
+                                <ul class="space-y-2 text-purple-700">
+                                    <li>• OpenRefine (open-source data cleaning)</li>
+                                    <li>• Trifacta Wrangler (visual cleaning)</li>
+                                    <li>• Excel Power Query</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="bg-yellow-50 rounded-lg p-6">
+                                <h4 class="text-lg font-semibold text-yellow-800 mb-3">Cloud Platform Services</h4>
+                                <ul class="space-y-2 text-yellow-700">
+                                    <li>• AWS Glue DataBrew</li>
+                                    <li>• Google Cloud Dataprep</li>
+                                    <li>• Azure Data Factory</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="mb-12">
+                        <h2 class="text-3xl font-bold text-gray-900 mb-6">Part 4: Case Studies and Best Practices</h2>
+                        
+                        <h3 class="text-2xl font-semibold text-gray-900 mb-4">Case 1: E-commerce Customer Data Cleaning</h3>
+                        <div class="bg-gray-50 rounded-lg p-6 mb-6">
+                            <h4 class="text-lg font-semibold text-gray-800 mb-3">Background:</h4>
+                            <p class="text-gray-700 mb-4">
+                                An e-commerce platform had 5 million user records with numerous quality issues: duplicate accounts, inconsistent formats, missing information, etc.
+                            </p>
+                            <h4 class="text-lg font-semibold text-gray-800 mb-3">Solution:</h4>
+                            <ol class="list-decimal pl-6 text-gray-700 space-y-2">
+                                <li>Used fuzzy matching algorithms to identify duplicate users (name + phone + email similarity analysis)</li>
+                                <li>Predicted missing age and gender information based on purchase behavior</li>
+                                <li>Standardized address formats and used third-party APIs to verify address authenticity</li>
+                                <li>Established a data quality scoring system to continuously monitor new data</li>
+                            </ol>
+                            <h4 class="text-lg font-semibold text-gray-800 mb-3">Results:</h4>
+                            <p class="text-gray-700">
+                                After cleaning, data accuracy improved to 98%, duplication rate dropped below 0.5%, providing a reliable foundation for precision marketing.
+                            </p>
+                        </div>
+
+                        <h3 class="text-2xl font-semibold text-gray-900 mb-4">Best Practices Summary</h3>
+                        <div class="space-y-4 mb-6">
+                            <div class="flex items-start space-x-3">
+                                <div class="flex-shrink-0 w-6 h-6 bg-blue-500 rounded-full flex items-center justify-center mt-1">
+                                    <span class="text-white text-sm font-bold">1</span>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-semibold text-gray-900">Establish Data Quality Baseline</h4>
+                                    <p class="text-gray-700">Before starting cleaning, document original data quality conditions in detail to establish a comparison baseline for cleaning effectiveness.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start space-x-3">
+                                <div class="flex-shrink-0 w-6 h-6 bg-blue-500 rounded-full flex items-center justify-center mt-1">
+                                    <span class="text-white text-sm font-bold">2</span>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-semibold text-gray-900">Implement in Phases</h4>
+                                    <p class="text-gray-700">Break complex cleaning tasks into multiple phases, with each phase focusing on specific types of quality issues.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start space-x-3">
+                                <div class="flex-shrink-0 w-6 h-6 bg-blue-500 rounded-full flex items-center justify-center mt-1">
+                                    <span class="text-white text-sm font-bold">3</span>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-semibold text-gray-900">Preserve Original Data</h4>
+                                    <p class="text-gray-700">Always maintain complete backups of original data for rollback and re-cleaning when needed.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start space-x-3">
+                                <div class="flex-shrink-0 w-6 h-6 bg-blue-500 rounded-full flex items-center justify-center mt-1">
+                                    <span class="text-white text-sm font-bold">4</span>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-semibold text-gray-900">Document Decision Process</h4>
+                                    <p class="text-gray-700">Document the rationale and process for each cleaning decision in detail to ensure reproducibility and auditability.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="mb-12">
+                        <h2 class="text-3xl font-bold text-gray-900 mb-6">Conclusion: Building Enterprise-Level Data Cleaning Capabilities</h2>
+                        <p class="text-lg leading-relaxed mb-6">
+                            Data cleaning is not just a technical activity but a systematic engineering effort. Successful data cleaning requires combining business understanding, technical capabilities, and process management. Through the methods and tools introduced in this article, you can build professional data cleaning capabilities:
+                        </p>
+                        
+                        <ul class="list-disc pl-6 mb-6 space-y-2">
+                            <li>Master systematic data quality assessment methods</li>
+                            <li>Establish standardized cleaning workflows</li>
+                            <li>Reasonably select and combine various tools</li>
+                            <li>Accumulate industry-specific cleaning experience and best practices</li>
+                        </ul>
+                        
+                        <div class="bg-blue-50 border-l-4 border-blue-400 p-6">
+                            <h4 class="text-lg font-semibold text-blue-800 mb-2">Start Now:</h4>
+                            <p class="text-blue-700">
+                                Begin your data cleaning journey with our <a href="../tools/text-conversion.html" class="text-blue-800 hover:underline">text conversion tool</a>. This tool helps you quickly handle text format standardization, deduplication, sorting, and other common data cleaning tasks.
+                            </p>
+                        </div>
+                        
+                        <p class="text-lg leading-relaxed mt-6">
+                            Remember, data cleaning is a process of continuous improvement. As business develops and data sources change, your cleaning strategies need constant optimization and adjustment. Maintaining a learning mindset and staying updated with new tools and technologies will help you stay ahead in the data cleaning field.
+                        </p>
+                    </section>
+                </div>
+
+                <footer class="border-t border-gray-200 pt-8 mt-12">
+                    <div class="flex items-center justify-between mb-8">
+                        <div class="flex items-center space-x-4">
+                            <span class="text-gray-600">Share this article:</span>
+                            <a href="https://twitter.com/" class="text-blue-600 hover:text-blue-800" target="_blank" rel="noopener">Twitter</a>
+                            <a href="https://linkedin.com/" class="text-blue-600 hover:text-blue-800" target="_blank" rel="noopener">LinkedIn</a>
+                            <a href="https://facebook.com/" class="text-blue-600 hover:text-blue-800" target="_blank" rel="noopener">Facebook</a>
+                        </div>
+                    </div>
+                    
+                    <div class="border-t border-gray-200 pt-8">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-6">Related Articles</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <a href="advanced-writing-techniques.html" class="block bg-gray-50 rounded-lg p-6 hover:bg-gray-100 transition-colors">
+                                <h4 class="text-lg font-semibold text-gray-900 mb-2">10 Essential Writing Techniques</h4>
+                                <p class="text-gray-600 text-sm">Master professional writing techniques from ideation to publication...</p>
+                            </a>
+                            <a href="seo-content-optimization.html" class="block bg-gray-50 rounded-lg p-6 hover:bg-gray-100 transition-colors">
+                                <h4 class="text-lg font-semibold text-gray-900 mb-2">Ultimate SEO Content Optimization Guide</h4>
+                                <p class="text-gray-600 text-sm">Learn professional SEO strategies to make your content stand out...</p>
+                            </a>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </article>
+    </main>
+
+    <footer class="bg-gray-100 py-8 px-4">
+        <div class="container mx-auto max-w-7xl">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <p class="text-gray-600">© 2025 Text Processing Tools</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="../about.html" class="text-gray-600 hover:text-blue-600">About Us</a>
+                    <a href="../terms.html" class="text-gray-600 hover:text-blue-600">Terms</a>
+                    <a href="../privacy.html" class="text-gray-600 hover:text-blue-600">Privacy</a>
+                    <a href="../contact.html" class="text-gray-600 hover:text-blue-600">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../js/main.js"></script>
+    <script src="../../js/navigation.js"></script>
+    <script src="../../js/language.js"></script>
+    <script src="../../js/cookie-consent.js"></script>
+</body>
+</html>

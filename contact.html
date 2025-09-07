@@ -26,7 +26,58 @@
   <nav id="navigation" class="fixed top-0 w-full bg-white bg-opacity-80 backdrop-blur-md shadow-sm z-50">
     <div class="container mx-auto max-w-7xl px-4">
       <div class="flex justify-between items-center h-16">
-        <a href="index.html" class="text-2xl font-semibold text-gray-900">文字工具</a>
+        <div class="flex-shrink-0 flex items-center">
+          <a href="index.html" class="text-2xl font-semibold text-gray-900">文字工具</a>
+        </div>
+        
+        <!-- 主导航 (桌面版) -->
+        <div class="hidden md:flex items-center space-x-8">
+          <a href="about.html" class="text-gray-700 hover:text-blue-600">关于</a>
+          <a href="index.html#tools" class="text-gray-700 hover:text-blue-600">工具</a>
+          <a href="help.html" class="text-gray-700 hover:text-blue-600">帮助</a>
+          <a href="articles/index.html" class="text-gray-700 hover:text-blue-600">指南</a>
+          <a href="blog/index.html" class="text-gray-700 hover:text-blue-600">博客</a>
+        </div>
+        
+        <!-- 右侧选项 -->
+        <div class="flex items-center space-x-4">
+          <!-- 语言切换按钮 -->
+          <div class="relative language-selector">
+            <button id="language-button" class="flex items-center space-x-1 p-2 rounded-md hover:bg-gray-100 transition">
+              <span id="current-language">中文</span>
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </button>
+            <div id="language-dropdown" class="absolute right-0 mt-2 w-32 bg-white rounded-md shadow-lg hidden z-10">
+              <a href="contact.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">中文</a>
+              <a href="en/contact.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">English</a>
+            </div>
+          </div>
+          
+          <!-- 移动端菜单按钮 -->
+          <button id="mobile-menu-button" class="md:hidden p-2 rounded-md hover:bg-gray-100">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+      
+      <!-- 移动端菜单 -->
+      <div id="mobile-menu" class="md:hidden hidden pb-4">
+        <div class="flex flex-col space-y-4">
+          <a href="about.html" class="text-gray-700 hover:text-blue-600">关于</a>
+          <a href="index.html#tools" class="text-gray-700 hover:text-blue-600">工具</a>
+          <a href="help.html" class="text-gray-700 hover:text-blue-600">帮助</a>
+          <a href="articles/index.html" class="text-gray-700 hover:text-blue-600">指南</a>
+          <a href="blog/index.html" class="text-gray-700 hover:text-blue-600">博客</a>
+          <div class="pt-2 border-t border-gray-200">
+            <p class="text-sm text-gray-600 mb-1">选择语言</p>
+            <a href="contact.html" class="block py-1 text-gray-700 hover:text-blue-600">中文</a>
+            <a href="en/contact.html" class="block py-1 text-gray-700 hover:text-blue-600">English</a>
+          </div>
+        </div>
       </div>
     </div>
   </nav>
@@ -37,7 +88,7 @@
         <div class="bg-white rounded-xl shadow-md p-8 space-y-8">
           <div class="text-center">
             <h1 class="text-4xl font-bold text-gray-900 mb-4">联系我们</h1>
-            <p class="text-xl text-gray-600 max-w-2xl mx-auto">我们致力于为用户提供最优质的文字处理工具服务，您的意见和建议对我们非常重要</p>
+            <p class="text-xl text-gray-600 max-w-2xl mx-auto">我们致力于为用户提供最优质的文字处理工具服务，您的意见和建议对我们非常重要。作为一个用户导向的技术团队，我们深知优质的用户体验来源于持续的沟通和改进。无论您是遇到技术问题、有功能建议，还是希望与我们建立商业合作关系，我们都非常欢迎您的联系。我们的专业团队会认真对待每一个反馈，并致力于为您提供最满意的解决方案。</p>
           </div>
           
           <!-- 联系方式 -->
@@ -85,12 +136,13 @@
             
             <div class="bg-green-50 rounded-lg p-6">
               <h2 class="text-2xl font-semibold text-gray-900 mb-4">业务范围</h2>
+              <p class="text-gray-700 mb-6">我们提供全方位的服务支持，致力于为每一位用户和合作伙伴创造价值。无论您的需求是什么，我们都有专业的团队为您提供个性化的解决方案。从技术支持到商业合作，从产品咨询到定制开发，我们都能为您提供专业、及时、高效的服务。</p>
               <div class="space-y-3">
                 <div class="flex items-start space-x-3">
                   <span class="inline-block w-2 h-2 bg-green-500 rounded-full mt-2"></span>
                   <div>
                     <p class="font-semibold text-gray-900">技术支持</p>
-                    <p class="text-gray-600 text-sm">工具使用问题、功能建议、Bug反馈</p>
+                    <p class="text-gray-600 text-sm">工具使用问题、功能建议、Bug反馈、技术咨询、集成指导</p>
                   </div>
                 </div>
                 <div class="flex items-start space-x-3">
