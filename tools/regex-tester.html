@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>正则表达式测试工具 - 在线Regex测试/匹配/替换 | 文字处理工具网站</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="preload" href="../css/custom.css" as="style">
+    <link href="../css/custom.css" rel="stylesheet">
+    <link rel="preload" href="/favicon.svg" as="image" type="image/svg+xml">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <meta name="description" content="在线正则表达式测试工具：实时匹配预览，高亮显示结果，捕获组显示，提供常用模式库和替换功能，纯前端本地处理。">
+    <meta name="keywords" content="正则表达式,Regex测试,正则匹配,正则替换,正则工具,正则调试,模式匹配">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="zh_CN">
+    <meta property="og:image" content="https://chartools.art/img/og/og-zh.svg">
+    <meta property="og:image:alt" content="正则表达式测试工具">
+    <meta property="og:locale:alternate" content="en_US">
+    <meta property="og:title" content="正则表达式测试工具 - 在线Regex测试/匹配/替换">
+    <meta property="og:description" content="实时测试正则表达式，高亮匹配结果，常用模式库，替换功能。">
+    <meta property="og:url" content="https://chartools.art/tools/regex-tester.html">
+    <meta property="og:site_name" content="文字处理工具网站">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="正则表达式测试工具">
+    <meta name="twitter:description" content="实时测试正则表达式，高亮显示匹配结果。">
+    <link rel="alternate" hreflang="zh-CN" href="https://chartools.art/tools/regex-tester.html">
+    <link rel="alternate" hreflang="en" href="https://chartools.art/en/tools/regex-tester.html">
+    <link rel="alternate" hreflang="x-default" href="https://chartools.art/tools/regex-tester.html">
+    <link rel="canonical" href="https://chartools.art/tools/regex-tester.html">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-32ZXK1J41J"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-32ZXK1J41J');
+    </script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4770465793767896" crossorigin="anonymous"></script>
+    <style>
+        .regex-match {
+            background-color: #fef3c7;
+            border-bottom: 2px solid #f59e0b;
+            padding: 2px 0;
+            font-weight: 500;
+        }
+        .regex-group-1 { 
+            background-color: #dbeafe;
+            border-bottom: 2px solid #3b82f6;
+        }
+        .regex-group-2 { 
+            background-color: #fce7f3;
+            border-bottom: 2px solid #ec4899;
+        }
+    </style>
+    <script type="application/ld+json">{
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "正则表达式测试工具",
+      "alternateName": "Regex Tester Tool",
+      "applicationCategory": "WebApplication",
+      "url": "https://chartools.art/tools/regex-tester.html",
+      "description": "在线正则表达式测试工具：实时匹配预览，高亮显示结果，捕获组显示，提供常用模式库和替换功能。",
+      "operatingSystem": "Any",
+      "permissions": "无需特殊权限",
+      "softwareVersion": "1.0",
+      "datePublished": "2025-01-01",
+      "dateModified": "2025-10-04",
+      "author": {
+        "@type": "Organization",
+        "name": "文字处理工具网站",
+        "url": "https://chartools.art/"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "CNY"
+      },
+      "featureList": [
+        "实时匹配预览",
+        "高亮显示匹配结果",
+        "捕获组显示",
+        "常用正则模式库",
+        "替换功能",
+        "语法错误提示",
+        "本地处理保护隐私"
+      ]
+    }</script>
+</head>
+<body class="bg-white text-gray-800 min-h-screen flex flex-col">
+    <!-- 导航栏 -->
+    <nav id="navigation" class="fixed top-0 w-full bg-white bg-opacity-80 backdrop-blur-md shadow-sm z-50">
+        <div class="container mx-auto max-w-7xl px-4">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="../index.html" class="text-2xl font-semibold text-gray-900">文字工具</a>
+                </div>
+                
+                <!-- 主导航 (桌面版) -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="../about.html" class="text-gray-700 hover:text-blue-600">关于</a>
+                    <a href="../index.html#tools" class="text-gray-700 hover:text-blue-600">工具</a>
+                    <a href="../help.html" class="text-gray-700 hover:text-blue-600">帮助</a>
+                </div>
+                
+                <!-- 右侧选项 -->
+                <div class="flex items-center space-x-4">
+                    <!-- 语言切换按钮 -->
+                    <div class="relative language-selector">
+                        <button id="language-button" class="flex items-center space-x-1 p-2 rounded-md hover:bg-gray-100 transition">
+                            <span id="current-language">中文</span>
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div id="language-dropdown" class="absolute right-0 mt-2 w-32 bg-white rounded-md shadow-lg hidden z-10">
+                            <a href="regex-tester.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-100" data-lang="zh-CN">中文</a>
+                            <a href="../en/tools/regex-tester.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-100" data-lang="en">English</a>
+                        </div>
+                    </div>
+                    
+                    <!-- 移动端菜单按钮 -->
+                    <button id="mobile-menu-button" class="md:hidden p-2 rounded-md hover:bg-gray-100">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- 移动端菜单 -->
+            <div id="mobile-menu" class="md:hidden hidden pb-4">
+                <div class="flex flex-col space-y-4">
+                    <a href="../about.html" class="text-gray-700 hover:text-blue-600">关于</a>
+                    <a href="../index.html#tools" class="text-gray-700 hover:text-blue-600">工具</a>
+                    <a href="../help.html" class="text-gray-700 hover:text-blue-600">帮助</a>
+                    <div class="pt-2 border-t border-gray-200">
+                        <p class="text-sm text-gray-600 mb-1">选择语言</p>
+                        <a href="regex-tester.html" class="block py-1 text-gray-700 hover:text-blue-600" data-lang="zh-CN">中文</a>
+                        <a href="../en/tools/regex-tester.html" class="block py-1 text-gray-700 hover:text-blue-600" data-lang="en">English</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 主内容区 -->
+    <main class="flex-grow pt-16">
+        <script type="application/ld+json">{
+          "@context":"https://schema.org",
+          "@graph":[
+            {
+              "@type":"BreadcrumbList",
+              "itemListElement":[
+                {"@type":"ListItem","position":1,"name":"首页","item":"https://chartools.art/"},
+                {"@type":"ListItem","position":2,"name":"正则表达式测试","item":"https://chartools.art/tools/regex-tester.html"}
+              ]
+            }
+          ]
+        }</script>
+
+        <!-- 工具标题 -->
+        <section class="py-8 px-4 bg-gradient-to-br from-blue-50 to-indigo-50">
+            <div class="container mx-auto max-w-6xl">
+                <h1 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">正则表达式测试工具</h1>
+                <p class="text-lg text-gray-600">实时测试正则表达式，高亮显示匹配结果，提供常用模式库和替换功能</p>
+            </div>
+        </section>
+
+        <!-- 工具主体 -->
+        <section class="py-8 px-4">
+            <div class="container mx-auto max-w-6xl">
+                <!-- 正则表达式输入 -->
+                <div class="mb-6 bg-white rounded-xl shadow-md p-6">
+                    <label for="regex-pattern" class="block text-lg font-semibold text-gray-900 mb-2">正则表达式</label>
+                    <div class="flex items-center gap-2 mb-4">
+                        <span class="text-gray-600 text-2xl">/</span>
+                        <input 
+                            type="text" 
+                            id="regex-pattern" 
+                            class="flex-1 p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent font-mono"
+                            placeholder="输入正则表达式，例如：\d{3}-\d{4}"
+                        />
+                        <span class="text-gray-600 text-2xl">/</span>
+                    </div>
+                    
+                    <!-- 标志 -->
+                    <div class="flex flex-wrap gap-4">
+                        <label class="flex items-center cursor-pointer">
+                            <input type="checkbox" id="flag-g" value="g" class="flag-checkbox w-5 h-5 text-blue-600 rounded focus:ring-2 focus:ring-blue-500">
+                            <span class="ml-2 text-gray-700">g (全局匹配)</span>
+                        </label>
+                        <label class="flex items-center cursor-pointer">
+                            <input type="checkbox" id="flag-i" value="i" class="flag-checkbox w-5 h-5 text-blue-600 rounded focus:ring-2 focus:ring-blue-500">
+                            <span class="ml-2 text-gray-700">i (忽略大小写)</span>
+                        </label>
+                        <label class="flex items-center cursor-pointer">
+                            <input type="checkbox" id="flag-m" value="m" class="flag-checkbox w-5 h-5 text-blue-600 rounded focus:ring-2 focus:ring-blue-500">
+                            <span class="ml-2 text-gray-700">m (多行模式)</span>
+                        </label>
+                    </div>
+                    
+                    <!-- 错误提示 -->
+                    <div id="regex-error" class="mt-3 p-3 bg-red-50 border-l-4 border-red-500 text-red-700 hidden"></div>
+                </div>
+
+                <!-- 测试文本 -->
+                <div class="mb-6">
+                    <label for="test-text" class="block text-lg font-semibold text-gray-900 mb-2">测试文本</label>
+                    <textarea 
+                        id="test-text" 
+                        class="w-full h-64 p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent font-mono text-sm resize-y"
+                        placeholder="在此输入要测试的文本..."
+                    ></textarea>
+                </div>
+
+                <!-- 匹配结果显示 -->
+                <div class="mb-6 bg-white rounded-xl shadow-md p-6">
+                    <h2 class="text-xl font-semibold text-gray-900 mb-4">匹配结果</h2>
+                    
+                    <!-- 统计信息 -->
+                    <div class="mb-4 p-4 bg-blue-50 rounded-lg">
+                        <div class="flex flex-wrap gap-6">
+                            <div>
+                                <span class="text-gray-600">匹配数量：</span>
+                                <span id="match-count" class="text-blue-600 font-semibold">0</span>
+                            </div>
+                            <div>
+                                <span class="text-gray-600">捕获组：</span>
+                                <span id="group-count" class="text-blue-600 font-semibold">0</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 匹配详情 -->
+                    <div id="match-details" class="space-y-3">
+                        <p class="text-gray-500 text-center py-8">暂无匹配结果</p>
+                    </div>
+                </div>
+
+                <!-- 替换功能 -->
+                <div class="mb-6 bg-white rounded-xl shadow-md p-6">
+                    <h2 class="text-xl font-semibold text-gray-900 mb-4">替换功能</h2>
+                    <div class="mb-4">
+                        <label for="replace-text" class="block text-md font-medium text-gray-700 mb-2">替换为</label>
+                        <input 
+                            type="text" 
+                            id="replace-text" 
+                            class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent font-mono"
+                            placeholder="输入替换文本，支持 $1, $2 等捕获组引用"
+                        />
+                    </div>
+                    <button id="replace-button" class="bg-green-600 hover:bg-green-700 text-white px-6 py-2 rounded-lg transition-colors">
+                        执行替换
+                    </button>
+                    
+                    <!-- 替换结果 -->
+                    <div id="replace-result" class="mt-4 hidden">
+                        <label class="block text-md font-medium text-gray-700 mb-2">替换结果</label>
+                        <textarea 
+                            id="replace-output" 
+                            class="w-full h-32 p-4 border border-gray-300 rounded-lg font-mono text-sm bg-gray-50"
+                            readonly
+                        ></textarea>
+                        <button id="copy-replace-button" class="mt-2 bg-gray-600 hover:bg-gray-700 text-white px-4 py-2 rounded-lg transition-colors">
+                            复制结果
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 常用模式库 -->
+                <div class="bg-white rounded-xl shadow-md p-6">
+                    <h2 class="text-xl font-semibold text-gray-900 mb-4">常用正则模式库</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4" id="pattern-library">
+                        <!-- 模式卡片由JavaScript动态生成 -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 使用说明 -->
+        <section class="py-8 px-4 bg-gray-50">
+            <div class="container mx-auto max-w-6xl">
+                <h2 class="text-2xl font-bold text-gray-900 mb-6">使用说明</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="bg-white rounded-lg p-6 shadow-sm">
+                        <h3 class="text-lg font-semibold text-gray-900 mb-3">正则表达式标志</h3>
+                        <ul class="space-y-2 text-gray-600">
+                            <li><strong>g</strong> - 全局匹配：查找所有匹配项，而不是在第一个匹配后停止</li>
+                            <li><strong>i</strong> - 忽略大小写：匹配时不区分大小写</li>
+                            <li><strong>m</strong> - 多行模式：^ 和 $ 匹配每一行的开始和结束</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bg-white rounded-lg p-6 shadow-sm">
+                        <h3 class="text-lg font-semibold text-gray-900 mb-3">捕获组</h3>
+                        <p class="text-gray-600 mb-2">使用圆括号 () 创建捕获组，可以在替换中使用 $1, $2 等引用。</p>
+                        <p class="text-sm text-gray-500">示例：(\d{3})-(\d{4}) 可以匹配 123-4567，替换为 $2-$1 得到 4567-123</p>
+                    </div>
+                    
+                    <div class="bg-white rounded-lg p-6 shadow-sm">
+                        <h3 class="text-lg font-semibold text-gray-900 mb-3">常用元字符</h3>
+                        <ul class="space-y-1 text-sm text-gray-600">
+                            <li><code>\d</code> - 数字 (0-9)</li>
+                            <li><code>\w</code> - 字母数字下划线</li>
+                            <li><code>\s</code> - 空白字符</li>
+                            <li><code>.</code> - 任意字符（除换行符）</li>
+                            <li><code>*</code> - 0次或多次</li>
+                            <li><code>+</code> - 1次或多次</li>
+                            <li><code>?</code> - 0次或1次</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bg-white rounded-lg p-6 shadow-sm">
+                        <h3 class="text-lg font-semibold text-gray-900 mb-3">实时匹配</h3>
+                        <p class="text-gray-600">输入正则表达式和测试文本后，工具会实时显示匹配结果，匹配的内容会高亮显示，方便调试和学习。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- 页脚 -->
+    <footer class="bg-gray-100 py-8 px-4">
+        <div class="container mx-auto max-w-7xl">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <p class="text-gray-600">© 2025 文字处理工具网站</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="../about.html" class="text-gray-600 hover:text-blue-600">关于我们</a>
+                    <a href="../terms.html" class="text-gray-600 hover:text-blue-600">使用条款</a>
+                    <a href="../privacy.html" class="text-gray-600 hover:text-blue-600">隐私政策</a>
+                    <a href="../contact.html" class="text-gray-600 hover:text-blue-600">联系我们</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- JavaScript -->
+    <script src="../js/main.js"></script>
+    <script src="../js/navigation.js"></script>
+    <script src="../js/language.js"></script>
+    <script src="../js/tools/regex-tester.js"></script>
+</body>
+</html>
+
