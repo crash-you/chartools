@@ -316,109 +316,139 @@
             <div class="container mx-auto max-w-7xl">
                 <h2 class="text-3xl font-bold text-gray-900 mb-12 text-center">更多工具</h2>
                 
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     <!-- 字符计数工具 -->
-                    <a href="tools/text-counter.html" class="group">
-                        <div class="bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden h-full">
-                            <div class="p-4">
-                                <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
-                                    <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <a href="tools/text-counter.html" class="group block">
+                        <div class="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden h-full border border-gray-100 group-hover:border-blue-200 flex flex-col">
+                            <div class="p-6 flex-grow">
+                                <div class="w-14 h-14 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300">
+                                    <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"></path>
                                     </svg>
                                 </div>
-                                <h3 class="text-xl font-semibold text-gray-900 mb-2">字符计数</h3>
-                                <p class="text-gray-600">实时统计字符、单词数量，分类计数与阅读时间估算。配合<a href="articles/writing-guides.html" class="text-blue-600 hover:underline">写作指南</a>使用更高效。</p>
+                                <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">字符计数</h3>
+                                <p class="text-gray-600 text-sm leading-relaxed min-h-[60px]">实时统计字符、单词数量，分类计数与阅读时间估算。配合写作指南使用更高效。</p>
                             </div>
-                            <div class="px-4 pb-3">
-                                <span class="inline-block text-blue-600 group-hover:translate-x-1 transition-transform duration-200">立即使用 →</span>
+                            <div class="px-6 pb-5 pt-2">
+                                <span class="inline-flex items-center text-blue-600 font-medium group-hover:gap-2 transition-all duration-200">
+                                    立即使用
+                                    <svg class="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                                    </svg>
+                                </span>
                             </div>
                         </div>
                     </a>
                     
                     <!-- 文本转换工具 -->
-                    <a href="tools/text-conversion.html" class="group">
-                        <div class="bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden h-full">
-                            <div class="p-4">
-                                <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
-                                    <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <a href="tools/text-conversion.html" class="group block">
+                        <div class="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden h-full border border-gray-100 group-hover:border-green-200 flex flex-col">
+                            <div class="p-6 flex-grow">
+                                <div class="w-14 h-14 bg-gradient-to-br from-green-500 to-green-600 rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300">
+                                    <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path>
                                     </svg>
                                 </div>
-                                <h3 class="text-xl font-semibold text-gray-900 mb-2">文本转换</h3>
-                                <p class="text-gray-600">大小写、简繁体、行处理、空白处理、全角半角。了解<a href="articles/data-cleaning.html" class="text-blue-600 hover:underline">数据清洗技巧</a>提升处理效果。</p>
+                                <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-green-600 transition-colors">文本转换</h3>
+                                <p class="text-gray-600 text-sm leading-relaxed min-h-[60px]">大小写、简繁体、行处理、空白处理、全角半角转换，数据清洗必备工具。</p>
                             </div>
-                            <div class="px-4 pb-3">
-                                <span class="inline-block text-blue-600 group-hover:translate-x-1 transition-transform duration-200">立即使用 →</span>
+                            <div class="px-6 pb-5 pt-2">
+                                <span class="inline-flex items-center text-green-600 font-medium group-hover:gap-2 transition-all duration-200">
+                                    立即使用
+                                    <svg class="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                                    </svg>
+                                </span>
                             </div>
                         </div>
                     </a>
                     
-                    <a href="tools/formatting.html" class="group">
-                        <div class="bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden h-full">
-                            <div class="p-4">
-                                <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
-                                    <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <a href="tools/formatting.html" class="group block">
+                        <div class="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden h-full border border-gray-100 group-hover:border-purple-200 flex flex-col">
+                            <div class="p-6 flex-grow">
+                                <div class="w-14 h-14 bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300">
+                                    <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path>
                                     </svg>
                                 </div>
-                                <h3 class="text-xl font-semibold text-gray-900 mb-2">格式化工具</h3>
-                                <p class="text-gray-600">JSON、XML、HTML、CSS 格式化与最小化。参考<a href="articles/dev-workflows.html" class="text-blue-600 hover:underline">开发者工作流</a>优化使用技巧。</p>
+                                <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-purple-600 transition-colors">格式化工具</h3>
+                                <p class="text-gray-600 text-sm leading-relaxed min-h-[60px]">JSON、XML、HTML、CSS 格式化与最小化，开发者工作流优化利器。</p>
                             </div>
-                            <div class="px-4 pb-3">
-                                <span class="inline-block text-blue-600 group-hover:translate-x-1 transition-transform duration-200">立即使用 →</span>
+                            <div class="px-6 pb-5 pt-2">
+                                <span class="inline-flex items-center text-purple-600 font-medium group-hover:gap-2 transition-all duration-200">
+                                    立即使用
+                                    <svg class="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                                    </svg>
+                                </span>
                             </div>
                         </div>
                     </a>
                     
-                    <a href="tools/text-comparison.html" class="group">
-                        <div class="bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden h-full">
-                            <div class="p-4">
-                                <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
-                                    <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <a href="tools/text-comparison.html" class="group block">
+                        <div class="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden h-full border border-gray-100 group-hover:border-orange-200 flex flex-col">
+                            <div class="p-6 flex-grow">
+                                <div class="w-14 h-14 bg-gradient-to-br from-orange-500 to-orange-600 rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300">
+                                    <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
                                     </svg>
                                 </div>
-                                <h3 class="text-xl font-semibold text-gray-900 mb-2">文本比较</h3>
-                                <p class="text-gray-600">智能对比两段文本内容，高亮显示差异部分，支持逐字逐句分析。适合<a href="articles/dev-workflows.html" class="text-blue-600 hover:underline">代码审查</a>和文档版本管理。</p>
+                                <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-orange-600 transition-colors">文本比较</h3>
+                                <p class="text-gray-600 text-sm leading-relaxed min-h-[60px]">智能对比文本差异，高亮显示变化，完美适配代码审查和版本管理。</p>
                             </div>
-                            <div class="px-4 pb-3">
-                                <span class="inline-block text-blue-600 group-hover:translate-x-1 transition-transform duration-200">立即使用 →</span>
+                            <div class="px-6 pb-5 pt-2">
+                                <span class="inline-flex items-center text-orange-600 font-medium group-hover:gap-2 transition-all duration-200">
+                                    立即使用
+                                    <svg class="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                                    </svg>
+                                </span>
                             </div>
                         </div>
                     </a>
                     
                     <!-- 文本编码/解码工具 -->
-                    <a href="tools/text-encoder.html" class="group">
-                        <div class="bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden h-full">
-                            <div class="p-4">
-                                <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
-                                    <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <a href="tools/text-encoder.html" class="group block">
+                        <div class="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden h-full border border-gray-100 group-hover:border-indigo-200 flex flex-col">
+                            <div class="p-6 flex-grow">
+                                <div class="w-14 h-14 bg-gradient-to-br from-indigo-500 to-indigo-600 rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300">
+                                    <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
                                     </svg>
                                 </div>
-                                <h3 class="text-xl font-semibold text-gray-900 mb-2">文本编码/解码</h3>
-                                <p class="text-gray-600">Base64、URL、Unicode、HTML实体编码解码，JWT解析，进制转换。</p>
+                                <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-indigo-600 transition-colors">文本编码/解码</h3>
+                                <p class="text-gray-600 text-sm leading-relaxed min-h-[60px]">Base64、URL、Unicode、HTML实体编码，JWT解析，进制转换全搞定。</p>
                             </div>
-                            <div class="px-4 pb-3">
-                                <span class="inline-block text-blue-600 group-hover:translate-x-1 transition-transform duration-200">立即使用 →</span>
+                            <div class="px-6 pb-5 pt-2">
+                                <span class="inline-flex items-center text-indigo-600 font-medium group-hover:gap-2 transition-all duration-200">
+                                    立即使用
+                                    <svg class="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                                    </svg>
+                                </span>
                             </div>
                         </div>
                     </a>
                     
                     <!-- 正则表达式测试工具 -->
-                    <a href="tools/regex-tester.html" class="group">
-                        <div class="bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden h-full">
-                            <div class="p-4">
-                                <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
-                                    <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <a href="tools/regex-tester.html" class="group block">
+                        <div class="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden h-full border border-gray-100 group-hover:border-pink-200 flex flex-col">
+                            <div class="p-6 flex-grow">
+                                <div class="w-14 h-14 bg-gradient-to-br from-pink-500 to-pink-600 rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300">
+                                    <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 20l4-16m2 16l4-16M6 9h14M4 15h14"></path>
                                     </svg>
                                 </div>
-                                <h3 class="text-xl font-semibold text-gray-900 mb-2">正则表达式测试</h3>
-                                <p class="text-gray-600">实时测试正则表达式，高亮匹配结果，提供常用模式库和替换功能。</p>
+                                <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-pink-600 transition-colors">正则表达式测试</h3>
+                                <p class="text-gray-600 text-sm leading-relaxed min-h-[60px]">实时测试正则，高亮匹配结果，内置常用模式库和替换功能。</p>
                             </div>
-                            <div class="px-4 pb-3">
-                                <span class="inline-block text-blue-600 group-hover:translate-x-1 transition-transform duration-200">立即使用 →</span>
+                            <div class="px-6 pb-5 pt-2">
+                                <span class="inline-flex items-center text-pink-600 font-medium group-hover:gap-2 transition-all duration-200">
+                                    立即使用
+                                    <svg class="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                                    </svg>
+                                </span>
                             </div>
                         </div>
                     </a>
