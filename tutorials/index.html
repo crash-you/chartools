@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>教程中心 - 文字处理工具完整使用教程 | CharTools</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="preload" href="../css/custom.css" as="style">
+    <link href="../css/custom.css" rel="stylesheet">
+    <meta name="description" content="文字处理工具完整教程中心：从入门到精通，包含工具使用教程、实战案例、最佳实践、常见问题解决方案等全面学习资源。">
+    <meta name="keywords" content="教程,使用指南,学习资源,实战案例,最佳实践,工具教学">
+    <link rel="canonical" href="https://chartools.art/tutorials/index.html">
+    <link rel="alternate" hreflang="zh-CN" href="https://chartools.art/tutorials/index.html">
+    <link rel="alternate" hreflang="en" href="https://chartools.art/en/tutorials/index.html">
+    <link rel="alternate" hreflang="x-default" href="https://chartools.art/tutorials/index.html">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-32ZXK1J41J"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-32ZXK1J41J');
+    </script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4770465793767896" crossorigin="anonymous"></script>
+</head>
+<body class="bg-white text-gray-800 min-h-screen flex flex-col">
+    <!-- 导航栏 -->
+    <nav id="navigation" class="fixed top-0 w-full bg-white bg-opacity-80 backdrop-blur-md shadow-sm z-50">
+        <div class="container mx-auto max-w-7xl px-4">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="../index.html" class="text-2xl font-semibold text-gray-900">文字工具</a>
+                </div>
+                
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="../about.html" class="text-gray-700 hover:text-blue-600">关于</a>
+                    <a href="../index.html#tools" class="text-gray-700 hover:text-blue-600">工具</a>
+                    <a href="../help.html" class="text-gray-700 hover:text-blue-600">帮助</a>
+                    <a href="index.html" class="text-blue-600">教程</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- 主内容 -->
+    <main class="flex-grow pt-16">
+        <!-- 标题区 -->
+        <section class="py-12 px-4 bg-gradient-to-br from-indigo-50 to-purple-50">
+            <div class="container mx-auto max-w-7xl text-center">
+                <h1 class="text-4xl font-bold text-gray-900 mb-4">教程中心</h1>
+                <p class="text-xl text-gray-600 mb-6">从入门到精通，全面掌握文字处理工具</p>
+                <p class="text-gray-600">通过实战案例和详细指南，快速提升文本处理技能</p>
+            </div>
+        </section>
+        
+        <!-- 学习路径 -->
+        <section class="py-16 px-4 bg-white">
+            <div class="container mx-auto max-w-7xl">
+                <h2 class="text-3xl font-bold text-gray-900 mb-12 text-center">推荐学习路径</h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- 入门级 -->
+                    <div class="bg-gradient-to-br from-green-50 to-green-100 rounded-xl shadow-md p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="w-10 h-10 bg-green-500 rounded-full flex items-center justify-center text-white font-bold mr-3">1</div>
+                            <h3 class="text-xl font-semibold text-green-900">入门级</h3>
+                        </div>
+                        <p class="text-green-800 mb-4 text-sm">适合首次使用文字处理工具的用户</p>
+                        <div class="space-y-2">
+                            <a href="../tools/text-counter.html" class="block bg-white rounded-lg p-3 hover:shadow-md transition-shadow">
+                                <div class="font-medium text-gray-900">字符计数工具</div>
+                                <p class="text-xs text-gray-600">最简单的工具，实时统计字数</p>
+                            </a>
+                            <a href="../tools/text-conversion.html" class="block bg-white rounded-lg p-3 hover:shadow-md transition-shadow">
+                                <div class="font-medium text-gray-900">文本转换工具</div>
+                                <p class="text-xs text-gray-600">大小写转换、去重排序</p>
+                            </a>
+                            <a href="../help.html" class="block bg-white rounded-lg p-3 hover:shadow-md transition-shadow">
+                                <div class="font-medium text-gray-900">帮助文档</div>
+                                <p class="text-xs text-gray-600">查看基础使用指南</p>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- 进阶级 -->
+                    <div class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl shadow-md p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center text-white font-bold mr-3">2</div>
+                            <h3 class="text-xl font-semibold text-blue-900">进阶级</h3>
+                        </div>
+                        <p class="text-blue-800 mb-4 text-sm">掌握更多高级功能和技巧</p>
+                        <div class="space-y-2">
+                            <a href="../tools/formatting.html" class="block bg-white rounded-lg p-3 hover:shadow-md transition-shadow">
+                                <div class="font-medium text-gray-900">格式化工具</div>
+                                <p class="text-xs text-gray-600">JSON/XML/HTML格式化</p>
+                            </a>
+                            <a href="../tools/text-comparison.html" class="block bg-white rounded-lg p-3 hover:shadow-md transition-shadow">
+                                <div class="font-medium text-gray-900">文本比较工具</div>
+                                <p class="text-xs text-gray-600">智能diff对比</p>
+                            </a>
+                            <a href="../articles/data-cleaning.html" class="block bg-white rounded-lg p-3 hover:shadow-md transition-shadow">
+                                <div class="font-medium text-gray-900">数据清洗指南</div>
+                                <p class="text-xs text-gray-600">专业数据处理技巧</p>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- 专家级 -->
+                    <div class="bg-gradient-to-br from-purple-50 to-purple-100 rounded-xl shadow-md p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="w-10 h-10 bg-purple-500 rounded-full flex items-center justify-center text-white font-bold mr-3">3</div>
+                            <h3 class="text-xl font-semibold text-purple-900">专家级</h3>
+                        </div>
+                        <p class="text-purple-800 mb-4 text-sm">掌握复杂工具和专业技术</p>
+                        <div class="space-y-2">
+                            <a href="../tools/regex-tester.html" class="block bg-white rounded-lg p-3 hover:shadow-md transition-shadow">
+                                <div class="font-medium text-gray-900">正则表达式测试</div>
+                                <p class="text-xs text-gray-600">正则调试和学习</p>
+                            </a>
+                            <a href="../tools/text-encoder.html" class="block bg-white rounded-lg p-3 hover:shadow-md transition-shadow">
+                                <div class="font-medium text-gray-900">编码/解码工具</div>
+                                <p class="text-xs text-gray-600">Base64、URL、JWT等</p>
+                            </a>
+                            <a href="../articles/dev-workflows.html" class="block bg-white rounded-lg p-3 hover:shadow-md transition-shadow">
+                                <div class="font-medium text-gray-900">开发工作流</div>
+                                <p class="text-xs text-gray-600">高级使用技巧</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 按场景分类 -->
+        <section class="py-16 px-4 bg-gray-50">
+            <div class="container mx-auto max-w-7xl">
+                <h2 class="text-3xl font-bold text-gray-900 mb-12 text-center">按使用场景学习</h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- 学术写作 -->
+                    <div class="bg-white rounded-xl shadow-md p-8">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-3">
+                                <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-semibold text-gray-900">学术写作场景</h3>
+                        </div>
+                        <p class="text-gray-700 mb-4">论文、报告、摘要字数控制</p>
+                        <div class="space-y-3">
+                            <div class="flex items-start">
+                                <span class="text-blue-600 font-semibold mr-2">→</span>
+                                <div>
+                                    <a href="../tools/text-counter.html" class="text-blue-600 hover:underline font-medium">字符计数工具教程</a>
+                                    <p class="text-sm text-gray-600">如何精确控制论文字数</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <span class="text-blue-600 font-semibold mr-2">→</span>
+                                <div>
+                                    <a href="../articles/writing-guides.html" class="text-blue-600 hover:underline font-medium">写作与字数控制指南</a>
+                                    <p class="text-sm text-gray-600">专业写作技巧和工具使用</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 数据分析 -->
+                    <div class="bg-white rounded-xl shadow-md p-8">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mr-3">
+                                <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-semibold text-gray-900">数据分析场景</h3>
+                        </div>
+                        <p class="text-gray-700 mb-4">问卷处理、用户反馈分析</p>
+                        <div class="space-y-3">
+                            <div class="flex items-start">
+                                <span class="text-green-600 font-semibold mr-2">→</span>
+                                <div>
+                                    <a href="../tools/text-conversion.html" class="text-blue-600 hover:underline font-medium">文本转换工具教程</a>
+                                    <p class="text-sm text-gray-600">数据清洗、去重、排序</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <span class="text-green-600 font-semibold mr-2">→</span>
+                                <div>
+                                    <a href="../articles/data-cleaning.html" class="text-blue-600 hover:underline font-medium">数据清洗完整指南</a>
+                                    <p class="text-sm text-gray-600">专业数据处理工作流</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 开发调试 -->
+                    <div class="bg-white rounded-xl shadow-md p-8">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mr-3">
+                                <svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-semibold text-gray-900">开发调试场景</h3>
+                        </div>
+                        <p class="text-gray-700 mb-4">API调试、代码review、配置管理</p>
+                        <div class="space-y-3">
+                            <div class="flex items-start">
+                                <span class="text-purple-600 font-semibold mr-2">→</span>
+                                <div>
+                                    <a href="../tools/formatting.html" class="text-blue-600 hover:underline font-medium">格式化工具教程</a>
+                                    <p class="text-sm text-gray-600">JSON/XML/HTML美化</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <span class="text-purple-600 font-semibold mr-2">→</span>
+                                <div>
+                                    <a href="../articles/dev-workflows.html" class="text-blue-600 hover:underline font-medium">开发者工作流指南</a>
+                                    <p class="text-sm text-gray-600">格式化与差异对比</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 内容创作 -->
+                    <div class="bg-white rounded-xl shadow-md p-8">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 bg-yellow-100 rounded-full flex items-center justify-center mr-3">
+                                <svg class="w-6 h-6 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-semibold text-gray-900">内容创作场景</h3>
+                        </div>
+                        <p class="text-gray-700 mb-4">文案编辑、博客写作、新媒体</p>
+                        <div class="space-y-3">
+                            <div class="flex items-start">
+                                <span class="text-yellow-600 font-semibold mr-2">→</span>
+                                <div>
+                                    <a href="../tools/text-counter.html" class="text-blue-600 hover:underline font-medium">字数控制技巧</a>
+                                    <p class="text-sm text-gray-600">多平台字数适配</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <span class="text-yellow-600 font-semibold mr-2">→</span>
+                                <div>
+                                    <a href="../blog/advanced-writing-techniques.html" class="text-blue-600 hover:underline font-medium">高效写作技巧</a>
+                                    <p class="text-sm text-gray-600">提升写作效率</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 工具详细教程 -->
+        <section class="py-16 px-4 bg-white">
+            <div class="container mx-auto max-w-7xl">
+                <h2 class="text-3xl font-bold text-gray-900 mb-12 text-center">工具详细教程</h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <a href="../tools/text-counter.html#faq" class="group bg-white rounded-xl shadow-md hover:shadow-lg transition-all p-6 border-l-4 border-blue-500">
+                        <h3 class="text-lg font-semibold text-gray-900 mb-2 group-hover:text-blue-600">字符计数工具</h3>
+                        <p class="text-gray-600 text-sm mb-3">实时统计、分类计数、阅读时间</p>
+                        <ul class="text-sm text-gray-600 space-y-1">
+                            <li>• 5个实战案例</li>
+                            <li>• 10个常见问题</li>
+                            <li>• 6个使用技巧</li>
+                        </ul>
+                    </a>
+                    
+                    <a href="../tools/text-conversion.html#faq" class="group bg-white rounded-xl shadow-md hover:shadow-lg transition-all p-6 border-l-4 border-green-500">
+                        <h3 class="text-lg font-semibold text-gray-900 mb-2 group-hover:text-green-600">文本转换工具</h3>
+                        <p class="text-gray-600 text-sm mb-3">大小写、简繁体、行处理、去重</p>
+                        <ul class="text-sm text-gray-600 space-y-1">
+                            <li>• 5个实战案例</li>
+                            <li>• 10个常见问题</li>
+                            <li>• 6个使用技巧</li>
+                        </ul>
+                    </a>
+                    
+                    <a href="../tools/formatting.html#faq" class="group bg-white rounded-xl shadow-md hover:shadow-lg transition-all p-6 border-l-4 border-purple-500">
+                        <h3 class="text-lg font-semibold text-gray-900 mb-2 group-hover:text-purple-600">格式化工具</h3>
+                        <p class="text-gray-600 text-sm mb-3">JSON、XML、HTML、CSS格式化</p>
+                        <ul class="text-sm text-gray-600 space-y-1">
+                            <li>• 5个实战案例</li>
+                            <li>• 10个常见问题</li>
+                            <li>• 6个使用技巧</li>
+                        </ul>
+                    </a>
+                    
+                    <a href="../tools/text-comparison.html#faq" class="group bg-white rounded-xl shadow-md hover:shadow-lg transition-all p-6 border-l-4 border-orange-500">
+                        <h3 class="text-lg font-semibold text-gray-900 mb-2 group-hover:text-orange-600">文本比较工具</h3>
+                        <p class="text-gray-600 text-sm mb-3">智能diff、版本对比、高亮差异</p>
+                        <ul class="text-sm text-gray-600 space-y-1">
+                            <li>• 5个实战案例</li>
+                            <li>• 10个常见问题</li>
+                            <li>• 6个使用技巧</li>
+                        </ul>
+                    </a>
+                    
+                    <a href="../tools/text-encoder.html#faq" class="group bg-white rounded-xl shadow-md hover:shadow-lg transition-all p-6 border-l-4 border-indigo-500">
+                        <h3 class="text-lg font-semibold text-gray-900 mb-2 group-hover:text-indigo-600">编码/解码工具</h3>
+                        <p class="text-gray-600 text-sm mb-3">Base64、URL、Unicode、JWT</p>
+                        <ul class="text-sm text-gray-600 space-y-1">
+                            <li>• 4个实战案例</li>
+                            <li>• 10个常见问题</li>
+                            <li>• 3个使用技巧</li>
+                        </ul>
+                    </a>
+                    
+                    <a href="../tools/regex-tester.html#faq" class="group bg-white rounded-xl shadow-md hover:shadow-lg transition-all p-6 border-l-4 border-pink-500">
+                        <h3 class="text-lg font-semibold text-gray-900 mb-2 group-hover:text-pink-600">正则表达式测试</h3>
+                        <p class="text-gray-600 text-sm mb-3">正则调试、模式匹配、替换</p>
+                        <ul class="text-sm text-gray-600 space-y-1">
+                            <li>• 4个实战案例</li>
+                            <li>• 10个常见问题</li>
+                            <li>• 3个学习技巧</li>
+                        </ul>
+                    </a>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 专业指南 -->
+        <section class="py-16 px-4 bg-white">
+            <div class="container mx-auto max-w-7xl">
+                <h2 class="text-3xl font-bold text-gray-900 mb-12 text-center">专业技术指南</h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <a href="../articles/writing-guides.html" class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl shadow-md hover:shadow-lg transition-all p-6">
+                        <h3 class="text-xl font-semibold text-blue-900 mb-3">写作与排版控制</h3>
+                        <p class="text-blue-800 text-sm mb-4">利用字符计数、行处理与大小写转换，高效打磨草稿</p>
+                        <div class="text-blue-600 font-medium text-sm">
+                            阅读指南 →
+                        </div>
+                    </a>
+                    
+                    <a href="../articles/data-cleaning.html" class="bg-gradient-to-br from-green-50 to-green-100 rounded-xl shadow-md hover:shadow-lg transition-all p-6">
+                        <h3 class="text-xl font-semibold text-green-900 mb-3">数据清洗与批量处理</h3>
+                        <p class="text-green-800 text-sm mb-4">去重、排序、空白优化，一键清洗文本集合</p>
+                        <div class="text-green-600 font-medium text-sm">
+                            阅读指南 →
+                        </div>
+                    </a>
+                    
+                    <a href="../articles/dev-workflows.html" class="bg-gradient-to-br from-purple-50 to-purple-100 rounded-xl shadow-md hover:shadow-lg transition-all p-6">
+                        <h3 class="text-xl font-semibold text-purple-900 mb-3">开发者工作流优化</h3>
+                        <p class="text-purple-800 text-sm mb-4">格式化/最小化与文本比较组合拳，快速定位变更</p>
+                        <div class="text-purple-600 font-medium text-sm">
+                            阅读指南 →
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 学习资源 -->
+        <section class="py-16 px-4 bg-gray-50">
+            <div class="container mx-auto max-w-7xl">
+                <h2 class="text-3xl font-bold text-gray-900 mb-12 text-center">更多学习资源</h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="bg-white rounded-xl shadow-md p-8">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-4">📚 技术博客</h3>
+                        <p class="text-gray-700 mb-4">深度技术文章，帮助您理解原理和最佳实践</p>
+                        <div class="space-y-2">
+                            <a href="../blog/seo-content-optimization.html" class="block text-blue-600 hover:underline">• SEO内容优化指南</a>
+                            <a href="../blog/advanced-writing-techniques.html" class="block text-blue-600 hover:underline">• 高效写作的10个技巧</a>
+                            <a href="../blog/data-cleaning-masterclass.html" class="block text-blue-600 hover:underline">• 数据清洗大师班</a>
+                            <a href="../blog/content-marketing-trends-2025.html" class="block text-blue-600 hover:underline">• 2025内容营销趋势</a>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white rounded-xl shadow-md p-8">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-4">🔧 实用工具</h3>
+                        <p class="text-gray-700 mb-4">直接使用工具，边学边练最有效</p>
+                        <div class="space-y-2">
+                            <a href="../tools/text-counter.html" class="block text-blue-600 hover:underline">• 字符计数工具</a>
+                            <a href="../tools/text-conversion.html" class="block text-blue-600 hover:underline">• 文本转换工具</a>
+                            <a href="../tools/formatting.html" class="block text-blue-600 hover:underline">• 格式化工具</a>
+                            <a href="../tools/text-comparison.html" class="block text-blue-600 hover:underline">• 文本比较工具</a>
+                            <a href="../tools/text-encoder.html" class="block text-blue-600 hover:underline">• 编码/解码工具</a>
+                            <a href="../tools/regex-tester.html" class="block text-blue-600 hover:underline">• 正则表达式测试</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 学习建议 -->
+        <section class="py-16 px-4 bg-white">
+            <div class="container mx-auto max-w-4xl">
+                <div class="bg-gradient-to-r from-blue-500 to-purple-600 rounded-xl shadow-lg p-8 text-white">
+                    <h2 class="text-2xl font-bold mb-4">💡 学习建议</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <h3 class="font-semibold mb-3">初学者建议</h3>
+                            <ul class="space-y-2 text-blue-100">
+                                <li>1. 从字符计数工具开始</li>
+                                <li>2. 阅读每个工具的使用指南</li>
+                                <li>3. 尝试提供的示例文本</li>
+                                <li>4. 应用到实际工作中</li>
+                            </ul>
+                        </div>
+                        
+                        <div>
+                            <h3 class="font-semibold mb-3">进阶用户建议</h3>
+                            <ul class="space-y-2 text-blue-100">
+                                <li>1. 学习工具组合使用</li>
+                                <li>2. 查看实战案例</li>
+                                <li>3. 掌握高级功能</li>
+                                <li>4. 探索技术博客深度内容</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- 页脚 -->
+    <footer class="bg-gray-100 py-8 px-4">
+        <div class="container mx-auto max-w-7xl">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <p class="text-gray-600">© 2025 文字处理工具网站</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="../about.html" class="text-gray-600 hover:text-blue-600">关于我们</a>
+                    <a href="../terms.html" class="text-gray-600 hover:text-blue-600">使用条款</a>
+                    <a href="../privacy.html" class="text-gray-600 hover:text-blue-600">隐私政策</a>
+                    <a href="../contact.html" class="text-gray-600 hover:text-blue-600">联系我们</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="../js/main.js"></script>
+    <script src="../js/navigation.js"></script>
+    <script src="../js/language.js"></script>
+</body>
+</html>
+

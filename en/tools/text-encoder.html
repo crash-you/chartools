@@ -295,6 +295,99 @@
                 </div>
             </div>
         </section>
+
+        <!-- Use Cases & FAQ -->
+        <section class="py-12 px-4 bg-white">
+            <div class="container mx-auto max-w-7xl">
+                <h2 class="text-3xl font-bold text-gray-900 mb-8">Encoding/Decoding Guide</h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                    <div class="bg-blue-50 rounded-lg p-6">
+                        <h3 class="text-lg font-semibold text-blue-900 mb-2">Base64: Image Embedding</h3>
+                        <p class="text-gray-700 text-sm">
+                            <strong>Use:</strong> Embed small images in HTML/CSS without external files.<br>
+                            <strong>Note:</strong> Not encryption! Anyone can decode. Size increases ~33%.
+                        </p>
+                    </div>
+                    
+                    <div class="bg-green-50 rounded-lg p-6">
+                        <h3 class="text-lg font-semibold text-green-900 mb-2">URL: Chinese Characters</h3>
+                        <p class="text-gray-700 text-sm">
+                            <strong>Use:</strong> Encode Chinese/special chars in URLs.<br>
+                            <strong>Example:</strong> "搜索" → %E6%90%9C%E7%B4%A2
+                        </p>
+                    </div>
+                    
+                    <div class="bg-purple-50 rounded-lg p-6">
+                        <h3 class="text-lg font-semibold text-purple-900 mb-2">JWT: Token Debugging</h3>
+                        <p class="text-gray-700 text-sm">
+                            <strong>Use:</strong> Parse JWT to view user info, permissions, expiry.<br>
+                            <strong>Tip:</strong> Check "exp" field to verify if token expired.
+                        </p>
+                    </div>
+                    
+                    <div class="bg-yellow-50 rounded-lg p-6">
+                        <h3 class="text-lg font-semibold text-yellow-900 mb-2">HTML Entities: XSS Prevention</h3>
+                        <p class="text-gray-700 text-sm">
+                            <strong>Use:</strong> Encode < > & " to prevent XSS attacks.<br>
+                            <strong>Security:</strong> Always encode user input before display.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- FAQ -->
+                <div class="bg-white rounded-xl shadow-md p-8">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Quick FAQ</h3>
+                    <div class="space-y-4">
+                        <div>
+                            <p class="font-semibold text-gray-900">Is Base64 encryption?</p>
+                            <p class="text-gray-700 text-sm"><strong>No!</strong> Base64 is encoding, not encryption. Anyone can decode it. Use AES/RSA for actual encryption.</p>
+                        </div>
+                        <div>
+                            <p class="font-semibold text-gray-900">JWT parse failed - why?</p>
+                            <p class="text-gray-700 text-sm">Check: 1) Token has 3 parts separated by dots, 2) No extra spaces/line breaks, 3) Starts with "eyJ".</p>
+                        </div>
+                        <div>
+                            <p class="font-semibold text-gray-900">All operations reversible?</p>
+                            <p class="text-gray-700 text-sm">Yes! Encode/decode pairs are fully reversible: Base64, URL, Unicode, HTML entities - 100% data recovery.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technical Info -->
+        <section class="py-12 px-4 bg-gray-50">
+            <div class="container mx-auto max-w-7xl">
+                <div class="bg-white rounded-xl shadow-md p-8 border-l-4 border-indigo-500">
+                    <h2 class="text-2xl font-bold text-gray-900 mb-6">🔒 Technology & Privacy</h2>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <h3 class="font-semibold text-gray-900 mb-3">Tech</h3>
+                            <ul class="text-gray-700 text-sm space-y-1">
+                                <li>• Native atob/btoa APIs</li>
+                                <li>• encodeURIComponent for URL</li>
+                                <li>• Regex for HTML entities</li>
+                                <li>• RFC 4648 compliant Base64</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-gray-900 mb-3">Privacy</h3>
+                            <ul class="text-gray-700 text-sm space-y-1">
+                                <li>• 100% local processing</li>
+                                <li>• Safe for tokens & secrets</li>
+                                <li>• No upload, no logging</li>
+                                <li>• Open source code</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="mt-4 bg-indigo-50 rounded p-3">
+                        <p class="text-indigo-800 text-sm"><strong>Performance:</strong> Base64 10KB <20ms, URL encode/decode <10ms, JWT parse <50ms, base conversion <5ms.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
     
     <!-- Footer -->

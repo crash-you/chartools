@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>字符计数工具 - 交互式教程 | 完整学习指南 | CharTools</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="preload" href="../css/custom.css" as="style">
+    <link href="../css/custom.css" rel="stylesheet">
+    <meta name="description" content="字符计数工具交互式教程：手把手教学，从基础到高级，包含实时练习、进度追踪、测验题、完整实战案例演示。学习字数统计、字符分析、阅读时间评估的专业技能。">
+    <meta name="keywords" content="字符计数教程,字数统计学习,交互式教学,实战练习,学术写作,内容创作,字数控制">
+    <link rel="canonical" href="https://chartools.art/tutorials/character-counter-interactive.html">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-32ZXK1J41J"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-32ZXK1J41J');
+    </script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4770465793767896" crossorigin="anonymous"></script>
+    <style>
+        .lesson-step {
+            transition: all 0.3s ease;
+        }
+        .lesson-step.completed {
+            opacity: 0.6;
+        }
+        .lesson-step.active {
+            border-color: #3B82F6;
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+        }
+        .progress-bar {
+            transition: width 0.5s ease;
+        }
+        .practice-area {
+            border: 2px dashed #E5E7EB;
+            transition: border-color 0.3s;
+        }
+        .practice-area:focus-within {
+            border-color: #3B82F6;
+            background-color: #F9FAFB;
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-800 min-h-screen flex flex-col">
+    <!-- 导航栏 -->
+    <nav id="navigation" class="fixed top-0 w-full bg-white bg-opacity-80 backdrop-blur-md shadow-sm z-50">
+        <div class="container mx-auto max-w-7xl px-4">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="../index.html" class="text-2xl font-semibold text-gray-900">文字工具</a>
+                </div>
+                
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="../about.html" class="text-gray-700 hover:text-blue-600">关于</a>
+                    <a href="../tools/text-counter.html" class="text-gray-700 hover:text-blue-600">使用工具</a>
+                    <a href="index.html" class="text-gray-700 hover:text-blue-600">教程中心</a>
+                    <a href="../help.html" class="text-gray-700 hover:text-blue-600">帮助</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- 主内容 -->
+    <main class="flex-grow pt-16">
+        <!-- 教程标题 -->
+        <section class="py-12 px-4 bg-gradient-to-br from-blue-50 to-indigo-100">
+            <div class="container mx-auto max-w-4xl">
+                <div class="mb-6">
+                    <a href="index.html" class="text-blue-600 hover:underline">← 返回教程中心</a>
+                </div>
+                <h1 class="text-4xl font-bold text-gray-900 mb-4">字符计数工具 - 交互式教程</h1>
+                <p class="text-xl text-gray-700 mb-6">通过分步练习，完全掌握字符计数工具的所有功能</p>
+                
+                <!-- 学习进度 -->
+                <div class="bg-white rounded-xl shadow-md p-6">
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="font-semibold text-gray-900">学习进度</span>
+                        <span class="text-sm text-gray-600"><span id="progress-count">0</span> / 6 课程</span>
+                    </div>
+                    <div class="w-full bg-gray-200 rounded-full h-3">
+                        <div id="progress-bar" class="progress-bar bg-gradient-to-r from-blue-500 to-indigo-600 h-3 rounded-full" style="width: 0%"></div>
+                    </div>
+                    <p class="text-sm text-gray-600 mt-2">预计学习时间：25分钟</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 教程内容 -->
+        <section class="py-16 px-4">
+            <div class="container mx-auto max-w-4xl">
+                
+                <!-- 第1课：基础认识 -->
+                <div class="lesson-step mb-8 bg-white rounded-xl shadow-lg p-8 border-2 border-gray-200" data-lesson="1">
+                    <div class="flex items-center justify-between mb-6">
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-4">
+                                <span class="text-2xl font-bold text-blue-600">1</span>
+                            </div>
+                            <h2 class="text-2xl font-bold text-gray-900">第1课：认识字符计数工具</h2>
+                        </div>
+                        <span class="lesson-status text-gray-400">⏳ 未完成</span>
+                    </div>
+                    
+                    <div class="lesson-content space-y-6">
+                        <div>
+                            <h3 class="text-lg font-semibold text-gray-900 mb-3">📖 理论学习</h3>
+                            <div class="bg-blue-50 rounded-lg p-6">
+                                <p class="text-gray-800 mb-4"><strong>什么是字符计数工具？</strong></p>
+                                <p class="text-gray-700 mb-4">字符计数工具是一种帮助您实时统计文本内容的专业工具。它可以准确计算：</p>
+                                <ul class="space-y-2 text-gray-700">
+                                    <li>• <strong>字符总数</strong>：包括所有字母、数字、标点、空格等</li>
+                                    <li>• <strong>不含空格字符数</strong>：去除空格后的纯文本字符</li>
+                                    <li>• <strong>单词数</strong>：英文按空格分隔，中文按字数统计</li>
+                                    <li>• <strong>行数</strong>：文本包含的总行数</li>
+                                    <li>• <strong>段落数</strong>：由空行分隔的段落数量</li>
+                                    <li>• <strong>阅读时间</strong>：基于平均阅读速度的估算</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <h3 class="text-lg font-semibold text-gray-900 mb-3">💼 应用场景</h3>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div class="bg-green-50 rounded-lg p-4">
+                                    <h4 class="font-semibold text-green-900 mb-2">学术写作</h4>
+                                    <p class="text-sm text-green-800">论文摘要限制200字，论文正文要求5000-8000字</p>
+                                </div>
+                                <div class="bg-purple-50 rounded-lg p-4">
+                                    <h4 class="font-semibold text-purple-900 mb-2">社交媒体</h4>
+                                    <p class="text-sm text-purple-800">Twitter限制280字符，微博限制2000字</p>
+                                </div>
+                                <div class="bg-yellow-50 rounded-lg p-4">
+                                    <h4 class="font-semibold text-yellow-900 mb-2">SEO优化</h4>
+                                    <p class="text-sm text-yellow-800">标题60字符，描述155字符以内最佳</p>
+                                </div>
+                                <div class="bg-pink-50 rounded-lg p-4">
+                                    <h4 class="font-semibold text-pink-900 mb-2">内容创作</h4>
+                                    <p class="text-sm text-pink-800">博客文章建议1500-2000字，提升SEO排名</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <h3 class="text-lg font-semibold text-gray-900 mb-3">✏️ 实践练习</h3>
+                            <p class="text-gray-700 mb-3">在下方文本框中输入任意内容，观察实时统计结果：</p>
+                            <div class="practice-area rounded-lg p-4">
+                                <textarea id="practice-1" class="w-full h-32 p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 resize-none" placeholder="试着输入一些文字..."></textarea>
+                                <div class="mt-4 grid grid-cols-2 md:grid-cols-3 gap-3">
+                                    <div class="bg-white rounded-lg p-3 shadow-sm">
+                                        <div class="text-xs text-gray-600">字符数（含空格）</div>
+                                        <div id="stat-chars-1" class="text-2xl font-bold text-blue-600">0</div>
+                                    </div>
+                                    <div class="bg-white rounded-lg p-3 shadow-sm">
+                                        <div class="text-xs text-gray-600">字符数（不含空格）</div>
+                                        <div id="stat-chars-no-space-1" class="text-2xl font-bold text-green-600">0</div>
+                                    </div>
+                                    <div class="bg-white rounded-lg p-3 shadow-sm">
+                                        <div class="text-xs text-gray-600">单词/字数</div>
+                                        <div id="stat-words-1" class="text-2xl font-bold text-purple-600">0</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="flex justify-end">
+                            <button onclick="completeLesson(1)" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors shadow-md">
+                                完成本课 →
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 第2课：学术写作应用 -->
+                <div class="lesson-step mb-8 bg-white rounded-xl shadow-lg p-8 border-2 border-gray-200 opacity-50" data-lesson="2">
+                    <div class="flex items-center justify-between mb-6">
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-4">
+                                <span class="text-2xl font-bold text-blue-600">2</span>
+                            </div>
+                            <h2 class="text-2xl font-bold text-gray-900">第2课：学术写作字数控制</h2>
+                        </div>
+                        <span class="lesson-status text-gray-400">🔒 未解锁</span>
+                    </div>
+                    
+                    <div class="lesson-content space-y-6">
+                        <div>
+                            <h3 class="text-lg font-semibold text-gray-900 mb-3">📖 场景案例</h3>
+                            <div class="bg-indigo-50 rounded-lg p-6">
+                                <p class="text-gray-800 mb-4"><strong>任务：撰写论文摘要</strong></p>
+                                <p class="text-gray-700 mb-4">要求：中文摘要不超过300字，英文摘要不超过200词</p>
+                                <div class="bg-white rounded-lg p-4 mt-4">
+                                    <p class="text-sm text-gray-600 mb-2">示例场景：</p>
+                                    <ul class="text-sm text-gray-700 space-y-1">
+                                        <li>• 学术期刊投稿要求严格控制摘要字数</li>
+                                        <li>• 超出字数限制会被直接退稿</li>
+                                        <li>• 需要在有限字数内准确表达核心内容</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <h3 class="text-lg font-semibold text-gray-900 mb-3">✏️ 实战练习</h3>
+                            <p class="text-gray-700 mb-3">请将下面的长摘要压缩到300字以内（当前425字）：</p>
+                            <div class="practice-area rounded-lg p-4">
+                                <textarea id="practice-2" class="w-full h-48 p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 resize-none">本研究旨在探讨人工智能技术在现代教育领域的应用及其对学生学习效果的影响。通过对全国200所高校的5000名学生进行为期一年的跟踪调查，我们发现AI辅助教学能够显著提升学生的学习兴趣和学习效率。研究采用了定量和定性相结合的研究方法，包括问卷调查、深度访谈、课堂观察等多种数据收集方式。数据分析结果表明，使用AI学习工具的学生群体，其期末考试成绩平均提高了15.3%，学习主动性评分提高了23.7%。此外，AI技术还能够根据每个学生的学习特点提供个性化的学习方案，有效解决了传统课堂教学"一刀切"的问题。研究同时发现，AI技术的应用需要教师具备相应的技术素养和教学设计能力，学校需要提供充足的技术支持和培训资源。本研究为AI在教育领域的进一步推广提供了实证依据，同时也指出了当前存在的技术门槛、成本投入、隐私保护等挑战。未来研究可以进一步探讨AI技术与传统教学方法的最佳结合模式，以及如何建立科学的AI教学效果评估体系。</textarea>
+                                <div class="mt-4 flex items-center justify-between">
+                                    <div class="flex gap-4">
+                                        <div class="bg-white rounded-lg p-3 shadow-sm">
+                                            <div class="text-xs text-gray-600">当前字数</div>
+                                            <div id="stat-chars-2" class="text-2xl font-bold text-red-600">425</div>
+                                        </div>
+                                        <div class="bg-white rounded-lg p-3 shadow-sm">
+                                            <div class="text-xs text-gray-600">目标字数</div>
+                                            <div class="text-2xl font-bold text-green-600">≤300</div>
+                                        </div>
+                                        <div class="bg-white rounded-lg p-3 shadow-sm">
+                                            <div class="text-xs text-gray-600">超出字数</div>
+                                            <div id="stat-exceed-2" class="text-2xl font-bold text-orange-600">125</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bg-yellow-50 rounded-lg p-4 mt-4">
+                                <p class="text-sm text-yellow-900"><strong>💡 压缩技巧：</strong></p>
+                                <ul class="text-sm text-yellow-800 space-y-1 mt-2">
+                                    <li>• 删除不必要的修饰词和重复表述</li>
+                                    <li>• 用简洁的表达替代冗长的句子</li>
+                                    <li>• 保留核心观点和关键数据</li>
+                                    <li>• 合并相似内容</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="flex justify-end">
+                            <button onclick="completeLesson(2)" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors shadow-md disabled:bg-gray-300 disabled:cursor-not-allowed" disabled>
+                                完成本课 →
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 第3课：社交媒体发布 -->
+                <div class="lesson-step mb-8 bg-white rounded-xl shadow-lg p-8 border-2 border-gray-200 opacity-50" data-lesson="3">
+                    <div class="flex items-center justify-between mb-6">
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-4">
+                                <span class="text-2xl font-bold text-blue-600">3</span>
+                            </div>
+                            <h2 class="text-2xl font-bold text-gray-900">第3课：社交媒体字数限制</h2>
+                        </div>
+                        <span class="lesson-status text-gray-400">🔒 未解锁</span>
+                    </div>
+                    
+                    <div class="lesson-content space-y-6">
+                        <div>
+                            <h3 class="text-lg font-semibold text-gray-900 mb-3">📖 平台规则</h3>
+                            <div class="bg-purple-50 rounded-lg p-6">
+                                <p class="text-gray-800 mb-4"><strong>主流平台字数限制：</strong></p>
+                                <div class="space-y-3">
+                                    <div class="bg-white rounded-lg p-4">
+                                        <div class="flex justify-between items-center">
+                                            <span class="font-semibold text-gray-900">Twitter / X</span>
+                                            <span class="text-blue-600 font-bold">280字符</span>
+                                        </div>
+                                    </div>
+                                    <div class="bg-white rounded-lg p-4">
+                                        <div class="flex justify-between items-center">
+                                            <span class="font-semibold text-gray-900">微博</span>
+                                            <span class="text-blue-600 font-bold">2000字符</span>
+                                        </div>
+                                    </div>
+                                    <div class="bg-white rounded-lg p-4">
+                                        <div class="flex justify-between items-center">
+                                            <span class="font-semibold text-gray-900">小红书标题</span>
+                                            <span class="text-blue-600 font-bold">20字</span>
+                                        </div>
+                                    </div>
+                                    <div class="bg-white rounded-lg p-4">
+                                        <div class="flex justify-between items-center">
+                                            <span class="font-semibold text-gray-900">Instagram标题</span>
+                                            <span class="text-blue-600 font-bold">2200字符</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <h3 class="text-lg font-semibold text-gray-900 mb-3">✏️ 实战练习：Twitter发文</h3>
+                            <p class="text-gray-700 mb-3">创建一条推文，介绍你的新产品（限制280字符）：</p>
+                            <div class="practice-area rounded-lg p-4">
+                                <textarea id="practice-3" class="w-full h-32 p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 resize-none" placeholder="写下你的推文..."></textarea>
+                                <div class="mt-4 flex items-center justify-between">
+                                    <div id="stat-chars-3" class="text-3xl font-bold text-blue-600">0 / 280</div>
+                                    <div id="progress-circle-3" class="text-sm">
+                                        <span class="text-gray-600">剩余：</span>
+                                        <span id="remaining-3" class="font-bold text-green-600">280</span>
+                                    </div>
+                                </div>
+                                <div class="mt-2 w-full bg-gray-200 rounded-full h-2">
+                                    <div id="progress-twitter-3" class="bg-gradient-to-r from-blue-500 to-blue-600 h-2 rounded-full transition-all" style="width: 0%"></div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="flex justify-end">
+                            <button onclick="completeLesson(3)" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors shadow-md disabled:bg-gray-300 disabled:cursor-not-allowed" disabled>
+                                完成本课 →
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 第4课：内容创作优化 -->
+                <div class="lesson-step mb-8 bg-white rounded-xl shadow-lg p-8 border-2 border-gray-200 opacity-50" data-lesson="4">
+                    <div class="flex items-center justify-between mb-6">
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-4">
+                                <span class="text-2xl font-bold text-blue-600">4</span>
+                            </div>
+                            <h2 class="text-2xl font-bold text-gray-900">第4课：博客文章SEO优化</h2>
+                        </div>
+                        <span class="lesson-status text-gray-400">🔒 未解锁</span>
+                    </div>
+                    
+                    <div class="lesson-content space-y-6">
+                        <div>
+                            <h3 class="text-lg font-semibold text-gray-900 mb-3">📖 SEO最佳实践</h3>
+                            <div class="bg-green-50 rounded-lg p-6">
+                                <p class="text-gray-800 mb-4"><strong>内容字数与SEO的关系：</strong></p>
+                                <ul class="space-y-2 text-gray-700">
+                                    <li>• <strong>文章正文</strong>：1500-2500字为最佳范围</li>
+                                    <li>• <strong>页面标题</strong>：50-60字符（包含关键词）</li>
+                                    <li>• <strong>Meta描述</strong>：150-160字符</li>
+                                    <li>• <strong>H1标题</strong>：20-70字符</li>
+                                    <li>• <strong>段落长度</strong>：建议每段不超过300字</li>
+                                </ul>
+                                <div class="bg-white rounded-lg p-4 mt-4">
+                                    <p class="text-sm text-green-900 font-semibold">💡 为什么字数重要？</p>
+                                    <p class="text-sm text-gray-700 mt-2">Google倾向于排名内容丰富、深入的文章。2000字左右的文章在搜索结果中表现更好，因为它们能够更全面地回答用户问题。</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <h3 class="text-lg font-semibold text-gray-900 mb-3">✏️ 实战练习：优化博客文章</h3>
+                            <p class="text-gray-700 mb-3">检查以下文章标题和描述是否符合SEO标准：</p>
+                            
+                            <div class="space-y-4">
+                                <div class="practice-area rounded-lg p-4">
+                                    <label class="block text-sm font-semibold text-gray-700 mb-2">页面标题（目标：50-60字符）</label>
+                                    <input type="text" id="practice-4-title" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500" placeholder="输入文章标题..." value="如何提升网站流量的10个SEO技巧">
+                                    <div class="mt-2 flex items-center justify-between">
+                                        <span id="stat-title-4" class="text-sm font-semibold text-blue-600">0 字符</span>
+                                        <span id="title-status-4" class="text-sm text-gray-600"></span>
+                                    </div>
+                                </div>
+                                
+                                <div class="practice-area rounded-lg p-4">
+                                    <label class="block text-sm font-semibold text-gray-700 mb-2">Meta描述（目标：150-160字符）</label>
+                                    <textarea id="practice-4-desc" class="w-full h-24 p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 resize-none" placeholder="输入文章描述...">学习经过验证的SEO策略，帮助您的网站提升搜索排名、获得更多有机流量。本指南涵盖关键词研究、内容优化、技术SEO等核心技巧。</textarea>
+                                    <div class="mt-2 flex items-center justify-between">
+                                        <span id="stat-desc-4" class="text-sm font-semibold text-blue-600">0 字符</span>
+                                        <span id="desc-status-4" class="text-sm text-gray-600"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="flex justify-end">
+                            <button onclick="completeLesson(4)" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors shadow-md disabled:bg-gray-300 disabled:cursor-not-allowed" disabled>
+                                完成本课 →
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 第5课：阅读时间评估 -->
+                <div class="lesson-step mb-8 bg-white rounded-xl shadow-lg p-8 border-2 border-gray-200 opacity-50" data-lesson="5">
+                    <div class="flex items-center justify-between mb-6">
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-4">
+                                <span class="text-2xl font-bold text-blue-600">5</span>
+                            </div>
+                            <h2 class="text-2xl font-bold text-gray-900">第5课：阅读时间与用户体验</h2>
+                        </div>
+                        <span class="lesson-status text-gray-400">🔒 未解锁</span>
+                    </div>
+                    
+                    <div class="lesson-content space-y-6">
+                        <div>
+                            <h3 class="text-lg font-semibold text-gray-900 mb-3">📖 阅读速度标准</h3>
+                            <div class="bg-yellow-50 rounded-lg p-6">
+                                <p class="text-gray-800 mb-4"><strong>不同类型内容的平均阅读速度：</strong></p>
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                    <div class="bg-white rounded-lg p-4">
+                                        <div class="text-sm text-gray-600 mb-1">中文阅读</div>
+                                        <div class="text-2xl font-bold text-yellow-600">300-500 字/分钟</div>
+                                    </div>
+                                    <div class="bg-white rounded-lg p-4">
+                                        <div class="text-sm text-gray-600 mb-1">英文阅读</div>
+                                        <div class="text-2xl font-bold text-yellow-600">200-250 词/分钟</div>
+                                    </div>
+                                    <div class="bg-white rounded-lg p-4">
+                                        <div class="text-sm text-gray-600 mb-1">技术文档</div>
+                                        <div class="text-2xl font-bold text-yellow-600">100-150 词/分钟</div>
+                                    </div>
+                                    <div class="bg-white rounded-lg p-4">
+                                        <div class="text-sm text-gray-600 mb-1">轻松小说</div>
+                                        <div class="text-2xl font-bold text-yellow-600">400-600 字/分钟</div>
+                                    </div>
+                                </div>
+                                <div class="bg-white rounded-lg p-4 mt-4">
+                                    <p class="text-sm text-yellow-900 font-semibold">💡 为什么要显示阅读时间？</p>
+                                    <p class="text-sm text-gray-700 mt-2">Medium等平台发现，显示预计阅读时间可以提升30%的文章完读率，因为读者能够更好地安排时间。</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <h3 class="text-lg font-semibold text-gray-900 mb-3">✏️ 实战练习：计算阅读时间</h3>
+                            <p class="text-gray-700 mb-3">为以下不同类型的文章估算阅读时间：</p>
+                            <div class="space-y-4">
+                                <div class="practice-area rounded-lg p-4">
+                                    <div class="flex items-center justify-between mb-2">
+                                        <span class="font-semibold text-gray-900">博客文章（中文）</span>
+                                        <span class="text-sm text-gray-600">平均速度：400字/分钟</span>
+                                    </div>
+                                    <textarea id="practice-5-blog" class="w-full h-24 p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 resize-none" placeholder="粘贴文章内容..."></textarea>
+                                    <div class="mt-3 bg-white rounded-lg p-3 shadow-sm">
+                                        <div class="flex items-center justify-between">
+                                            <span class="text-sm text-gray-600">字数：</span>
+                                            <span id="blog-words-5" class="font-bold text-blue-600">0 字</span>
+                                        </div>
+                                        <div class="flex items-center justify-between mt-2">
+                                            <span class="text-sm text-gray-600">预计阅读时间：</span>
+                                            <span id="blog-time-5" class="font-bold text-green-600">0 分钟</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="flex justify-end">
+                            <button onclick="completeLesson(5)" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors shadow-md disabled:bg-gray-300 disabled:cursor-not-allowed" disabled>
+                                完成本课 →
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 第6课：综合测验 -->
+                <div class="lesson-step mb-8 bg-white rounded-xl shadow-lg p-8 border-2 border-gray-200 opacity-50" data-lesson="6">
+                    <div class="flex items-center justify-between mb-6">
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-4">
+                                <span class="text-2xl font-bold text-blue-600">6</span>
+                            </div>
+                            <h2 class="text-2xl font-bold text-gray-900">第6课：综合测验与实战挑战</h2>
+                        </div>
+                        <span class="lesson-status text-gray-400">🔒 未解锁</span>
+                    </div>
+                    
+                    <div class="lesson-content space-y-6">
+                        <div>
+                            <h3 class="text-lg font-semibold text-gray-900 mb-3">🎯 知识测验</h3>
+                            <div class="space-y-4">
+                                <div class="bg-gray-50 rounded-lg p-6">
+                                    <p class="font-semibold text-gray-900 mb-3">问题1：Twitter的字符限制是多少？</p>
+                                    <div class="space-y-2">
+                                        <label class="flex items-center">
+                                            <input type="radio" name="q1" value="a" class="mr-2">
+                                            <span class="text-gray-700">A. 140字符</span>
+                                        </label>
+                                        <label class="flex items-center">
+                                            <input type="radio" name="q1" value="b" class="mr-2">
+                                            <span class="text-gray-700">B. 280字符</span>
+                                        </label>
+                                        <label class="flex items-center">
+                                            <input type="radio" name="q1" value="c" class="mr-2">
+                                            <span class="text-gray-700">C. 500字符</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                
+                                <div class="bg-gray-50 rounded-lg p-6">
+                                    <p class="font-semibold text-gray-900 mb-3">问题2：SEO优化中，博客文章的理想字数范围是？</p>
+                                    <div class="space-y-2">
+                                        <label class="flex items-center">
+                                            <input type="radio" name="q2" value="a" class="mr-2">
+                                            <span class="text-gray-700">A. 500-800字</span>
+                                        </label>
+                                        <label class="flex items-center">
+                                            <input type="radio" name="q2" value="b" class="mr-2">
+                                            <span class="text-gray-700">B. 1500-2500字</span>
+                                        </label>
+                                        <label class="flex items-center">
+                                            <input type="radio" name="q2" value="c" class="mr-2">
+                                            <span class="text-gray-700">C. 5000字以上</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                
+                                <div class="bg-gray-50 rounded-lg p-6">
+                                    <p class="font-semibold text-gray-900 mb-3">问题3：Meta描述的最佳字符长度是？</p>
+                                    <div class="space-y-2">
+                                        <label class="flex items-center">
+                                            <input type="radio" name="q3" value="a" class="mr-2">
+                                            <span class="text-gray-700">A. 50-60字符</span>
+                                        </label>
+                                        <label class="flex items-center">
+                                            <input type="radio" name="q3" value="b" class="mr-2">
+                                            <span class="text-gray-700">B. 150-160字符</span>
+                                        </label>
+                                        <label class="flex items-center">
+                                            <input type="radio" name="q3" value="c" class="mr-2">
+                                            <span class="text-gray-700">C. 300字符</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <button onclick="checkQuiz()" class="mt-6 bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors">
+                                提交答案
+                            </button>
+                            <div id="quiz-result" class="mt-4 hidden"></div>
+                        </div>
+                        
+                        <div>
+                            <h3 class="text-lg font-semibold text-gray-900 mb-3">🏆 实战挑战</h3>
+                            <div class="bg-gradient-to-r from-purple-50 to-pink-50 rounded-lg p-6">
+                                <p class="font-semibold text-purple-900 mb-3">挑战任务：多平台内容适配</p>
+                                <p class="text-gray-700 mb-4">将以下产品介绍改写成适合不同平台的版本：</p>
+                                <div class="bg-white rounded-lg p-4 mb-4">
+                                    <p class="text-sm text-gray-700">"我们的新款智能手表不仅拥有超长续航能力（7天待机），还搭载了最先进的健康监测系统，能够24小时实时监测心率、血氧、睡眠质量等多项健康指标。防水等级达到50米，无论游泳还是淋浴都可以放心佩戴。此外，它还支持50多种运动模式，精准追踪您的运动数据。更重要的是，它的价格非常亲民，仅需1299元。"</p>
+                                </div>
+                                
+                                <div class="space-y-4">
+                                    <div>
+                                        <label class="block text-sm font-semibold text-gray-700 mb-2">Twitter版本（≤280字符）</label>
+                                        <textarea id="challenge-twitter" class="w-full h-20 p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 resize-none"></textarea>
+                                        <div class="mt-1 text-sm text-gray-600">
+                                            <span id="twitter-count">0</span> / 280 字符
+                                        </div>
+                                    </div>
+                                    
+                                    <div>
+                                        <label class="block text-sm font-semibold text-gray-700 mb-2">小红书标题（≤20字）</label>
+                                        <input type="text" id="challenge-redbook" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500">
+                                        <div class="mt-1 text-sm text-gray-600">
+                                            <span id="redbook-count">0</span> / 20 字
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="flex justify-end">
+                            <button onclick="completeLesson(6)" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors shadow-md disabled:bg-gray-300 disabled:cursor-not-allowed" disabled>
+                                完成教程 🎉
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+        
+        <!-- 完成证书 -->
+        <section id="certificate" class="py-16 px-4 bg-gradient-to-br from-yellow-50 to-orange-50 hidden">
+            <div class="container mx-auto max-w-2xl text-center">
+                <div class="bg-white rounded-xl shadow-2xl p-12 border-4 border-yellow-400">
+                    <div class="text-6xl mb-4">🏆</div>
+                    <h2 class="text-3xl font-bold text-gray-900 mb-4">恭喜完成教程！</h2>
+                    <p class="text-xl text-gray-700 mb-6">您已经掌握了字符计数工具的所有核心功能</p>
+                    <div class="bg-gradient-to-r from-blue-50 to-purple-50 rounded-lg p-6 mb-6">
+                        <p class="text-gray-800 font-semibold mb-2">学习成果：</p>
+                        <ul class="text-left text-gray-700 space-y-1">
+                            <li>✓ 理解字符计数的基本原理</li>
+                            <li>✓ 掌握学术写作字数控制技巧</li>
+                            <li>✓ 熟悉各平台字数限制规则</li>
+                            <li>✓ 学会SEO内容优化方法</li>
+                            <li>✓ 理解阅读时间评估的意义</li>
+                            <li>✓ 完成综合实战挑战</li>
+                        </ul>
+                    </div>
+                    <div class="space-x-4">
+                        <a href="../tools/text-counter.html" class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors shadow-md">
+                            立即使用工具
+                        </a>
+                        <a href="index.html" class="inline-block bg-gray-200 hover:bg-gray-300 text-gray-800 px-8 py-3 rounded-lg font-semibold transition-colors">
+                            查看更多教程
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 相关资源 -->
+        <section class="py-16 px-4 bg-gray-50">
+            <div class="container mx-auto max-w-4xl">
+                <h2 class="text-2xl font-bold text-gray-900 mb-8 text-center">继续学习</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <a href="../tools/text-counter.html" class="bg-white rounded-lg shadow-md hover:shadow-lg transition-all p-6">
+                        <h3 class="font-semibold text-gray-900 mb-2">使用工具</h3>
+                        <p class="text-sm text-gray-600">立即尝试字符计数工具</p>
+                    </a>
+                    <a href="../cases/index.html" class="bg-white rounded-lg shadow-md hover:shadow-lg transition-all p-6">
+                        <h3 class="font-semibold text-gray-900 mb-2">实战案例</h3>
+                        <p class="text-sm text-gray-600">查看更多真实案例</p>
+                    </a>
+                    <a href="index.html" class="bg-white rounded-lg shadow-md hover:shadow-lg transition-all p-6">
+                        <h3 class="font-semibold text-gray-900 mb-2">其他教程</h3>
+                        <p class="text-sm text-gray-600">学习更多工具使用</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- 页脚 -->
+    <footer class="bg-gray-100 py-8 px-4">
+        <div class="container mx-auto max-w-7xl">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <p class="text-gray-600">© 2025 文字处理工具网站</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="../about.html" class="text-gray-600 hover:text-blue-600">关于我们</a>
+                    <a href="../terms.html" class="text-gray-600 hover:text-blue-600">使用条款</a>
+                    <a href="../privacy.html" class="text-gray-600 hover:text-blue-600">隐私政策</a>
+                    <a href="../contact.html" class="text-gray-600 hover:text-blue-600">联系我们</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="../js/main.js"></script>
+    <script src="../js/navigation.js"></script>
+    <script>
+        // 学习进度管理
+        let completedLessons = 0;
+        const totalLessons = 6;
+        
+        // 字符计数函数
+        function countChars(text) {
+            return {
+                total: text.length,
+                noSpace: text.replace(/\s/g, '').length,
+                words: text.trim() ? text.trim().split(/\s+/).length : 0
+            };
+        }
+        
+        // 第1课实时统计
+        const practice1 = document.getElementById('practice-1');
+        if (practice1) {
+            practice1.addEventListener('input', function() {
+                const stats = countChars(this.value);
+                document.getElementById('stat-chars-1').textContent = stats.total;
+                document.getElementById('stat-chars-no-space-1').textContent = stats.noSpace;
+                document.getElementById('stat-words-1').textContent = stats.words;
+            });
+        }
+        
+        // 第2课实时统计
+        const practice2 = document.getElementById('practice-2');
+        if (practice2) {
+            practice2.addEventListener('input', function() {
+                const charCount = this.value.replace(/\s/g, '').length;
+                document.getElementById('stat-chars-2').textContent = charCount;
+                const exceed = Math.max(0, charCount - 300);
+                document.getElementById('stat-exceed-2').textContent = exceed;
+                document.getElementById('stat-exceed-2').className = exceed > 0 ? 'text-2xl font-bold text-red-600' : 'text-2xl font-bold text-green-600';
+            });
+            practice2.dispatchEvent(new Event('input'));
+        }
+        
+        // 第3课Twitter统计
+        const practice3 = document.getElementById('practice-3');
+        if (practice3) {
+            practice3.addEventListener('input', function() {
+                const count = this.value.length;
+                const remaining = 280 - count;
+                document.getElementById('stat-chars-3').textContent = count + ' / 280';
+                document.getElementById('remaining-3').textContent = remaining;
+                document.getElementById('remaining-3').className = remaining < 0 ? 'font-bold text-red-600' : 'font-bold text-green-600';
+                const percent = Math.min(100, (count / 280) * 100);
+                document.getElementById('progress-twitter-3').style.width = percent + '%';
+            });
+        }
+        
+        // 第4课SEO统计
+        const practice4Title = document.getElementById('practice-4-title');
+        const practice4Desc = document.getElementById('practice-4-desc');
+        if (practice4Title) {
+            practice4Title.addEventListener('input', function() {
+                const count = this.value.length;
+                document.getElementById('stat-title-4').textContent = count + ' 字符';
+                const status = document.getElementById('title-status-4');
+                if (count >= 50 && count <= 60) {
+                    status.textContent = '✓ 完美';
+                    status.className = 'text-sm text-green-600 font-semibold';
+                } else if (count < 50) {
+                    status.textContent = '太短';
+                    status.className = 'text-sm text-orange-600';
+                } else {
+                    status.textContent = '太长';
+                    status.className = 'text-sm text-red-600';
+                }
+            });
+            practice4Title.dispatchEvent(new Event('input'));
+        }
+        if (practice4Desc) {
+            practice4Desc.addEventListener('input', function() {
+                const count = this.value.length;
+                document.getElementById('stat-desc-4').textContent = count + ' 字符';
+                const status = document.getElementById('desc-status-4');
+                if (count >= 150 && count <= 160) {
+                    status.textContent = '✓ 完美';
+                    status.className = 'text-sm text-green-600 font-semibold';
+                } else if (count < 150) {
+                    status.textContent = '可以更长';
+                    status.className = 'text-sm text-orange-600';
+                } else {
+                    status.textContent = '超出限制';
+                    status.className = 'text-sm text-red-600';
+                }
+            });
+            practice4Desc.dispatchEvent(new Event('input'));
+        }
+        
+        // 第5课阅读时间计算
+        const practice5Blog = document.getElementById('practice-5-blog');
+        if (practice5Blog) {
+            practice5Blog.addEventListener('input', function() {
+                const charCount = this.value.replace(/\s/g, '').length;
+                document.getElementById('blog-words-5').textContent = charCount + ' 字';
+                const readTime = Math.ceil(charCount / 400);
+                document.getElementById('blog-time-5').textContent = readTime + ' 分钟';
+            });
+        }
+        
+        // 第6课挑战统计
+        const challengeTwitter = document.getElementById('challenge-twitter');
+        const challengeRedbook = document.getElementById('challenge-redbook');
+        if (challengeTwitter) {
+            challengeTwitter.addEventListener('input', function() {
+                document.getElementById('twitter-count').textContent = this.value.length;
+            });
+        }
+        if (challengeRedbook) {
+            challengeRedbook.addEventListener('input', function() {
+                document.getElementById('redbook-count').textContent = this.value.replace(/\s/g, '').length;
+            });
+        }
+        
+        // 完成课程
+        function completeLesson(lessonNum) {
+            const lessonEl = document.querySelector(`[data-lesson="${lessonNum}"]`);
+            lessonEl.classList.add('completed');
+            lessonEl.querySelector('.lesson-status').innerHTML = '✓ 已完成';
+            lessonEl.querySelector('.lesson-status').className = 'lesson-status text-green-600 font-semibold';
+            
+            completedLessons++;
+            updateProgress();
+            
+            // 解锁下一课
+            if (lessonNum < totalLessons) {
+                const nextLesson = document.querySelector(`[data-lesson="${lessonNum + 1}"]`);
+                nextLesson.style.opacity = '1';
+                nextLesson.querySelector('.lesson-status').innerHTML = '⏳ 进行中';
+                nextLesson.querySelector('.lesson-status').className = 'lesson-status text-blue-600';
+                nextLesson.classList.add('active');
+                nextLesson.querySelector('button').disabled = false;
+                
+                // 滚动到下一课
+                setTimeout(() => {
+                    nextLesson.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }, 300);
+            } else {
+                // 显示完成证书
+                document.getElementById('certificate').classList.remove('hidden');
+                setTimeout(() => {
+                    document.getElementById('certificate').scrollIntoView({ behavior: 'smooth' });
+                }, 300);
+            }
+        }
+        
+        // 更新进度条
+        function updateProgress() {
+            document.getElementById('progress-count').textContent = completedLessons;
+            const percent = (completedLessons / totalLessons) * 100;
+            document.getElementById('progress-bar').style.width = percent + '%';
+        }
+        
+        // 测验检查
+        function checkQuiz() {
+            const q1 = document.querySelector('input[name="q1"]:checked');
+            const q2 = document.querySelector('input[name="q2"]:checked');
+            const q3 = document.querySelector('input[name="q3"]:checked');
+            
+            if (!q1 || !q2 || !q3) {
+                alert('请回答所有问题');
+                return;
+            }
+            
+            const answers = {q1: 'b', q2: 'b', q3: 'b'};
+            const userAnswers = {q1: q1.value, q2: q2.value, q3: q3.value};
+            
+            let correct = 0;
+            Object.keys(answers).forEach(key => {
+                if (answers[key] === userAnswers[key]) correct++;
+            });
+            
+            const resultEl = document.getElementById('quiz-result');
+            resultEl.classList.remove('hidden');
+            
+            if (correct === 3) {
+                resultEl.className = 'mt-4 bg-green-50 border-2 border-green-500 rounded-lg p-4';
+                resultEl.innerHTML = '<p class="text-green-900 font-semibold">🎉 全部正确！您已经完全掌握了知识点！</p>';
+            } else {
+                resultEl.className = 'mt-4 bg-yellow-50 border-2 border-yellow-500 rounded-lg p-4';
+                resultEl.innerHTML = `<p class="text-yellow-900">答对了 ${correct}/3 题。建议回顾前面的课程内容。</p>`;
+            }
+        }
+    </script>
+</body>
+</html>
+

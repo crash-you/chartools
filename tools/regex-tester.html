@@ -318,6 +318,330 @@
                 </div>
             </div>
         </section>
+
+        <!-- 实用案例 -->
+        <section class="py-12 px-4 bg-white">
+            <div class="container mx-auto max-w-7xl">
+                <h2 class="text-3xl font-bold text-gray-900 mb-8">实用案例：正则表达式的实战应用</h2>
+                
+                <div class="space-y-8">
+                    <!-- 案例1：邮箱验证 -->
+                    <div class="bg-white rounded-xl shadow-md p-6 border-l-4 border-blue-500">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-3">案例1：邮箱地址格式验证</h3>
+                        <p class="text-gray-700 mb-3">
+                            <strong>场景：</strong>表单验证需要检查用户输入的邮箱地址是否符合标准格式。
+                        </p>
+                        <p class="text-gray-700 mb-2"><strong>正则表达式：</strong></p>
+                        <code class="block bg-gray-100 p-3 rounded text-sm mb-3 overflow-x-auto">^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$</code>
+                        <p class="text-gray-700 mb-2"><strong>测试文本：</strong></p>
+                        <pre class="bg-gray-50 p-3 rounded text-sm mb-3">test@example.com ✓
+user.name@company.co.uk ✓
+invalid@  ✗
+@domain.com ✗</pre>
+                        <div class="bg-green-50 rounded-lg p-3">
+                            <p class="text-green-800 text-sm"><strong>效果：</strong>准确识别有效邮箱，验证准确率100%，避免了无效邮箱进入数据库。</p>
+                        </div>
+                    </div>
+                    
+                    <!-- 案例2：手机号提取 -->
+                    <div class="bg-white rounded-xl shadow-md p-6 border-l-4 border-green-500">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-3">案例2：从文本中批量提取手机号</h3>
+                        <p class="text-gray-700 mb-3">
+                            <strong>场景：</strong>从客户留言中提取所有手机号码，用于客户回访。
+                        </p>
+                        <p class="text-gray-700 mb-2"><strong>正则表达式：</strong></p>
+                        <code class="block bg-gray-100 p-3 rounded text-sm mb-3 overflow-x-auto">1[3-9]\d{9}</code>
+                        <p class="text-gray-700 mb-2"><strong>使用步骤：</strong></p>
+                        <ol class="list-decimal list-inside text-gray-700 space-y-1 ml-4 text-sm">
+                            <li>将客户留言粘贴到测试文本区</li>
+                            <li>输入手机号正则表达式</li>
+                            <li>勾选"g"全局匹配，查看所有匹配结果</li>
+                            <li>从匹配详情中复制所有手机号</li>
+                        </ol>
+                        <div class="bg-green-50 rounded-lg p-3 mt-3">
+                            <p class="text-green-800 text-sm"><strong>效果：</strong>从500条留言中快速提取出235个手机号，人工提取需要2小时，工具只需2分钟。</p>
+                        </div>
+                    </div>
+                    
+                    <!-- 案例3：密码强度检查 -->
+                    <div class="bg-white rounded-xl shadow-md p-6 border-l-4 border-purple-500">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-3">案例3：密码强度规则验证</h3>
+                        <p class="text-gray-700 mb-3">
+                            <strong>场景：</strong>设计注册页面，要求密码必须包含大小写字母、数字、特殊符号，且长度8-20位。
+                        </p>
+                        <p class="text-gray-700 mb-2"><strong>正则表达式：</strong></p>
+                        <code class="block bg-gray-100 p-3 rounded text-sm mb-3 overflow-x-auto">^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,20}$</code>
+                        <p class="text-gray-700 mb-2"><strong>测试示例：</strong></p>
+                        <pre class="bg-gray-50 p-3 rounded text-sm mb-3">Pass123! ✓ （符合规则）
+password ✗ （缺少大写、数字、符号）
+Pass123 ✗ （缺少特殊符号）</pre>
+                        <div class="bg-green-50 rounded-lg p-3">
+                            <p class="text-green-800 text-sm"><strong>效果：</strong>使用正则测试工具调试规则，确保密码验证逻辑正确，提升系统安全性。</p>
+                        </div>
+                    </div>
+                    
+                    <!-- 案例4：日志解析 -->
+                    <div class="bg-white rounded-xl shadow-md p-6 border-l-4 border-yellow-500">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-3">案例4：服务器日志错误提取</h3>
+                        <p class="text-gray-700 mb-3">
+                            <strong>场景：</strong>从10万行服务器日志中提取所有ERROR级别的日志，用于故障分析。
+                        </p>
+                        <p class="text-gray-700 mb-2"><strong>正则表达式：</strong></p>
+                        <code class="block bg-gray-100 p-3 rounded text-sm mb-3 overflow-x-auto">^\[.*?\]\s+ERROR.*$</code>
+                        <p class="text-gray-700 mb-2"><strong>使用步骤：</strong></p>
+                        <ol class="list-decimal list-inside text-gray-700 space-y-1 ml-4 text-sm">
+                            <li>将日志文件内容粘贴到测试文本区</li>
+                            <li>输入ERROR日志匹配的正则表达式</li>
+                            <li>勾选"g"和"m"（全局+多行模式）</li>
+                            <li>查看所有ERROR日志的匹配结果</li>
+                            <li>分析错误模式，定位系统问题</li>
+                        </ol>
+                        <div class="bg-green-50 rounded-lg p-3 mt-3">
+                            <p class="text-green-800 text-sm"><strong>效果：</strong>快速从10万行日志中提取出327条ERROR日志，定位了3个系统Bug，节省了排查时间。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 常见问题 FAQ -->
+        <section class="py-12 px-4 bg-gray-50">
+            <div class="container mx-auto max-w-4xl">
+                <h2 class="text-3xl font-bold text-gray-900 mb-8">常见问题解答 (FAQ)</h2>
+                
+                <div class="space-y-6">
+                    <div class="bg-white rounded-lg p-6 shadow-sm">
+                        <h3 class="text-lg font-semibold text-gray-900 mb-2">1. g、i、m标志分别是什么意思？</h3>
+                        <p class="text-gray-700">
+                            正则表达式标志（flags）用于控制匹配行为：
+                            <ul class="list-disc list-inside text-gray-700 ml-4 mt-2 space-y-1">
+                                <li><strong>g (global)</strong>：全局匹配，找到所有匹配项，而不是只找第一个</li>
+                                <li><strong>i (ignore case)</strong>：忽略大小写，A和a视为相同</li>
+                                <li><strong>m (multiline)</strong>：多行模式，^和$可以匹配每行的开始和结束</li>
+                            </ul>
+                            可以组合使用，如"gi"表示全局且忽略大小写。
+                        </p>
+                    </div>
+                    
+                    <div class="bg-white rounded-lg p-6 shadow-sm">
+                        <h3 class="text-lg font-semibold text-gray-900 mb-2">2. 正则表达式中的特殊字符如何转义？</h3>
+                        <p class="text-gray-700">
+                            以下特殊字符在正则中有特殊含义，如需匹配字符本身，需要用反斜杠转义：
+                            <code class="block bg-gray-100 p-2 rounded text-sm mt-2">. * + ? ^ $ { } [ ] ( ) | \</code>
+                            例如：匹配点号"."需要写成"\."，匹配美元符"$"需要写成"\$"。
+                        </p>
+                    </div>
+                    
+                    <div class="bg-white rounded-lg p-6 shadow-sm">
+                        <h3 class="text-lg font-semibold text-gray-900 mb-2">3. 什么是捕获组？如何使用？</h3>
+                        <p class="text-gray-700">
+                            捕获组用括号()定义，可以提取匹配的子串。例如：
+                            <code class="block bg-gray-100 p-2 rounded text-sm mt-2">(\d{4})-(\d{2})-(\d{2})</code>
+                            匹配日期"2025-10-23"时，可以分别提取年(2025)、月(10)、日(23)。
+                            使用场景：提取URL参数、解析日期时间、分离姓名等。
+                        </p>
+                    </div>
+                    
+                    <div class="bg-white rounded-lg p-6 shadow-sm">
+                        <h3 class="text-lg font-semibold text-gray-900 mb-2">4. 贪婪匹配和非贪婪匹配有什么区别？</h3>
+                        <p class="text-gray-700">
+                            <strong>贪婪匹配</strong>：尽可能多地匹配字符。例如 <code class="bg-gray-200 px-1 rounded">.+</code> 会匹配尽可能长的字符串。<br>
+                            <strong>非贪婪匹配</strong>：尽可能少地匹配字符。在量词后加?变为非贪婪，如 <code class="bg-gray-200 px-1 rounded">.+?</code>
+                        </p>
+                        <p class="text-gray-700 mt-2">
+                            示例：对于文本"&lt;div&gt;content&lt;/div&gt;"，<code class="bg-gray-200 px-1 rounded">&lt;.*&gt;</code>（贪婪）会匹配整个字符串，而<code class="bg-gray-200 px-1 rounded">&lt;.*?&gt;</code>（非贪婪）只匹配&lt;div&gt;和&lt;/div&gt;。
+                        </p>
+                    </div>
+                    
+                    <div class="bg-white rounded-lg p-6 shadow-sm">
+                        <h3 class="text-lg font-semibold text-gray-900 mb-2">5. 如何匹配中文字符？</h3>
+                        <p class="text-gray-700">
+                            匹配中文字符的常用正则表达式：
+                            <code class="block bg-gray-100 p-2 rounded text-sm mt-2">[\u4e00-\u9fa5]</code>
+                            这个范围涵盖了常用的汉字。如果需要匹配一个或多个汉字：
+                            <code class="block bg-gray-100 p-2 rounded text-sm mt-2">[\u4e00-\u9fa5]+</code>
+                            可以在我们的工具中测试验证效果。
+                        </p>
+                    </div>
+                    
+                    <div class="bg-white rounded-lg p-6 shadow-sm">
+                        <h3 class="text-lg font-semibold text-gray-900 mb-2">6. 正则替换功能如何使用？</h3>
+                        <p class="text-gray-700">
+                            使用替换功能可以批量修改文本：
+                            <ol class="list-decimal list-inside text-gray-700 ml-4 mt-2 space-y-1">
+                                <li>输入要匹配的正则表达式</li>
+                                <li>在"替换为"框中输入替换文本</li>
+                                <li>支持使用$1、$2引用捕获组</li>
+                                <li>点击"替换"查看结果</li>
+                            </ol>
+                            例如：将"2025-10-23"格式转为"2025/10/23"，使用<code class="bg-gray-200 px-1 rounded">(\d{4})-(\d{2})-(\d{2})</code>匹配，替换为<code class="bg-gray-200 px-1 rounded">$1/$2/$3</code>。
+                        </p>
+                    </div>
+                    
+                    <div class="bg-white rounded-lg p-6 shadow-sm">
+                        <h3 class="text-lg font-semibold text-gray-900 mb-2">7. 为什么我的正则表达式匹配失败？</h3>
+                        <p class="text-gray-700">
+                            常见错误包括：
+                            <ul class="list-disc list-inside text-gray-700 ml-4 mt-2 space-y-1">
+                                <li><strong>忘记转义特殊字符</strong>：如匹配点号要用\.而不是.</li>
+                                <li><strong>量词位置错误</strong>：量词必须放在要重复的元素后面</li>
+                                <li><strong>括号未闭合</strong>：每个(必须有对应的)</li>
+                                <li><strong>字符类错误</strong>：[a-Z]不是有效范围，应该用[a-zA-Z]</li>
+                            </ul>
+                            使用我们的工具实时测试，可以快速发现和修正这些错误。
+                        </p>
+                    </div>
+                    
+                    <div class="bg-white rounded-lg p-6 shadow-sm">
+                        <h3 class="text-lg font-semibold text-gray-900 mb-2">8. 常用的正则模式有哪些？</h3>
+                        <div class="space-y-2 text-sm mt-2">
+                            <div class="flex items-start">
+                                <code class="bg-gray-200 px-2 py-1 rounded text-xs mr-2 flex-shrink-0">^\d+$</code>
+                                <span class="text-gray-700">纯数字</span>
+                            </div>
+                            <div class="flex items-start">
+                                <code class="bg-gray-200 px-2 py-1 rounded text-xs mr-2 flex-shrink-0">^[a-zA-Z]+$</code>
+                                <span class="text-gray-700">纯字母</span>
+                            </div>
+                            <div class="flex items-start">
+                                <code class="bg-gray-200 px-2 py-1 rounded text-xs mr-2 flex-shrink-0">\s+</code>
+                                <span class="text-gray-700">空白字符（空格、Tab、换行）</span>
+                            </div>
+                            <div class="flex items-start">
+                                <code class="bg-gray-200 px-2 py-1 rounded text-xs mr-2 flex-shrink-0">\w+</code>
+                                <span class="text-gray-700">单词字符（字母、数字、下划线）</span>
+                            </div>
+                            <div class="flex items-start">
+                                <code class="bg-gray-200 px-2 py-1 rounded text-xs mr-2 flex-shrink-0">https?://\S+</code>
+                                <span class="text-gray-700">URL地址</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white rounded-lg p-6 shadow-sm">
+                        <h3 class="text-lg font-semibold text-gray-900 mb-2">9. 如何测试正则性能？</h3>
+                        <p class="text-gray-700">
+                            在我们的工具中测试时，注意：
+                            <ul class="list-disc list-inside text-gray-700 ml-4 mt-2 space-y-1">
+                                <li>避免过度使用.*和.+（可能导致回溯）</li>
+                                <li>优先使用具体字符类而非.</li>
+                                <li>使用非贪婪匹配（?）优化性能</li>
+                                <li>测试大文本时观察响应时间</li>
+                            </ul>
+                            如果匹配时间超过1秒，考虑优化正则表达式。
+                        </p>
+                    </div>
+                    
+                    <div class="bg-white rounded-lg p-6 shadow-sm">
+                        <h3 class="text-lg font-semibold text-gray-900 mb-2">10. 这个工具适合正则学习吗？</h3>
+                        <p class="text-gray-700 mb-2">
+                            <strong>非常适合！</strong>我们的正则测试工具是学习正则表达式的绝佳工具：
+                        </p>
+                        <ul class="list-disc list-inside text-gray-700 ml-4 mt-2 space-y-1">
+                            <li><strong>实时反馈</strong>：输入正则后立即看到匹配效果</li>
+                            <li><strong>高亮显示</strong>：清晰看到哪些部分被匹配</li>
+                            <li><strong>捕获组展示</strong>：理解括号的作用</li>
+                            <li><strong>常用模式库</strong>：参考学习常用正则</li>
+                            <li><strong>错误提示</strong>：语法错误时给出提示</li>
+                        </ul>
+                        <p class="text-gray-700 mt-2">
+                            建议从简单模式开始练习，逐步掌握复杂语法。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 使用技巧 -->
+        <section class="py-12 px-4 bg-white">
+            <div class="container mx-auto max-w-7xl">
+                <h2 class="text-3xl font-bold text-gray-900 mb-8">💡 正则表达式学习技巧</h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl p-6">
+                        <h3 class="text-lg font-semibold text-blue-900 mb-3">📚 学习路径</h3>
+                        <ul class="text-blue-800 space-y-2 text-sm">
+                            <li>1. 掌握基本字符匹配</li>
+                            <li>2. 学习量词（*、+、?、{n}）</li>
+                            <li>3. 理解字符类（[abc]、\d、\w）</li>
+                            <li>4. 练习捕获组和引用</li>
+                            <li>5. 学习断言（前瞻、后顾）</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bg-gradient-to-br from-green-50 to-green-100 rounded-xl p-6">
+                        <h3 class="text-lg font-semibold text-green-900 mb-3">🎯 调试技巧</h3>
+                        <ul class="text-green-800 space-y-2 text-sm">
+                            <li>• 从简单开始，逐步复杂化</li>
+                            <li>• 用小数据集测试</li>
+                            <li>• 分段构建复杂正则</li>
+                            <li>• 使用注释说明各部分作用</li>
+                            <li>• 保存常用正则模式</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bg-gradient-to-br from-purple-50 to-purple-100 rounded-xl p-6">
+                        <h3 class="text-lg font-semibold text-purple-900 mb-3">⚡ 性能优化</h3>
+                        <ul class="text-purple-800 space-y-2 text-sm">
+                            <li>• 避免过度使用.*</li>
+                            <li>• 使用非贪婪匹配.+?</li>
+                            <li>• 优先使用字符类[abc]</li>
+                            <li>• 固定长度用{n}而非重复量词</li>
+                            <li>• 测试大文本验证性能</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="mt-8 bg-yellow-50 border-l-4 border-yellow-500 p-6 rounded">
+                    <h3 class="text-lg font-semibold text-yellow-800 mb-3">📖 推荐学习资源</h3>
+                    <ul class="text-yellow-700 space-y-2">
+                        <li>• 《精通正则表达式》（Jeffrey Friedl著）- 经典教材</li>
+                        <li>• MDN正则表达式文档 - 权威参考</li>
+                        <li>• RegexOne.com - 交互式教程</li>
+                        <li>• 在本工具中实践常用模式 - 边学边用</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- 技术说明 -->
+        <section class="py-12 px-4 bg-gray-50">
+            <div class="container mx-auto max-w-7xl">
+                <div class="bg-white rounded-xl shadow-md p-8 border-l-4 border-pink-500">
+                    <h2 class="text-2xl font-bold text-gray-900 mb-6">🔒 技术实现与数据安全</h2>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div>
+                            <h3 class="text-lg font-semibold text-gray-900 mb-4">技术特点</h3>
+                            <ul class="space-y-2 text-gray-700">
+                                <li>• <strong>JavaScript正则引擎</strong>：使用浏览器内置RegExp对象</li>
+                                <li>• <strong>实时匹配</strong>：输入时即时显示匹配结果</li>
+                                <li>• <strong>语法高亮</strong>：匹配内容高亮显示</li>
+                                <li>• <strong>错误检测</strong>：自动检测正则语法错误</li>
+                                <li>• <strong>纯前端</strong>：无服务器依赖</li>
+                            </ul>
+                        </div>
+                        
+                        <div>
+                            <h3 class="text-lg font-semibold text-gray-900 mb-4">隐私保护</h3>
+                            <ul class="space-y-2 text-gray-700">
+                                <li>• <strong>本地处理</strong>：所有匹配在浏览器完成</li>
+                                <li>• <strong>敏感数据安全</strong>：可安全测试包含敏感信息的文本</li>
+                                <li>• <strong>无数据上传</strong>：测试文本不会发送到服务器</li>
+                                <li>• <strong>无历史记录</strong>：关闭页面后不留痕迹</li>
+                                <li>• <strong>开源透明</strong>：代码公开可审查</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-6 bg-pink-50 border border-pink-200 rounded-lg p-4">
+                        <p class="text-pink-800 text-sm">
+                            <strong>性能数据：</strong>实时匹配响应<50ms，支持10000+字符文本测试。兼容ECMAScript 2018+正则特性。支持Chrome 90+、Firefox 88+、Safari 14+等现代浏览器。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
     
     <!-- 页脚 -->

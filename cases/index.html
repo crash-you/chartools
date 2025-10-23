@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>实战案例库 - 文字处理工具真实应用案例 | CharTools</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="../css/custom.css" rel="stylesheet">
+    <meta name="description" content="文字处理工具实战案例库：学术写作、数据清洗、API开发、内容运营、代码审查、翻译校对等真实场景的完整解决方案。">
+    <meta name="keywords" content="实战案例,使用案例,应用场景,解决方案,真实案例,工作流程">
+    <link rel="canonical" href="https://chartools.art/cases/index.html">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-32ZXK1J41J"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-32ZXK1J41J');
+    </script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js?adsbygoogle.js?client=ca-pub-4770465793767896" crossorigin="anonymous"></script>
+</head>
+<body class="bg-white text-gray-800 min-h-screen flex flex-col">
+    <nav id="navigation" class="fixed top-0 w-full bg-white bg-opacity-80 backdrop-blur-md shadow-sm z-50">
+        <div class="container mx-auto max-w-7xl px-4">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex-shrink-0">
+                    <a href="../index.html" class="text-2xl font-semibold text-gray-900">文字工具</a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="../about.html" class="text-gray-700 hover:text-blue-600">关于</a>
+                    <a href="index.html" class="text-blue-600">案例库</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="flex-grow pt-16">
+        <!-- 标题 -->
+        <section class="py-12 px-4 bg-gradient-to-br from-blue-50 to-purple-50">
+            <div class="container mx-auto max-w-7xl text-center">
+                <h1 class="text-4xl font-bold text-gray-900 mb-4">实战案例库</h1>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    真实场景、完整流程、可复制的解决方案
+                </p>
+            </div>
+        </section>
+
+        <!-- 案例列表 -->
+        <section class="py-16 px-4 bg-white">
+            <div class="container mx-auto max-w-7xl">
+                <!-- 案例1：学术写作 -->
+                <div class="mb-16">
+                    <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-200">
+                        <div class="bg-gradient-to-r from-blue-500 to-blue-600 px-8 py-6">
+                            <div class="flex items-center">
+                                <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center mr-4">
+                                    <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                                    </svg>
+                                </div>
+                                <div class="text-white">
+                                    <h2 class="text-2xl font-bold">案例1：学术论文字数精确控制</h2>
+                                    <p class="text-blue-100 text-sm">难度：★☆☆ | 场景：学术写作 | 工具：字符计数</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="px-8 py-6">
+                            <div class="mb-6">
+                                <h3 class="text-lg font-semibold text-gray-900 mb-3">📋 场景描述</h3>
+                                <p class="text-gray-700">
+                                    研究生张同学需要提交一篇3000-3500字的学术论文。期刊要求：摘要不超过250字，每个章节比例合理（引言15%、方法25%、结果30%、讨论25%、结论5%），正文必须包含至少5个段落。
+                                </p>
+                            </div>
+                            
+                            <div class="mb-6">
+                                <h3 class="text-lg font-semibold text-gray-900 mb-3">🎯 核心挑战</h3>
+                                <ul class="list-disc pl-6 text-gray-700 space-y-1">
+                                    <li>精确控制总字数在3000-3500字范围</li>
+                                    <li>摘要必须在250字以内，且信息完整</li>
+                                    <li>各章节比例需要合理分配</li>
+                                    <li>避免反复删减导致的时间浪费</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="mb-6">
+                                <h3 class="text-lg font-semibold text-gray-900 mb-3">💡 解决方案</h3>
+                                <div class="bg-gray-50 rounded-lg p-6">
+                                    <ol class="space-y-3 text-gray-800">
+                                        <li>
+                                            <strong>Step 1: 制定字数计划</strong>
+                                            <ul class="list-disc pl-6 mt-2 space-y-1 text-sm">
+                                                <li>目标总字数：3200字（中间值）</li>
+                                                <li>摘要：220字（留10%余量）</li>
+                                                <li>引言：480字（15%）</li>
+                                                <li>方法：800字（25%）</li>
+                                                <li>结果：960字（30%）</li>
+                                                <li>讨论：800字（25%）</li>
+                                                <li>结论：160字（5%）</li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <strong>Step 2: 使用字符计数工具监控</strong>
+                                            <ul class="list-disc pl-6 mt-2 space-y-1 text-sm">
+                                                <li>打开<a href="../tools/text-counter.html" class="text-blue-600 hover:underline">字符计数工具</a></li>
+                                                <li>先写摘要，粘贴检查字数→220字 ✓</li>
+                                                <li>写引言，每写一段就检查→480字 ✓</li>
+                                                <li>依次完成其他章节，实时监控字数</li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <strong>Step 3: 最终检查与微调</strong>
+                                            <ul class="list-disc pl-6 mt-2 space-y-1 text-sm">
+                                                <li>将全文粘贴到工具，总字数3185字 ✓</li>
+                                                <li>段落计数显示6段，符合要求 ✓</li>
+                                                <li>各章节比例合理，内容充实</li>
+                                            </ul>
+                                        </li>
+                                    </ol>
+                                </div>
+                            </div>
+                            
+                            <div class="bg-green-50 border-l-4 border-green-500 p-6">
+                                <h3 class="text-lg font-semibold text-green-900 mb-2">✅ 实施效果</h3>
+                                <ul class="text-green-800 space-y-2">
+                                    <li>• <strong>一次成功</strong>：初稿字数即符合要求，无需大幅删减</li>
+                                    <li>• <strong>节省时间</strong>：避免反复修改，节省2小时修订时间</li>
+                                    <li>• <strong>质量提升</strong>：各章节比例合理，逻辑结构清晰</li>
+                                    <li>• <strong>顺利发表</strong>：论文被期刊接收，审稿人评价"结构合理，内容充实"</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="mt-6">
+                                <h3 class="text-lg font-semibold text-gray-900 mb-3">🔧 使用的工具</h3>
+                                <div class="flex flex-wrap gap-3">
+                                    <a href="../tools/text-counter.html" class="px-4 py-2 bg-blue-100 text-blue-800 rounded-lg hover:bg-blue-200 transition-colors text-sm font-medium">
+                                        字符计数工具
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 案例2：数据清洗 -->
+                <div class="mb-16">
+                    <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-200">
+                        <div class="bg-gradient-to-r from-green-500 to-green-600 px-8 py-6">
+                            <div class="flex items-center">
+                                <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center mr-4">
+                                    <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+                                    </svg>
+                                </div>
+                                <div class="text-white">
+                                    <h2 class="text-2xl font-bold">案例2：3000份问卷数据快速清洗</h2>
+                                    <p class="text-green-100 text-sm">难度：★★☆ | 场景：数据分析 | 工具：文本转换+字符计数</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="px-8 py-6">
+                            <div class="mb-6">
+                                <h3 class="text-lg font-semibold text-gray-900 mb-3">📋 场景描述</h3>
+                                <p class="text-gray-700">
+                                    市场部通过线上问卷收集了3000份用户反馈。原始数据存在：大量重复回答（复制粘贴）、格式不统一（全角半角混用）、多余空格、空白数据等问题。需要清洗后导入分析工具进行文本分析。
+                                </p>
+                            </div>
+                            
+                            <div class="mb-6">
+                                <h3 class="text-lg font-semibold text-gray-900 mb-3">💡 解决方案（完整流程）</h3>
+                                <div class="bg-gray-50 rounded-lg p-6">
+                                    <ol class="space-y-4 text-gray-800">
+                                        <li>
+                                            <strong>数据导出与初步评估</strong>
+                                            <ul class="list-disc pl-6 mt-2 space-y-1 text-sm">
+                                                <li>从问卷系统导出CSV，提取开放题回答列</li>
+                                                <li>复制到<a href="../tools/text-counter.html" class="text-blue-600 hover:underline">字符计数工具</a>初步评估：3000行，平均每行85字</li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <strong>数据清洗（核心步骤）</strong>
+                                            <ul class="list-disc pl-6 mt-2 space-y-1 text-sm">
+                                                <li>打开<a href="../tools/text-conversion.html" class="text-blue-600 hover:underline">文本转换工具</a>，粘贴所有数据</li>
+                                                <li>点击"移除空行"：3000行 → 2950行（清理50个空白提交）</li>
+                                                <li>点击"裁剪每行"：去除每个回答首尾的多余空格</li>
+                                                <li>点击"转半角"：统一全角半角字符（数字、标点）</li>
+                                                <li>点击"转小写"：统一英文大小写（便于去重）</li>
+                                                <li>点击"去重"：2950行 → 1856行（去重率37.1%）</li>
+                                                <li>点击"升序排序"：按字母顺序整理，便于后续分类</li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <strong>质量验证</strong>
+                                            <ul class="list-disc pl-6 mt-2 space-y-1 text-sm">
+                                                <li>将清洗后的数据粘贴到字符计数工具</li>
+                                                <li>确认数据量：1856行有效数据 ✓</li>
+                                                <li>抽样检查前10条，确认格式统一 ✓</li>
+                                            </ul>
+                                        </li>
+                                    </ol>
+                                </div>
+                            </div>
+                            
+                            <div class="bg-green-50 border-l-4 border-green-500 p-6 mb-6">
+                                <h3 class="text-lg font-semibold text-green-900 mb-2">✅ 实施效果</h3>
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-green-800">
+                                    <div>
+                                        <p class="font-semibold mb-2">效率提升：</p>
+                                        <ul class="space-y-1 text-sm">
+                                            <li>• 处理时间：30分钟</li>
+                                            <li>• 人工预估：5个工作日</li>
+                                            <li>• 效率提升：99%</li>
+                                        </ul>
+                                    </div>
+                                    <div>
+                                        <p class="font-semibold mb-2">数据质量：</p>
+                                        <ul class="space-y-1 text-sm">
+                                            <li>• 去重率：37.1%</li>
+                                            <li>• 有效数据：1856条</li>
+                                            <li>• 格式统一度：100%</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="bg-blue-50 rounded-lg p-6">
+                                <h3 class="text-lg font-semibold text-blue-900 mb-3">💡 经验总结</h3>
+                                <ul class="text-blue-800 space-y-2 text-sm">
+                                    <li>• 数据清洗顺序很重要：移除空行→裁剪→格式统一→去重→排序</li>
+                                    <li>• 转小写+转半角能显著提升去重效果</li>
+                                    <li>• 清洗前后都要用字符计数工具统计，便于评估效果</li>
+                                    <li>• 保留原始数据备份，便于出问题时回溯</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 案例3：API开发 -->
+                <div class="mb-16">
+                    <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-200">
+                        <div class="bg-gradient-to-r from-purple-500 to-purple-600 px-8 py-6">
+                            <div class="flex items-center">
+                                <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center mr-4">
+                                    <svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                                    </svg>
+                                </div>
+                                <div class="text-white">
+                                    <h2 class="text-2xl font-bold">案例3：API响应JSON快速调试</h2>
+                                    <p class="text-purple-100 text-sm">难度：★★☆ | 场景：API开发 | 工具：格式化+文本比较</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="px-8 py-6">
+                            <div class="mb-6">
+                                <h3 class="text-lg font-semibold text-gray-900 mb-3">📋 场景描述</h3>
+                                <p class="text-gray-700">
+                                    前端开发小李对接后端API时，发现返回的JSON数据全部压缩在一行（3527个字符），包含深层嵌套结构（5层），难以阅读和定位字段。需要快速美化JSON，找到目标数据字段，验证数据结构。
+                                </p>
+                            </div>
+                            
+                            <div class="mb-6">
+                                <h3 class="text-lg font-semibold text-gray-900 mb-3">💡 解决方案</h3>
+                                <div class="bg-gray-50 rounded-lg p-6">
+                                    <ol class="space-y-3 text-gray-800">
+                                        <li>
+                                            <strong>格式化JSON</strong>
+                                            <ul class="list-disc pl-6 mt-2 space-y-1 text-sm">
+                                                <li>从Chrome DevTools的Network面板复制Response</li>
+                                                <li>打开<a href="../tools/formatting.html" class="text-blue-600 hover:underline">格式化工具</a>，粘贴JSON</li>
+                                                <li>选择"JSON"格式，缩进设为"4空格"</li>
+                                                <li>点击"格式化"→3秒内完成美化</li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <strong>定位数据字段</strong>
+                                            <ul class="list-disc pl-6 mt-2 space-y-1 text-sm">
+                                                <li>在格式化后的JSON中使用Ctrl+F搜索字段名"userId"</li>
+                                                <li>快速定位到data.user.profile.userId</li>
+                                                <li>发现userId类型是字符串，而非预期的数字</li>
+                                                <li>截图发给后端，确认这是bug</li>
+                                            </ul>
+                                        </li>
+                                    </ol>
+                                </div>
+                            </div>
+                            
+                            <div class="bg-green-50 border-l-4 border-green-500 p-6">
+                                <h3 class="text-lg font-semibold text-green-900 mb-2">✅ 实施效果</h3>
+                                <ul class="text-green-800 space-y-2">
+                                    <li>• 调试时间从30分钟缩短到5分钟（效率提升83%）</li>
+                                    <li>• 快速发现数据类型错误，避免了前端bug</li>
+                                    <li>• 格式化后的JSON便于与后端沟通问题</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 更多案例简介 -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="bg-white rounded-xl shadow-md p-6 border-l-4 border-yellow-500">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-3">案例4：代码PR审查</h3>
+                        <p class="text-gray-700 mb-4 text-sm">
+                            使用文本比较工具对比配置文件修改，5分钟完成审查，发现1个潜在bug避免上线事故。
+                        </p>
+                        <a href="../tools/text-comparison.html" class="text-blue-600 hover:underline text-sm font-medium">查看工具 →</a>
+                    </div>
+                    
+                    <div class="bg-white rounded-xl shadow-md p-6 border-l-4 border-red-500">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-3">案例5：翻译质量评估</h3>
+                        <p class="text-gray-700 mb-4 text-sm">
+                            对比3000字中文原文和英文译文，使用字符计数工具验证译文字数在原文的120-150%范围，确保翻译质量。
+                        </p>
+                        <a href="../tools/text-counter.html" class="text-blue-600 hover:underline text-sm font-medium">查看工具 →</a>
+                    </div>
+                    
+                    <div class="bg-white rounded-xl shadow-md p-6 border-l-4 border-indigo-500">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-3">案例6：JWT Token调试</h3>
+                        <p class="text-gray-700 mb-4 text-sm">
+                            前端鉴权失败，使用JWT解析工具查看Token内容，发现exp字段已过期，快速定位问题。
+                        </p>
+                        <a href="../tools/text-encoder.html" class="text-blue-600 hover:underline text-sm font-medium">查看工具 →</a>
+                    </div>
+                    
+                    <div class="bg-white rounded-xl shadow-md p-6 border-l-4 border-pink-500">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-3">案例7：正则提取手机号</h3>
+                        <p class="text-gray-700 mb-4 text-sm">
+                            从500条客户留言中提取手机号，使用正则表达式工具2分钟提取出235个手机号，人工需要2小时。
+                        </p>
+                        <a href="../tools/regex-tester.html" class="text-blue-600 hover:underline text-sm font-medium">查看工具 →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 案例索引 -->
+        <section class="py-16 px-4 bg-gray-50">
+            <div class="container mx-auto max-w-7xl">
+                <h2 class="text-3xl font-bold text-gray-900 mb-12 text-center">按场景查找案例</h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="bg-white rounded-xl shadow-md p-6">
+                        <h3 class="text-lg font-semibold text-gray-900 mb-4">学术与写作</h3>
+                        <ul class="space-y-2 text-gray-700 text-sm">
+                            <li>• <a href="#" class="text-blue-600 hover:underline">论文字数控制</a></li>
+                            <li>• <a href="#" class="text-blue-600 hover:underline">简历优化</a></li>
+                            <li>• <a href="#" class="text-blue-600 hover:underline">翻译质量评估</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bg-white rounded-xl shadow-md p-6">
+                        <h3 class="text-lg font-semibold text-gray-900 mb-4">数据处理</h3>
+                        <ul class="space-y-2 text-gray-700 text-sm">
+                            <li>• <a href="#" class="text-blue-600 hover:underline">问卷数据清洗</a></li>
+                            <li>• <a href="#" class="text-blue-600 hover:underline">邮件列表去重</a></li>
+                            <li>• <a href="#" class="text-blue-600 hover:underline">标签库规范化</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bg-white rounded-xl shadow-md p-6">
+                        <h3 class="text-lg font-semibold text-gray-900 mb-4">开发调试</h3>
+                        <ul class="space-y-2 text-gray-700 text-sm">
+                            <li>• <a href="#" class="text-blue-600 hover:underline">API响应调试</a></li>
+                            <li>• <a href="#" class="text-blue-600 hover:underline">代码PR审查</a></li>
+                            <li>• <a href="#" class="text-blue-600 hover:underline">JWT Token调试</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-100 py-8 px-4">
+        <div class="container mx-auto max-w-7xl">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-600">© 2025 文字处理工具网站</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/navigation.js"></script>
+</body>
+</html>
+
