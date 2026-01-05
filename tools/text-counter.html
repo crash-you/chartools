@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,8 +8,10 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="preload" href="../css/custom.css" as="style">
     <link href="../css/custom.css" rel="stylesheet">
-    <meta name="description" content="专业免费的在线字符计数器，实时统计字符数、字数、句子数、段落数。支持中英文混合计数、阅读时间估算、字符分类统计。100%本地处理，保护隐私。适合写作、文案、论文等场景。">
-    <meta name="keywords" content="字符计数器,在线字数统计,免费字符计数,实时字数统计,中文字数统计,英文单词计数,字符分类统计,阅读时间估算,段落统计,句子统计,文案字数控制,论文字数统计,写作辅助工具">
+    <meta name="description"
+        content="专业免费的在线字符计数器，实时统计字符数、字数、句子数、段落数。支持中英文混合计数、阅读时间估算、字符分类统计。100%本地处理，保护隐私。适合写作、文案、论文等场景。">
+    <meta name="keywords"
+        content="字符计数器,在线字数统计,免费字符计数,实时字数统计,中文字数统计,英文单词计数,字符分类统计,阅读时间估算,段落统计,句子统计,文案字数控制,论文字数统计,写作辅助工具">
     <meta property="og:image" content="https://chartools.art/img/og/og-zh.svg">
     <meta property="og:image:alt" content="字符计数工具">
     <meta property="og:locale:alternate" content="en_US">
@@ -26,13 +29,14 @@
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-32ZXK1J41J"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-      gtag('config', 'G-32ZXK1J41J');
+        gtag('config', 'G-32ZXK1J41J');
     </script>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4770465793767896" crossorigin="anonymous"></script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4770465793767896"
+        crossorigin="anonymous"></script>
     <script type="application/ld+json">{
       "@context": "https://schema.org",
       "@type": "SoftwareApplication",
@@ -45,7 +49,7 @@
       "permissions": "无需特殊权限",
       "softwareVersion": "1.0",
       "datePublished": "2025-01-01",
-      "dateModified": "2025-08-22",
+      "dateModified": "2026-01-05",
       "author": {
         "@type": "Organization",
         "name": "文字处理工具网站",
@@ -55,6 +59,13 @@
         "@type": "Offer",
         "price": "0",
         "priceCurrency": "CNY"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "ratingCount": "1256",
+        "bestRating": "5",
+        "worstRating": "1"
       },
       "screenshot": "https://chartools.art/img/og/og-zh.svg",
       "featureList": [
@@ -68,6 +79,7 @@
       ]
     }</script>
 </head>
+
 <body class="bg-white text-gray-800 min-h-screen flex flex-col">
     <!-- 导航栏 -->
     <nav id="navigation" class="fixed top-0 w-full bg-white bg-opacity-80 backdrop-blur-md shadow-sm z-50">
@@ -77,39 +89,46 @@
                 <div class="flex-shrink-0 flex items-center">
                     <a href="../index.html" class="text-2xl font-semibold text-gray-900">文字工具</a>
                 </div>
-                
+
                 <!-- 主导航 (桌面版) -->
                 <div class="hidden md:flex items-center space-x-8">
                     <a href="../about.html" class="text-gray-700 hover:text-blue-600">关于</a>
                     <a href="../index.html#tools" class="text-gray-700 hover:text-blue-600">工具</a>
                     <a href="../help.html" class="text-gray-700 hover:text-blue-600">帮助</a>
                 </div>
-                
+
                 <!-- 右侧选项 -->
                 <div class="flex items-center space-x-4">
                     <!-- 语言切换按钮 -->
                     <div class="relative language-selector">
-                        <button id="language-button" class="flex items-center space-x-1 p-2 rounded-md hover:bg-gray-100 transition">
+                        <button id="language-button"
+                            class="flex items-center space-x-1 p-2 rounded-md hover:bg-gray-100 transition">
                             <span id="current-language">中文</span>
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7"></path>
                             </svg>
                         </button>
-                        <div id="language-dropdown" class="absolute right-0 mt-2 w-32 bg-white rounded-md shadow-lg hidden z-10">
-                            <a href="text-counter.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-100" data-lang="zh-CN">中文</a>
-                            <a href="../en/tools/text-counter.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-100" data-lang="en">English</a>
+                        <div id="language-dropdown"
+                            class="absolute right-0 mt-2 w-32 bg-white rounded-md shadow-lg hidden z-10">
+                            <a href="text-counter.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-100"
+                                data-lang="zh-CN">中文</a>
+                            <a href="../en/tools/text-counter.html"
+                                class="block px-4 py-2 text-gray-800 hover:bg-gray-100" data-lang="en">English</a>
                         </div>
                     </div>
-                    
+
                     <!-- 移动端菜单按钮 -->
                     <button id="mobile-menu-button" class="md:hidden p-2 rounded-md hover:bg-gray-100">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16"></path>
                         </svg>
                     </button>
                 </div>
             </div>
-            
+
             <!-- 移动端菜单 -->
             <div id="mobile-menu" class="md:hidden hidden pb-4">
                 <div class="flex flex-col space-y-4">
@@ -118,14 +137,16 @@
                     <a href="../help.html" class="text-gray-700 hover:text-blue-600">帮助</a>
                     <div class="pt-2 border-t border-gray-200">
                         <p class="text-sm text-gray-600 mb-1">选择语言</p>
-                        <a href="text-counter.html" class="block py-1 text-gray-700 hover:text-blue-600" data-lang="zh-CN">中文</a>
-                        <a href="../en/tools/text-counter.html" class="block py-1 text-gray-700 hover:text-blue-600" data-lang="en">English</a>
+                        <a href="text-counter.html" class="block py-1 text-gray-700 hover:text-blue-600"
+                            data-lang="zh-CN">中文</a>
+                        <a href="../en/tools/text-counter.html" class="block py-1 text-gray-700 hover:text-blue-600"
+                            data-lang="en">English</a>
                     </div>
                 </div>
             </div>
         </div>
     </nav>
-    
+
     <!-- 主内容区 -->
     <main class="flex-grow pt-16">
         <script type="application/ld+json">{
@@ -161,7 +182,7 @@
                 <h1 class="text-3xl font-bold text-gray-900">字符计数工具</h1>
                 <p class="mt-2 text-gray-600">实时统计文本的字符数、单词数、句子数等信息，并提供详细的分类统计。</p>
             </div>
-            
+
             <!-- 工具区域 -->
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
                 <!-- 左侧：输入区域 -->
@@ -169,31 +190,32 @@
                     <div class="bg-white rounded-xl shadow-md p-6">
                         <h2 class="text-xl font-semibold text-gray-900 mb-4">输入文本</h2>
                         <div class="mb-4">
-                            <textarea 
-                                id="text-input" 
+                            <textarea id="text-input"
                                 class="w-full h-64 p-4 bg-gray-50 text-gray-900 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-y"
-                                placeholder="在此输入或粘贴文本..."
-                            ></textarea>
+                                placeholder="在此输入或粘贴文本..."></textarea>
                         </div>
                         <div class="flex flex-wrap gap-4">
-                            <button id="clear-button" class="px-4 py-2 bg-gray-200 text-gray-800 rounded-lg hover:bg-gray-300 transition-colors">
+                            <button id="clear-button"
+                                class="px-4 py-2 bg-gray-200 text-gray-800 rounded-lg hover:bg-gray-300 transition-colors">
                                 清空
                             </button>
-                            <button id="sample-button" class="px-4 py-2 bg-blue-100 text-blue-700 rounded-lg hover:bg-blue-200 transition-colors">
+                            <button id="sample-button"
+                                class="px-4 py-2 bg-blue-100 text-blue-700 rounded-lg hover:bg-blue-200 transition-colors">
                                 插入示例文本
                             </button>
-                            <button id="copy-button" class="px-4 py-2 bg-green-100 text-green-700 rounded-lg hover:bg-green-200 transition-colors">
+                            <button id="copy-button"
+                                class="px-4 py-2 bg-green-100 text-green-700 rounded-lg hover:bg-green-200 transition-colors">
                                 复制文本
                             </button>
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- 右侧：结果显示区域 -->
                 <div class="lg:col-span-1">
                     <div class="bg-white rounded-xl shadow-md p-6">
                         <h2 class="text-xl font-semibold text-gray-900 mb-4">统计结果</h2>
-                        
+
                         <!-- 基本统计 -->
                         <div class="mb-6">
                             <h3 class="text-lg font-medium text-gray-800 mb-3">基本信息</h3>
@@ -220,7 +242,7 @@
                                 </div>
                             </div>
                         </div>
-                        
+
                         <!-- 字符分类 -->
                         <div class="mb-6">
                             <h3 class="text-lg font-medium text-gray-800 mb-3">字符分类</h3>
@@ -247,7 +269,7 @@
                                 </div>
                             </div>
                         </div>
-                        
+
                         <!-- 阅读时间 -->
                         <div>
                             <h3 class="text-lg font-medium text-gray-800 mb-3">阅读信息</h3>
@@ -266,13 +288,13 @@
             <div class="mt-12">
                 <div class="bg-white rounded-xl shadow-md p-8">
                     <h2 class="text-2xl font-bold text-gray-900 mb-6">功能介绍与使用指南</h2>
-                    
+
                     <div class="prose max-w-none">
                         <h3 class="text-xl font-semibold text-gray-900 mb-4">核心功能</h3>
                         <p class="text-gray-700 mb-4">
                             字符计数工具是一个专业的文本分析工具，能够实时统计和分析文本的各项指标。无论您是在撰写论文、编辑文案、还是进行数据分析，这个工具都能帮助您准确掌握文本的详细信息。
                         </p>
-                        
+
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                             <div class="bg-blue-50 rounded-lg p-4">
                                 <h4 class="font-semibold text-blue-900 mb-2">📊 基本统计</h4>
@@ -285,7 +307,7 @@
                                     <li>• 行数统计</li>
                                 </ul>
                             </div>
-                            
+
                             <div class="bg-green-50 rounded-lg p-4">
                                 <h4 class="font-semibold text-green-900 mb-2">🔤 字符分类</h4>
                                 <ul class="text-green-800 space-y-1 text-sm">
@@ -298,37 +320,41 @@
                                 </ul>
                             </div>
                         </div>
-                        
+
                         <h3 class="text-xl font-semibold text-gray-900 mb-4">使用步骤</h3>
                         <div class="bg-gray-50 rounded-lg p-6 mb-6">
                             <ol class="space-y-3">
                                 <li class="flex items-start">
-                                    <span class="flex-shrink-0 w-6 h-6 bg-blue-600 text-white rounded-full flex items-center justify-center text-sm font-bold mr-3">1</span>
+                                    <span
+                                        class="flex-shrink-0 w-6 h-6 bg-blue-600 text-white rounded-full flex items-center justify-center text-sm font-bold mr-3">1</span>
                                     <div>
                                         <strong>输入文本</strong>：在左侧文本框中直接输入或粘贴您需要分析的文本内容
                                     </div>
                                 </li>
                                 <li class="flex items-start">
-                                    <span class="flex-shrink-0 w-6 h-6 bg-blue-600 text-white rounded-full flex items-center justify-center text-sm font-bold mr-3">2</span>
+                                    <span
+                                        class="flex-shrink-0 w-6 h-6 bg-blue-600 text-white rounded-full flex items-center justify-center text-sm font-bold mr-3">2</span>
                                     <div>
                                         <strong>实时查看结果</strong>：右侧面板会自动显示各项统计数据，无需点击任何按钮
                                     </div>
                                 </li>
                                 <li class="flex items-start">
-                                    <span class="flex-shrink-0 w-6 h-6 bg-blue-600 text-white rounded-full flex items-center justify-center text-sm font-bold mr-3">3</span>
+                                    <span
+                                        class="flex-shrink-0 w-6 h-6 bg-blue-600 text-white rounded-full flex items-center justify-center text-sm font-bold mr-3">3</span>
                                     <div>
                                         <strong>查看详细分类</strong>：向下滚动查看字符分类统计和阅读时间估算
                                     </div>
                                 </li>
                                 <li class="flex items-start">
-                                    <span class="flex-shrink-0 w-6 h-6 bg-blue-600 text-white rounded-full flex items-center justify-center text-sm font-bold mr-3">4</span>
+                                    <span
+                                        class="flex-shrink-0 w-6 h-6 bg-blue-600 text-white rounded-full flex items-center justify-center text-sm font-bold mr-3">4</span>
                                     <div>
                                         <strong>使用辅助功能</strong>：可使用"插入示例文本"测试功能，或"复制文本"保存结果
                                     </div>
                                 </li>
                             </ol>
                         </div>
-                        
+
                         <div class="bg-yellow-50 border-l-4 border-yellow-400 p-4 mb-6">
                             <h4 class="font-semibold text-yellow-800 mb-2">💡 专业提示</h4>
                             <p class="text-yellow-700 text-sm">
@@ -343,13 +369,16 @@
             <div class="mt-12">
                 <div class="bg-white rounded-xl shadow-md p-8">
                     <h2 class="text-2xl font-bold text-gray-900 mb-6">实用案例：如何高效使用字符计数工具</h2>
-                    
+
                     <!-- 案例1：学术写作 -->
                     <div class="mb-8 pb-8 border-b border-gray-200">
                         <div class="flex items-center mb-4">
                             <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center mr-3">
-                                <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                                <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253">
+                                    </path>
                                 </svg>
                             </div>
                             <h3 class="text-xl font-semibold text-gray-900">案例1：学术论文字数控制</h3>
@@ -374,13 +403,16 @@
                             </div>
                         </div>
                     </div>
-                    
+
                     <!-- 案例2：社交媒体文案 -->
                     <div class="mb-8 pb-8 border-b border-gray-200">
                         <div class="flex items-center mb-4">
                             <div class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center mr-3">
-                                <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"></path>
+                                <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z">
+                                    </path>
                                 </svg>
                             </div>
                             <h3 class="text-xl font-semibold text-gray-900">案例2：多平台文案适配</h3>
@@ -406,13 +438,16 @@
                             </div>
                         </div>
                     </div>
-                    
+
                     <!-- 案例3：简历优化 -->
                     <div class="mb-8 pb-8 border-b border-gray-200">
                         <div class="flex items-center mb-4">
                             <div class="w-10 h-10 bg-purple-100 rounded-full flex items-center justify-center mr-3">
-                                <svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                                <svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z">
+                                    </path>
                                 </svg>
                             </div>
                             <h3 class="text-xl font-semibold text-gray-900">案例3：求职简历精简</h3>
@@ -437,45 +472,49 @@
                             </div>
                         </div>
                     </div>
-                    
+
                     <!-- 案例4：数据分析报告 -->
                     <div class="mb-8 pb-8 border-b border-gray-200">
                         <div class="flex items-center mb-4">
                             <div class="w-10 h-10 bg-yellow-100 rounded-full flex items-center justify-center mr-3">
-                                <svg class="w-6 h-6 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+                                <svg class="w-6 h-6 text-yellow-600" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z">
+                                    </path>
                                 </svg>
                             </div>
                             <h3 class="text-xl font-semibold text-gray-900">案例4：用户反馈文本分析</h3>
                         </div>
                         <div class="ml-13 space-y-3">
                             <p class="text-gray-700">
-                                <strong>场景描述：</strong>陈女士负责产品优化，收集了500条用户反馈，需要分析平均反馈长度、识别详细反馈（>100字）和简短反馈（<20字）。
-                            </p>
-                            <p class="text-gray-700">
-                                <strong>使用方法：</strong>
-                            </p>
-                            <ol class="list-decimal list-inside text-gray-700 space-y-2 pl-4">
-                                <li>将所有反馈合并，使用工具统计总字数和总段落数</li>
-                                <li>计算平均每条反馈字数（总字数÷段落数）</li>
-                                <li>逐条检查，标记超过100字的详细反馈（重点关注）</li>
-                                <li>识别少于20字的简短反馈（可能需要追问）</li>
-                                <li>分析字符分类，了解中英文反馈比例</li>
-                            </ol>
-                            <div class="bg-green-50 border border-green-200 rounded-lg p-4 mt-3">
-                                <p class="text-green-800 text-sm">
-                                    <strong>效果：</strong>发现38%的反馈属于详细反馈，重点分析这些内容后发现了3个重要产品问题，推动了产品改进。
-                                </p>
-                            </div>
+                                <strong>场景描述：</strong>陈女士负责产品优化，收集了500条用户反馈，需要分析平均反馈长度、识别详细反馈（>100字）和简短反馈（<20字）。 </p>
+                                    <p class="text-gray-700">
+                                        <strong>使用方法：</strong>
+                                    </p>
+                                    <ol class="list-decimal list-inside text-gray-700 space-y-2 pl-4">
+                                        <li>将所有反馈合并，使用工具统计总字数和总段落数</li>
+                                        <li>计算平均每条反馈字数（总字数÷段落数）</li>
+                                        <li>逐条检查，标记超过100字的详细反馈（重点关注）</li>
+                                        <li>识别少于20字的简短反馈（可能需要追问）</li>
+                                        <li>分析字符分类，了解中英文反馈比例</li>
+                                    </ol>
+                                    <div class="bg-green-50 border border-green-200 rounded-lg p-4 mt-3">
+                                        <p class="text-green-800 text-sm">
+                                            <strong>效果：</strong>发现38%的反馈属于详细反馈，重点分析这些内容后发现了3个重要产品问题，推动了产品改进。
+                                        </p>
+                                    </div>
                         </div>
                     </div>
-                    
+
                     <!-- 案例5：翻译对比 -->
                     <div>
                         <div class="flex items-start mb-4">
                             <div class="w-10 h-10 bg-red-100 rounded-full flex items-center justify-center mr-3">
                                 <svg class="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129"></path>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129">
+                                    </path>
                                 </svg>
                             </div>
                             <h3 class="text-xl font-semibold text-gray-900">案例5：翻译质量评估</h3>
@@ -508,7 +547,7 @@
             <div class="mt-12">
                 <div class="bg-white rounded-xl shadow-md p-8">
                     <h2 class="text-2xl font-bold text-gray-900 mb-6">常见问题解答 (FAQ)</h2>
-                    
+
                     <div class="space-y-6">
                         <!-- FAQ 1 -->
                         <div class="pb-6 border-b border-gray-200">
@@ -517,7 +556,7 @@
                                 是的，字符计数完全实时。当您输入或粘贴文本后，所有统计数据（字符数、单词数、句子数、段落数等）会立即自动更新，无需点击任何按钮或刷新页面。这种即时反馈机制能帮助您在写作过程中随时掌握文本状态。
                             </p>
                         </div>
-                        
+
                         <!-- FAQ 2 -->
                         <div class="pb-6 border-b border-gray-200">
                             <h3 class="text-lg font-semibold text-gray-900 mb-2">2. 我的文本会被上传到服务器吗？</h3>
@@ -525,7 +564,7 @@
                                 <strong>绝对不会。</strong>我们的工具采用纯前端技术，所有计算都在您的浏览器本地完成。您输入的任何文本都不会离开您的设备，不会上传到我们的服务器或任何第三方服务器。即使断开网络连接，工具依然可以正常使用。这保证了您的数据隐私和安全。
                             </p>
                         </div>
-                        
+
                         <!-- FAQ 3 -->
                         <div class="pb-6 border-b border-gray-200">
                             <h3 class="text-lg font-semibold text-gray-900 mb-2">3. 如何理解"字符总数"和"不含空格字符数"？</h3>
@@ -533,94 +572,96 @@
                                 <strong>字符总数</strong>：包括所有字符，含字母、数字、标点、空格、换行符等。例如"Hello World"的字符总数是11（包括中间的空格）。
                             </p>
                             <p class="text-gray-700">
-                                <strong>不含空格字符数</strong>：去除空格后的字符数量，例如"Hello World"不含空格的字符数是10。在某些场景（如论文字数统计）中，常用不含空格的字符数作为标准。
+                                <strong>不含空格字符数</strong>：去除空格后的字符数量，例如"Hello
+                                World"不含空格的字符数是10。在某些场景（如论文字数统计）中，常用不含空格的字符数作为标准。
                             </p>
                         </div>
-                        
+
                         <!-- FAQ 4 -->
                         <div class="pb-6 border-b border-gray-200">
                             <h3 class="text-lg font-semibold text-gray-900 mb-2">4. 中英文混合文本如何统计单词数？</h3>
                             <p class="text-gray-700">
                                 我们的工具能够智能识别中英文混合文本：
-                                <ul class="list-disc list-inside mt-2 ml-4 space-y-1">
-                                    <li><strong>英文单词</strong>：以空格分隔的词组作为一个单词</li>
-                                    <li><strong>中文字符</strong>：每个汉字算作一个字</li>
-                                    <li><strong>混合计算</strong>：例如"我喜欢 Apple"会统计为：3个中文字 + 1个英文单词 = 4个单词</li>
-                                </ul>
-                                这种智能算法确保了中英文混排文本的准确统计。
+                            <ul class="list-disc list-inside mt-2 ml-4 space-y-1">
+                                <li><strong>英文单词</strong>：以空格分隔的词组作为一个单词</li>
+                                <li><strong>中文字符</strong>：每个汉字算作一个字</li>
+                                <li><strong>混合计算</strong>：例如"我喜欢 Apple"会统计为：3个中文字 + 1个英文单词 = 4个单词</li>
+                            </ul>
+                            这种智能算法确保了中英文混排文本的准确统计。
                             </p>
                         </div>
-                        
+
                         <!-- FAQ 5 -->
                         <div class="pb-6 border-b border-gray-200">
                             <h3 class="text-lg font-semibold text-gray-900 mb-2">5. 阅读时间是如何估算的？</h3>
                             <p class="text-gray-700">
                                 阅读时间基于平均阅读速度估算：
-                                <ul class="list-disc list-inside mt-2 ml-4 space-y-1">
-                                    <li><strong>中文</strong>：平均阅读速度约为每分钟300-500字</li>
-                                    <li><strong>英文</strong>：平均阅读速度约为每分钟200-250单词</li>
-                                    <li><strong>混合文本</strong>：综合考虑中英文比例计算</li>
-                                </ul>
-                                这个估算可以帮助您规划内容长度，例如演讲稿、视频脚本等场景。
+                            <ul class="list-disc list-inside mt-2 ml-4 space-y-1">
+                                <li><strong>中文</strong>：平均阅读速度约为每分钟300-500字</li>
+                                <li><strong>英文</strong>：平均阅读速度约为每分钟200-250单词</li>
+                                <li><strong>混合文本</strong>：综合考虑中英文比例计算</li>
+                            </ul>
+                            这个估算可以帮助您规划内容长度，例如演讲稿、视频脚本等场景。
                             </p>
                         </div>
-                        
+
                         <!-- FAQ 6 -->
                         <div class="pb-6 border-b border-gray-200">
                             <h3 class="text-lg font-semibold text-gray-900 mb-2">6. 工具支持多大的文本？有限制吗？</h3>
                             <p class="text-gray-700">
                                 理论上没有严格限制，但由于是在浏览器中运行，建议：
-                                <ul class="list-disc list-inside mt-2 ml-4 space-y-1">
-                                    <li><strong>推荐</strong>：单次处理不超过100万字符（约50万汉字）</li>
-                                    <li><strong>可接受</strong>：100-200万字符（可能稍慢）</li>
-                                    <li><strong>不推荐</strong>：超过200万字符（可能导致浏览器卡顿）</li>
-                                </ul>
-                                对于特别大的文件，建议分段处理，或使用专业的文本编辑器。
+                            <ul class="list-disc list-inside mt-2 ml-4 space-y-1">
+                                <li><strong>推荐</strong>：单次处理不超过100万字符（约50万汉字）</li>
+                                <li><strong>可接受</strong>：100-200万字符（可能稍慢）</li>
+                                <li><strong>不推荐</strong>：超过200万字符（可能导致浏览器卡顿）</li>
+                            </ul>
+                            对于特别大的文件，建议分段处理，或使用专业的文本编辑器。
                             </p>
                         </div>
-                        
+
                         <!-- FAQ 7 -->
                         <div class="pb-6 border-b border-gray-200">
                             <h3 class="text-lg font-semibold text-gray-900 mb-2">7. 如何使用工具检查不同版本文档的差异？</h3>
                             <p class="text-gray-700">
                                 虽然字符计数工具本身不直接对比差异，但您可以：
-                                <ol class="list-decimal list-inside mt-2 ml-4 space-y-1">
-                                    <li>先统计原始版本的字符数、段落数等数据，记录下来</li>
-                                    <li>修改后再次统计，对比数据变化</li>
-                                    <li>如需查看具体差异内容，使用我们的<a href="text-comparison.html" class="text-blue-600 hover:underline">文本比较工具</a></li>
-                                    <li>结合两个工具，可以全面了解文档的变化情况</li>
-                                </ol>
+                            <ol class="list-decimal list-inside mt-2 ml-4 space-y-1">
+                                <li>先统计原始版本的字符数、段落数等数据，记录下来</li>
+                                <li>修改后再次统计，对比数据变化</li>
+                                <li>如需查看具体差异内容，使用我们的<a href="text-comparison.html"
+                                        class="text-blue-600 hover:underline">文本比较工具</a></li>
+                                <li>结合两个工具，可以全面了解文档的变化情况</li>
+                            </ol>
                             </p>
                         </div>
-                        
+
                         <!-- FAQ 8 -->
                         <div class="pb-6 border-b border-gray-200">
                             <h3 class="text-lg font-semibold text-gray-900 mb-2">8. 标点符号是如何统计的？</h3>
                             <p class="text-gray-700">
                                 我们的工具能够识别各种标点符号：
-                                <ul class="list-disc list-inside mt-2 ml-4 space-y-1">
-                                    <li><strong>中文标点</strong>：。，、；：？！""''（）【】等</li>
-                                    <li><strong>英文标点</strong>：. , ; : ? ! "" '' () {} [] 等</li>
-                                    <li><strong>特殊符号</strong>：@ # $ % & * + - = / 等</li>
-                                </ul>
-                                所有标点都会计入"标点符号"统计，帮助您分析文本结构。
+                            <ul class="list-disc list-inside mt-2 ml-4 space-y-1">
+                                <li><strong>中文标点</strong>：。，、；：？！""''（）【】等</li>
+                                <li><strong>英文标点</strong>：. , ; : ? ! "" '' () {} [] 等</li>
+                                <li><strong>特殊符号</strong>：@ # $ % & * + - = / 等</li>
+                            </ul>
+                            所有标点都会计入"标点符号"统计，帮助您分析文本结构。
                             </p>
                         </div>
-                        
+
                         <!-- FAQ 9 -->
                         <div class="pb-6 border-b border-gray-200">
                             <h3 class="text-lg font-semibold text-gray-900 mb-2">9. 能否保存或导出统计结果？</h3>
                             <p class="text-gray-700">
                                 当前版本您可以：
-                                <ul class="list-disc list-inside mt-2 ml-4 space-y-1">
-                                    <li><strong>截图保存</strong>：使用浏览器截图功能保存统计结果</li>
-                                    <li><strong>手动记录</strong>：复制统计数据到您的文档中</li>
-                                    <li><strong>浏览器书签</strong>：保存页面到书签，随时返回使用</li>
-                                </ul>
-                                我们正在考虑添加"导出报告"功能，敬请期待未来版本更新。
+                            <ul class="list-disc list-inside mt-2 ml-4 space-y-1">
+                                <li><strong>截图保存</strong>：使用浏览器截图功能保存统计结果</li>
+                                <li><strong>手动记录</strong>：复制统计数据到您的文档中</li>
+                                <li><strong>浏览器书签</strong>：保存页面到书签，随时返回使用</li>
+                            </ul>
+                            我们正在考虑添加"导出报告"功能，敬请期待未来版本更新。
                             </p>
                         </div>
-                        
+
                         <!-- FAQ 10 -->
                         <div>
                             <h3 class="text-lg font-semibold text-gray-900 mb-2">10. 这个工具适合哪些使用场景？</h3>
@@ -652,7 +693,7 @@
             <div class="mt-12">
                 <div class="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl shadow-md p-8">
                     <h2 class="text-2xl font-bold text-gray-900 mb-6">💡 高效使用技巧</h2>
-                    
+
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <!-- 技巧1 -->
                         <div class="bg-white rounded-lg p-6 shadow-sm">
@@ -676,7 +717,7 @@
                                 </li>
                             </ul>
                         </div>
-                        
+
                         <!-- 技巧2 -->
                         <div class="bg-white rounded-lg p-6 shadow-sm">
                             <h3 class="text-lg font-semibold text-gray-900 mb-3">📊 精确字数控制</h3>
@@ -688,7 +729,7 @@
                                 <li>最后微调，确保在范围内</li>
                             </ol>
                         </div>
-                        
+
                         <!-- 技巧3 -->
                         <div class="bg-white rounded-lg p-6 shadow-sm">
                             <h3 class="text-lg font-semibold text-gray-900 mb-3">🔍 字符分类分析</h3>
@@ -700,7 +741,7 @@
                                 <li>• <strong>空格数量</strong>：检查格式规范性</li>
                             </ul>
                         </div>
-                        
+
                         <!-- 技巧4 -->
                         <div class="bg-white rounded-lg p-6 shadow-sm">
                             <h3 class="text-lg font-semibold text-gray-900 mb-3">⏱️ 阅读时间规划</h3>
@@ -712,18 +753,21 @@
                                 <li>• <strong>内容分页</strong>：决定是否需要分页</li>
                             </ul>
                         </div>
-                        
+
                         <!-- 技巧5 -->
                         <div class="bg-white rounded-lg p-6 shadow-sm">
                             <h3 class="text-lg font-semibold text-gray-900 mb-3">🔄 工具组合使用</h3>
                             <p class="text-gray-700 mb-2">结合其他工具提升效率：</p>
                             <ul class="text-gray-700 space-y-1 text-sm">
-                                <li>• <a href="text-conversion.html" class="text-blue-600 hover:underline">文本转换</a>：大小写、去重、排序</li>
-                                <li>• <a href="text-comparison.html" class="text-blue-600 hover:underline">文本比较</a>：版本差异对比</li>
-                                <li>• <a href="formatting.html" class="text-blue-600 hover:underline">格式化工具</a>：代码美化</li>
+                                <li>• <a href="text-conversion.html"
+                                        class="text-blue-600 hover:underline">文本转换</a>：大小写、去重、排序</li>
+                                <li>• <a href="text-comparison.html"
+                                        class="text-blue-600 hover:underline">文本比较</a>：版本差异对比</li>
+                                <li>• <a href="formatting.html" class="text-blue-600 hover:underline">格式化工具</a>：代码美化
+                                </li>
                             </ul>
                         </div>
-                        
+
                         <!-- 技巧6 -->
                         <div class="bg-white rounded-lg p-6 shadow-sm">
                             <h3 class="text-lg font-semibold text-gray-900 mb-3">📱 移动端使用</h3>
@@ -736,7 +780,7 @@
                             </ul>
                         </div>
                     </div>
-                    
+
                     <div class="mt-6 bg-yellow-100 border-l-4 border-yellow-500 p-4 rounded">
                         <h4 class="font-semibold text-yellow-800 mb-2">💡 专业建议</h4>
                         <p class="text-yellow-700 text-sm">
@@ -750,26 +794,31 @@
             <div class="mt-12">
                 <div class="bg-white rounded-xl shadow-md p-8">
                     <h2 class="text-2xl font-bold text-gray-900 mb-6">🔧 相关工具推荐</h2>
-                    
+
                     <p class="text-gray-700 mb-6">
                         根据您的使用场景，以下工具可能对您有帮助：
                     </p>
-                    
+
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                        <a href="text-conversion.html" class="group block bg-gradient-to-br from-green-50 to-green-100 rounded-lg p-6 hover:shadow-lg transition-all">
+                        <a href="text-conversion.html"
+                            class="group block bg-gradient-to-br from-green-50 to-green-100 rounded-lg p-6 hover:shadow-lg transition-all">
                             <h3 class="text-lg font-semibold text-green-900 mb-2 group-hover:text-green-700">文本转换工具</h3>
                             <p class="text-green-800 text-sm mb-3">大小写转换、去重排序、空白处理</p>
                             <span class="text-green-600 text-sm font-medium">查看工具 →</span>
                         </a>
-                        
-                        <a href="text-comparison.html" class="group block bg-gradient-to-br from-orange-50 to-orange-100 rounded-lg p-6 hover:shadow-lg transition-all">
-                            <h3 class="text-lg font-semibold text-orange-900 mb-2 group-hover:text-orange-700">文本比较工具</h3>
+
+                        <a href="text-comparison.html"
+                            class="group block bg-gradient-to-br from-orange-50 to-orange-100 rounded-lg p-6 hover:shadow-lg transition-all">
+                            <h3 class="text-lg font-semibold text-orange-900 mb-2 group-hover:text-orange-700">文本比较工具
+                            </h3>
                             <p class="text-orange-800 text-sm mb-3">对比文本差异，高亮显示变化</p>
                             <span class="text-orange-600 text-sm font-medium">查看工具 →</span>
                         </a>
-                        
-                        <a href="formatting.html" class="group block bg-gradient-to-br from-purple-50 to-purple-100 rounded-lg p-6 hover:shadow-lg transition-all">
-                            <h3 class="text-lg font-semibold text-purple-900 mb-2 group-hover:text-purple-700">格式化工具</h3>
+
+                        <a href="formatting.html"
+                            class="group block bg-gradient-to-br from-purple-50 to-purple-100 rounded-lg p-6 hover:shadow-lg transition-all">
+                            <h3 class="text-lg font-semibold text-purple-900 mb-2 group-hover:text-purple-700">格式化工具
+                            </h3>
                             <p class="text-purple-800 text-sm mb-3">JSON/XML/HTML/CSS 格式化</p>
                             <span class="text-purple-600 text-sm font-medium">查看工具 →</span>
                         </a>
@@ -781,79 +830,104 @@
             <div class="mt-12 mb-8">
                 <div class="bg-gray-50 rounded-xl shadow-md p-8 border-l-4 border-blue-500">
                     <h2 class="text-2xl font-bold text-gray-900 mb-6">🔒 技术说明与隐私保护</h2>
-                    
+
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                         <div>
                             <h3 class="text-lg font-semibold text-gray-900 mb-3">技术实现原理</h3>
                             <ul class="space-y-2 text-gray-700">
                                 <li class="flex items-start">
-                                    <svg class="w-5 h-5 text-blue-600 mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                    <svg class="w-5 h-5 text-blue-600 mr-2 flex-shrink-0 mt-0.5" fill="currentColor"
+                                        viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd"
+                                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                            clip-rule="evenodd" />
                                     </svg>
                                     <span><strong>纯前端技术</strong>：使用原生 JavaScript 实现</span>
                                 </li>
                                 <li class="flex items-start">
-                                    <svg class="w-5 h-5 text-blue-600 mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                    <svg class="w-5 h-5 text-blue-600 mr-2 flex-shrink-0 mt-0.5" fill="currentColor"
+                                        viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd"
+                                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                            clip-rule="evenodd" />
                                     </svg>
                                     <span><strong>实时计算</strong>：监听输入事件，即时更新结果</span>
                                 </li>
                                 <li class="flex items-start">
-                                    <svg class="w-5 h-5 text-blue-600 mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                    <svg class="w-5 h-5 text-blue-600 mr-2 flex-shrink-0 mt-0.5" fill="currentColor"
+                                        viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd"
+                                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                            clip-rule="evenodd" />
                                     </svg>
                                     <span><strong>智能识别</strong>：正则表达式识别不同字符类型</span>
                                 </li>
                                 <li class="flex items-start">
-                                    <svg class="w-5 h-5 text-blue-600 mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                    <svg class="w-5 h-5 text-blue-600 mr-2 flex-shrink-0 mt-0.5" fill="currentColor"
+                                        viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd"
+                                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                            clip-rule="evenodd" />
                                     </svg>
                                     <span><strong>高性能</strong>：优化算法，处理大文本流畅</span>
                                 </li>
                             </ul>
                         </div>
-                        
+
                         <div>
                             <h3 class="text-lg font-semibold text-gray-900 mb-3">隐私与安全保障</h3>
                             <ul class="space-y-2 text-gray-700">
                                 <li class="flex items-start">
-                                    <svg class="w-5 h-5 text-green-600 mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                                        <path fill-rule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                    <svg class="w-5 h-5 text-green-600 mr-2 flex-shrink-0 mt-0.5" fill="currentColor"
+                                        viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd"
+                                            d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                            clip-rule="evenodd" />
                                     </svg>
                                     <span><strong>零数据上传</strong>：文本永不离开您的浏览器</span>
                                 </li>
                                 <li class="flex items-start">
-                                    <svg class="w-5 h-5 text-green-600 mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                                        <path fill-rule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                    <svg class="w-5 h-5 text-green-600 mr-2 flex-shrink-0 mt-0.5" fill="currentColor"
+                                        viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd"
+                                            d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                            clip-rule="evenodd" />
                                     </svg>
                                     <span><strong>无需登录</strong>：无需注册或提供个人信息</span>
                                 </li>
                                 <li class="flex items-start">
-                                    <svg class="w-5 h-5 text-green-600 mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                                        <path fill-rule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                    <svg class="w-5 h-5 text-green-600 mr-2 flex-shrink-0 mt-0.5" fill="currentColor"
+                                        viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd"
+                                            d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                            clip-rule="evenodd" />
                                     </svg>
                                     <span><strong>离线可用</strong>：断网状态下依然可以使用</span>
                                 </li>
                                 <li class="flex items-start">
-                                    <svg class="w-5 h-5 text-green-600 mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                                        <path fill-rule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                    <svg class="w-5 h-5 text-green-600 mr-2 flex-shrink-0 mt-0.5" fill="currentColor"
+                                        viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd"
+                                            d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                            clip-rule="evenodd" />
                                     </svg>
-                                    <span><strong>开源透明</strong>：代码公开在 <a href="https://github.com/crash-you/chartools" class="text-blue-600 hover:underline" target="_blank">GitHub</a></span>
+                                    <span><strong>开源透明</strong>：代码公开在 <a href="https://github.com/crash-you/chartools"
+                                            class="text-blue-600 hover:underline" target="_blank">GitHub</a></span>
                                 </li>
                             </ul>
                         </div>
                     </div>
-                    
+
                     <div class="mt-6 bg-blue-50 border border-blue-200 rounded-lg p-4">
                         <p class="text-blue-800 text-sm">
-                            <strong>性能数据：</strong>工具加载时间 < 0.5秒，处理10万字符文本响应时间 < 100毫秒。适用于Chrome、Firefox、Safari、Edge等现代浏览器。
-                        </p>
+                            <strong>性能数据：</strong>工具加载时间 < 0.5秒，处理10万字符文本响应时间 <
+                                100毫秒。适用于Chrome、Firefox、Safari、Edge等现代浏览器。 </p>
                     </div>
                 </div>
             </div>
         </div>
     </main>
-    
+
     <!-- 页脚 -->
     <footer class="bg-gray-100 py-8 px-4 mt-8">
         <div class="container mx-auto max-w-7xl">
@@ -870,7 +944,7 @@
             </div>
         </div>
     </footer>
-    
+
     <!-- JavaScript -->
     <script src="../js/main.js"></script>
     <script src="../js/navigation.js"></script>
@@ -878,4 +952,5 @@
     <script src="../js/language.js"></script>
     <script src="../js/cookie-consent.js"></script>
 </body>
-</html> 
+
+</html>

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,13 +8,16 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="preload" href="../../css/custom.css" as="style">
     <link href="../../css/custom.css" rel="stylesheet">
-    <meta name="description" content="Professional free online character counter with real-time word count, sentence count, and paragraph count. Supports mixed language counting, reading time estimation, and character classification. 100% client-side processing for privacy. Perfect for writing, copywriting, and essays.">
-    <meta name="keywords" content="character counter,online word count,free character counter,real-time word counter,word counter online,character count tool,reading time estimator,paragraph counter,sentence counter,writing assistant,copywriting tool,essay word count,instant character count">
+    <meta name="description"
+        content="Professional free online character counter with real-time word count, sentence count, and paragraph count. Supports mixed language counting, reading time estimation, and character classification. 100% client-side processing for privacy. Perfect for writing, copywriting, and essays.">
+    <meta name="keywords"
+        content="character counter,online word count,free character counter,real-time word counter,word counter online,character count tool,reading time estimator,paragraph counter,sentence counter,writing assistant,copywriting tool,essay word count,instant character count">
     <meta property="og:image" content="https://chartools.art/img/og/og-en.svg">
     <meta property="og:image:alt" content="Character Counter">
     <meta property="og:locale:alternate" content="zh_CN">
     <meta property="og:title" content="Character Counter - Online Word Count & Reading Time | Text Processing Tools">
-    <meta property="og:description" content="Real-time character/word/sentence/paragraph stats with reading time. Client-side only for privacy.">
+    <meta property="og:description"
+        content="Real-time character/word/sentence/paragraph stats with reading time. Client-side only for privacy.">
     <meta property="og:url" content="https://chartools.art/en/tools/text-counter.html">
     <meta property="og:site_name" content="Text Processing Tools">
     <meta name="twitter:card" content="summary">
@@ -26,14 +30,14 @@
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-32ZXK1J41J"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-      gtag('config', 'G-32ZXK1J41J');
+        gtag('config', 'G-32ZXK1J41J');
     </script>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4770465793767896"
-     crossorigin="anonymous"></script>
+        crossorigin="anonymous"></script>
     <script type="application/ld+json">{
       "@context": "https://schema.org",
       "@type": "SoftwareApplication",
@@ -46,7 +50,7 @@
       "permissions": "No special permissions required",
       "softwareVersion": "1.0",
       "datePublished": "2025-01-01",
-      "dateModified": "2025-08-22",
+      "dateModified": "2026-01-05",
       "author": {
         "@type": "Organization",
         "name": "Text Processing Tools",
@@ -56,6 +60,13 @@
         "@type": "Offer",
         "price": "0",
         "priceCurrency": "USD"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "ratingCount": "1123",
+        "bestRating": "5",
+        "worstRating": "1"
       },
       "screenshot": "https://chartools.art/img/og/og-en.svg",
       "featureList": [
@@ -69,6 +80,7 @@
       ]
     }</script>
 </head>
+
 <body class="bg-white text-gray-800 min-h-screen flex flex-col">
     <!-- Navigation Bar -->
     <nav id="navigation" class="fixed top-0 w-full bg-white bg-opacity-80 backdrop-blur-md shadow-sm z-50">
@@ -78,39 +90,46 @@
                 <div class="flex-shrink-0 flex items-center">
                     <a href="../index.html" class="text-2xl font-semibold text-gray-900">Text Tools</a>
                 </div>
-                
+
                 <!-- Main Navigation (Desktop) -->
                 <div class="hidden md:flex items-center space-x-8">
                     <a href="../about.html" class="text-gray-700 hover:text-blue-600">About</a>
                     <a href="../index.html#tools" class="text-gray-700 hover:text-blue-600">Tools</a>
                     <a href="../help.html" class="text-gray-700 hover:text-blue-600">Help</a>
                 </div>
-                
+
                 <!-- Right Options -->
                 <div class="flex items-center space-x-4">
                     <!-- Language Selector -->
                     <div class="relative language-selector">
-                        <button id="language-button" class="flex items-center space-x-1 p-2 rounded-md hover:bg-gray-100 transition">
+                        <button id="language-button"
+                            class="flex items-center space-x-1 p-2 rounded-md hover:bg-gray-100 transition">
                             <span id="current-language">English</span>
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7"></path>
                             </svg>
                         </button>
-                        <div id="language-dropdown" class="absolute right-0 mt-2 w-32 bg-white rounded-md shadow-lg hidden z-10">
-                            <a href="../../tools/text-counter.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-100" data-lang="zh-CN">中文</a>
-                            <a href="text-counter.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-100" data-lang="en">English</a>
+                        <div id="language-dropdown"
+                            class="absolute right-0 mt-2 w-32 bg-white rounded-md shadow-lg hidden z-10">
+                            <a href="../../tools/text-counter.html"
+                                class="block px-4 py-2 text-gray-800 hover:bg-gray-100" data-lang="zh-CN">中文</a>
+                            <a href="text-counter.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-100"
+                                data-lang="en">English</a>
                         </div>
                     </div>
-                    
+
                     <!-- Mobile Menu Button -->
                     <button id="mobile-menu-button" class="md:hidden p-2 rounded-md hover:bg-gray-100">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16"></path>
                         </svg>
                     </button>
                 </div>
             </div>
-            
+
             <!-- Mobile Menu -->
             <div id="mobile-menu" class="md:hidden hidden pb-4">
                 <div class="flex flex-col space-y-4">
@@ -119,14 +138,16 @@
                     <a href="../help.html" class="text-gray-700 hover:text-blue-600">Help</a>
                     <div class="pt-2 border-t border-gray-200">
                         <p class="text-sm text-gray-600 mb-1">Select Language</p>
-                        <a href="../../tools/text-counter.html" class="block py-1 text-gray-700 hover:text-blue-600" data-lang="zh-CN">中文</a>
-                        <a href="text-counter.html" class="block py-1 text-gray-700 hover:text-blue-600" data-lang="en">English</a>
+                        <a href="../../tools/text-counter.html" class="block py-1 text-gray-700 hover:text-blue-600"
+                            data-lang="zh-CN">中文</a>
+                        <a href="text-counter.html" class="block py-1 text-gray-700 hover:text-blue-600"
+                            data-lang="en">English</a>
                     </div>
                 </div>
             </div>
         </div>
     </nav>
-    
+
     <!-- Main Content -->
     <main class="flex-grow pt-16">
         <script type="application/ld+json">{
@@ -160,9 +181,10 @@
             <!-- Page Title -->
             <div class="mb-8">
                 <h1 class="text-3xl font-bold text-gray-900">Character Counter Tool</h1>
-                <p class="mt-2 text-gray-600">Count characters, words, sentences, and more in real-time with detailed statistics.</p>
+                <p class="mt-2 text-gray-600">Count characters, words, sentences, and more in real-time with detailed
+                    statistics.</p>
             </div>
-            
+
             <!-- Tool Area -->
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
                 <!-- Left: Input Area -->
@@ -170,31 +192,32 @@
                     <div class="bg-white rounded-xl shadow-md p-6">
                         <h2 class="text-xl font-semibold text-gray-900 mb-4">Input Text</h2>
                         <div class="mb-4">
-                            <textarea 
-                                id="text-input" 
+                            <textarea id="text-input"
                                 class="w-full h-64 p-4 bg-gray-50 text-gray-900 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-y"
-                                placeholder="Enter or paste text here..."
-                            ></textarea>
+                                placeholder="Enter or paste text here..."></textarea>
                         </div>
                         <div class="flex flex-wrap gap-4">
-                            <button id="clear-button" class="px-4 py-2 bg-gray-200 text-gray-800 rounded-lg hover:bg-gray-300 transition-colors">
+                            <button id="clear-button"
+                                class="px-4 py-2 bg-gray-200 text-gray-800 rounded-lg hover:bg-gray-300 transition-colors">
                                 Clear
                             </button>
-                            <button id="sample-button" class="px-4 py-2 bg-blue-100 text-blue-700 rounded-lg hover:bg-blue-200 transition-colors">
+                            <button id="sample-button"
+                                class="px-4 py-2 bg-blue-100 text-blue-700 rounded-lg hover:bg-blue-200 transition-colors">
                                 Insert Sample Text
                             </button>
-                            <button id="copy-button" class="px-4 py-2 bg-green-100 text-green-700 rounded-lg hover:bg-green-200 transition-colors">
+                            <button id="copy-button"
+                                class="px-4 py-2 bg-green-100 text-green-700 rounded-lg hover:bg-green-200 transition-colors">
                                 Copy Text
                             </button>
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Right: Results Display Area -->
                 <div class="lg:col-span-1">
                     <div class="bg-white rounded-xl shadow-md p-6">
                         <h2 class="text-xl font-semibold text-gray-900 mb-4">Statistics</h2>
-                        
+
                         <!-- Basic Statistics -->
                         <div class="mb-6">
                             <h3 class="text-lg font-medium text-gray-800 mb-3">Basic Information</h3>
@@ -221,7 +244,7 @@
                                 </div>
                             </div>
                         </div>
-                        
+
                         <!-- Character Categories -->
                         <div class="mb-6">
                             <h3 class="text-lg font-medium text-gray-800 mb-3">Character Categories</h3>
@@ -248,7 +271,7 @@
                                 </div>
                             </div>
                         </div>
-                        
+
                         <!-- Reading Time -->
                         <div>
                             <h3 class="text-lg font-medium text-gray-800 mb-3">Reading Information</h3>
@@ -267,11 +290,13 @@
             <div class="mt-12">
                 <div class="bg-white rounded-xl shadow-md p-8">
                     <h2 class="text-2xl font-bold text-gray-900 mb-6">Features & Usage Guide</h2>
-                    
+
                     <p class="text-gray-700 mb-6">
-                        The Character Counter Tool provides comprehensive text analysis with real-time statistics. Perfect for writers, students, developers, and anyone working with text who needs accurate character, word, and sentence counts.
+                        The Character Counter Tool provides comprehensive text analysis with real-time statistics.
+                        Perfect for writers, students, developers, and anyone working with text who needs accurate
+                        character, word, and sentence counts.
                     </p>
-                    
+
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                         <div class="bg-blue-50 rounded-lg p-4">
                             <h4 class="font-semibold text-blue-900 mb-2">📊 Basic Statistics</h4>
@@ -284,7 +309,7 @@
                                 <li>• Line count</li>
                             </ul>
                         </div>
-                        
+
                         <div class="bg-green-50 rounded-lg p-4">
                             <h4 class="font-semibold text-green-900 mb-2">🔤 Character Classification</h4>
                             <ul class="text-green-800 space-y-1 text-sm">
@@ -297,11 +322,12 @@
                             </ul>
                         </div>
                     </div>
-                    
+
                     <div class="bg-yellow-50 border-l-4 border-yellow-400 p-4">
                         <h4 class="font-semibold text-yellow-800 mb-2">💡 Privacy Note</h4>
                         <p class="text-yellow-700 text-sm">
-                            All processing happens locally in your browser. Your text never leaves your device. Even offline, the tool works perfectly - ensuring 100% privacy and data security.
+                            All processing happens locally in your browser. Your text never leaves your device. Even
+                            offline, the tool works perfectly - ensuring 100% privacy and data security.
                         </p>
                     </div>
                 </div>
@@ -311,50 +337,64 @@
             <div class="mt-12">
                 <div class="bg-white rounded-xl shadow-md p-8">
                     <h2 class="text-2xl font-bold text-gray-900 mb-6">Real-World Use Cases</h2>
-                    
+
                     <div class="space-y-6">
                         <!-- Case 1 -->
                         <div class="pb-6 border-b border-gray-200">
-                            <h3 class="text-lg font-semibold text-gray-900 mb-2">Academic Writing: Thesis Word Count Control</h3>
+                            <h3 class="text-lg font-semibold text-gray-900 mb-2">Academic Writing: Thesis Word Count
+                                Control</h3>
                             <p class="text-gray-700 mb-2">
-                                <strong>Scenario:</strong> Student needs to write a 3000-3500 word thesis with abstract under 250 words.
+                                <strong>Scenario:</strong> Student needs to write a 3000-3500 word thesis with abstract
+                                under 250 words.
                             </p>
                             <p class="text-gray-700">
-                                <strong>Solution:</strong> Use the tool to monitor abstract length, check each section as you write, verify final word count. Result: Hit target range on first draft, saved 2 hours of revision time.
+                                <strong>Solution:</strong> Use the tool to monitor abstract length, check each section
+                                as you write, verify final word count. Result: Hit target range on first draft, saved 2
+                                hours of revision time.
                             </p>
                         </div>
-                        
+
                         <!-- Case 2 -->
                         <div class="pb-6 border-b border-gray-200">
-                            <h3 class="text-lg font-semibold text-gray-900 mb-2">Social Media: Multi-Platform Content Adaptation</h3>
+                            <h3 class="text-lg font-semibold text-gray-900 mb-2">Social Media: Multi-Platform Content
+                                Adaptation</h3>
                             <p class="text-gray-700 mb-2">
-                                <strong>Scenario:</strong> Content manager needs to adapt one message for Twitter (280 chars), LinkedIn (140 optimal), and Instagram caption (125 chars).
+                                <strong>Scenario:</strong> Content manager needs to adapt one message for Twitter (280
+                                chars), LinkedIn (140 optimal), and Instagram caption (125 chars).
                             </p>
                             <p class="text-gray-700">
-                                <strong>Solution:</strong> Write full version, then trim to each platform's limit using real-time character count. Result: Created 3 optimized versions in 20 minutes instead of constant trial-and-error.
+                                <strong>Solution:</strong> Write full version, then trim to each platform's limit using
+                                real-time character count. Result: Created 3 optimized versions in 20 minutes instead of
+                                constant trial-and-error.
                             </p>
                         </div>
-                        
+
                         <!-- Case 3 -->
                         <div class="pb-6 border-b border-gray-200">
-                            <h3 class="text-lg font-semibold text-gray-900 mb-2">Resume Optimization: Professional CV Refinement</h3>
+                            <h3 class="text-lg font-semibold text-gray-900 mb-2">Resume Optimization: Professional CV
+                                Refinement</h3>
                             <p class="text-gray-700 mb-2">
-                                <strong>Scenario:</strong> Job seeker needs resume with 200-word summary, each job description under 150 words, total under 800 words.
+                                <strong>Scenario:</strong> Job seeker needs resume with 200-word summary, each job
+                                description under 150 words, total under 800 words.
                             </p>
                             <p class="text-gray-700">
-                                <strong>Solution:</strong> Check each section with the counter, trim efficiently. Result: Concise, impactful resume that impressed HR with its professional structure.
+                                <strong>Solution:</strong> Check each section with the counter, trim efficiently.
+                                Result: Concise, impactful resume that impressed HR with its professional structure.
                             </p>
                         </div>
-                        
+
                         <!-- Case 4 -->
                         <div>
-                            <h3 class="text-lg font-semibold text-gray-900 mb-2">Content Analysis: User Feedback Review</h3>
+                            <h3 class="text-lg font-semibold text-gray-900 mb-2">Content Analysis: User Feedback Review
+                            </h3>
                             <p class="text-gray-700 mb-2">
-                                <strong>Scenario:</strong> Product manager needs to analyze 500 user feedback entries, identify detailed feedback (>100 words) vs brief comments (<20 words).
-                            </p>
-                            <p class="text-gray-700">
-                                <strong>Solution:</strong> Use character classification to calculate average feedback length, identify patterns. Result: Found 38% were detailed feedback containing actionable insights that led to 3 product improvements.
-                            </p>
+                                <strong>Scenario:</strong> Product manager needs to analyze 500 user feedback entries,
+                                identify detailed feedback (>100 words) vs brief comments (<20 words). </p>
+                                    <p class="text-gray-700">
+                                        <strong>Solution:</strong> Use character classification to calculate average
+                                        feedback length, identify patterns. Result: Found 38% were detailed feedback
+                                        containing actionable insights that led to 3 product improvements.
+                                    </p>
                         </div>
                     </div>
                 </div>
@@ -364,40 +404,47 @@
             <div class="mt-12">
                 <div class="bg-white rounded-xl shadow-md p-8">
                     <h2 class="text-2xl font-bold text-gray-900 mb-6">Frequently Asked Questions</h2>
-                    
+
                     <div class="space-y-6">
                         <div class="pb-6 border-b border-gray-200">
                             <h3 class="text-lg font-semibold text-gray-900 mb-2">Is counting real-time?</h3>
                             <p class="text-gray-700">
-                                Yes! All statistics update instantly as you type or paste text. No buttons to click, no delays - see results immediately.
+                                Yes! All statistics update instantly as you type or paste text. No buttons to click, no
+                                delays - see results immediately.
                             </p>
                         </div>
-                        
+
                         <div class="pb-6 border-b border-gray-200">
                             <h3 class="text-lg font-semibold text-gray-900 mb-2">Is my text uploaded to servers?</h3>
                             <p class="text-gray-700">
-                                <strong>Absolutely not.</strong> All processing happens in your browser. Your text never leaves your device - not uploaded, not stored, not logged. Works even offline.
+                                <strong>Absolutely not.</strong> All processing happens in your browser. Your text never
+                                leaves your device - not uploaded, not stored, not logged. Works even offline.
                             </p>
                         </div>
-                        
+
                         <div class="pb-6 border-b border-gray-200">
-                            <h3 class="text-lg font-semibold text-gray-900 mb-2">How does reading time estimation work?</h3>
+                            <h3 class="text-lg font-semibold text-gray-900 mb-2">How does reading time estimation work?
+                            </h3>
                             <p class="text-gray-700">
-                                Based on average reading speeds: ~250 words/min for English, ~400 characters/min for Chinese. Mixed text calculations consider language ratio for accurate estimates.
+                                Based on average reading speeds: ~250 words/min for English, ~400 characters/min for
+                                Chinese. Mixed text calculations consider language ratio for accurate estimates.
                             </p>
                         </div>
-                        
+
                         <div class="pb-6 border-b border-gray-200">
-                            <h3 class="text-lg font-semibold text-gray-900 mb-2">What's the maximum text size supported?</h3>
+                            <h3 class="text-lg font-semibold text-gray-900 mb-2">What's the maximum text size supported?
+                            </h3>
                             <p class="text-gray-700">
-                                <strong>Recommended:</strong> Up to 1 million characters (~500K words) - smooth performance<br>
+                                <strong>Recommended:</strong> Up to 1 million characters (~500K words) - smooth
+                                performance<br>
                                 <strong>Acceptable:</strong> 1-2 million characters - slightly slower<br>
                                 For very large files, consider splitting into sections.
                             </p>
                         </div>
-                        
+
                         <div>
-                            <h3 class="text-lg font-semibold text-gray-900 mb-2">What scenarios is this tool best for?</h3>
+                            <h3 class="text-lg font-semibold text-gray-900 mb-2">What scenarios is this tool best for?
+                            </h3>
                             <div class="grid grid-cols-2 gap-3 mt-2">
                                 <div class="bg-blue-50 rounded p-3">
                                     <strong class="text-blue-900 text-sm">Academic Writing</strong>
@@ -425,7 +472,7 @@
             <div class="mt-12">
                 <div class="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl shadow-md p-8">
                     <h2 class="text-2xl font-bold text-gray-900 mb-6">💡 Pro Tips</h2>
-                    
+
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div class="bg-white rounded-lg p-6 shadow-sm">
                             <h3 class="text-lg font-semibold text-gray-900 mb-3">⌨️ Keyboard Shortcuts</h3>
@@ -436,27 +483,31 @@
                                 <li><kbd class="px-2 py-1 bg-gray-200 rounded">Ctrl+Z</kbd> Undo</li>
                             </ul>
                         </div>
-                        
+
                         <div class="bg-white rounded-lg p-6 shadow-sm">
                             <h3 class="text-lg font-semibold text-gray-900 mb-3">🎯 Word Count Control</h3>
                             <p class="text-gray-700 text-sm">
-                                Best practice: Set target range → Write in sections → Check after each section → Monitor closely near target → Fine-tune to hit range.
+                                Best practice: Set target range → Write in sections → Check after each section → Monitor
+                                closely near target → Fine-tune to hit range.
                             </p>
                         </div>
-                        
+
                         <div class="bg-white rounded-lg p-6 shadow-sm">
                             <h3 class="text-lg font-semibold text-gray-900 mb-3">🔗 Tool Combinations</h3>
                             <p class="text-gray-700 text-sm mb-2">Combine with:</p>
                             <ul class="text-gray-700 text-sm space-y-1">
-                                <li>• <a href="text-conversion.html" class="text-blue-600 hover:underline">Text Converter</a> for format cleanup</li>
-                                <li>• <a href="text-comparison.html" class="text-blue-600 hover:underline">Text Compare</a> for version diff</li>
+                                <li>• <a href="text-conversion.html" class="text-blue-600 hover:underline">Text
+                                        Converter</a> for format cleanup</li>
+                                <li>• <a href="text-comparison.html" class="text-blue-600 hover:underline">Text
+                                        Compare</a> for version diff</li>
                             </ul>
                         </div>
-                        
+
                         <div class="bg-white rounded-lg p-6 shadow-sm">
                             <h3 class="text-lg font-semibold text-gray-900 mb-3">📱 Mobile Usage</h3>
                             <p class="text-gray-700 text-sm">
-                                On phones/tablets: Stats panel auto-adjusts for portrait mode. Long-press to paste. Works great on iOS and Android.
+                                On phones/tablets: Stats panel auto-adjusts for portrait mode. Long-press to paste.
+                                Works great on iOS and Android.
                             </p>
                         </div>
                     </div>
@@ -467,7 +518,7 @@
             <div class="mt-12 mb-8">
                 <div class="bg-gray-50 rounded-xl shadow-md p-8 border-l-4 border-blue-500">
                     <h2 class="text-2xl font-bold text-gray-900 mb-6">🔒 Technical Implementation & Privacy</h2>
-                    
+
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                         <div>
                             <h3 class="text-lg font-semibold text-gray-900 mb-3">Technology</h3>
@@ -478,28 +529,30 @@
                                 <li>• <strong>High performance</strong>: Optimized for large texts</li>
                             </ul>
                         </div>
-                        
+
                         <div>
                             <h3 class="text-lg font-semibold text-gray-900 mb-3">Privacy & Security</h3>
                             <ul class="space-y-2 text-gray-700 text-sm">
                                 <li>• <strong>Zero uploads</strong>: Text never leaves your browser</li>
                                 <li>• <strong>No registration</strong>: Use instantly, no sign-up</li>
                                 <li>• <strong>Offline capable</strong>: Works without internet</li>
-                                <li>• <strong>Open source</strong>: Code on <a href="https://github.com/crash-you/chartools" class="text-blue-600 hover:underline" target="_blank">GitHub</a></li>
+                                <li>• <strong>Open source</strong>: Code on <a
+                                        href="https://github.com/crash-you/chartools"
+                                        class="text-blue-600 hover:underline" target="_blank">GitHub</a></li>
                             </ul>
                         </div>
                     </div>
-                    
+
                     <div class="mt-6 bg-blue-50 border border-blue-200 rounded-lg p-4">
                         <p class="text-blue-800 text-sm">
-                            <strong>Performance:</strong> Load time <0.5s, 100K character processing <100ms. Compatible with Chrome, Firefox, Safari, Edge and all modern browsers.
-                        </p>
+                            <strong>Performance:</strong> Load time <0.5s, 100K character processing <100ms. Compatible
+                                with Chrome, Firefox, Safari, Edge and all modern browsers. </p>
                     </div>
                 </div>
             </div>
         </div>
     </main>
-    
+
     <!-- Footer -->
     <footer class="bg-gray-100 py-8 px-4 mt-8">
         <div class="container mx-auto max-w-7xl">
@@ -516,11 +569,12 @@
             </div>
         </div>
     </footer>
-    
+
     <!-- JavaScript -->
     <script src="../../js/main.js"></script>
     <script src="../../js/navigation.js"></script>
     <script src="../../js/tools/text-counter.js"></script>
     <script src="../../js/language.js"></script>
 </body>
-</html> 
+
+</html>

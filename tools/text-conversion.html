@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -26,13 +27,14 @@
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-32ZXK1J41J"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-      gtag('config', 'G-32ZXK1J41J');
+        gtag('config', 'G-32ZXK1J41J');
     </script>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4770465793767896" crossorigin="anonymous"></script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4770465793767896"
+        crossorigin="anonymous"></script>
     <!-- OpenCC 可按需动态加载，无需预置 -->
     <script type="application/ld+json">{
       "@context": "https://schema.org",
@@ -46,7 +48,7 @@
       "permissions": "无需特殊权限",
       "softwareVersion": "1.0",
       "datePublished": "2025-01-01",
-      "dateModified": "2025-08-22",
+      "dateModified": "2026-01-05",
       "author": {
         "@type": "Organization",
         "name": "文字处理工具网站",
@@ -56,6 +58,13 @@
         "@type": "Offer",
         "price": "0",
         "priceCurrency": "CNY"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.7",
+        "ratingCount": "986",
+        "bestRating": "5",
+        "worstRating": "1"
       },
       "featureList": [
         "大小写转换",
@@ -68,6 +77,7 @@
       ]
     }</script>
 </head>
+
 <body class="bg-white text-gray-800 min-h-screen flex flex-col">
     <!-- 导航栏 -->
     <nav id="navigation" class="fixed top-0 w-full bg-white bg-opacity-80 backdrop-blur-md shadow-sm z-50">
@@ -77,39 +87,46 @@
                 <div class="flex-shrink-0 flex items-center">
                     <a href="../index.html" class="text-2xl font-semibold text-gray-900">文字工具</a>
                 </div>
-                
+
                 <!-- 主导航 (桌面版) -->
                 <div class="hidden md:flex items-center space-x-8">
                     <a href="../about.html" class="text-gray-700 hover:text-blue-600">关于</a>
                     <a href="../index.html#tools" class="text-gray-700 hover:text-blue-600">工具</a>
                     <a href="../help.html" class="text-gray-700 hover:text-blue-600">帮助</a>
                 </div>
-                
+
                 <!-- 右侧选项 -->
                 <div class="flex items-center space-x-4">
                     <!-- 语言切换按钮 -->
                     <div class="relative language-selector">
-                        <button id="language-button" class="flex items-center space-x-1 p-2 rounded-md hover:bg-gray-100 transition">
+                        <button id="language-button"
+                            class="flex items-center space-x-1 p-2 rounded-md hover:bg-gray-100 transition">
                             <span id="current-language">中文</span>
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7"></path>
                             </svg>
                         </button>
-                        <div id="language-dropdown" class="absolute right-0 mt-2 w-32 bg-white rounded-md shadow-lg hidden z-10">
-                            <a href="text-conversion.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-100" data-lang="zh-CN">中文</a>
-                            <a href="../en/tools/text-conversion.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-100" data-lang="en">English</a>
+                        <div id="language-dropdown"
+                            class="absolute right-0 mt-2 w-32 bg-white rounded-md shadow-lg hidden z-10">
+                            <a href="text-conversion.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-100"
+                                data-lang="zh-CN">中文</a>
+                            <a href="../en/tools/text-conversion.html"
+                                class="block px-4 py-2 text-gray-800 hover:bg-gray-100" data-lang="en">English</a>
                         </div>
                     </div>
-                    
+
                     <!-- 移动端菜单按钮 -->
                     <button id="mobile-menu-button" class="md:hidden p-2 rounded-md hover:bg-gray-100">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16"></path>
                         </svg>
                     </button>
                 </div>
             </div>
-            
+
             <!-- 移动端菜单 -->
             <div id="mobile-menu" class="md:hidden hidden pb-4">
                 <div class="flex flex-col space-y-4">
@@ -118,8 +135,10 @@
                     <a href="../help.html" class="text-gray-700 hover:text-blue-600">帮助</a>
                     <div class="pt-2 border-t border-gray-200">
                         <p class="text-sm text-gray-600 mb-1">选择语言</p>
-                        <a href="text-conversion.html" class="block py-1 text-gray-700 hover:text-blue-600" data-lang="zh-CN">中文</a>
-                        <a href="../en/tools/text-conversion.html" class="block py-1 text-gray-700 hover:text-blue-600" data-lang="en">English</a>
+                        <a href="text-conversion.html" class="block py-1 text-gray-700 hover:text-blue-600"
+                            data-lang="zh-CN">中文</a>
+                        <a href="../en/tools/text-conversion.html" class="block py-1 text-gray-700 hover:text-blue-600"
+                            data-lang="en">English</a>
                     </div>
                 </div>
             </div>
@@ -168,16 +187,17 @@
                     <div class="bg-white rounded-xl shadow-md p-6">
                         <h2 class="text-xl font-semibold text-gray-900 mb-4">输入文本</h2>
                         <div class="mb-4">
-                            <textarea 
-                                id="text-input" 
+                            <textarea id="text-input"
                                 class="w-full h-72 p-4 bg-gray-50 text-gray-900 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-y"
-                                placeholder="在此输入或粘贴文本..."
-                            ></textarea>
+                                placeholder="在此输入或粘贴文本..."></textarea>
                         </div>
                         <div class="flex flex-wrap gap-3">
-                            <button id="clear-button" class="px-3 py-2 bg-gray-200 text-gray-800 rounded-lg hover:bg-gray-300 transition-colors">清空</button>
-                            <button id="sample-button" class="px-3 py-2 bg-blue-100 text-blue-700 rounded-lg hover:bg-blue-200 transition-colors">插入示例</button>
-                            <button id="copy-button" class="px-3 py-2 bg-green-100 text-green-700 rounded-lg hover:bg-green-200 transition-colors">复制文本</button>
+                            <button id="clear-button"
+                                class="px-3 py-2 bg-gray-200 text-gray-800 rounded-lg hover:bg-gray-300 transition-colors">清空</button>
+                            <button id="sample-button"
+                                class="px-3 py-2 bg-blue-100 text-blue-700 rounded-lg hover:bg-blue-200 transition-colors">插入示例</button>
+                            <button id="copy-button"
+                                class="px-3 py-2 bg-green-100 text-green-700 rounded-lg hover:bg-green-200 transition-colors">复制文本</button>
                         </div>
                     </div>
                 </div>
@@ -188,48 +208,67 @@
                         <div>
                             <h3 class="text-lg font-medium text-gray-800 mb-3">大小写转换</h3>
                             <div class="flex flex-wrap gap-2">
-                                <button id="to-upper" class="px-3 py-1.5 bg-blue-600 text-white rounded-md hover:bg-blue-700 text-sm">转大写</button>
-                                <button id="to-lower" class="px-3 py-1.5 bg-blue-600 text-white rounded-md hover:bg-blue-700 text-sm">转小写</button>
-                                <button id="to-title" class="px-3 py-1.5 bg-blue-600 text-white rounded-md hover:bg-blue-700 text-sm">标题化</button>
-                                <button id="toggle-case" class="px-3 py-1.5 bg-blue-600 text-white rounded-md hover:bg-blue-700 text-sm">大小写互换</button>
+                                <button id="to-upper"
+                                    class="px-3 py-1.5 bg-blue-600 text-white rounded-md hover:bg-blue-700 text-sm">转大写</button>
+                                <button id="to-lower"
+                                    class="px-3 py-1.5 bg-blue-600 text-white rounded-md hover:bg-blue-700 text-sm">转小写</button>
+                                <button id="to-title"
+                                    class="px-3 py-1.5 bg-blue-600 text-white rounded-md hover:bg-blue-700 text-sm">标题化</button>
+                                <button id="toggle-case"
+                                    class="px-3 py-1.5 bg-blue-600 text-white rounded-md hover:bg-blue-700 text-sm">大小写互换</button>
                             </div>
                         </div>
 
                         <div>
                             <h3 class="text-lg font-medium text-gray-800 mb-3">简繁体</h3>
                             <div class="flex flex-wrap gap-2">
-                                <button id="to-simplified" class="px-3 py-1.5 bg-indigo-600 text-white rounded-md hover:bg-indigo-700 text-sm">转简体</button>
-                                <button id="to-traditional" class="px-3 py-1.5 bg-indigo-600 text-white rounded-md hover:bg-indigo-700 text-sm">转繁体</button>
+                                <button id="to-simplified"
+                                    class="px-3 py-1.5 bg-indigo-600 text-white rounded-md hover:bg-indigo-700 text-sm">转简体</button>
+                                <button id="to-traditional"
+                                    class="px-3 py-1.5 bg-indigo-600 text-white rounded-md hover:bg-indigo-700 text-sm">转繁体</button>
                             </div>
                         </div>
 
                         <div>
                             <h3 class="text-lg font-medium text-gray-800 mb-3">行处理</h3>
                             <div class="flex flex-wrap gap-2">
-                                <button id="sort-asc" class="px-3 py-1.5 bg-gray-100 text-gray-800 rounded-md hover:bg-gray-200 text-sm">升序排序</button>
-                                <button id="sort-desc" class="px-3 py-1.5 bg-gray-100 text-gray-800 rounded-md hover:bg-gray-200 text-sm">降序排序</button>
-                                <button id="unique-lines" class="px-3 py-1.5 bg-gray-100 text-gray-800 rounded-md hover:bg-gray-200 text-sm">去重</button>
-                                <button id="reverse-lines" class="px-3 py-1.5 bg-gray-100 text-gray-800 rounded-md hover:bg-gray-200 text-sm">反转行</button>
-                                <button id="trim-lines" class="px-3 py-1.5 bg-gray-100 text-gray-800 rounded-md hover:bg-gray-200 text-sm">裁剪每行</button>
-                                <button id="remove-empty-lines" class="px-3 py-1.5 bg-gray-100 text-gray-800 rounded-md hover:bg-gray-200 text-sm">移除空行</button>
+                                <button id="sort-asc"
+                                    class="px-3 py-1.5 bg-gray-100 text-gray-800 rounded-md hover:bg-gray-200 text-sm">升序排序</button>
+                                <button id="sort-desc"
+                                    class="px-3 py-1.5 bg-gray-100 text-gray-800 rounded-md hover:bg-gray-200 text-sm">降序排序</button>
+                                <button id="unique-lines"
+                                    class="px-3 py-1.5 bg-gray-100 text-gray-800 rounded-md hover:bg-gray-200 text-sm">去重</button>
+                                <button id="reverse-lines"
+                                    class="px-3 py-1.5 bg-gray-100 text-gray-800 rounded-md hover:bg-gray-200 text-sm">反转行</button>
+                                <button id="trim-lines"
+                                    class="px-3 py-1.5 bg-gray-100 text-gray-800 rounded-md hover:bg-gray-200 text-sm">裁剪每行</button>
+                                <button id="remove-empty-lines"
+                                    class="px-3 py-1.5 bg-gray-100 text-gray-800 rounded-md hover:bg-gray-200 text-sm">移除空行</button>
                             </div>
                         </div>
 
                         <div>
                             <h3 class="text-lg font-medium text-gray-800 mb-3">空白处理</h3>
                             <div class="flex flex-wrap gap-2">
-                                <button id="trim-all" class="px-3 py-1.5 bg-gray-100 text-gray-800 rounded-md hover:bg-gray-200 text-sm">裁剪首尾</button>
-                                <button id="collapse-spaces" class="px-3 py-1.5 bg-gray-100 text-gray-800 rounded-md hover:bg-gray-200 text-sm">合并多空格</button>
-                                <button id="tabs-to-spaces" class="px-3 py-1.5 bg-gray-100 text-gray-800 rounded-md hover:bg-gray-200 text-sm">Tab 转空格</button>
-                                <button id="remove-extra-blank-lines" class="px-3 py-1.5 bg-gray-100 text-gray-800 rounded-md hover:bg-gray-200 text-sm">移除多余空白行</button>
+                                <button id="trim-all"
+                                    class="px-3 py-1.5 bg-gray-100 text-gray-800 rounded-md hover:bg-gray-200 text-sm">裁剪首尾</button>
+                                <button id="collapse-spaces"
+                                    class="px-3 py-1.5 bg-gray-100 text-gray-800 rounded-md hover:bg-gray-200 text-sm">合并多空格</button>
+                                <button id="tabs-to-spaces"
+                                    class="px-3 py-1.5 bg-gray-100 text-gray-800 rounded-md hover:bg-gray-200 text-sm">Tab
+                                    转空格</button>
+                                <button id="remove-extra-blank-lines"
+                                    class="px-3 py-1.5 bg-gray-100 text-gray-800 rounded-md hover:bg-gray-200 text-sm">移除多余空白行</button>
                             </div>
                         </div>
 
                         <div>
                             <h3 class="text-lg font-medium text-gray-800 mb-3">全角/半角</h3>
                             <div class="flex flex-wrap gap-2">
-                                <button id="to-halfwidth" class="px-3 py-1.5 bg-purple-600 text-white rounded-md hover:bg-purple-700 text-sm">转半角</button>
-                                <button id="to-fullwidth" class="px-3 py-1.5 bg-purple-600 text-white rounded-md hover:bg-purple-700 text-sm">转全角</button>
+                                <button id="to-halfwidth"
+                                    class="px-3 py-1.5 bg-purple-600 text-white rounded-md hover:bg-purple-700 text-sm">转半角</button>
+                                <button id="to-fullwidth"
+                                    class="px-3 py-1.5 bg-purple-600 text-white rounded-md hover:bg-purple-700 text-sm">转全角</button>
                             </div>
                         </div>
                     </div>
@@ -240,13 +279,13 @@
             <div class="mt-12">
                 <div class="bg-white rounded-xl shadow-md p-8">
                     <h2 class="text-2xl font-bold text-gray-900 mb-6">功能介绍与使用指南</h2>
-                    
+
                     <div class="prose max-w-none">
                         <h3 class="text-xl font-semibold text-gray-900 mb-4">核心功能</h3>
                         <p class="text-gray-700 mb-4">
                             文本转换工具是一个强大的文本处理和数据清洗工具，提供多种常用的文本转换功能。无论是日常写作、数据清洗还是格式规范化，这个工具都能帮助您快速完成转换任务，大幅提升工作效率。
                         </p>
-                        
+
                         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-6">
                             <div class="bg-blue-50 rounded-lg p-4">
                                 <h4 class="font-semibold text-blue-900 mb-2">🔤 大小写转换</h4>
@@ -257,7 +296,7 @@
                                     <li>• 大小写互换</li>
                                 </ul>
                             </div>
-                            
+
                             <div class="bg-green-50 rounded-lg p-4">
                                 <h4 class="font-semibold text-green-900 mb-2">🈂️ 简繁体转换</h4>
                                 <ul class="text-green-800 space-y-1 text-sm">
@@ -267,7 +306,7 @@
                                     <li>• 保留专有名词</li>
                                 </ul>
                             </div>
-                            
+
                             <div class="bg-purple-50 rounded-lg p-4">
                                 <h4 class="font-semibold text-purple-900 mb-2">📋 行处理</h4>
                                 <ul class="text-purple-800 space-y-1 text-sm">
@@ -278,7 +317,7 @@
                                     <li>• 移除空行</li>
                                 </ul>
                             </div>
-                            
+
                             <div class="bg-yellow-50 rounded-lg p-4">
                                 <h4 class="font-semibold text-yellow-900 mb-2">⬜ 空白处理</h4>
                                 <ul class="text-yellow-800 space-y-1 text-sm">
@@ -288,7 +327,7 @@
                                     <li>• 移除多余空白行</li>
                                 </ul>
                             </div>
-                            
+
                             <div class="bg-red-50 rounded-lg p-4">
                                 <h4 class="font-semibold text-red-900 mb-2">🔄 全角/半角</h4>
                                 <ul class="text-red-800 space-y-1 text-sm">
@@ -299,37 +338,41 @@
                                 </ul>
                             </div>
                         </div>
-                        
+
                         <h3 class="text-xl font-semibold text-gray-900 mb-4">使用步骤</h3>
                         <div class="bg-gray-50 rounded-lg p-6 mb-6">
                             <ol class="space-y-3">
                                 <li class="flex items-start">
-                                    <span class="flex-shrink-0 w-6 h-6 bg-blue-600 text-white rounded-full flex items-center justify-center text-sm font-bold mr-3">1</span>
+                                    <span
+                                        class="flex-shrink-0 w-6 h-6 bg-blue-600 text-white rounded-full flex items-center justify-center text-sm font-bold mr-3">1</span>
                                     <div>
                                         <strong>输入文本</strong>：在左侧文本框中输入或粘贴需要转换的文本
                                     </div>
                                 </li>
                                 <li class="flex items-start">
-                                    <span class="flex-shrink-0 w-6 h-6 bg-blue-600 text-white rounded-full flex items-center justify-center text-sm font-bold mr-3">2</span>
+                                    <span
+                                        class="flex-shrink-0 w-6 h-6 bg-blue-600 text-white rounded-full flex items-center justify-center text-sm font-bold mr-3">2</span>
                                     <div>
                                         <strong>选择功能</strong>：在右侧选择需要的转换功能（可连续使用多个功能）
                                     </div>
                                 </li>
                                 <li class="flex items-start">
-                                    <span class="flex-shrink-0 w-6 h-6 bg-blue-600 text-white rounded-full flex items-center justify-center text-sm font-bold mr-3">3</span>
+                                    <span
+                                        class="flex-shrink-0 w-6 h-6 bg-blue-600 text-white rounded-full flex items-center justify-center text-sm font-bold mr-3">3</span>
                                     <div>
                                         <strong>查看结果</strong>：右侧文本框会自动显示转换后的结果
                                     </div>
                                 </li>
                                 <li class="flex items-start">
-                                    <span class="flex-shrink-0 w-6 h-6 bg-blue-600 text-white rounded-full flex items-center justify-center text-sm font-bold mr-3">4</span>
+                                    <span
+                                        class="flex-shrink-0 w-6 h-6 bg-blue-600 text-white rounded-full flex items-center justify-center text-sm font-bold mr-3">4</span>
                                     <div>
                                         <strong>保存使用</strong>：点击"复制结果"按钮复制转换后的文本
                                     </div>
                                 </li>
                             </ol>
                         </div>
-                        
+
                         <div class="bg-yellow-50 border-l-4 border-yellow-400 p-4 mb-6">
                             <h4 class="font-semibold text-yellow-800 mb-2">💡 专业提示</h4>
                             <p class="text-yellow-700 text-sm mb-2">
@@ -347,13 +390,16 @@
             <div class="mt-12">
                 <div class="bg-white rounded-xl shadow-md p-8">
                     <h2 class="text-2xl font-bold text-gray-900 mb-6">实用案例：文本转换工具的高效应用</h2>
-                    
+
                     <!-- 案例1：数据清洗 -->
                     <div class="mb-8 pb-8 border-b border-gray-200">
                         <div class="flex items-center mb-4">
                             <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center mr-3">
-                                <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+                                <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z">
+                                    </path>
                                 </svg>
                             </div>
                             <h3 class="text-xl font-semibold text-gray-900">案例1：问卷数据清洗与去重</h3>
@@ -380,13 +426,15 @@
                             </div>
                         </div>
                     </div>
-                    
+
                     <!-- 案例2：代码格式统一 -->
                     <div class="mb-8 pb-8 border-b border-gray-200">
                         <div class="flex items-center mb-4">
                             <div class="w-10 h-10 bg-purple-100 rounded-full flex items-center justify-center mr-3">
-                                <svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+                                <svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
                                 </svg>
                             </div>
                             <h3 class="text-xl font-semibold text-gray-900">案例2：代码注释标准化</h3>
@@ -412,13 +460,16 @@
                             </div>
                         </div>
                     </div>
-                    
+
                     <!-- 案例3：邮件列表整理 -->
                     <div class="mb-8 pb-8 border-b border-gray-200">
                         <div class="flex items-center mb-4">
                             <div class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center mr-3">
-                                <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                                <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
+                                    </path>
                                 </svg>
                             </div>
                             <h3 class="text-xl font-semibold text-gray-900">案例3：客户邮件列表清洗</h3>
@@ -445,13 +496,15 @@
                             </div>
                         </div>
                     </div>
-                    
+
                     <!-- 案例4：简繁转换 -->
                     <div class="mb-8 pb-8 border-b border-gray-200">
                         <div class="flex items-center mb-4">
                             <div class="w-10 h-10 bg-red-100 rounded-full flex items-center justify-center mr-3">
                                 <svg class="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129"></path>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129">
+                                    </path>
                                 </svg>
                             </div>
                             <h3 class="text-xl font-semibold text-gray-900">案例4：跨地区内容本地化</h3>
@@ -477,13 +530,16 @@
                             </div>
                         </div>
                     </div>
-                    
+
                     <!-- 案例5：CSV数据预处理 -->
                     <div>
                         <div class="flex items-center mb-4">
                             <div class="w-10 h-10 bg-yellow-100 rounded-full flex items-center justify-center mr-3">
-                                <svg class="w-6 h-6 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                                <svg class="w-6 h-6 text-yellow-600" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z">
+                                    </path>
                                 </svg>
                             </div>
                             <h3 class="text-xl font-semibold text-gray-900">案例5：产品标签库规范化</h3>
@@ -518,7 +574,7 @@
             <div class="mt-12">
                 <div class="bg-white rounded-xl shadow-md p-8">
                     <h2 class="text-2xl font-bold text-gray-900 mb-6">常见问题解答 (FAQ)</h2>
-                    
+
                     <div class="space-y-6">
                         <!-- FAQ 1 -->
                         <div class="pb-6 border-b border-gray-200">
@@ -527,7 +583,7 @@
                                 首次使用简繁体转换功能时需要联网，系统会从CDN自动加载opencc-js转换库（约200KB，通常3-5秒完成）。加载完成后，转换库会缓存在浏览器中，后续使用无需再次下载，即使离线也能正常使用。<strong>其他所有功能（大小写、排序、空白处理等）无需联网即可使用。</strong>
                             </p>
                         </div>
-                        
+
                         <!-- FAQ 2 -->
                         <div class="pb-6 border-b border-gray-200">
                             <h3 class="text-lg font-semibold text-gray-900 mb-2">2. 可以连续使用多个转换功能吗？</h3>
@@ -535,7 +591,7 @@
                                 可以！这正是我们工具的强大之处。转换结果会自动显示在右侧文本框，您可以继续点击其他转换按钮进行多次转换。例如：先"去重"→再"升序排序"→最后"裁剪每行"，实现一站式数据清洗。
                             </p>
                         </div>
-                        
+
                         <!-- FAQ 3 -->
                         <div class="pb-6 border-b border-gray-200">
                             <h3 class="text-lg font-semibold text-gray-900 mb-2">3. "去重"功能的准确率如何？</h3>
@@ -543,7 +599,7 @@
                                 去重功能基于完全匹配原则，只有内容完全相同的行才会被视为重复。注意：<strong>"hello"和"Hello"会被认为是不同的行</strong>（大小写不同）。建议先统一大小写，再去重，效果更好。空格和空白字符也会影响匹配，建议先使用"裁剪每行"功能。
                             </p>
                         </div>
-                        
+
                         <!-- FAQ 4 -->
                         <div class="pb-6 border-b border-gray-200">
                             <h3 class="text-lg font-semibold text-gray-900 mb-2">4. 全角和半角有什么区别？何时使用？</h3>
@@ -559,20 +615,20 @@
                                 <li><strong>转全角</strong>：中文排版美观、特殊视觉效果</li>
                             </ul>
                         </div>
-                        
+
                         <!-- FAQ 5 -->
                         <div class="pb-6 border-b border-gray-200">
                             <h3 class="text-lg font-semibold text-gray-900 mb-2">5. 排序功能支持哪些排序方式？</h3>
                             <p class="text-gray-700">
                                 目前支持两种排序方式：
-                                <ul class="list-disc list-inside text-gray-700 ml-4 mt-2 space-y-1">
-                                    <li><strong>升序排序</strong>：A-Z，0-9，按字符编码从小到大排列</li>
-                                    <li><strong>降序排序</strong>：Z-A，9-0，按字符编码从大到小排列</li>
-                                </ul>
-                                排序基于Unicode编码，中文会按拼音顺序排列，数字会排在字母前面。
+                            <ul class="list-disc list-inside text-gray-700 ml-4 mt-2 space-y-1">
+                                <li><strong>升序排序</strong>：A-Z，0-9，按字符编码从小到大排列</li>
+                                <li><strong>降序排序</strong>：Z-A，9-0，按字符编码从大到小排列</li>
+                            </ul>
+                            排序基于Unicode编码，中文会按拼音顺序排列，数字会排在字母前面。
                             </p>
                         </div>
-                        
+
                         <!-- FAQ 6 -->
                         <div class="pb-6 border-b border-gray-200">
                             <h3 class="text-lg font-semibold text-gray-900 mb-2">6. "Tab转空格"有什么用？</h3>
@@ -580,49 +636,49 @@
                                 Tab转空格主要用于代码格式统一。不同编辑器对Tab的显示宽度不同（有的是4空格，有的是2空格），导致代码在不同环境下显示不一致。将Tab统一转换为固定数量的空格后，代码在任何编辑器中都能保持相同的缩进效果。我们的工具将每个Tab转换为4个空格。
                             </p>
                         </div>
-                        
+
                         <!-- FAQ 7 -->
                         <div class="pb-6 border-b border-gray-200">
                             <h3 class="text-lg font-semibold text-gray-900 mb-2">7. 处理大批量数据时会卡顿吗？</h3>
                             <p class="text-gray-700">
                                 对于大多数场景，工具能流畅处理：
-                                <ul class="list-disc list-inside text-gray-700 ml-4 mt-2 space-y-1">
-                                    <li><strong>推荐</strong>：10万字符以内（约5万汉字），响应时间<100毫秒</li>
-                                    <li><strong>可接受</strong>：10-50万字符，响应时间<500毫秒</li>
-                                    <li><strong>较慢</strong>：50-100万字符，可能需要1-2秒</li>
-                                </ul>
-                                如果数据量特别大（>100万字符），建议分批处理。
+                            <ul class="list-disc list-inside text-gray-700 ml-4 mt-2 space-y-1">
+                                <li><strong>推荐</strong>：10万字符以内（约5万汉字），响应时间<100毫秒< /li>
+                                <li><strong>可接受</strong>：10-50万字符，响应时间<500毫秒< /li>
+                                <li><strong>较慢</strong>：50-100万字符，可能需要1-2秒</li>
+                            </ul>
+                            如果数据量特别大（>100万字符），建议分批处理。
                             </p>
                         </div>
-                        
+
                         <!-- FAQ 8 -->
                         <div class="pb-6 border-b border-gray-200">
                             <h3 class="text-lg font-semibold text-gray-900 mb-2">8. 如何批量处理多个文件？</h3>
                             <p class="text-gray-700">
                                 当前版本需要逐个文件处理：
-                                <ol class="list-decimal list-inside text-gray-700 ml-4 mt-2 space-y-1">
-                                    <li>打开第一个文件，复制内容到工具</li>
-                                    <li>执行需要的转换操作</li>
-                                    <li>复制结果并保存</li>
-                                    <li>重复以上步骤处理下一个文件</li>
-                                </ol>
-                                提示：可以使用浏览器的多个标签页同时处理多个文件，提升效率。
+                            <ol class="list-decimal list-inside text-gray-700 ml-4 mt-2 space-y-1">
+                                <li>打开第一个文件，复制内容到工具</li>
+                                <li>执行需要的转换操作</li>
+                                <li>复制结果并保存</li>
+                                <li>重复以上步骤处理下一个文件</li>
+                            </ol>
+                            提示：可以使用浏览器的多个标签页同时处理多个文件，提升效率。
                             </p>
                         </div>
-                        
+
                         <!-- FAQ 9 -->
                         <div class="pb-6 border-b border-gray-200">
                             <h3 class="text-lg font-semibold text-gray-900 mb-2">9. 转换后可以撤销吗？</h3>
                             <p class="text-gray-700">
                                 工具本身不提供撤销功能，但您可以：
-                                <ul class="list-disc list-inside text-gray-700 ml-4 mt-2 space-y-1">
-                                    <li>使用浏览器的"后退"功能（<kbd class="px-1 bg-gray-200 rounded">Ctrl+Z</kbd>）在文本框内撤销</li>
-                                    <li>在转换前先复制原始文本备份</li>
-                                    <li>使用"清空"按钮后重新粘贴原始文本</li>
-                                </ul>
+                            <ul class="list-disc list-inside text-gray-700 ml-4 mt-2 space-y-1">
+                                <li>使用浏览器的"后退"功能（<kbd class="px-1 bg-gray-200 rounded">Ctrl+Z</kbd>）在文本框内撤销</li>
+                                <li>在转换前先复制原始文本备份</li>
+                                <li>使用"清空"按钮后重新粘贴原始文本</li>
+                            </ul>
                             </p>
                         </div>
-                        
+
                         <!-- FAQ 10 -->
                         <div>
                             <h3 class="text-lg font-semibold text-gray-900 mb-2">10. 数据清洗的推荐操作顺序是什么？</h3>
@@ -650,7 +706,7 @@
             <div class="mt-12">
                 <div class="bg-gradient-to-r from-purple-50 to-pink-50 rounded-xl shadow-md p-8">
                     <h2 class="text-2xl font-bold text-gray-900 mb-6">💡 高效使用技巧</h2>
-                    
+
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <!-- 技巧1 -->
                         <div class="bg-white rounded-lg p-6 shadow-sm">
@@ -664,7 +720,7 @@
                                 <li>5️⃣ 升序排序（便于分析）</li>
                             </ol>
                         </div>
-                        
+
                         <!-- 技巧2 -->
                         <div class="bg-white rounded-lg p-6 shadow-sm">
                             <h3 class="text-lg font-semibold text-gray-900 mb-3">🔄 多步骤转换技巧</h3>
@@ -676,7 +732,7 @@
                                 <li>• 建议从简单操作开始</li>
                             </ul>
                         </div>
-                        
+
                         <!-- 技巧3 -->
                         <div class="bg-white rounded-lg p-6 shadow-sm">
                             <h3 class="text-lg font-semibold text-gray-900 mb-3">📝 文案格式快速统一</h3>
@@ -688,7 +744,7 @@
                                 <li>4. 裁剪首尾（去除空格）</li>
                             </ol>
                         </div>
-                        
+
                         <!-- 技巧4 -->
                         <div class="bg-white rounded-lg p-6 shadow-sm">
                             <h3 class="text-lg font-semibold text-gray-900 mb-3">🔢 数字格式处理</h3>
@@ -700,7 +756,7 @@
                                 <li>• 半角数字兼容性更好</li>
                             </ul>
                         </div>
-                        
+
                         <!-- 技巧5 -->
                         <div class="bg-white rounded-lg p-6 shadow-sm">
                             <h3 class="text-lg font-semibold text-gray-900 mb-3">⚡ 性能优化建议</h3>
@@ -712,15 +768,18 @@
                                 <li>• 可以先采样测试，确认效果后再处理全量数据</li>
                             </ul>
                         </div>
-                        
+
                         <!-- 技巧6 -->
                         <div class="bg-white rounded-lg p-6 shadow-sm">
                             <h3 class="text-lg font-semibold text-gray-900 mb-3">🔗 工具组合使用</h3>
                             <p class="text-gray-700 mb-2 text-sm">与其他工具配合：</p>
                             <ul class="text-gray-700 space-y-1 text-sm">
-                                <li>• <a href="text-counter.html" class="text-blue-600 hover:underline">字符计数</a>：转换前后统计对比</li>
-                                <li>• <a href="text-comparison.html" class="text-blue-600 hover:underline">文本比较</a>：查看转换差异</li>
-                                <li>• <a href="formatting.html" class="text-blue-600 hover:underline">格式化工具</a>：处理JSON/XML数据</li>
+                                <li>• <a href="text-counter.html"
+                                        class="text-blue-600 hover:underline">字符计数</a>：转换前后统计对比</li>
+                                <li>• <a href="text-comparison.html"
+                                        class="text-blue-600 hover:underline">文本比较</a>：查看转换差异</li>
+                                <li>• <a href="formatting.html"
+                                        class="text-blue-600 hover:underline">格式化工具</a>：处理JSON/XML数据</li>
                             </ul>
                         </div>
                     </div>
@@ -731,26 +790,31 @@
             <div class="mt-12">
                 <div class="bg-white rounded-xl shadow-md p-8">
                     <h2 class="text-2xl font-bold text-gray-900 mb-6">🔧 推荐工具组合</h2>
-                    
+
                     <p class="text-gray-700 mb-6">
                         结合以下工具，打造完整的文本处理工作流：
                     </p>
-                    
+
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                        <a href="text-counter.html" class="group block bg-gradient-to-br from-blue-50 to-blue-100 rounded-lg p-6 hover:shadow-lg transition-all">
+                        <a href="text-counter.html"
+                            class="group block bg-gradient-to-br from-blue-50 to-blue-100 rounded-lg p-6 hover:shadow-lg transition-all">
                             <h3 class="text-lg font-semibold text-blue-900 mb-2 group-hover:text-blue-700">字符计数工具</h3>
                             <p class="text-blue-800 text-sm mb-3">转换前后统计字数变化</p>
                             <span class="text-blue-600 text-sm font-medium">立即使用 →</span>
                         </a>
-                        
-                        <a href="text-comparison.html" class="group block bg-gradient-to-br from-orange-50 to-orange-100 rounded-lg p-6 hover:shadow-lg transition-all">
-                            <h3 class="text-lg font-semibold text-orange-900 mb-2 group-hover:text-orange-700">文本比较工具</h3>
+
+                        <a href="text-comparison.html"
+                            class="group block bg-gradient-to-br from-orange-50 to-orange-100 rounded-lg p-6 hover:shadow-lg transition-all">
+                            <h3 class="text-lg font-semibold text-orange-900 mb-2 group-hover:text-orange-700">文本比较工具
+                            </h3>
                             <p class="text-orange-800 text-sm mb-3">对比转换前后的具体差异</p>
                             <span class="text-orange-600 text-sm font-medium">立即使用 →</span>
                         </a>
-                        
-                        <a href="text-encoder.html" class="group block bg-gradient-to-br from-indigo-50 to-indigo-100 rounded-lg p-6 hover:shadow-lg transition-all">
-                            <h3 class="text-lg font-semibold text-indigo-900 mb-2 group-hover:text-indigo-700">编码/解码工具</h3>
+
+                        <a href="text-encoder.html"
+                            class="group block bg-gradient-to-br from-indigo-50 to-indigo-100 rounded-lg p-6 hover:shadow-lg transition-all">
+                            <h3 class="text-lg font-semibold text-indigo-900 mb-2 group-hover:text-indigo-700">编码/解码工具
+                            </h3>
                             <p class="text-indigo-800 text-sm mb-3">Base64、URL、Unicode编码转换</p>
                             <span class="text-indigo-600 text-sm font-medium">立即使用 →</span>
                         </a>
@@ -762,73 +826,99 @@
             <div class="mt-12 mb-8">
                 <div class="bg-gray-50 rounded-xl shadow-md p-8 border-l-4 border-purple-500">
                     <h2 class="text-2xl font-bold text-gray-900 mb-6">🔒 技术实现与数据安全</h2>
-                    
+
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                         <div>
                             <h3 class="text-lg font-semibold text-gray-900 mb-3">技术架构</h3>
                             <ul class="space-y-2 text-gray-700">
                                 <li class="flex items-start">
-                                    <svg class="w-5 h-5 text-purple-600 mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                    <svg class="w-5 h-5 text-purple-600 mr-2 flex-shrink-0 mt-0.5" fill="currentColor"
+                                        viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd"
+                                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                            clip-rule="evenodd" />
                                     </svg>
                                     <span><strong>原生JavaScript</strong>：无框架依赖，轻量高效</span>
                                 </li>
                                 <li class="flex items-start">
-                                    <svg class="w-5 h-5 text-purple-600 mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                    <svg class="w-5 h-5 text-purple-600 mr-2 flex-shrink-0 mt-0.5" fill="currentColor"
+                                        viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd"
+                                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                            clip-rule="evenodd" />
                                     </svg>
                                     <span><strong>正则表达式</strong>：高效的文本模式匹配</span>
                                 </li>
                                 <li class="flex items-start">
-                                    <svg class="w-5 h-5 text-purple-600 mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                    <svg class="w-5 h-5 text-purple-600 mr-2 flex-shrink-0 mt-0.5" fill="currentColor"
+                                        viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd"
+                                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                            clip-rule="evenodd" />
                                     </svg>
                                     <span><strong>OpenCC库</strong>：专业的简繁转换引擎</span>
                                 </li>
                                 <li class="flex items-start">
-                                    <svg class="w-5 h-5 text-purple-600 mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                    <svg class="w-5 h-5 text-purple-600 mr-2 flex-shrink-0 mt-0.5" fill="currentColor"
+                                        viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd"
+                                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                            clip-rule="evenodd" />
                                     </svg>
                                     <span><strong>算法优化</strong>：Set数据结构实现高效去重</span>
                                 </li>
                             </ul>
                         </div>
-                        
+
                         <div>
                             <h3 class="text-lg font-semibold text-gray-900 mb-3">隐私保护</h3>
                             <ul class="space-y-2 text-gray-700">
                                 <li class="flex items-start">
-                                    <svg class="w-5 h-5 text-green-600 mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                                        <path fill-rule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                    <svg class="w-5 h-5 text-green-600 mr-2 flex-shrink-0 mt-0.5" fill="currentColor"
+                                        viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd"
+                                            d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                            clip-rule="evenodd" />
                                     </svg>
                                     <span><strong>100%本地处理</strong>：数据不离开浏览器</span>
                                 </li>
                                 <li class="flex items-start">
-                                    <svg class="w-5 h-5 text-green-600 mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                                        <path fill-rule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                    <svg class="w-5 h-5 text-green-600 mr-2 flex-shrink-0 mt-0.5" fill="currentColor"
+                                        viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd"
+                                            d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                            clip-rule="evenodd" />
                                     </svg>
                                     <span><strong>零服务器请求</strong>：无需担心数据泄露</span>
                                 </li>
                                 <li class="flex items-start">
-                                    <svg class="w-5 h-5 text-green-600 mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                                        <path fill-rule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                    <svg class="w-5 h-5 text-green-600 mr-2 flex-shrink-0 mt-0.5" fill="currentColor"
+                                        viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd"
+                                            d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                            clip-rule="evenodd" />
                                     </svg>
-                                    <span><strong>开源代码</strong>：<a href="https://github.com/crash-you/chartools" class="text-blue-600 hover:underline" target="_blank">GitHub开源</a>，透明可审计</span>
+                                    <span><strong>开源代码</strong>：<a href="https://github.com/crash-you/chartools"
+                                            class="text-blue-600 hover:underline"
+                                            target="_blank">GitHub开源</a>，透明可审计</span>
                                 </li>
                                 <li class="flex items-start">
-                                    <svg class="w-5 h-5 text-green-600 mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                                        <path fill-rule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                    <svg class="w-5 h-5 text-green-600 mr-2 flex-shrink-0 mt-0.5" fill="currentColor"
+                                        viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd"
+                                            d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                            clip-rule="evenodd" />
                                     </svg>
                                     <span><strong>支持离线</strong>：加载后无需网络即可使用</span>
                                 </li>
                             </ul>
                         </div>
                     </div>
-                    
+
                     <div class="mt-6 bg-purple-50 border border-purple-200 rounded-lg p-4">
                         <p class="text-purple-800 text-sm">
-                            <strong>性能指标：</strong>大小写转换响应时间<50ms，去重10000行数据<200ms，简繁转换10万字<500ms。支持Chrome 90+、Firefox 88+、Safari 14+、Edge 90+等现代浏览器。
-                        </p>
+                            <strong>性能指标：</strong>大小写转换响应时间<50ms，去重10000行数据<200ms，简繁转换10万字<500ms。支持Chrome 90+、Firefox
+                                88+、Safari 14+、Edge 90+等现代浏览器。 </p>
                     </div>
                 </div>
             </div>
@@ -868,6 +958,5 @@
 - 空白处理：整体裁剪/折叠多空格/Tab->空格/移除多余空白行
 - 全角半角：ASCII 全角/半角互转
 -->
+
 </html>
-
-

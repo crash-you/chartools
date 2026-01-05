@@ -1,0 +1,40 @@
+# 将不带.html的博客URL重定向到带.html的版本
+/blog/advanced-writing-techniques /blog/advanced-writing-techniques.html 301
+/blog/content-marketing-trends-2025 /blog/content-marketing-trends-2025.html 301
+/blog/data-cleaning-masterclass /blog/data-cleaning-masterclass.html 301
+/blog/seo-content-optimization /blog/seo-content-optimization.html 301
+/blog/10-productivity-tips /blog/10-productivity-tips.html 301
+/blog/character-encoding-guide /blog/character-encoding-guide.html 301
+/blog/data-privacy-frontend /blog/data-privacy-frontend.html 301
+/blog/frontend-architecture-deep-dive /blog/frontend-architecture-deep-dive.html 301
+/blog/json-best-practices /blog/json-best-practices.html 301
+/blog/regex-30-patterns /blog/regex-30-patterns.html 301
+/blog/text-processing-complete-guide /blog/text-processing-complete-guide.html 301
+
+# 英文博客
+/en/blog/advanced-writing-techniques /en/blog/advanced-writing-techniques.html 301
+/en/blog/content-marketing-trends-2025 /en/blog/content-marketing-trends-2025.html 301
+/en/blog/data-cleaning-masterclass /en/blog/data-cleaning-masterclass.html 301
+/en/blog/seo-content-optimization /en/blog/seo-content-optimization.html 301
+
+# 文章页面
+/articles/writing-guides /articles/writing-guides.html 301
+/articles/data-cleaning /articles/data-cleaning.html 301
+/articles/dev-workflows /articles/dev-workflows.html 301
+/en/articles/writing-guides /en/articles/writing-guides.html 301
+/en/articles/data-cleaning /en/articles/data-cleaning.html 301
+/en/articles/dev-workflows /en/articles/dev-workflows.html 301
+
+# 工具页面
+/tools/text-counter /tools/text-counter.html 301
+/tools/text-conversion /tools/text-conversion.html 301
+/tools/text-comparison /tools/text-comparison.html 301
+/tools/formatting /tools/formatting.html 301
+/tools/text-encoder /tools/text-encoder.html 301
+/tools/regex-tester /tools/regex-tester.html 301
+/en/tools/text-counter /en/tools/text-counter.html 301
+/en/tools/text-conversion /en/tools/text-conversion.html 301
+/en/tools/text-comparison /en/tools/text-comparison.html 301
+/en/tools/formatting /en/tools/formatting.html 301
+/en/tools/text-encoder /en/tools/text-encoder.html 301
+/en/tools/regex-tester /en/tools/regex-tester.html 301
