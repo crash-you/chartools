@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kostenloser Textvergleich Online | Diff-Tool | CharTools</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="preload" href="../../css/custom.css" as="style">
+    <link href="../../css/custom.css" rel="stylesheet">
+    <meta name="description"
+        content="Kostenloser Online-Textvergleich mit Hervorhebung von Unterschieden. Perfekt für Code-Reviews und Dokumentenvergleiche. 100% clientseitig.">
+    <meta name="keywords"
+        content="Textvergleich,Diff-Tool,Code-Vergleich,Dokumentenvergleich,Unterschiede finden,Versionskontrolle">
+    <link rel="alternate" hreflang="zh-CN" href="https://chartools.art/tools/text-comparison.html">
+    <link rel="alternate" hreflang="en" href="https://chartools.art/en/tools/text-comparison.html">
+    <link rel="alternate" hreflang="de" href="https://chartools.art/de/tools/text-comparison.html">
+    <link rel="alternate" hreflang="x-default" href="https://chartools.art/tools/text-comparison.html">
+    <link rel="canonical" href="https://chartools.art/de/tools/text-comparison.html">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-32ZXK1J41J"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-32ZXK1J41J');
+    </script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4770465793767896"
+        crossorigin="anonymous"></script>
+</head>
+
+<body class="bg-white text-gray-800 min-h-screen flex flex-col">
+    <nav id="navigation" class="fixed top-0 w-full bg-white bg-opacity-80 backdrop-blur-md shadow-sm z-50">
+        <div class="container mx-auto max-w-7xl px-4">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="../index.html" class="text-2xl font-semibold text-gray-900">Text Tools</a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="../index.html#tools" class="text-gray-700 hover:text-blue-600">Tools</a>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <div class="relative language-selector">
+                        <button id="language-button"
+                            class="flex items-center space-x-1 p-2 rounded-md hover:bg-gray-100 transition">
+                            <span id="current-language">Deutsch</span>
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div id="language-dropdown"
+                            class="absolute right-0 mt-2 w-32 bg-white rounded-md shadow-lg hidden z-10">
+                            <a href="../../tools/text-comparison.html"
+                                class="block px-4 py-2 text-gray-800 hover:bg-gray-100" data-lang="zh-CN">中文</a>
+                            <a href="../../en/tools/text-comparison.html"
+                                class="block px-4 py-2 text-gray-800 hover:bg-gray-100" data-lang="en">English</a>
+                            <a href="text-comparison.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-100"
+                                data-lang="de">Deutsch</a>
+                        </div>
+                    </div>
+                    <button id="mobile-menu-button" class="md:hidden p-2 rounded-md hover:bg-gray-100">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="flex-grow pt-16">
+        <div class="container mx-auto max-w-7xl px-4 py-8">
+            <div class="mb-8">
+                <h1 class="text-3xl font-bold text-gray-900">Textvergleich</h1>
+                <p class="mt-2 text-gray-600">Vergleichen Sie zwei Texte und finden Sie Unterschiede mit Hervorhebung.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <div>
+                    <div class="bg-white rounded-xl shadow-md p-6">
+                        <h2 class="text-xl font-semibold text-gray-900 mb-4">Originaltext</h2>
+                        <textarea id="text-original"
+                            class="w-full h-64 p-4 bg-gray-50 text-gray-900 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-y"
+                            placeholder="Originaltext hier eingeben..."></textarea>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="bg-white rounded-xl shadow-md p-6">
+                        <h2 class="text-xl font-semibold text-gray-900 mb-4">Geänderter Text</h2>
+                        <textarea id="text-modified"
+                            class="w-full h-64 p-4 bg-gray-50 text-gray-900 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-y"
+                            placeholder="Geänderten Text hier eingeben..."></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-6 flex justify-center gap-4">
+                <button id="compare-btn"
+                    class="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-medium">
+                    Vergleichen
+                </button>
+                <button id="clear-btn"
+                    class="px-6 py-3 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300 transition-colors font-medium">
+                    Löschen
+                </button>
+                <button id="swap-btn"
+                    class="px-6 py-3 bg-purple-100 text-purple-700 rounded-lg hover:bg-purple-200 transition-colors font-medium">
+                    Tauschen
+                </button>
+            </div>
+
+            <div class="mt-8">
+                <div class="bg-white rounded-xl shadow-md p-6">
+                    <h2 class="text-xl font-semibold text-gray-900 mb-4">Vergleichsergebnis</h2>
+                    <div id="diff-output"
+                        class="p-4 bg-gray-50 rounded-lg border border-gray-300 min-h-[200px] font-mono text-sm whitespace-pre-wrap">
+                        Das Vergleichsergebnis wird hier angezeigt...
+                    </div>
+                    <div class="mt-4 flex items-center gap-4 text-sm">
+                        <span class="flex items-center"><span
+                                class="inline-block w-4 h-4 bg-green-200 mr-2 rounded"></span>Hinzugefügt</span>
+                        <span class="flex items-center"><span
+                                class="inline-block w-4 h-4 bg-red-200 mr-2 rounded"></span>Entfernt</span>
+                        <span class="flex items-center"><span
+                                class="inline-block w-4 h-4 bg-gray-100 mr-2 rounded"></span>Unverändert</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-12">
+                <div class="bg-white rounded-xl shadow-md p-8">
+                    <h2 class="text-2xl font-bold text-gray-900 mb-6">Funktionen & Anleitung</h2>
+                    <p class="text-gray-700 mb-6">
+                        Das Textvergleichs-Tool zeigt Unterschiede zwischen zwei Texten mit farblicher Hervorhebung.
+                        Perfekt für Code-Reviews, Dokumentenvergleiche und Versionskontrolle.
+                    </p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="bg-blue-50 rounded-lg p-4">
+                            <h4 class="font-semibold text-blue-900 mb-2">Anwendungsfälle</h4>
+                            <ul class="text-blue-800 space-y-1 text-sm">
+                                <li>• Code-Reviews und Pull Requests</li>
+                                <li>• Dokumentenversionierung</li>
+                                <li>• Übersetzungsvergleiche</li>
+                                <li>• Konfigurationsänderungen</li>
+                            </ul>
+                        </div>
+                        <div class="bg-green-50 rounded-lg p-4">
+                            <h4 class="font-semibold text-green-900 mb-2">Funktionen</h4>
+                            <ul class="text-green-800 space-y-1 text-sm">
+                                <li>• Zeile-für-Zeile-Vergleich</li>
+                                <li>• Farbliche Unterschied-Hervorhebung</li>
+                                <li>• Texte tauschen</li>
+                                <li>• 100% lokale Verarbeitung</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-gray-100 py-8 px-4 mt-8">
+        <div class="container mx-auto max-w-7xl">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <p class="text-gray-600">© 2025 Textverarbeitungstools</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../js/main.js"></script>
+    <script src="../../js/navigation.js"></script>
+    <script src="../../js/tools/text-comparison.js"></script>
+    <script src="../../js/language.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kostenloser Online Zeichenzähler | Echtzeit Wortzähler | CharTools</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="preload" href="../../css/custom.css" as="style">
+    <link href="../../css/custom.css" rel="stylesheet">
+    <meta name="description"
+        content="Professioneller kostenloser Online-Zeichenzähler mit Echtzeit-Wortzählung, Satzzählung und Absatzzählung. 100% clientseitige Verarbeitung für Datenschutz.">
+    <meta name="keywords"
+        content="Zeichenzähler,Online Wortzähler,kostenloser Zeichenzähler,Echtzeit Wortzähler,Absatzzähler,Satzzähler,Schreibassistent">
+    <link rel="alternate" hreflang="zh-CN" href="https://chartools.art/tools/text-counter.html">
+    <link rel="alternate" hreflang="en" href="https://chartools.art/en/tools/text-counter.html">
+    <link rel="alternate" hreflang="de" href="https://chartools.art/de/tools/text-counter.html">
+    <link rel="alternate" hreflang="x-default" href="https://chartools.art/tools/text-counter.html">
+    <link rel="canonical" href="https://chartools.art/de/tools/text-counter.html">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-32ZXK1J41J"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-32ZXK1J41J');
+    </script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4770465793767896"
+        crossorigin="anonymous"></script>
+</head>
+
+<body class="bg-white text-gray-800 min-h-screen flex flex-col">
+    <!-- Navigation Bar -->
+    <nav id="navigation" class="fixed top-0 w-full bg-white bg-opacity-80 backdrop-blur-md shadow-sm z-50">
+        <div class="container mx-auto max-w-7xl px-4">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="../index.html" class="text-2xl font-semibold text-gray-900">Text Tools</a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="../index.html#tools" class="text-gray-700 hover:text-blue-600">Tools</a>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <div class="relative language-selector">
+                        <button id="language-button"
+                            class="flex items-center space-x-1 p-2 rounded-md hover:bg-gray-100 transition">
+                            <span id="current-language">Deutsch</span>
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div id="language-dropdown"
+                            class="absolute right-0 mt-2 w-32 bg-white rounded-md shadow-lg hidden z-10">
+                            <a href="../../tools/text-counter.html"
+                                class="block px-4 py-2 text-gray-800 hover:bg-gray-100" data-lang="zh-CN">中文</a>
+                            <a href="../../en/tools/text-counter.html"
+                                class="block px-4 py-2 text-gray-800 hover:bg-gray-100" data-lang="en">English</a>
+                            <a href="text-counter.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-100"
+                                data-lang="de">Deutsch</a>
+                        </div>
+                    </div>
+                    <button id="mobile-menu-button" class="md:hidden p-2 rounded-md hover:bg-gray-100">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <div id="mobile-menu" class="md:hidden hidden pb-4">
+                <div class="flex flex-col space-y-4">
+                    <a href="../index.html#tools" class="text-gray-700 hover:text-blue-600">Tools</a>
+                    <div class="pt-2 border-t border-gray-200">
+                        <p class="text-sm text-gray-600 mb-1">Sprache wählen</p>
+                        <a href="../../tools/text-counter.html" class="block py-1 text-gray-700 hover:text-blue-600"
+                            data-lang="zh-CN">中文</a>
+                        <a href="../../en/tools/text-counter.html" class="block py-1 text-gray-700 hover:text-blue-600"
+                            data-lang="en">English</a>
+                        <a href="text-counter.html" class="block py-1 text-gray-700 hover:text-blue-600"
+                            data-lang="de">Deutsch</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="flex-grow pt-16">
+        <div class="container mx-auto max-w-7xl px-4 py-8">
+            <div class="mb-8">
+                <h1 class="text-3xl font-bold text-gray-900">Zeichenzähler</h1>
+                <p class="mt-2 text-gray-600">Zählen Sie Zeichen, Wörter, Sätze und mehr in Echtzeit mit detaillierten
+                    Statistiken.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <div class="lg:col-span-2">
+                    <div class="bg-white rounded-xl shadow-md p-6">
+                        <h2 class="text-xl font-semibold text-gray-900 mb-4">Text eingeben</h2>
+                        <div class="mb-4">
+                            <textarea id="text-input"
+                                class="w-full h-64 p-4 bg-gray-50 text-gray-900 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-y"
+                                placeholder="Text hier eingeben oder einfügen..."></textarea>
+                        </div>
+                        <div class="flex flex-wrap gap-4">
+                            <button id="clear-button"
+                                class="px-4 py-2 bg-gray-200 text-gray-800 rounded-lg hover:bg-gray-300 transition-colors">
+                                Löschen
+                            </button>
+                            <button id="sample-button"
+                                class="px-4 py-2 bg-blue-100 text-blue-700 rounded-lg hover:bg-blue-200 transition-colors">
+                                Beispieltext einfügen
+                            </button>
+                            <button id="copy-button"
+                                class="px-4 py-2 bg-green-100 text-green-700 rounded-lg hover:bg-green-200 transition-colors">
+                                Text kopieren
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-1">
+                    <div class="bg-white rounded-xl shadow-md p-6">
+                        <h2 class="text-xl font-semibold text-gray-900 mb-4">Statistiken</h2>
+
+                        <div class="mb-6">
+                            <h3 class="text-lg font-medium text-gray-800 mb-3">Grundinformationen</h3>
+                            <div class="space-y-3">
+                                <div class="flex justify-between">
+                                    <span class="text-gray-600">Gesamtzeichen</span>
+                                    <span id="char-count" class="font-medium text-gray-900">0</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span class="text-gray-600">Wörter</span>
+                                    <span id="word-count" class="font-medium text-gray-900">0</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span class="text-gray-600">Sätze</span>
+                                    <span id="sentence-count" class="font-medium text-gray-900">0</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span class="text-gray-600">Absätze</span>
+                                    <span id="paragraph-count" class="font-medium text-gray-900">0</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span class="text-gray-600">Zeilen</span>
+                                    <span id="line-count" class="font-medium text-gray-900">0</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mb-6">
+                            <h3 class="text-lg font-medium text-gray-800 mb-3">Zeichenkategorien</h3>
+                            <div class="space-y-3">
+                                <div class="flex justify-between">
+                                    <span class="text-gray-600">Chinesische Zeichen</span>
+                                    <span id="chinese-count" class="font-medium text-gray-900">0</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span class="text-gray-600">Buchstaben</span>
+                                    <span id="alpha-count" class="font-medium text-gray-900">0</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span class="text-gray-600">Zahlen</span>
+                                    <span id="digit-count" class="font-medium text-gray-900">0</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span class="text-gray-600">Satzzeichen</span>
+                                    <span id="punctuation-count" class="font-medium text-gray-900">0</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span class="text-gray-600">Leerzeichen</span>
+                                    <span id="space-count" class="font-medium text-gray-900">0</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <h3 class="text-lg font-medium text-gray-800 mb-3">Leseinformationen</h3>
+                            <div class="space-y-3">
+                                <div class="flex justify-between">
+                                    <span class="text-gray-600">Lesezeit</span>
+                                    <span id="reading-time" class="font-medium text-gray-900">0 Minuten</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-12">
+                <div class="bg-white rounded-xl shadow-md p-8">
+                    <h2 class="text-2xl font-bold text-gray-900 mb-6">Funktionen & Anleitung</h2>
+                    <p class="text-gray-700 mb-6">
+                        Das Zeichenzähler-Tool bietet umfassende Textanalyse mit Echtzeitstatistiken.
+                        Perfekt für Autoren, Studenten, Entwickler und alle, die mit Text arbeiten und genaue
+                        Zeichen-, Wort- und Satzzählungen benötigen.
+                    </p>
+                    <div class="bg-yellow-50 border-l-4 border-yellow-400 p-4">
+                        <h4 class="font-semibold text-yellow-800 mb-2">Datenschutzhinweis</h4>
+                        <p class="text-yellow-700 text-sm">
+                            Die gesamte Verarbeitung erfolgt lokal in Ihrem Browser. Ihr Text verlässt niemals Ihr
+                            Gerät.
+                            Das Tool funktioniert sogar offline - 100% Datenschutz und Datensicherheit.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-100 py-8 px-4 mt-8">
+        <div class="container mx-auto max-w-7xl">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <p class="text-gray-600">© 2025 Textverarbeitungstools</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="https://github.com/crash-you/chartools" target="_blank"
+                        class="text-gray-600 hover:text-blue-600">GitHub</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../js/main.js"></script>
+    <script src="../../js/navigation.js"></script>
+    <script src="../../js/tools/text-counter.js"></script>
+    <script src="../../js/language.js"></script>
+</body>
+
+</html>

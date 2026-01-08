@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Free Online Text Processing Tools - Character Counter, Text Converter | CharTools</title>
+    <title>Kostenlose Online Textverarbeitungstools | Zeichenzähler, Textkonverter | CharTools</title>
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
     <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
     <link rel="preconnect" href="https://pagead2.googlesyndication.com" crossorigin>
@@ -14,24 +14,24 @@
     <link rel="preload" href="/favicon.svg" as="image" type="image/svg+xml">
     <link rel="icon" href="/favicon.svg" type="image/svg+xml">
     <meta property="og:type" content="website">
-    <meta property="og:locale" content="en_US">
-    <meta property="og:image" content="https://chartools.art/img/og/og-en.svg">
-    <meta property="og:image:alt" content="Text Processing Tools">
-    <meta property="og:title" content="Text Processing Tools | Character Counter, Text Converter, Comparison">
+    <meta property="og:locale" content="de_DE">
+    <meta property="og:image" content="https://chartools.art/img/og/og-de.svg">
+    <meta property="og:image:alt" content="Textverarbeitungstools">
+    <meta property="og:title" content="Textverarbeitungstools | Zeichenzähler, Textkonverter, Vergleich">
     <meta property="og:description"
-        content="Free online text tools: character counting, text conversion, comparison, formatting. Client-side processing for privacy.">
-    <meta property="og:url" content="https://chartools.art/en/">
-    <meta property="og:site_name" content="Text Processing Tools">
+        content="Kostenlose Online-Texttools: Zeichenzählung, Textkonvertierung, Vergleich, Formatierung. Clientseitige Verarbeitung für Datenschutz.">
+    <meta property="og:url" content="https://chartools.art/de/">
+    <meta property="og:site_name" content="Textverarbeitungstools">
     <meta name="twitter:card" content="summary">
     <meta name="description"
-        content="Free online text processing tools: character counter, text conversion, comparison, formatting. All processing happens locally in your browser.">
+        content="Kostenlose Online-Textverarbeitungstools: Zeichenzähler, Textkonvertierung, Vergleich, Formatierung. Alle Verarbeitung erfolgt lokal in Ihrem Browser.">
     <meta name="keywords"
-        content="text tools,character counter,word counter,text converter,JSON formatter,text comparison,online tools">
+        content="Texttools,Zeichenzähler,Wortzähler,Textkonverter,JSON Formatter,Textvergleich,Online Tools">
     <link rel="alternate" hreflang="zh-CN" href="https://chartools.art/index.html">
     <link rel="alternate" hreflang="en" href="https://chartools.art/en/index.html">
     <link rel="alternate" hreflang="de" href="https://chartools.art/de/index.html">
     <link rel="alternate" hreflang="x-default" href="https://chartools.art/index.html">
-    <link rel="canonical" href="https://chartools.art/en/">
+    <link rel="canonical" href="https://chartools.art/de/">
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-32ZXK1J41J"></script>
     <script>
@@ -53,17 +53,15 @@
                     <a href="index.html" class="text-2xl font-semibold text-gray-900">Text Tools</a>
                 </div>
                 <div class="hidden md:flex items-center space-x-8">
-                    <a href="about.html" class="text-gray-700 hover:text-blue-600">About</a>
+                    <a href="about.html" class="text-gray-700 hover:text-blue-600">Über uns</a>
                     <a href="#tools" class="text-gray-700 hover:text-blue-600">Tools</a>
-                    <a href="help.html" class="text-gray-700 hover:text-blue-600">Help</a>
-                    <a href="articles/index.html" class="text-gray-700 hover:text-blue-600">Guides</a>
-                    <a href="blog/index.html" class="text-gray-700 hover:text-blue-600">Blog</a>
+                    <a href="help.html" class="text-gray-700 hover:text-blue-600">Hilfe</a>
                 </div>
                 <div class="flex items-center space-x-4">
                     <div class="relative language-selector">
                         <button id="language-button"
                             class="flex items-center space-x-1 p-2 rounded-md hover:bg-gray-100 transition">
-                            <span id="current-language">English</span>
+                            <span id="current-language">Deutsch</span>
                             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                     d="M19 9l-7 7-7-7"></path>
@@ -73,9 +71,9 @@
                             class="absolute right-0 mt-2 w-32 bg-white rounded-md shadow-lg hidden z-10">
                             <a href="../index.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-100"
                                 data-lang="zh-CN">中文</a>
-                            <a href="index.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-100"
+                            <a href="../en/index.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-100"
                                 data-lang="en">English</a>
-                            <a href="../de/index.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-100"
+                            <a href="index.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-100"
                                 data-lang="de">Deutsch</a>
                         </div>
                     </div>
@@ -89,11 +87,9 @@
             </div>
             <div id="mobile-menu" class="md:hidden hidden pb-4">
                 <div class="flex flex-col space-y-4">
-                    <a href="about.html" class="text-gray-700 hover:text-blue-600">About</a>
+                    <a href="about.html" class="text-gray-700 hover:text-blue-600">Über uns</a>
                     <a href="#tools" class="text-gray-700 hover:text-blue-600">Tools</a>
-                    <a href="help.html" class="text-gray-700 hover:text-blue-600">Help</a>
-                    <a href="articles/index.html" class="text-gray-700 hover:text-blue-600">Guides</a>
-                    <a href="blog/index.html" class="text-gray-700 hover:text-blue-600">Blog</a>
+                    <a href="help.html" class="text-gray-700 hover:text-blue-600">Hilfe</a>
                 </div>
             </div>
         </div>
@@ -104,44 +100,46 @@
         <section class="py-12 md:py-20 px-4 bg-gradient-to-br from-blue-50 to-indigo-50">
             <div class="container mx-auto max-w-7xl">
                 <div class="flex flex-col items-center text-center">
-                    <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Professional Text Processing Tools
+                    <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Professionelle Textverarbeitungstools
                     </h1>
-                    <p class="text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl">Versatile text processing tools for all
-                        your needs. Simple, secure, and reliable.</p>
+                    <p class="text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl">Vielseitige Textverarbeitungstools für
+                        alle Ihre Bedürfnisse. Einfach, sicher und zuverlässig.</p>
                     <a href="tools/text-counter.html"
-                        class="bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-lg transition-colors duration-300">Get
-                        Started</a>
+                        class="bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-lg transition-colors duration-300">Jetzt
+                        starten</a>
                 </div>
             </div>
         </section>
 
-        <!-- Popular Guides -->
+        <!-- Beliebte Anleitungen -->
         <section class="py-16 px-4 bg-white">
             <div class="container mx-auto max-w-7xl">
-                <h2 class="text-3xl font-bold text-gray-900 mb-12 text-center">Popular Guides</h2>
+                <h2 class="text-3xl font-bold text-gray-900 mb-12 text-center">Beliebte Anleitungen</h2>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    <a href="articles/writing-guides.html" class="group">
+                    <a href="../en/articles/writing-guides.html" class="group">
                         <div
                             class="bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden h-full p-6">
-                            <h3 class="text-xl font-semibold text-gray-900 mb-2">Writing: Word Count & Layout Control
+                            <h3 class="text-xl font-semibold text-gray-900 mb-2">Schreiben: Wort- & Layoutkontrolle</h3>
+                            <p class="text-gray-600">Nutzen Sie Zeichenzählung, Zeilenverarbeitung und
+                                Groß-/Kleinschreibung, um Ihre Entwürfe zu polieren.</p>
+                        </div>
+                    </a>
+                    <a href="../en/articles/data-cleaning.html" class="group">
+                        <div
+                            class="bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden h-full p-6">
+                            <h3 class="text-xl font-semibold text-gray-900 mb-2">Datenbereinigung & Stapelverarbeitung
                             </h3>
-                            <p class="text-gray-600">Use character counting, line processing, and case conversion to
-                                polish your drafts.</p>
+                            <p class="text-gray-600">Duplikate entfernen, sortieren und Leerzeichen optimieren, um Ihre
+                                Textdaten zu bereinigen.</p>
                         </div>
                     </a>
-                    <a href="articles/data-cleaning.html" class="group">
+                    <a href="../en/articles/dev-workflows.html" class="group">
                         <div
                             class="bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden h-full p-6">
-                            <h3 class="text-xl font-semibold text-gray-900 mb-2">Data Cleaning & Batch Processing</h3>
-                            <p class="text-gray-600">Deduplicate, sort, and optimize whitespace to clean your text data.
-                            </p>
-                        </div>
-                    </a>
-                    <a href="articles/dev-workflows.html" class="group">
-                        <div
-                            class="bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden h-full p-6">
-                            <h3 class="text-xl font-semibold text-gray-900 mb-2">Developer Workflows: Format & Diff</h3>
-                            <p class="text-gray-600">Format/minify and compare text to quickly locate changes.</p>
+                            <h3 class="text-xl font-semibold text-gray-900 mb-2">Entwickler-Workflows: Format & Diff
+                            </h3>
+                            <p class="text-gray-600">Formatieren/minimieren und Text vergleichen, um Änderungen schnell
+                                zu lokalisieren.</p>
                         </div>
                     </a>
                 </div>
@@ -151,9 +149,9 @@
         <!-- Tools Grid -->
         <section id="tools" class="py-16 px-4 bg-gray-50">
             <div class="container mx-auto max-w-7xl">
-                <h2 class="text-3xl font-bold text-gray-900 mb-12 text-center">More Tools</h2>
+                <h2 class="text-3xl font-bold text-gray-900 mb-12 text-center">Mehr Tools</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Character Counter -->
+                    <!-- Zeichenzähler -->
                     <a href="tools/text-counter.html" class="group block">
                         <div
                             class="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden h-full border border-gray-100 group-hover:border-blue-200 flex flex-col">
@@ -169,12 +167,12 @@
                                 </div>
                                 <h3
                                     class="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
-                                    Character Counter</h3>
-                                <p class="text-gray-600 text-sm leading-relaxed">Real-time character and word statistics
-                                    with reading time estimates.</p>
+                                    Zeichenzähler</h3>
+                                <p class="text-gray-600 text-sm leading-relaxed">Echtzeit-Zeichen- und Wortstatistiken
+                                    mit Lesezeitschätzung.</p>
                             </div>
                             <div class="px-6 pb-5 pt-2">
-                                <span class="inline-flex items-center text-blue-600 font-medium">Use Now
+                                <span class="inline-flex items-center text-blue-600 font-medium">Jetzt verwenden
                                     <svg class="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none"
                                         stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -185,7 +183,7 @@
                         </div>
                     </a>
 
-                    <!-- Text Conversion -->
+                    <!-- Textkonvertierung -->
                     <a href="tools/text-conversion.html" class="group block">
                         <div
                             class="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden h-full border border-gray-100 group-hover:border-green-200 flex flex-col">
@@ -201,12 +199,12 @@
                                 </div>
                                 <h3
                                     class="text-xl font-bold text-gray-900 mb-3 group-hover:text-green-600 transition-colors">
-                                    Text Conversion</h3>
-                                <p class="text-gray-600 text-sm leading-relaxed">Case conversion, line processing,
-                                    whitespace handling, and more.</p>
+                                    Textkonvertierung</h3>
+                                <p class="text-gray-600 text-sm leading-relaxed">Groß-/Kleinschreibung,
+                                    Zeilenverarbeitung, Leerzeichenbehandlung.</p>
                             </div>
                             <div class="px-6 pb-5 pt-2">
-                                <span class="inline-flex items-center text-green-600 font-medium">Use Now
+                                <span class="inline-flex items-center text-green-600 font-medium">Jetzt verwenden
                                     <svg class="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none"
                                         stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -217,7 +215,7 @@
                         </div>
                     </a>
 
-                    <!-- Formatting Tools -->
+                    <!-- Formatierungstools -->
                     <a href="tools/formatting.html" class="group block">
                         <div
                             class="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden h-full border border-gray-100 group-hover:border-purple-200 flex flex-col">
@@ -233,12 +231,12 @@
                                 </div>
                                 <h3
                                     class="text-xl font-bold text-gray-900 mb-3 group-hover:text-purple-600 transition-colors">
-                                    Formatting Tools</h3>
-                                <p class="text-gray-600 text-sm leading-relaxed">JSON, XML, HTML, CSS formatting and
-                                    minification.</p>
+                                    Formatierungstools</h3>
+                                <p class="text-gray-600 text-sm leading-relaxed">JSON, XML, HTML, CSS Formatierung und
+                                    Minimierung.</p>
                             </div>
                             <div class="px-6 pb-5 pt-2">
-                                <span class="inline-flex items-center text-purple-600 font-medium">Use Now
+                                <span class="inline-flex items-center text-purple-600 font-medium">Jetzt verwenden
                                     <svg class="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none"
                                         stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -249,7 +247,7 @@
                         </div>
                     </a>
 
-                    <!-- Text Comparison -->
+                    <!-- Textvergleich -->
                     <a href="tools/text-comparison.html" class="group block">
                         <div
                             class="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden h-full border border-gray-100 group-hover:border-orange-200 flex flex-col">
@@ -265,12 +263,12 @@
                                 </div>
                                 <h3
                                     class="text-xl font-bold text-gray-900 mb-3 group-hover:text-orange-600 transition-colors">
-                                    Text Comparison</h3>
-                                <p class="text-gray-600 text-sm leading-relaxed">Smart text diff with highlighted
-                                    changes.</p>
+                                    Textvergleich</h3>
+                                <p class="text-gray-600 text-sm leading-relaxed">Intelligenter Textvergleich mit
+                                    hervorgehobenen Änderungen.</p>
                             </div>
                             <div class="px-6 pb-5 pt-2">
-                                <span class="inline-flex items-center text-orange-600 font-medium">Use Now
+                                <span class="inline-flex items-center text-orange-600 font-medium">Jetzt verwenden
                                     <svg class="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none"
                                         stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -298,11 +296,11 @@
                                 <h3
                                     class="text-xl font-bold text-gray-900 mb-3 group-hover:text-indigo-600 transition-colors">
                                     Text Encoder/Decoder</h3>
-                                <p class="text-gray-600 text-sm leading-relaxed">Base64, URL, Unicode, HTML entity
-                                    encoding.</p>
+                                <p class="text-gray-600 text-sm leading-relaxed">Base64, URL, Unicode,
+                                    HTML-Entity-Kodierung.</p>
                             </div>
                             <div class="px-6 pb-5 pt-2">
-                                <span class="inline-flex items-center text-indigo-600 font-medium">Use Now
+                                <span class="inline-flex items-center text-indigo-600 font-medium">Jetzt verwenden
                                     <svg class="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none"
                                         stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -329,11 +327,11 @@
                                 <h3
                                     class="text-xl font-bold text-gray-900 mb-3 group-hover:text-pink-600 transition-colors">
                                     Regex Tester</h3>
-                                <p class="text-gray-600 text-sm leading-relaxed">Real-time regex testing with
-                                    highlighted matches.</p>
+                                <p class="text-gray-600 text-sm leading-relaxed">Echtzeit-Regex-Test mit hervorgehobenen
+                                    Treffern.</p>
                             </div>
                             <div class="px-6 pb-5 pt-2">
-                                <span class="inline-flex items-center text-pink-600 font-medium">Use Now
+                                <span class="inline-flex items-center text-pink-600 font-medium">Jetzt verwenden
                                     <svg class="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none"
                                         stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -347,26 +345,26 @@
             </div>
         </section>
 
-        <!-- Core Advantages -->
+        <!-- Kernvorteile -->
         <section class="py-16 px-4 bg-white">
             <div class="container mx-auto max-w-7xl">
-                <h2 class="text-3xl font-bold text-gray-900 mb-12 text-center">Core Advantages</h2>
+                <h2 class="text-3xl font-bold text-gray-900 mb-12 text-center">Kernvorteile</h2>
                 <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
                     <div>
                         <div class="text-4xl font-bold text-blue-600 mb-2">6+</div>
-                        <div class="text-gray-600">Useful Tools</div>
+                        <div class="text-gray-600">Nützliche Tools</div>
                     </div>
                     <div>
                         <div class="text-4xl font-bold text-green-600 mb-2">0s</div>
-                        <div class="text-gray-600">Startup Time</div>
+                        <div class="text-gray-600">Startzeit</div>
                     </div>
                     <div>
-                        <div class="text-4xl font-bold text-purple-600 mb-2">Local</div>
-                        <div class="text-gray-600">Data Processing</div>
+                        <div class="text-4xl font-bold text-purple-600 mb-2">Lokal</div>
+                        <div class="text-gray-600">Datenverarbeitung</div>
                     </div>
                     <div>
-                        <div class="text-4xl font-bold text-yellow-600 mb-2">Free</div>
-                        <div class="text-gray-600">Completely Free</div>
+                        <div class="text-4xl font-bold text-yellow-600 mb-2">Gratis</div>
+                        <div class="text-gray-600">Völlig kostenlos</div>
                     </div>
                 </div>
             </div>
@@ -375,67 +373,70 @@
         <!-- FAQ -->
         <section class="py-16 px-4 bg-gray-50">
             <div class="container mx-auto max-w-4xl">
-                <h2 class="text-3xl font-bold text-gray-900 mb-12 text-center">Frequently Asked Questions</h2>
+                <h2 class="text-3xl font-bold text-gray-900 mb-12 text-center">Häufig gestellte Fragen</h2>
                 <div class="space-y-6">
                     <div class="bg-white rounded-lg shadow-md p-6 border-l-4 border-blue-500">
-                        <h3 class="text-xl font-semibold text-gray-900 mb-3">Are these tools free to use?</h3>
-                        <p class="text-gray-700">Yes, all our text processing tools are completely free to use. No
-                            registration or payment required.</p>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-3">Sind diese Tools kostenlos nutzbar?</h3>
+                        <p class="text-gray-700">Ja, alle unsere Textverarbeitungstools sind vollständig kostenlos.
+                            Keine Registrierung oder Zahlung erforderlich.</p>
                     </div>
                     <div class="bg-white rounded-lg shadow-md p-6 border-l-4 border-green-500">
-                        <h3 class="text-xl font-semibold text-gray-900 mb-3">Is my data secure?</h3>
-                        <p class="text-gray-700">Absolutely. All text processing happens locally in your browser. No
-                            data is uploaded to our servers.</p>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-3">Sind meine Daten sicher?</h3>
+                        <p class="text-gray-700">Absolut. Alle Textverarbeitung erfolgt lokal in Ihrem Browser. Keine
+                            Daten werden auf unsere Server hochgeladen.</p>
                     </div>
                     <div class="bg-white rounded-lg shadow-md p-6 border-l-4 border-purple-500">
-                        <h3 class="text-xl font-semibold text-gray-900 mb-3">Which browsers are supported?</h3>
-                        <p class="text-gray-700">Our tools work on all modern browsers including Chrome, Firefox,
-                            Safari, and Edge.</p>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-3">Welche Browser werden unterstützt?</h3>
+                        <p class="text-gray-700">Unsere Tools funktionieren in allen modernen Browsern, einschließlich
+                            Chrome, Firefox, Safari und Edge.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Tool Combinations -->
+        <!-- Empfohlene Tool-Kombinationen -->
         <section class="py-16 px-4 bg-blue-50">
             <div class="container mx-auto max-w-7xl">
-                <h2 class="text-3xl font-bold text-gray-900 mb-12 text-center">Recommended Tool Combinations</h2>
+                <h2 class="text-3xl font-bold text-gray-900 mb-12 text-center">Empfohlene Tool-Kombinationen</h2>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                     <div class="bg-white rounded-xl shadow-md p-6">
-                        <h3 class="text-xl font-semibold text-gray-900 mb-4">Content Creation Suite</h3>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-4">Content-Erstellung Suite</h3>
                         <ul class="space-y-2 text-gray-700 mb-6">
-                            <li>• <a href="tools/text-counter.html" class="text-blue-600 hover:underline">Character
-                                    Counter</a> - Word count control</li>
-                            <li>• <a href="tools/text-conversion.html" class="text-blue-600 hover:underline">Text
-                                    Conversion</a> - Format uniformity</li>
-                            <li>• <a href="tools/text-comparison.html" class="text-blue-600 hover:underline">Text
-                                    Comparison</a> - Version comparison</li>
+                            <li>• <a href="tools/text-counter.html"
+                                    class="text-blue-600 hover:underline">Zeichenzähler</a> - Wortzahlkontrolle</li>
+                            <li>• <a href="tools/text-conversion.html"
+                                    class="text-blue-600 hover:underline">Textkonvertierung</a> - Formateinheitlichkeit
+                            </li>
+                            <li>• <a href="tools/text-comparison.html"
+                                    class="text-blue-600 hover:underline">Textvergleich</a> - Versionsvergleich</li>
                         </ul>
-                        <p class="text-sm text-gray-600">Perfect for copywriting and content editing</p>
+                        <p class="text-sm text-gray-600">Perfekt für Texterstellung und Inhaltsbearbeitung</p>
                     </div>
                     <div class="bg-white rounded-xl shadow-md p-6">
-                        <h3 class="text-xl font-semibold text-gray-900 mb-4">Data Processing Suite</h3>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-4">Datenverarbeitungs Suite</h3>
                         <ul class="space-y-2 text-gray-700 mb-6">
-                            <li>• <a href="tools/text-conversion.html" class="text-blue-600 hover:underline">Text
-                                    Conversion</a> - Data cleaning</li>
-                            <li>• <a href="tools/text-counter.html" class="text-blue-600 hover:underline">Character
-                                    Counter</a> - Statistical analysis</li>
-                            <li>• <a href="tools/formatting.html" class="text-blue-600 hover:underline">Formatting
-                                    Tools</a> - Structured data</li>
+                            <li>• <a href="tools/text-conversion.html"
+                                    class="text-blue-600 hover:underline">Textkonvertierung</a> - Datenbereinigung</li>
+                            <li>• <a href="tools/text-counter.html"
+                                    class="text-blue-600 hover:underline">Zeichenzähler</a> - Statistische Analyse</li>
+                            <li>• <a href="tools/formatting.html"
+                                    class="text-blue-600 hover:underline">Formatierungstools</a> - Strukturierte Daten
+                            </li>
                         </ul>
-                        <p class="text-sm text-gray-600">Perfect for data analysis and batch processing</p>
+                        <p class="text-sm text-gray-600">Perfekt für Datenanalyse und Stapelverarbeitung</p>
                     </div>
                     <div class="bg-white rounded-xl shadow-md p-6">
-                        <h3 class="text-xl font-semibold text-gray-900 mb-4">Developer Suite</h3>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-4">Entwickler Suite</h3>
                         <ul class="space-y-2 text-gray-700 mb-6">
-                            <li>• <a href="tools/formatting.html" class="text-blue-600 hover:underline">Formatting
-                                    Tools</a> - Code beautification</li>
-                            <li>• <a href="tools/text-comparison.html" class="text-blue-600 hover:underline">Text
-                                    Comparison</a> - Code comparison</li>
+                            <li>• <a href="tools/formatting.html"
+                                    class="text-blue-600 hover:underline">Formatierungstools</a> - Code-Verschönerung
+                            </li>
+                            <li>• <a href="tools/text-comparison.html"
+                                    class="text-blue-600 hover:underline">Textvergleich</a> - Code-Vergleich</li>
                             <li>• <a href="tools/regex-tester.html" class="text-blue-600 hover:underline">Regex
-                                    Tester</a> - Pattern matching</li>
+                                    Tester</a> - Musterabgleich</li>
                         </ul>
-                        <p class="text-sm text-gray-600">Perfect for code development and technical docs</p>
+                        <p class="text-sm text-gray-600">Perfekt für Softwareentwicklung und technische Dokumente</p>
                     </div>
                 </div>
             </div>
@@ -444,9 +445,9 @@
         <!-- Open Source Info -->
         <section class="py-16 px-4 bg-white">
             <div class="container mx-auto max-w-7xl">
-                <h2 class="text-3xl font-bold text-gray-900 mb-4 text-center">Open Source, Free & Transparent</h2>
-                <p class="text-xl text-gray-600 text-center mb-12 max-w-3xl mx-auto">CharTools is an open source project
-                    with fully transparent code. Feel free to review and contribute.</p>
+                <h2 class="text-3xl font-bold text-gray-900 mb-4 text-center">Open Source, Kostenlos & Transparent</h2>
+                <p class="text-xl text-gray-600 text-center mb-12 max-w-3xl mx-auto">CharTools ist ein
+                    Open-Source-Projekt mit vollständig transparentem Code. Überprüfen und beitragen Sie gerne.</p>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
                     <div class="bg-gradient-to-br from-gray-50 to-gray-100 rounded-xl p-8 text-center">
                         <div class="w-16 h-16 bg-gray-900 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -457,11 +458,11 @@
                             </svg>
                         </div>
                         <h3 class="text-xl font-semibold text-gray-900 mb-3">GitHub Repository</h3>
-                        <p class="text-gray-600 mb-4">All code is publicly available. Review the source code to verify
-                            our privacy claims.</p>
+                        <p class="text-gray-600 mb-4">Der gesamte Code ist öffentlich verfügbar. Überprüfen Sie den
+                            Quellcode, um unsere Datenschutzversprechen zu bestätigen.</p>
                         <a href="https://github.com/crash-you/chartools" target="_blank" rel="noopener"
                             class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium">
-                            Visit GitHub Repository
+                            GitHub Repository besuchen
                             <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                     d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
@@ -469,7 +470,7 @@
                         </a>
                     </div>
                     <div class="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl p-8">
-                        <h3 class="text-xl font-semibold text-gray-900 mb-6">Our Core Principles</h3>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-6">Unsere Kernprinzipien</h3>
                         <ul class="space-y-4">
                             <li class="flex items-start">
                                 <span
@@ -481,8 +482,8 @@
                                     </svg>
                                 </span>
                                 <div>
-                                    <strong class="text-gray-900">100% Local Processing</strong>
-                                    <p class="text-gray-600 text-sm">Your data never leaves your browser</p>
+                                    <strong class="text-gray-900">100% lokale Verarbeitung</strong>
+                                    <p class="text-gray-600 text-sm">Ihre Daten verlassen nie Ihren Browser</p>
                                 </div>
                             </li>
                             <li class="flex items-start">
@@ -495,8 +496,8 @@
                                     </svg>
                                 </span>
                                 <div>
-                                    <strong class="text-gray-900">Completely Free</strong>
-                                    <p class="text-gray-600 text-sm">No registration, no payment</p>
+                                    <strong class="text-gray-900">Völlig kostenlos</strong>
+                                    <p class="text-gray-600 text-sm">Keine Registrierung, keine Zahlung</p>
                                 </div>
                             </li>
                             <li class="flex items-start">
@@ -509,8 +510,8 @@
                                     </svg>
                                 </span>
                                 <div>
-                                    <strong class="text-gray-900">Transparent Code</strong>
-                                    <p class="text-gray-600 text-sm">Open source for review</p>
+                                    <strong class="text-gray-900">Transparenter Code</strong>
+                                    <p class="text-gray-600 text-sm">Open Source zur Überprüfung</p>
                                 </div>
                             </li>
                         </ul>
@@ -519,32 +520,32 @@
             </div>
         </section>
 
-        <!-- Performance Metrics -->
+        <!-- Leistungsdaten -->
         <section class="py-16 px-4 bg-gray-50">
             <div class="container mx-auto max-w-7xl">
-                <h2 class="text-3xl font-bold text-gray-900 mb-4 text-center">Real Performance Data</h2>
-                <p class="text-xl text-gray-600 text-center mb-12 max-w-3xl mx-auto">All metrics are verifiable in your
-                    browser</p>
+                <h2 class="text-3xl font-bold text-gray-900 mb-4 text-center">Echte Leistungsdaten</h2>
+                <p class="text-xl text-gray-600 text-center mb-12 max-w-3xl mx-auto">Alle Metriken sind in Ihrem Browser
+                    überprüfbar</p>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                     <div class="bg-white rounded-xl shadow-md p-6 text-center">
-                        <div class="text-4xl font-bold text-blue-600 mb-2">&lt;0.5s</div>
-                        <div class="text-gray-600 mb-2">Page Load Time</div>
-                        <p class="text-xs text-gray-500">Chrome test, first paint</p>
+                        <div class="text-4xl font-bold text-blue-600 mb-2">&lt;0,5s</div>
+                        <div class="text-gray-600 mb-2">Seitenladezeit</div>
+                        <p class="text-xs text-gray-500">Chrome-Test, erste Darstellung</p>
                     </div>
                     <div class="bg-white rounded-xl shadow-md p-6 text-center">
                         <div class="text-4xl font-bold text-green-600 mb-2">&lt;100ms</div>
-                        <div class="text-gray-600 mb-2">Tool Response</div>
-                        <p class="text-xs text-gray-500">Processing 100K chars</p>
+                        <div class="text-gray-600 mb-2">Tool-Antwortzeit</div>
+                        <p class="text-xs text-gray-500">Verarbeitung von 100K Zeichen</p>
                     </div>
                     <div class="bg-white rounded-xl shadow-md p-6 text-center">
                         <div class="text-4xl font-bold text-purple-600 mb-2">0 Bytes</div>
-                        <div class="text-gray-600 mb-2">Data Upload</div>
-                        <p class="text-xs text-gray-500">100% local processing</p>
+                        <div class="text-gray-600 mb-2">Daten-Upload</div>
+                        <p class="text-xs text-gray-500">100% lokale Verarbeitung</p>
                     </div>
                     <div class="bg-white rounded-xl shadow-md p-6 text-center">
                         <div class="text-4xl font-bold text-yellow-600 mb-2">100%</div>
                         <div class="text-gray-600 mb-2">Open Source</div>
-                        <p class="text-xs text-gray-500">GitHub public code</p>
+                        <p class="text-xs text-gray-500">GitHub öffentlicher Code</p>
                     </div>
                 </div>
             </div>
@@ -556,13 +557,13 @@
         <div class="container mx-auto max-w-7xl">
             <div class="flex flex-col md:flex-row justify-between items-center">
                 <div class="mb-4 md:mb-0">
-                    <p class="text-gray-600">© 2025 Text Processing Tools</p>
+                    <p class="text-gray-600">© 2025 Textverarbeitungstools</p>
                 </div>
                 <div class="flex space-x-6">
-                    <a href="about.html" class="text-gray-600 hover:text-blue-600">About Us</a>
-                    <a href="terms.html" class="text-gray-600 hover:text-blue-600">Terms of Use</a>
-                    <a href="privacy.html" class="text-gray-600 hover:text-blue-600">Privacy Policy</a>
-                    <a href="contact.html" class="text-gray-600 hover:text-blue-600">Contact</a>
+                    <a href="about.html" class="text-gray-600 hover:text-blue-600">Über uns</a>
+                    <a href="terms.html" class="text-gray-600 hover:text-blue-600">Nutzungsbedingungen</a>
+                    <a href="privacy.html" class="text-gray-600 hover:text-blue-600">Datenschutz</a>
+                    <a href="contact.html" class="text-gray-600 hover:text-blue-600">Kontakt</a>
                 </div>
             </div>
         </div>

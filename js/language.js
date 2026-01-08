@@ -68,22 +68,48 @@ function detectBrowserLanguage() {
     // 检测浏览器语言
     const browserLang = navigator.language || navigator.userLanguage;
     
+    // 获取当前路径信息
+    const path = window.location.pathname;
+    const baseUrl = window.location.origin;
+    const isInEnglish = path.includes('/en/');
+    const isInGerman = path.includes('/de/');
+    const isInChinese = !isInEnglish && !isInGerman;
+    
     // 根据浏览器语言重定向到对应版本
     if (browserLang.startsWith('zh')) {
-        // 如果已经在中文页面，不需要重定向
-        if (!window.location.pathname.includes('/en/')) {
+        // 中文用户：重定向到中文版本
+        if (isInChinese) {
             return;
         }
         sessionStorage.setItem('autoLangRedirectDone', '1');
-        window.location.href = window.location.href.replace('/en/', '/');
-    } else {
-        // 如果浏览器语言不是中文，且用户不在英文页面，则重定向到英文版
-        if (!window.location.pathname.includes('/en/')) {
-            const path = window.location.pathname;
-            const baseUrl = window.location.origin;
-            const newPath = path.replace(/^\//, '/en/');
-            sessionStorage.setItem('autoLangRedirectDone', '1');
+        if (isInEnglish) {
+            window.location.href = window.location.href.replace('/en/', '/');
+        } else if (isInGerman) {
+            window.location.href = window.location.href.replace('/de/', '/');
+        }
+    } else if (browserLang.startsWith('de')) {
+        // 德语用户：重定向到德语版本
+        if (isInGerman) {
+            return;
+        }
+        sessionStorage.setItem('autoLangRedirectDone', '1');
+        if (isInChinese) {
+            const newPath = path.replace(/^\//, '/de/');
             window.location.href = baseUrl + newPath;
+        } else if (isInEnglish) {
+            window.location.href = window.location.href.replace('/en/', '/de/');
+        }
+    } else {
+        // 其他语言用户：默认重定向到英文版
+        if (isInEnglish) {
+            return;
+        }
+        sessionStorage.setItem('autoLangRedirectDone', '1');
+        if (isInChinese) {
+            const newPath = path.replace(/^\//, '/en/');
+            window.location.href = baseUrl + newPath;
+        } else if (isInGerman) {
+            window.location.href = window.location.href.replace('/de/', '/en/');
         }
     }
 }

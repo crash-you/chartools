@@ -35,6 +35,22 @@
   <url><loc>https://chartools.art/en/tools/text-encoder.html</loc><lastmod>2026-01-05</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://chartools.art/en/tools/regex-tester.html</loc><lastmod>2026-01-05</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   
+  <!-- 德文主页面 -->
+  <url><loc>https://chartools.art/de/index.html</loc><lastmod>2026-01-08</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  
+  <!-- 工具页面 (德文) -->
+  <url><loc>https://chartools.art/de/tools/text-counter.html</loc><lastmod>2026-01-08</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://chartools.art/de/tools/text-conversion.html</loc><lastmod>2026-01-08</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://chartools.art/de/tools/text-comparison.html</loc><lastmod>2026-01-08</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://chartools.art/de/tools/formatting.html</loc><lastmod>2026-01-08</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://chartools.art/de/tools/text-encoder.html</loc><lastmod>2026-01-08</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://chartools.art/de/tools/regex-tester.html</loc><lastmod>2026-01-08</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://chartools.art/de/about.html</loc><lastmod>2026-01-08</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://chartools.art/de/help.html</loc><lastmod>2026-01-08</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://chartools.art/de/contact.html</loc><lastmod>2026-01-08</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://chartools.art/de/privacy.html</loc><lastmod>2026-01-08</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://chartools.art/de/terms.html</loc><lastmod>2026-01-08</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  
   <!-- 指南文章 (中文) -->
   <url><loc>https://chartools.art/articles/index.html</loc><lastmod>2026-01-05</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://chartools.art/articles/writing-guides.html</loc><lastmod>2026-01-05</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
